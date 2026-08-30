@@ -1,0 +1,31 @@
+{
+  "model": "GUMNet_Fusion",
+  "target_type": "DAU",
+  "horizon": 7,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 10.397391,
+    "RMSE": 20.52727,
+    "MAPE": 6.7884,
+    "sMAPE": 6.8633,
+    "MASE": 2.542574,
+    "WAPE": 9.0156,
+    "R2": 0.841134,
+    "DA": 54.79,
+    "MSE": 421.368805,
+    "MdAE": 2.505786,
+    "MdAPE": 2.6982,
+    "MaxAE": 85.650858,
+    "Bias": 1.855286,
+    "TheilU": 2.427526,
+    "PICP": 61.56,
+    "PINAW": 15.6279,
+    "crps": 7.562615
+  },
+  "n_iterations": 21,
+  "n_features": 17,
+  "runtime_seconds": 3926.3,
+  "status": "completed",
+  "datetime": "2026-07-19T05:31:38.031902Z"
+}

@@ -1,0 +1,29 @@
+{
+  "model": "Time_MoE",
+  "target_type": "XANG",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 3.075897,
+    "RMSE": 5.617776,
+    "MAPE": 2.7004,
+    "sMAPE": 2.7067,
+    "MASE": 0.636706,
+    "WAPE": 3.1064,
+    "R2": 0.965935,
+    "DA": 55.56,
+    "MSE": 31.559403,
+    "MdAE": 1.170501,
+    "MdAPE": 1.3395,
+    "MaxAE": 24.121337,
+    "Bias": 0.348287,
+    "TheilU": 0.792104,
+    "crps": 3.075897
+  },
+  "n_iterations": 100,
+  "n_features": 15,
+  "runtime_seconds": 31617.3,
+  "status": "completed",
+  "datetime": "2026-08-18T12:54:52.102484Z"
+}

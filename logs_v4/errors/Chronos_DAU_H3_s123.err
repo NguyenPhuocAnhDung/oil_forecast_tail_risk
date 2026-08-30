@@ -1,0 +1,14 @@
+CMD: /usr/bin/python3 /data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py --type DAU --model Chronos --horizon 3 --seed 123 --protocol walkforward
+RETURN: -9
+
+=== STDOUT ===
+
+================================================================================
+ [1/1] Chronos | DAU | H3 | walkforward
+================================================================================
+
+Skipping Chronos | DAU | H3 | walkforward | seed=123 (already completed valid <= 2026-04-30)
+
+ All 1 experiments completed!
+
+=== STDERR ===

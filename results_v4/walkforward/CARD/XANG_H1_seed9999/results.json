@@ -1,0 +1,29 @@
+{
+  "model": "CARD",
+  "target_type": "XANG",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 9999,
+  "metrics": {
+    "MAE": 3.231116,
+    "RMSE": 5.88201,
+    "MAPE": 2.8146,
+    "sMAPE": 2.8247,
+    "MASE": 0.668836,
+    "WAPE": 3.2631,
+    "R2": 0.962655,
+    "DA": 54.55,
+    "MSE": 34.598046,
+    "MdAE": 1.153182,
+    "MdAPE": 1.3688,
+    "MaxAE": 24.631076,
+    "Bias": 0.155933,
+    "TheilU": 0.829359,
+    "crps": 3.231116
+  },
+  "n_iterations": 100,
+  "n_features": 15,
+  "runtime_seconds": 11558.4,
+  "status": "completed",
+  "datetime": "2026-08-17T16:00:28.933204Z"
+}

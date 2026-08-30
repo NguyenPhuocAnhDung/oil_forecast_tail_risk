@@ -1,0 +1,29 @@
+{
+  "model": "S_Mamba",
+  "target_type": "XANG",
+  "horizon": 7,
+  "protocol": "walkforward",
+  "seed": 2025,
+  "metrics": {
+    "MAE": 4.876185,
+    "RMSE": 8.890947,
+    "MAPE": 4.4199,
+    "sMAPE": 4.5368,
+    "MASE": 1.203864,
+    "WAPE": 5.3217,
+    "R2": 0.884914,
+    "DA": 48.29,
+    "MSE": 79.048936,
+    "MdAE": 1.846397,
+    "MdAPE": 2.3402,
+    "MaxAE": 39.157416,
+    "Bias": 1.467371,
+    "TheilU": 1.479567,
+    "crps": 4.876185
+  },
+  "n_iterations": 21,
+  "n_features": 16,
+  "runtime_seconds": 3173.1,
+  "status": "completed",
+  "datetime": "2026-08-20T05:22:04.696062Z"
+}

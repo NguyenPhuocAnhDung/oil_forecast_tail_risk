@@ -1,0 +1,29 @@
+{
+  "model": "GPT4TS",
+  "target_type": "DAU",
+  "horizon": 3,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 9.254308,
+    "RMSE": 17.739708,
+    "MAPE": 5.5648,
+    "sMAPE": 5.6275,
+    "MASE": 1.661183,
+    "WAPE": 7.1565,
+    "R2": 0.908538,
+    "DA": 45.92,
+    "MSE": 314.697257,
+    "MdAE": 2.064552,
+    "MdAPE": 2.2851,
+    "MaxAE": 107.895438,
+    "Bias": 0.759477,
+    "TheilU": 1.709038,
+    "crps": 9.254308
+  },
+  "n_iterations": 33,
+  "n_features": 16,
+  "runtime_seconds": 8889.2,
+  "status": "completed",
+  "datetime": "2026-08-27T15:26:07.156418Z"
+}

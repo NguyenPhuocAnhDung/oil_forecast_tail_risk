@@ -1,0 +1,29 @@
+{
+  "model": "Lag_Llama",
+  "target_type": "DAU",
+  "horizon": 5,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 12.664595,
+    "RMSE": 24.74086,
+    "MAPE": 7.5193,
+    "sMAPE": 7.3032,
+    "MASE": 2.224879,
+    "WAPE": 9.7614,
+    "R2": 0.821277,
+    "DA": 46.97,
+    "MSE": 612.110172,
+    "MdAE": 2.755874,
+    "MdAPE": 2.9379,
+    "MaxAE": 133.931042,
+    "Bias": 0.798942,
+    "TheilU": 2.359073,
+    "crps": 12.664595
+  },
+  "n_iterations": 20,
+  "n_features": 17,
+  "runtime_seconds": 4855.1,
+  "status": "completed",
+  "datetime": "2026-08-27T21:04:58.907152Z"
+}

@@ -1,0 +1,29 @@
+{
+  "model": "LTSF_Linear",
+  "target_type": "XANG",
+  "horizon": 10,
+  "protocol": "walkforward",
+  "seed": 2025,
+  "metrics": {
+    "MAE": 5.110401,
+    "RMSE": 10.22257,
+    "MAPE": 4.6989,
+    "sMAPE": 4.944,
+    "MASE": 1.425488,
+    "WAPE": 5.7518,
+    "R2": 0.810269,
+    "DA": 47.17,
+    "MSE": 104.500937,
+    "MdAE": 1.97321,
+    "MdAPE": 2.4885,
+    "MaxAE": 66.450528,
+    "Bias": 1.981542,
+    "TheilU": 1.899451,
+    "crps": 5.110401
+  },
+  "n_iterations": 40,
+  "n_features": 14,
+  "runtime_seconds": 3874.6,
+  "status": "completed",
+  "datetime": "2026-08-20T12:30:31.601285Z"
+}

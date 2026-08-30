@@ -1,0 +1,36 @@
+07:20:45 | ================================================================================
+07:20:45 |  CoST | XANG | H60 | walkforward | seed=777
+07:20:45 | ================================================================================
+07:20:45 | Data: 4513 rows | Features: 19
+07:25:10 |  Iter-01 | MAE=4.467 | MAPE=4.57%
+07:29:30 |  Iter-02 | MAE=8.275 | MAPE=8.25%
+07:33:50 |  Iter-03 | MAE=9.073 | MAPE=8.94%
+07:38:15 |  Iter-04 | MAE=3.677 | MAPE=3.97%
+07:42:39 |  Iter-05 | MAE=5.357 | MAPE=5.88%
+07:47:04 |  Iter-06 | MAE=10.423 | MAPE=11.32%
+07:51:30 |  Iter-07 | MAE=5.801 | MAPE=6.87%
+07:56:00 |  Iter-08 | MAE=3.024 | MAPE=3.69%
+08:00:31 |  Iter-09 | MAE=8.293 | MAPE=10.02%
+08:05:02 |  Iter-10 | MAE=14.617 | MAPE=17.74%
+08:09:33 |  Iter-11 | MAE=4.332 | MAPE=5.21%
+08:14:09 |  Iter-12 | MAE=5.326 | MAPE=6.33%
+08:18:44 |  Iter-13 | MAE=2.380 | MAPE=2.84%
+08:23:33 |  Iter-14 | MAE=2.428 | MAPE=3.00%
+08:28:21 |  Iter-15 | MAE=3.083 | MAPE=3.97%
+08:33:15 |  Iter-16 | MAE=5.781 | MAPE=7.43%
+08:38:08 |  Iter-17 | MAE=6.046 | MAPE=7.57%
+08:43:06 |  Iter-18 | MAE=9.553 | MAPE=11.94%
+08:48:10 |  Iter-19 | MAE=9.377 | MAPE=11.71%
+08:53:32 |  Iter-20 | MAE=3.426 | MAPE=4.27%
+08:58:54 |  Iter-21 | MAE=2.827 | MAPE=3.53%
+09:04:17 |  Iter-22 | MAE=3.627 | MAPE=4.51%
+09:09:44 |  Iter-23 | MAE=6.462 | MAPE=8.07%
+09:15:11 |  Iter-24 | MAE=5.305 | MAPE=6.79%
+09:20:40 |  Iter-25 | MAE=2.054 | MAPE=2.76%
+09:26:10 |  Iter-26 | MAE=3.633 | MAPE=4.50%
+09:31:44 |  Iter-27 | MAE=27.240 | MAPE=21.40%
+09:37:19 |  Iter-28 | MAE=42.897 | MAPE=32.38%
+09:37:19 | 
+ OVERALL: MAE=7.814, MAPE=8.19%, R2=-0.2189 (8194.4s)
+09:37:19 | Saved model checkpoint: /data/quyhv/oil_forecast_tail_risk/results_v4/walkforward/CoST/XANG_H60_seed777/model_checkpoint.pth
+09:37:19 | Saved processor/scaler: /data/quyhv/oil_forecast_tail_risk/results_v4/walkforward/CoST/XANG_H60_seed777/processor.pkl

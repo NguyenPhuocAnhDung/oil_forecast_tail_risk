@@ -1,0 +1,65 @@
+# =============================================================================
+# requirements_32models.txt
+# Dependencies cho hệ thống thực nghiệm 32 Models (33 SOTA + 11 GUM-Net variants)
+# Cập nhật: 2026-07-18
+# =============================================================================
+
+# --- Core Deep Learning ---
+torch>=2.13.0
+torchvision>=0.28.0
+torchaudio>=2.11.0
+
+# --- Data & Numerics ---
+numpy>=2.2.6
+pandas>=3.0.3
+scipy>=1.17.1
+
+# --- Machine Learning ---
+scikit-learn>=1.9.0
+xgboost>=3.2.0
+
+# --- Time Series Transformers ---
+einops>=0.8.2            # PatchTST, Autoformer, FedFormer, Informer, iTransformer, S_Mamba, etc.
+
+# --- Wavelet & Signal Processing ---
+PyWavelets>=1.9.0        # GUM-Net-Wavelet, WaveletKAN, Mexican Hat basis
+
+# --- KAN (Kolmogorov-Arnold Networks) ---
+# Cài thủ công nếu chưa có: pip install git+https://github.com/Blealtan/efficient-kan.git
+efficient-kan>=0.1.0     # GUM-Net-Wavelet, GUM-Net-Fusion
+
+# --- Graph Neural Networks ---
+networkx>=3.6.1          # GUM-Net-Graph, ST-GCN causal graph
+
+# --- Foundation Model Wrappers (Pre-trained LLMs) ---
+transformers>=5.14.1     # Chronos, TimesFM, Moirai, Lag-Llama, TEMPO, GPT4TS
+huggingface-hub>=1.24.0  # Pre-trained checkpoint downloader
+
+# --- Econometric Validation ---
+statsmodels>=0.14.6      # Diebold-Mariano HAC, ADF/KPSS tests, MCS
+
+# --- Visualization ---
+matplotlib>=3.11.0
+seaborn>=0.13.2
+
+# --- Utilities ---
+tqdm>=4.68.3
+
+# =============================================================================
+# INSTALLATION NOTES:
+# 1. Standard packages:
+#    pip install -r requirements_32models.txt
+#
+# 2. efficient-kan (KAN cho GUM-Net-Wavelet và GUM-Net-Fusion):
+#    pip install git+https://github.com/Blealtan/efficient-kan.git
+#
+# 3. Foundation Models (P6_Foundation - cần GPU + internet lần đầu):
+#    - Chronos: pip install chronos-forecasting
+#    - TimesFM: pip install timesfm
+#    - Moirai: pip install uni2ts
+#    - Lag-Llama: pip install lag-llama
+#    Hoặc dùng wrapper offline (random weights) trong extended_sota.py
+#
+# 4. Kiểm tra môi trường sau cài đặt:
+#    python scripts/check_environment.py
+# =============================================================================

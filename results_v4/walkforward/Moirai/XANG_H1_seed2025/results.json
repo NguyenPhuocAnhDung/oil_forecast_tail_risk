@@ -1,0 +1,29 @@
+{
+  "model": "Moirai",
+  "target_type": "XANG",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 2025,
+  "metrics": {
+    "MAE": 3.046734,
+    "RMSE": 5.67852,
+    "MAPE": 2.6746,
+    "sMAPE": 2.6827,
+    "MASE": 0.630669,
+    "WAPE": 3.0769,
+    "R2": 0.965195,
+    "DA": 53.54,
+    "MSE": 32.245588,
+    "MdAE": 1.124446,
+    "MdAPE": 1.3191,
+    "MaxAE": 27.294779,
+    "Bias": 0.173629,
+    "TheilU": 0.800669,
+    "crps": 3.046734
+  },
+  "n_iterations": 100,
+  "n_features": 15,
+  "runtime_seconds": 38272.8,
+  "status": "completed",
+  "datetime": "2026-08-18T07:50:15.985804Z"
+}

@@ -1,0 +1,29 @@
+{
+  "model": "FedFormer",
+  "target_type": "XANG",
+  "horizon": 7,
+  "protocol": "walkforward",
+  "seed": 123,
+  "metrics": {
+    "MAE": 4.64383,
+    "RMSE": 8.515714,
+    "MAPE": 4.2069,
+    "sMAPE": 4.3646,
+    "MASE": 1.146499,
+    "WAPE": 5.0682,
+    "R2": 0.894423,
+    "DA": 45.89,
+    "MSE": 72.517388,
+    "MdAE": 1.479878,
+    "MdAPE": 1.9642,
+    "MaxAE": 40.303935,
+    "Bias": 1.891941,
+    "TheilU": 1.417155,
+    "crps": 4.64383
+  },
+  "n_iterations": 21,
+  "n_features": 16,
+  "runtime_seconds": 2178.5,
+  "status": "completed",
+  "datetime": "2026-08-20T01:29:01.700987Z"
+}

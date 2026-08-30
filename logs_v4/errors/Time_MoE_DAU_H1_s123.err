@@ -1,0 +1,505 @@
+CMD: /usr/bin/python3 /data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py --type DAU --model Time_MoE --horizon 1 --seed 123 --protocol walkforward
+RETURN: -15
+
+=== STDOUT ===
+
+================================================================================
+ [1/1] Time_MoE | DAU | H1 | walkforward
+================================================================================
+
+ Using GPU: Tesla T4
+================================================================================
+ Time_MoE | DAU | H1 | walkforward | seed=123
+================================================================================
+Data: 4513 rows | Features: 16
+ Iter-01 | MAE=1.203 | MAPE=1.46%
+ Iter-02 | MAE=0.498 | MAPE=0.60%
+ Iter-03 | MAE=0.985 | MAPE=1.21%
+ Iter-04 | MAE=1.328 | MAPE=1.66%
+ Iter-05 | MAE=0.013 | MAPE=0.02%
+ Iter-06 | MAE=0.561 | MAPE=0.70%
+ Iter-07 | MAE=1.394 | MAPE=1.77%
+ Iter-08 | MAE=0.548 | MAPE=0.69%
+ Iter-09 | MAE=0.345 | MAPE=0.43%
+ Iter-10 | MAE=0.471 | MAPE=0.58%
+ Iter-11 | MAE=0.318 | MAPE=0.39%
+ Iter-12 | MAE=0.686 | MAPE=0.85%
+ Iter-13 | MAE=0.944 | MAPE=1.19%
+ Iter-14 | MAE=0.365 | MAPE=0.46%
+ Iter-15 | MAE=0.694 | MAPE=0.87%
+ Iter-16 | MAE=0.333 | MAPE=0.41%
+ Iter-17 | MAE=0.625 | MAPE=0.79%
+ Iter-18 | MAE=1.381 | MAPE=1.77%
+ Iter-19 | MAE=0.108 | MAPE=0.14%
+ Iter-20 | MAE=1.528 | MAPE=1.98%
+ Iter-21 | MAE=0.312 | MAPE=0.41%
+ Iter-22 | MAE=1.022 | MAPE=1.29%
+ Iter-23 | MAE=0.614 | MAPE=0.77%
+ Iter-24 | MAE=1.030 | MAPE=1.27%
+ Iter-25 | MAE=0.637 | MAPE=0.77%
+ Iter-26 | MAE=1.529 | MAPE=1.87%
+ Iter-27 | MAE=0.844 | MAPE=1.03%
+ Iter-28 | MAE=0.371 | MAPE=0.45%
+ Iter-29 | MAE=0.615 | MAPE=0.75%
+ Iter-30 | MAE=0.867 | MAPE=1.03%
+ Iter-31 | MAE=1.709 | MAPE=2.00%
+ Iter-32 | MAE=0.094 | MAPE=0.11%
+ Iter-33 | MAE=0.476 | MAPE=0.56%
+ Iter-34 | MAE=0.951 | MAPE=1.13%
+ Iter-35 | MAE=0.141 | MAPE=0.16%
+ Iter-36 | MAE=1.239 | MAPE=1.40%
+ Iter-37 | MAE=0.499 | MAPE=0.56%
+ Iter-38 | MAE=2.295 | MAPE=2.64%
+ Iter-39 | MAE=1.493 | MAPE=1.73%
+ Iter-40 | MAE=1.780 | MAPE=2.03%
+ Iter-41 | MAE=0.149 | MAPE=0.17%
+ Iter-42 | MAE=1.972 | MAPE=2.22%
+ Iter-43 | MAE=1.813 | MAPE=2.07%
+ Iter-44 | MAE=0.483 | MAPE=0.55%
+ Iter-45 | MAE=1.314 | MAPE=1.48%
+ Iter-46 | MAE=0.261 | MAPE=0.29%
+ Iter-47 | MAE=0.742 | MAPE=0.85%
+ Iter-48 | MAE=0.617 | MAPE=0.71%
+ Iter-49 | MAE=0.811 | MAPE=0.94%
+ Iter-50 | MAE=0.985 | MAPE=1.14%
+ Iter-51 | MAE=4.071 | MAPE=4.46%
+ Iter-52 | MAE=0.528 | MAPE=0.57%
+ Iter-53 | MAE=0.580 | MAPE=0.63%
+ Iter-54 | MAE=0.531 | MAPE=0.58%
+ Iter-55 | MAE=0.189 | MAPE=0.21%
+ Iter-56 | MAE=0.762 | MAPE=0.83%
+ Iter-57 | MAE=0.256 | MAPE=0.28%
+ Iter-58 | MAE=22.514 | MAPE=19.60%
+ Iter-59 | MAE=14.151 | MAPE=11.27%
+ Iter-60 | MAE=15.336 | MAPE=10.71%
+ Iter-61 | MAE=23.885 | MAPE=15.64%
+ Iter-62 | MAE=1.233 | MAPE=0.79%
+ Iter-63 | MAE=23.769 | MAPE=12.86%
+ Iter-64 | MAE=19.730 | MAPE=12.27%
+ Iter-65 | MAE=4.698 | MAPE=2.86%
+ Iter-66 | MAE=27.196 | MAPE=14.02%
+ Iter-67 | MAE=2.351 | MAPE=1.22%
+ Iter-68 | MAE=2.460 | MAPE=1.29%
+ Iter-69 | MAE=10.540 | MAPE=5.33%
+
+=== STDERR ===
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:290: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):

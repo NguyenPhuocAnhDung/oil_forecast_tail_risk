@@ -1,0 +1,7 @@
+Concurrent run started: 2026-08-21T15:51:34.276127
+GPU: 0 | Models: 47 | Jobs: 423
+
+[   1/423]   0.2% | OK:1    FAIL:0    SKIP:235 | OK           | 2498s | ETA:17566m | TFT|XANG|H20|s123
+[   2/423]   0.5% | OK:2    FAIL:0    SKIP:235 | OK           | 2965s | ETA:10404m | PatchTST|XANG|H20|s123
+[   3/423]   0.7% | OK:3    FAIL:0    SKIP:235 | OK           | 1606s | ETA:9575m | Autoformer|XANG|H20|s123
+[   4/423]   0.9% | OK:4    FAIL:0    SKIP:235 | OK           | 1560s | ETA:7900m | FedFormer|XANG|H20|s123

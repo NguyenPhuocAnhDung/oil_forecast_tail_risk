@@ -1,0 +1,128 @@
+Concurrent run started: 2026-08-26T13:49:08.098647
+GPU: 3 | Models: 13 | Jobs: 86
+
+[   1/86]   1.2% | OK:1    FAIL:0    SKIP:5   | OK           | 14644s | ETA:20745m | TimesNet|DAU|H1|s123
+[   2/86]   2.3% | OK:2    FAIL:0    SKIP:5   | OK           | 15284s | ETA:10699m | TimesFM|DAU|H1|s123
+[   3/86]   3.5% | OK:3    FAIL:0    SKIP:5   | OK           | 16422s | ETA:7573m | iTransformer|DAU|H1|s123
+[   4/86]   4.7% | OK:4    FAIL:0    SKIP:5   | OK           | 16835s | ETA:5752m | Chronos|DAU|H1|s123
+[   5/86]   5.8% | OK:5    FAIL:0    SKIP:5   | OK           | 18379s | ETA:4962m | TimeMixer|DAU|H1|s123
+[   6/86]   7.0% | OK:6    FAIL:0    SKIP:5   | OK           | 3776s | ETA:4235m | TimesFM|DAU|H3|s123
+[   7/86]   8.1% | OK:7    FAIL:0    SKIP:5   | OK           | 3790s | ETA:3802m | Chronos|DAU|H3|s123
+[   8/86]   9.3% | OK:8    FAIL:0    SKIP:5   | OK           | 3636s | ETA:3327m | Moirai|DAU|H3|s123
+[   9/86]  10.5% | OK:9    FAIL:0    SKIP:5   | OK           | 22352s | ETA:3187m | TTM|DAU|H1|s123
+[  10/86]  11.6% | OK:10   FAIL:0    SKIP:5   | OK           | 4522s | ETA:2901m | TTM|DAU|H3|s123
+[  11/86]  12.8% | OK:11   FAIL:0    SKIP:5   | OK           | 4607s | ETA:2689m | PatchTST|DAU|H3|s123
+[  12/86]  14.0% | OK:12   FAIL:0    SKIP:5   | OK           | 4419s | ETA:2558m | DLinear|DAU|H3|s123
+[  13/86]  15.1% | OK:13   FAIL:0    SKIP:5   | OK           | 6602s | ETA:2510m | RLinear|DAU|H3|s123
+[  14/86]  16.3% | OK:14   FAIL:0    SKIP:5   | OK           | 4460s | ETA:2345m | iTransformer|DAU|H3|s123
+[  15/86]  17.4% | OK:15   FAIL:0    SKIP:5   | OK           | 5069s | ETA:2163m | LTSF_Linear|DAU|H3|s123
+[  16/86]  18.6% | OK:16   FAIL:0    SKIP:5   | OK           | 4644s | ETA:2064m | TimesNet|DAU|H3|s123
+[  17/86]  19.8% | OK:17   FAIL:0    SKIP:5   | OK           | 3586s | ETA:1926m | TimeMixer|DAU|H3|s123
+[  18/86]  20.9% | OK:18   FAIL:0    SKIP:5   | OK           | 2205s | ETA:1865m | TimesFM|DAU|H5|s123
+[  19/86]  22.1% | OK:19   FAIL:0    SKIP:5   | OK           | 2245s | ETA:1796m | Chronos|DAU|H5|s123
+[  20/86]  23.3% | OK:20   FAIL:0    SKIP:5   | OK           | 3482s | ETA:1696m | Autoformer|DAU|H3|s123
+[  21/86]  24.4% | OK:21   FAIL:0    SKIP:5   | OK           | 2387s | ETA:1592m | Moirai|DAU|H5|s123
+[  22/86]  25.6% | OK:22   FAIL:0    SKIP:5   | OK           | 4224s | ETA:1505m | TFT|DAU|H3|s123
+[  23/86]  26.7% | OK:23   FAIL:0    SKIP:5   | OK           | 2930s | ETA:1486m | TTM|DAU|H5|s123
+[  24/86]  27.9% | OK:24   FAIL:0    SKIP:5   | OK           | 2711s | ETA:1432m | PatchTST|DAU|H5|s123
+[  25/86]  29.1% | OK:25   FAIL:0    SKIP:5   | OK           | 2527s | ETA:1358m | DLinear|DAU|H5|s123
+[  26/86]  30.2% | OK:26   FAIL:0    SKIP:5   | OK           | 2934s | ETA:1307m | LTSF_Linear|DAU|H5|s123
+[  27/86]  31.4% | OK:27   FAIL:0    SKIP:5   | OK           | 3529s | ETA:1252m | RLinear|DAU|H5|s123
+[  28/86]  32.6% | OK:28   FAIL:0    SKIP:5   | OK           | 2635s | ETA:1215m | iTransformer|DAU|H5|s123
+[  29/86]  33.7% | OK:29   FAIL:0    SKIP:5   | OK           | 2025s | ETA:1160m | TimeMixer|DAU|H5|s123
+[  30/86]  34.9% | OK:30   FAIL:0    SKIP:5   | OK           | 2738s | ETA:1120m | TimesNet|DAU|H5|s123
+[  31/86]  36.0% | OK:31   FAIL:0    SKIP:5   | OK           | 1841s | ETA:1071m | Autoformer|DAU|H5|s123
+[  32/86]  37.2% | OK:32   FAIL:0    SKIP:5   | OK           | 2466s | ETA:1025m | TFT|DAU|H5|s123
+[  33/86]  38.4% | OK:33   FAIL:0    SKIP:5   | OK           | 2179s | ETA:1000m | TimesFM|DAU|H7|s123
+[  34/86]  39.5% | OK:34   FAIL:0    SKIP:5   | OK           | 37528s | ETA:957m  | Moirai|DAU|H1|s123
+[  35/86]  40.7% | OK:35   FAIL:0    SKIP:5   | OK           | 2391s | ETA:918m  | Chronos|DAU|H7|s123
+[  36/86]  41.9% | OK:36   FAIL:0    SKIP:5   | OK           | 2849s | ETA:904m  | TTM|DAU|H7|s123
+[  37/86]  43.0% | OK:37   FAIL:0    SKIP:5   | OK           | 3165s | ETA:865m  | Moirai|DAU|H7|s123
+[  38/86]  44.2% | OK:38   FAIL:0    SKIP:5   | OK           | 3524s | ETA:841m  | PatchTST|DAU|H7|s123
+[  39/86]  45.3% | OK:39   FAIL:0    SKIP:5   | OK           | 2602s | ETA:806m  | DLinear|DAU|H7|s123
+[  40/86]  46.5% | OK:40   FAIL:0    SKIP:5   | OK           | 25513s | ETA:770m  | Autoformer|DAU|H1|s123
+[  41/86]  47.7% | OK:41   FAIL:0    SKIP:5   | OK           | 2937s | ETA:745m  | LTSF_Linear|DAU|H7|s123
+[  42/86]  48.8% | OK:42   FAIL:0    SKIP:5   | OK           | 4242s | ETA:727m  | RLinear|DAU|H7|s123
+[  43/86]  50.0% | OK:43   FAIL:0    SKIP:5   | OK           | 2804s | ETA:698m  | iTransformer|DAU|H7|s123
+[  44/86]  51.2% | OK:44   FAIL:0    SKIP:5   | OK           | 2850s | ETA:668m  | TimesNet|DAU|H7|s123
+[  45/86]  52.3% | OK:45   FAIL:0    SKIP:5   | OK           | 2148s | ETA:639m  | TimeMixer|DAU|H7|s123
+[  46/86]  53.5% | OK:46   FAIL:0    SKIP:5   | OK           | 1956s | ETA:610m  | Autoformer|DAU|H7|s123
+[  47/86]  54.7% | OK:47   FAIL:0    SKIP:5   | OK           | 2560s | ETA:590m  | TFT|DAU|H7|s123
+[  48/86]  55.8% | OK:48   FAIL:0    SKIP:5   | OK           | 3924s | ETA:589m  | TimesFM|DAU|H10|s123
+[  49/86]  57.0% | OK:49   FAIL:0    SKIP:5   | OK           | 3818s | ETA:572m  | Chronos|DAU|H10|s123
+[  50/86]  58.1% | OK:50   FAIL:0    SKIP:5   | OK           | 4271s | ETA:554m  | Moirai|DAU|H10|s123
+[  51/86]  59.3% | OK:51   FAIL:0    SKIP:5   | OK           | 4630s | ETA:534m  | TTM|DAU|H10|s123
+[  52/86]  60.5% | OK:52   FAIL:0    SKIP:5   | OK           | 4167s | ETA:511m  | DLinear|DAU|H10|s123
+[  53/86]  61.6% | OK:53   FAIL:0    SKIP:5   | OK           | 5498s | ETA:494m  | PatchTST|DAU|H10|s123
+[  54/86]  62.8% | OK:54   FAIL:0    SKIP:5   | OK           | 4653s | ETA:487m  | LTSF_Linear|DAU|H10|s123
+[  55/86]  64.0% | OK:55   FAIL:0    SKIP:5   | OK           | 7648s | ETA:467m  | RLinear|DAU|H10|s123
+[  56/86]  65.1% | OK:56   FAIL:0    SKIP:5   | OK           | 4695s | ETA:448m  | iTransformer|DAU|H10|s123
+[  57/86]  66.3% | OK:57   FAIL:0    SKIP:5   | OK           | 3934s | ETA:429m  | TimeMixer|DAU|H10|s123
+[  58/86]  67.4% | OK:58   FAIL:0    SKIP:5   | OK           | 3129s | ETA:408m  | Autoformer|DAU|H10|s123
+[  59/86]  68.6% | OK:59   FAIL:0    SKIP:5   | OK           | 5210s | ETA:392m  | TimesNet|DAU|H10|s123
+[  60/86]  69.8% | OK:60   FAIL:0    SKIP:5   | OK           | 4627s | ETA:372m  | TFT|DAU|H10|s123
+[  61/86]  70.9% | OK:61   FAIL:0    SKIP:5   | OK           | 2396s | ETA:353m  | TimesFM|DAU|H20|s123
+[  62/86]  72.1% | OK:62   FAIL:0    SKIP:5   | OK           | 1972s | ETA:334m  | Chronos|DAU|H20|s123
+[  63/86]  73.3% | OK:63   FAIL:0    SKIP:5   | OK           | 1940s | ETA:320m  | TTM|DAU|H20|s123
+[  64/86]  74.4% | OK:64   FAIL:0    SKIP:5   | OK           | 2449s | ETA:301m  | Moirai|DAU|H20|s123
+[  65/86]  75.6% | OK:65   FAIL:0    SKIP:5   | OK           | 2034s | ETA:287m  | RLinear|DAU|H20|s123
+[  66/86]  76.7% | OK:66   FAIL:0    SKIP:5   | OK           | 1943s | ETA:270m  | DLinear|DAU|H20|s123
+[  67/86]  77.9% | OK:67   FAIL:0    SKIP:5   | OK           | 2828s | ETA:253m  | PatchTST|DAU|H20|s123
+[  68/86]  79.1% | OK:68   FAIL:0    SKIP:5   | OK           | 2000s | ETA:237m  | LTSF_Linear|DAU|H20|s123
+[  69/86]  80.2% | OK:69   FAIL:0    SKIP:5   | OK           | 2395s | ETA:222m  | iTransformer|DAU|H20|s123
+[  70/86]  81.4% | OK:70   FAIL:0    SKIP:5   | OK           | 2077s | ETA:208m  | TimeMixer|DAU|H20|s123
+[  71/86]  82.6% | OK:71   FAIL:0    SKIP:5   | OK           | 1770s | ETA:194m  | Autoformer|DAU|H20|s123
+[  72/86]  83.7% | OK:72   FAIL:0    SKIP:5   | OK           | 3264s | ETA:181m  | TimesNet|DAU|H20|s123
+[  73/86]  84.9% | OK:73   FAIL:0    SKIP:5   | OK           | 2604s | ETA:166m  | TFT|DAU|H20|s123
+[  74/86]  86.0% | OK:74   FAIL:0    SKIP:5   | OK           | 4551s | ETA:157m  | Chronos|DAU|H60|s123
+[  75/86]  87.2% | OK:75   FAIL:0    SKIP:5   | OK           | 4853s | ETA:144m  | Moirai|DAU|H60|s123
+[  76/86]  88.4% | OK:76   FAIL:0    SKIP:5   | OK           | 4524s | ETA:130m  | TTM|DAU|H60|s123
+[  77/86]  89.5% | OK:77   FAIL:0    SKIP:5   | OK           | 6571s | ETA:117m  | TimesFM|DAU|H60|s123
+[  78/86]  90.7% | OK:78   FAIL:0    SKIP:5   | OK           | 4623s | ETA:104m  | DLinear|DAU|H60|s123
+[  79/86]  91.9% | OK:79   FAIL:0    SKIP:5   | OK           | 5191s | ETA:90m   | RLinear|DAU|H60|s123
+[  80/86]  93.0% | OK:79   FAIL:0    SKIP:5   | RETRY(1)     | 984s | ETA:78m   | TFT|DAU|H60|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[  81/86]  94.2% | OK:79   FAIL:0    SKIP:5   | RETRY(1)     | 3325s | ETA:65m   | LTSF_Linear|DAU|H60|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[  82/86]  95.3% | OK:79   FAIL:0    SKIP:5   | RETRY(1)     | 6395s | ETA:52m   | PatchTST|DAU|H60|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[  83/86]  96.5% | OK:79   FAIL:0    SKIP:5   | RETRY(1)     | 2612s | ETA:39m   | iTransformer|DAU|H60|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[  84/86]  97.7% | OK:79   FAIL:0    SKIP:5   | RETRY(1)     | 614s | ETA:26m   | Autoformer|DAU|H60|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[  85/86]  98.8% | OK:79   FAIL:0    SKIP:5   | RETRY(1)     | 2417s | ETA:13m   | TimesNet|DAU|H60|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[  86/86] 100.0% | OK:79   FAIL:0    SKIP:5   | RETRY(1)     | 1456s | ETA:0s    | TimeMixer|DAU|H60|s123
+  STDERR: es/torch/autograd/graph.py:769: UserWarning: upsample_linear1d_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+

@@ -1,0 +1,31 @@
+{
+  "model": "GUMNet_iTrans",
+  "target_type": "DAU",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 123,
+  "metrics": {
+    "MAE": 6.052921,
+    "RMSE": 11.600503,
+    "MAPE": 3.5097,
+    "sMAPE": 3.5233,
+    "MASE": 1.06336,
+    "WAPE": 4.6654,
+    "R2": 0.960708,
+    "DA": 59.09,
+    "MSE": 134.571664,
+    "MdAE": 1.417404,
+    "MdAPE": 1.5822,
+    "MaxAE": 57.453088,
+    "Bias": 0.399584,
+    "TheilU": 1.106104,
+    "PICP": 67.0,
+    "PINAW": 8.7093,
+    "crps": 4.554734
+  },
+  "n_iterations": 100,
+  "n_features": 16,
+  "runtime_seconds": 32253.3,
+  "status": "completed",
+  "datetime": "2026-08-27T15:53:23.913532Z"
+}

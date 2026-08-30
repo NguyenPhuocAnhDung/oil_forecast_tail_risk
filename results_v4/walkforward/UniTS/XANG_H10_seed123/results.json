@@ -1,0 +1,29 @@
+{
+  "model": "UniTS",
+  "target_type": "XANG",
+  "horizon": 10,
+  "protocol": "walkforward",
+  "seed": 123,
+  "metrics": {
+    "MAE": 5.247623,
+    "RMSE": 10.741773,
+    "MAPE": 4.7421,
+    "sMAPE": 4.9658,
+    "MASE": 1.463764,
+    "WAPE": 5.9062,
+    "R2": 0.790507,
+    "DA": 50.9,
+    "MSE": 115.385698,
+    "MdAE": 1.901775,
+    "MdAPE": 2.3629,
+    "MaxAE": 66.047128,
+    "Bias": 1.823975,
+    "TheilU": 1.995916,
+    "crps": 5.247623
+  },
+  "n_iterations": 40,
+  "n_features": 14,
+  "runtime_seconds": 3941.7,
+  "status": "completed",
+  "datetime": "2026-08-20T12:32:42.864182Z"
+}

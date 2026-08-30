@@ -1,0 +1,31 @@
+{
+  "model": "GUMNet_Mamba",
+  "target_type": "XANG",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 9999,
+  "metrics": {
+    "MAE": 3.18771,
+    "RMSE": 5.557514,
+    "MAPE": 2.7591,
+    "sMAPE": 2.7639,
+    "MASE": 0.659851,
+    "WAPE": 3.2193,
+    "R2": 0.966662,
+    "DA": 58.08,
+    "MSE": 30.885962,
+    "MdAE": 1.305349,
+    "MdAPE": 1.6418,
+    "MaxAE": 24.769686,
+    "Bias": 0.146228,
+    "TheilU": 0.783608,
+    "PICP": 69.0,
+    "PINAW": 6.5058,
+    "crps": 2.211516
+  },
+  "n_iterations": 100,
+  "n_features": 15,
+  "runtime_seconds": 31890.2,
+  "status": "completed",
+  "datetime": "2026-08-18T14:31:26.723909Z"
+}

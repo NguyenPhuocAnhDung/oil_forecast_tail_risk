@@ -1,0 +1,29 @@
+{
+  "model": "Reformer",
+  "target_type": "DAU",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 123,
+  "metrics": {
+    "MAE": 6.140195,
+    "RMSE": 12.097494,
+    "MAPE": 3.5417,
+    "sMAPE": 3.5646,
+    "MASE": 1.078692,
+    "WAPE": 4.7326,
+    "R2": 0.957269,
+    "DA": 56.57,
+    "MSE": 146.349362,
+    "MdAE": 1.334173,
+    "MdAPE": 1.4198,
+    "MaxAE": 65.182039,
+    "Bias": 0.575839,
+    "TheilU": 1.153475,
+    "crps": 6.140195
+  },
+  "n_iterations": 100,
+  "n_features": 16,
+  "runtime_seconds": 33072.8,
+  "status": "completed",
+  "datetime": "2026-08-26T22:55:39.627660Z"
+}

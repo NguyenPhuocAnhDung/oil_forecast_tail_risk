@@ -1,0 +1,41 @@
+07:04:47 | ================================================================================
+07:04:47 |  TEMPO | XANG | H3 | walkforward | seed=9999
+07:04:47 | ================================================================================
+07:04:47 | Data: 4513 rows | Features: 15
+07:07:49 |  Iter-01 | MAE=0.501 | MAPE=0.64%
+07:10:28 |  Iter-02 | MAE=3.645 | MAPE=4.89%
+07:15:46 |  Iter-03 | MAE=0.600 | MAPE=0.82%
+07:18:10 |  Iter-04 | MAE=0.595 | MAPE=0.81%
+07:21:31 |  Iter-05 | MAE=0.645 | MAPE=0.89%
+07:24:32 |  Iter-06 | MAE=0.922 | MAPE=1.29%
+07:27:07 |  Iter-07 | MAE=1.116 | MAPE=1.59%
+07:29:39 |  Iter-08 | MAE=0.601 | MAPE=0.83%
+07:31:44 |  Iter-09 | MAE=2.567 | MAPE=3.58%
+07:34:32 |  Iter-10 | MAE=0.371 | MAPE=0.52%
+07:37:26 |  Iter-11 | MAE=0.442 | MAPE=0.61%
+07:40:05 |  Iter-12 | MAE=1.476 | MAPE=2.01%
+07:42:16 |  Iter-13 | MAE=2.571 | MAPE=3.56%
+07:44:30 |  Iter-14 | MAE=1.560 | MAPE=2.10%
+07:46:44 |  Iter-15 | MAE=2.459 | MAPE=3.20%
+07:49:01 |  Iter-16 | MAE=2.973 | MAPE=4.07%
+07:51:00 |  Iter-17 | MAE=1.170 | MAPE=1.52%
+07:52:57 |  Iter-18 | MAE=1.250 | MAPE=1.57%
+07:55:37 |  Iter-19 | MAE=0.921 | MAPE=1.14%
+07:58:10 |  Iter-20 | MAE=16.138 | MAPE=16.49%
+08:01:30 |  Iter-21 | MAE=32.976 | MAPE=25.74%
+08:03:26 |  Iter-22 | MAE=14.362 | MAPE=11.57%
+08:05:19 |  Iter-23 | MAE=5.050 | MAPE=3.50%
+08:07:14 |  Iter-24 | MAE=6.449 | MAPE=4.13%
+08:09:34 |  Iter-25 | MAE=17.475 | MAPE=12.66%
+08:11:30 |  Iter-26 | MAE=5.667 | MAPE=4.13%
+08:14:15 |  Iter-27 | MAE=3.887 | MAPE=2.69%
+08:16:24 |  Iter-28 | MAE=14.607 | MAPE=11.31%
+08:18:14 |  Iter-29 | MAE=12.329 | MAPE=9.33%
+08:21:29 |  Iter-30 | MAE=11.524 | MAPE=9.36%
+08:23:16 |  Iter-31 | MAE=1.766 | MAPE=1.43%
+08:25:04 |  Iter-32 | MAE=5.943 | MAPE=4.66%
+08:29:04 |  Iter-33 | MAE=3.788 | MAPE=2.91%
+08:29:04 | 
+ OVERALL: MAE=5.404, MAPE=4.71%, R2=0.8955 (5058.1s)
+08:29:04 | Saved model checkpoint: /data/quyhv/oil_forecast_tail_risk/results_v4/walkforward/TEMPO/XANG_H3_seed9999/model_checkpoint.pth
+08:29:04 | Saved processor/scaler: /data/quyhv/oil_forecast_tail_risk/results_v4/walkforward/TEMPO/XANG_H3_seed9999/processor.pkl

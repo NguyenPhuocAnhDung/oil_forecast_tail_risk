@@ -1,0 +1,29 @@
+00:26:41 | ================================================================================
+00:26:41 |  RLinear | DAU | H7 | walkforward | seed=777
+00:26:41 | ================================================================================
+00:26:41 | Data: 4513 rows | Features: 17
+00:29:19 |  Iter-01 | MAE=0.728 | MAPE=0.83%
+00:32:06 |  Iter-02 | MAE=1.952 | MAPE=2.33%
+00:35:48 |  Iter-03 | MAE=7.123 | MAPE=7.77%
+00:38:44 |  Iter-04 | MAE=2.861 | MAPE=3.03%
+00:41:59 |  Iter-05 | MAE=1.216 | MAPE=1.25%
+00:44:37 |  Iter-06 | MAE=8.096 | MAPE=9.28%
+00:47:25 |  Iter-07 | MAE=1.629 | MAPE=1.91%
+00:52:52 |  Iter-08 | MAE=2.402 | MAPE=2.98%
+00:55:36 |  Iter-09 | MAE=0.863 | MAPE=1.08%
+00:59:05 |  Iter-10 | MAE=0.802 | MAPE=1.02%
+01:01:19 |  Iter-11 | MAE=3.858 | MAPE=4.75%
+01:03:51 |  Iter-12 | MAE=2.458 | MAPE=2.90%
+01:06:29 |  Iter-13 | MAE=1.461 | MAPE=1.66%
+01:10:17 |  Iter-14 | MAE=1.577 | MAPE=1.78%
+01:12:43 |  Iter-15 | MAE=3.741 | MAPE=4.07%
+01:15:48 |  Iter-16 | MAE=33.846 | MAPE=23.93%
+01:20:27 |  Iter-17 | MAE=19.287 | MAPE=10.10%
+01:22:29 |  Iter-18 | MAE=21.059 | MAPE=9.32%
+01:25:16 |  Iter-19 | MAE=36.638 | MAPE=13.99%
+01:27:20 |  Iter-20 | MAE=74.954 | MAPE=41.84%
+01:33:10 |  Iter-21 | MAE=7.793 | MAPE=5.18%
+01:33:10 | 
+ OVERALL: MAE=11.159, MAPE=7.19%, R2=0.8075 (3990.0s)
+01:33:10 | Saved model checkpoint: /data/quyhv/oil_forecast_tail_risk/results_v4/walkforward/RLinear/DAU_H7_seed777/model_checkpoint.pth
+01:33:10 | Saved processor/scaler: /data/quyhv/oil_forecast_tail_risk/results_v4/walkforward/RLinear/DAU_H7_seed777/processor.pkl

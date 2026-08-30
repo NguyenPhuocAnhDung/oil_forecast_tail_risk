@@ -1,0 +1,29 @@
+{
+  "model": "TEMPO",
+  "target_type": "DAU",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 6.066886,
+    "RMSE": 11.756006,
+    "MAPE": 3.4975,
+    "sMAPE": 3.4961,
+    "MASE": 1.065813,
+    "WAPE": 4.6761,
+    "R2": 0.959648,
+    "DA": 58.08,
+    "MSE": 138.203668,
+    "MdAE": 1.352088,
+    "MdAPE": 1.5697,
+    "MaxAE": 63.067252,
+    "Bias": -0.040492,
+    "TheilU": 1.120919,
+    "crps": 6.066886
+  },
+  "n_iterations": 100,
+  "n_features": 16,
+  "runtime_seconds": 38899.9,
+  "status": "completed",
+  "datetime": "2026-08-27T12:11:15.896283Z"
+}

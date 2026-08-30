@@ -1,0 +1,29 @@
+{
+  "model": "Time_MoE",
+  "target_type": "DAU",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 6.124686,
+    "RMSE": 11.826289,
+    "MAPE": 3.5349,
+    "sMAPE": 3.5393,
+    "MASE": 1.075967,
+    "WAPE": 4.7207,
+    "R2": 0.959164,
+    "DA": 59.09,
+    "MSE": 139.861104,
+    "MdAE": 1.387714,
+    "MdAPE": 1.4437,
+    "MaxAE": 63.966092,
+    "Bias": 0.460671,
+    "TheilU": 1.127621,
+    "crps": 6.124686
+  },
+  "n_iterations": 100,
+  "n_features": 16,
+  "runtime_seconds": 59277.8,
+  "status": "completed",
+  "datetime": "2026-08-27T20:24:57.735355Z"
+}

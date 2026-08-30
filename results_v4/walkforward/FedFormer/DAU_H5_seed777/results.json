@@ -1,0 +1,29 @@
+{
+  "model": "FedFormer",
+  "target_type": "DAU",
+  "horizon": 5,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 9.571074,
+    "RMSE": 16.11953,
+    "MAPE": 6.0048,
+    "sMAPE": 6.096,
+    "MASE": 1.681419,
+    "WAPE": 7.377,
+    "R2": 0.924133,
+    "DA": 47.98,
+    "MSE": 259.839263,
+    "MdAE": 2.808533,
+    "MdAPE": 3.0056,
+    "MaxAE": 71.864123,
+    "Bias": 1.08156,
+    "TheilU": 1.53701,
+    "crps": 9.571074
+  },
+  "n_iterations": 20,
+  "n_features": 17,
+  "runtime_seconds": 4248.9,
+  "status": "completed",
+  "datetime": "2026-08-27T17:30:18.676368Z"
+}

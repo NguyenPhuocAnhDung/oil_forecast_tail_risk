@@ -1,0 +1,30 @@
+{
+  "model": "GUMNet_iTrans",
+  "target_type": "XANG",
+  "horizon": 7,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 4.279435,
+    "RMSE": 7.93226,
+    "MAPE": 3.961,
+    "sMAPE": 4.0476,
+    "MASE": 1.056535,
+    "WAPE": 4.6705,
+    "R2": 0.908395,
+    "DA": 51.71,
+    "MSE": 62.920741,
+    "MdAE": 1.420241,
+    "MdAPE": 1.7316,
+    "MaxAE": 40.189032,
+    "Bias": 0.891561,
+    "TheilU": 1.320071,
+    "PICP": 73.81,
+    "PINAW": 11.8952
+  },
+  "n_iterations": 21,
+  "n_features": 16,
+  "runtime_seconds": 3434.1,
+  "status": "completed",
+  "datetime": "2026-07-18T13:03:26.426870Z"
+}

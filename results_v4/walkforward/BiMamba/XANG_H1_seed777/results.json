@@ -1,0 +1,29 @@
+{
+  "model": "BiMamba",
+  "target_type": "XANG",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 3.355889,
+    "RMSE": 6.256403,
+    "MAPE": 2.906,
+    "sMAPE": 2.9181,
+    "MASE": 0.694664,
+    "WAPE": 3.3891,
+    "R2": 0.95775,
+    "DA": 54.55,
+    "MSE": 39.142579,
+    "MdAE": 1.224651,
+    "MdAPE": 1.5251,
+    "MaxAE": 26.691463,
+    "Bias": 0.228525,
+    "TheilU": 0.882148,
+    "crps": 3.355889
+  },
+  "n_iterations": 100,
+  "n_features": 15,
+  "runtime_seconds": 38966.9,
+  "status": "completed",
+  "datetime": "2026-08-18T05:30:22.451506Z"
+}

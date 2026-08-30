@@ -1,0 +1,28 @@
+{
+  "model": "TTM",
+  "target_type": "XANG",
+  "horizon": 5,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 5.894721,
+    "RMSE": 9.962955,
+    "MAPE": 5.119,
+    "sMAPE": 5.3667,
+    "MASE": 1.220198,
+    "WAPE": 5.9531,
+    "R2": 0.89286,
+    "DA": 45.45,
+    "MSE": 99.260463,
+    "MdAE": 2.203857,
+    "MdAPE": 2.669,
+    "MaxAE": 48.531758,
+    "Bias": 2.856893,
+    "TheilU": 1.404773
+  },
+  "n_iterations": 20,
+  "n_features": 16,
+  "runtime_seconds": 520.3,
+  "status": "completed",
+  "datetime": "2026-07-18T08:45:45.057693Z"
+}

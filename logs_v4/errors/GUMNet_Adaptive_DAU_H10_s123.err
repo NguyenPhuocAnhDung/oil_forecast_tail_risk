@@ -1,0 +1,11 @@
+CMD: /usr/bin/python3 /data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py --type DAU --model GUMNet_Adaptive --horizon 10 --seed 123 --protocol walkforward
+RETURN: -9
+
+=== STDOUT ===
+
+================================================================================
+ [1/1] GUMNet_Adaptive | DAU | H10 | walkforward
+================================================================================
+
+
+=== STDERR ===

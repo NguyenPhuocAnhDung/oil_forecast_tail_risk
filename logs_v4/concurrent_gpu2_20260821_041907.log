@@ -1,0 +1,4 @@
+Concurrent run started: 2026-08-21T04:19:07.103775
+GPU: 2 | Models: 47 | Jobs: 429
+
+[   1/429]   0.2% | OK:1    FAIL:0    SKIP:229 | OK           | 1872s | ETA:13354m | DLinear|XANG|H20|s2025

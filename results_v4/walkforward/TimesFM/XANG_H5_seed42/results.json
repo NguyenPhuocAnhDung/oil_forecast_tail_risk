@@ -1,0 +1,28 @@
+{
+  "model": "TimesFM",
+  "target_type": "XANG",
+  "horizon": 5,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 5.467213,
+    "RMSE": 9.000592,
+    "MAPE": 4.7887,
+    "sMAPE": 4.974,
+    "MASE": 1.131704,
+    "WAPE": 5.5214,
+    "R2": 0.912558,
+    "DA": 48.48,
+    "MSE": 81.010649,
+    "MdAE": 2.72497,
+    "MdAPE": 2.966,
+    "MaxAE": 43.076184,
+    "Bias": 2.597506,
+    "TheilU": 1.269064
+  },
+  "n_iterations": 20,
+  "n_features": 16,
+  "runtime_seconds": 657.5,
+  "status": "completed",
+  "datetime": "2026-07-18T12:14:33.687686Z"
+}

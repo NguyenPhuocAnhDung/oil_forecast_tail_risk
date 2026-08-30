@@ -1,0 +1,29 @@
+{
+  "model": "TFT",
+  "target_type": "DAU",
+  "horizon": 10,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 9.45777,
+    "RMSE": 19.108913,
+    "MAPE": 6.5254,
+    "sMAPE": 6.7835,
+    "MASE": 2.668967,
+    "WAPE": 8.6997,
+    "R2": 0.830105,
+    "DA": 47.3,
+    "MSE": 365.150549,
+    "MdAE": 2.930066,
+    "MdAPE": 3.2625,
+    "MaxAE": 93.495638,
+    "Bias": 3.147043,
+    "TheilU": 2.242622,
+    "crps": 9.45777
+  },
+  "n_iterations": 40,
+  "n_features": 15,
+  "runtime_seconds": 1561.2,
+  "status": "completed",
+  "datetime": "2026-07-19T06:31:32.159850Z"
+}

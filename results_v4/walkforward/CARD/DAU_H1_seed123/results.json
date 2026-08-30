@@ -1,0 +1,29 @@
+{
+  "model": "CARD",
+  "target_type": "DAU",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 123,
+  "metrics": {
+    "MAE": 6.361005,
+    "RMSE": 12.054907,
+    "MAPE": 3.7452,
+    "sMAPE": 3.7339,
+    "MASE": 1.117483,
+    "WAPE": 4.9028,
+    "R2": 0.957569,
+    "DA": 56.57,
+    "MSE": 145.320777,
+    "MdAE": 1.530616,
+    "MdAPE": 1.6025,
+    "MaxAE": 66.186997,
+    "Bias": -0.088436,
+    "TheilU": 1.149423,
+    "crps": 6.361005
+  },
+  "n_iterations": 100,
+  "n_features": 16,
+  "runtime_seconds": 21247.7,
+  "status": "completed",
+  "datetime": "2026-08-27T03:36:39.955095Z"
+}

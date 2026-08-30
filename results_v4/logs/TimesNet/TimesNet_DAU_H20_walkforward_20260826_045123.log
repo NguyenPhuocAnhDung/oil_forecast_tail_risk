@@ -1,0 +1,23 @@
+04:51:23 | ================================================================================
+04:51:23 |  TimesNet | DAU | H20 | walkforward | seed=777
+04:51:23 | ================================================================================
+04:51:23 | Data: 4513 rows | Features: 15
+04:54:38 |  Iter-01 | MAE=1.967 | MAPE=2.26%
+04:58:23 |  Iter-02 | MAE=2.017 | MAPE=2.54%
+05:01:36 |  Iter-03 | MAE=2.064 | MAPE=2.59%
+05:04:45 |  Iter-04 | MAE=6.812 | MAPE=7.46%
+05:08:48 |  Iter-05 | MAE=1.414 | MAPE=1.55%
+05:12:15 |  Iter-06 | MAE=2.348 | MAPE=2.74%
+05:15:56 |  Iter-07 | MAE=2.160 | MAPE=2.45%
+05:19:38 |  Iter-08 | MAE=1.243 | MAPE=1.40%
+05:23:33 |  Iter-09 | MAE=11.449 | MAPE=12.27%
+05:27:28 |  Iter-10 | MAE=5.588 | MAPE=6.44%
+05:31:42 |  Iter-11 | MAE=2.976 | MAPE=3.74%
+05:35:50 |  Iter-12 | MAE=8.222 | MAPE=9.63%
+05:40:17 |  Iter-13 | MAE=9.656 | MAPE=8.48%
+05:44:32 |  Iter-14 | MAE=61.471 | MAPE=28.42%
+05:49:08 |  Iter-15 | MAE=111.853 | MAPE=66.82%
+05:49:08 | 
+ OVERALL: MAE=15.416, MAPE=10.59%, R2=0.0964 (3464.8s)
+05:49:08 | Saved model checkpoint: /data/quyhv/oil_forecast_tail_risk/results_v4/walkforward/TimesNet/DAU_H20_seed777/model_checkpoint.pth
+05:49:08 | Saved processor/scaler: /data/quyhv/oil_forecast_tail_risk/results_v4/walkforward/TimesNet/DAU_H20_seed777/processor.pkl

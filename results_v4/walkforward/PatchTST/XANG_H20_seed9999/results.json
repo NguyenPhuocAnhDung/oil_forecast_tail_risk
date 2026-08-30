@@ -1,0 +1,29 @@
+{
+  "model": "PatchTST",
+  "target_type": "XANG",
+  "horizon": 20,
+  "protocol": "walkforward",
+  "seed": 9999,
+  "metrics": {
+    "MAE": 5.891375,
+    "RMSE": 11.471395,
+    "MAPE": 5.6373,
+    "sMAPE": 5.9597,
+    "MASE": 1.981879,
+    "WAPE": 6.8835,
+    "R2": 0.675283,
+    "DA": 49.5,
+    "MSE": 131.592905,
+    "MdAE": 2.712514,
+    "MdAPE": 3.532,
+    "MaxAE": 65.798557,
+    "Bias": 2.840291,
+    "TheilU": 2.559497,
+    "crps": 5.891375
+  },
+  "n_iterations": 15,
+  "n_features": 14,
+  "runtime_seconds": 2902.2,
+  "status": "completed",
+  "datetime": "2026-08-21T01:31:00.900221Z"
+}

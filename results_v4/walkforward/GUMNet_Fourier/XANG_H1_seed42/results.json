@@ -1,0 +1,30 @@
+{
+  "model": "GUMNet_Fourier",
+  "target_type": "XANG",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 3.117916,
+    "RMSE": 5.604654,
+    "MAPE": 2.6755,
+    "sMAPE": 2.6728,
+    "MASE": 0.645404,
+    "WAPE": 3.1488,
+    "R2": 0.966094,
+    "DA": 52.53,
+    "MSE": 31.412148,
+    "MdAE": 1.349057,
+    "MdAPE": 1.6144,
+    "MaxAE": 24.08878,
+    "Bias": 0.191164,
+    "TheilU": 0.790255,
+    "PICP": 66.0,
+    "PINAW": 6.171
+  },
+  "n_iterations": 100,
+  "n_features": 15,
+  "runtime_seconds": 10230.6,
+  "status": "completed",
+  "datetime": "2026-07-18T15:24:34.080925Z"
+}

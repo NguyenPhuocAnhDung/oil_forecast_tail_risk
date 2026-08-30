@@ -1,0 +1,29 @@
+{
+  "model": "Informer",
+  "target_type": "XANG",
+  "horizon": 20,
+  "protocol": "walkforward",
+  "seed": 9999,
+  "metrics": {
+    "MAE": 6.22432,
+    "RMSE": 11.657678,
+    "MAPE": 6.0871,
+    "sMAPE": 6.4499,
+    "MASE": 2.093883,
+    "WAPE": 7.2726,
+    "R2": 0.664652,
+    "DA": 50.33,
+    "MSE": 135.901464,
+    "MdAE": 3.356481,
+    "MdAPE": 4.2219,
+    "MaxAE": 67.23849,
+    "Bias": 3.331047,
+    "TheilU": 2.60107,
+    "crps": 6.22432
+  },
+  "n_iterations": 15,
+  "n_features": 14,
+  "runtime_seconds": 1975.1,
+  "status": "completed",
+  "datetime": "2026-08-21T04:52:06.879540Z"
+}

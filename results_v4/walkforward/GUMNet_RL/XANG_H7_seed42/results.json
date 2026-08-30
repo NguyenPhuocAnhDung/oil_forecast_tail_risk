@@ -1,0 +1,30 @@
+{
+  "model": "GUMNet_RL",
+  "target_type": "XANG",
+  "horizon": 7,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 4.725373,
+    "RMSE": 8.655788,
+    "MAPE": 4.2918,
+    "sMAPE": 4.3927,
+    "MASE": 1.166631,
+    "WAPE": 5.1571,
+    "R2": 0.890922,
+    "DA": 47.95,
+    "MSE": 74.922666,
+    "MdAE": 1.606815,
+    "MdAPE": 1.9559,
+    "MaxAE": 40.060723,
+    "Bias": 1.381609,
+    "TheilU": 1.440478,
+    "PICP": 75.51,
+    "PINAW": 9.6783
+  },
+  "n_iterations": 21,
+  "n_features": 16,
+  "runtime_seconds": 3461.8,
+  "status": "completed",
+  "datetime": "2026-07-18T14:51:08.709530Z"
+}

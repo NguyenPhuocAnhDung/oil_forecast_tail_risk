@@ -1,0 +1,29 @@
+{
+  "model": "DLinear",
+  "target_type": "XANG",
+  "horizon": 3,
+  "protocol": "walkforward",
+  "seed": 9999,
+  "metrics": {
+    "MAE": 5.175609,
+    "RMSE": 9.742556,
+    "MAPE": 4.593,
+    "sMAPE": 4.7091,
+    "MASE": 1.072998,
+    "WAPE": 5.2466,
+    "R2": 0.897039,
+    "DA": 42.86,
+    "MSE": 94.917405,
+    "MdAE": 2.021263,
+    "MdAPE": 2.1606,
+    "MaxAE": 58.035416,
+    "Bias": 0.488512,
+    "TheilU": 1.371712,
+    "crps": 5.175609
+  },
+  "n_iterations": 33,
+  "n_features": 15,
+  "runtime_seconds": 6256.9,
+  "status": "completed",
+  "datetime": "2026-08-19T00:24:27.515072Z"
+}

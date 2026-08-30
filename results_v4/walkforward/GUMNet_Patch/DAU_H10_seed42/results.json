@@ -1,0 +1,31 @@
+{
+  "model": "GUMNet_Patch",
+  "target_type": "DAU",
+  "horizon": 10,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 9.490762,
+    "RMSE": 19.397653,
+    "MAPE": 6.4142,
+    "sMAPE": 6.6174,
+    "MASE": 2.678277,
+    "WAPE": 8.73,
+    "R2": 0.824932,
+    "DA": 52.31,
+    "MSE": 376.268955,
+    "MdAE": 2.487649,
+    "MdAPE": 2.8069,
+    "MaxAE": 93.141996,
+    "Bias": 2.382,
+    "TheilU": 2.276507,
+    "PICP": 70.51,
+    "PINAW": 15.097,
+    "crps": 7.027188
+  },
+  "n_iterations": 40,
+  "n_features": 15,
+  "runtime_seconds": 6430.3,
+  "status": "completed",
+  "datetime": "2026-07-19T14:08:13.884946Z"
+}

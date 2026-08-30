@@ -1,0 +1,41 @@
+{
+  "entries": [
+    {
+      "path": ".agents/skills",
+      "description": "gstack — 16 skills (Garry Tan / YC CEO)"
+    },
+    {
+      "path": ".agents/addy-skills/skills",
+      "description": "agent-skills — 24 skills (Addy Osmani / Chrome VP)"
+    },
+    {
+      "path": ".agents/ecc/skills",
+      "description": "ECC — 278 skills (affaan-m, 211k stars)"
+    },
+    {
+      "path": ".agents/superpowers/skills",
+      "description": "Superpowers — 14 skills (obra/Prime Radiant)"
+    },
+    {
+      "path": ".agents/mattpocock-skills/skills/engineering",
+      "description": "mattpocock engineering — 13 skills"
+    },
+    {
+      "path": ".agents/mattpocock-skills/skills/productivity",
+      "description": "mattpocock productivity — 5 skills"
+    },
+    {
+      "path": ".agents/mattpocock-skills/skills/misc",
+      "description": "mattpocock misc — 4 skills"
+    },
+    {
+      "path": ".agents/mattpocock-skills/skills/personal",
+      "description": "mattpocock personal — 2 skills"
+    },
+    {
+      "path": ".agents/anthropic-skills/skills",
+      "description": "Anthropic official — 17 skills (creative, enterprise, documents)"
+    }
+  ],
+  "description": "Master registry: 6 repositories, 373+ skills total"
+}

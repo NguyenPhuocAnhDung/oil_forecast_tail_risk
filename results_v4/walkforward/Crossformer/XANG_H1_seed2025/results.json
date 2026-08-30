@@ -1,0 +1,29 @@
+{
+  "model": "Crossformer",
+  "target_type": "XANG",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 2025,
+  "metrics": {
+    "MAE": 3.021899,
+    "RMSE": 5.326829,
+    "MAPE": 2.6535,
+    "sMAPE": 2.6511,
+    "MASE": 0.625528,
+    "WAPE": 3.0518,
+    "R2": 0.969372,
+    "DA": 56.06,
+    "MSE": 28.375104,
+    "MdAE": 1.300292,
+    "MdAPE": 1.5044,
+    "MaxAE": 24.445928,
+    "Bias": 0.129765,
+    "TheilU": 0.751081,
+    "crps": 3.021899
+  },
+  "n_iterations": 100,
+  "n_features": 15,
+  "runtime_seconds": 23239.4,
+  "status": "completed",
+  "datetime": "2026-08-17T19:43:19.072024Z"
+}

@@ -1,0 +1,29 @@
+{
+  "model": "NBEATS",
+  "target_type": "DAU",
+  "horizon": 5,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 11.573913,
+    "RMSE": 19.006289,
+    "MAPE": 7.0234,
+    "sMAPE": 7.1725,
+    "MASE": 2.033272,
+    "WAPE": 8.9207,
+    "R2": 0.894526,
+    "DA": 48.48,
+    "MSE": 361.239018,
+    "MdAE": 3.457984,
+    "MdAPE": 3.412,
+    "MaxAE": 65.205881,
+    "Bias": 3.349389,
+    "TheilU": 1.812268,
+    "crps": 11.573913
+  },
+  "n_iterations": 20,
+  "n_features": 17,
+  "runtime_seconds": 4198.9,
+  "status": "completed",
+  "datetime": "2026-08-27T16:40:59.913024Z"
+}

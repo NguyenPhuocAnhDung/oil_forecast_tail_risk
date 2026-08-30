@@ -1,0 +1,29 @@
+{
+  "model": "Gated_TabNet",
+  "target_type": "XANG",
+  "horizon": 3,
+  "protocol": "walkforward",
+  "seed": 9999,
+  "metrics": {
+    "MAE": 5.172495,
+    "RMSE": 8.846153,
+    "MAPE": 4.569,
+    "sMAPE": 4.6021,
+    "MASE": 1.072353,
+    "WAPE": 5.2435,
+    "R2": 0.915114,
+    "DA": 47.45,
+    "MSE": 78.25443,
+    "MdAE": 2.258108,
+    "MdAPE": 2.3754,
+    "MaxAE": 42.981594,
+    "Bias": 0.196724,
+    "TheilU": 1.245496,
+    "crps": 5.172495
+  },
+  "n_iterations": 33,
+  "n_features": 15,
+  "runtime_seconds": 4298.9,
+  "status": "completed",
+  "datetime": "2026-08-19T08:44:16.091061Z"
+}

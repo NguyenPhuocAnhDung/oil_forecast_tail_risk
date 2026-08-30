@@ -1,0 +1,29 @@
+{
+  "model": "Chronos",
+  "target_type": "DAU",
+  "horizon": 20,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 12.227086,
+    "RMSE": 25.864228,
+    "MAPE": 8.6825,
+    "sMAPE": 8.7088,
+    "MASE": 4.479033,
+    "WAPE": 12.1238,
+    "R2": 0.575334,
+    "DA": 49.33,
+    "MSE": 668.958309,
+    "MdAE": 3.453954,
+    "MdAPE": 4.0757,
+    "MaxAE": 109.501443,
+    "Bias": 1.669894,
+    "TheilU": 4.178991,
+    "crps": 12.227086
+  },
+  "n_iterations": 15,
+  "n_features": 15,
+  "runtime_seconds": 629.7,
+  "status": "completed",
+  "datetime": "2026-07-19T20:33:35.988426Z"
+}

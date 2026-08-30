@@ -1,0 +1,29 @@
+{
+  "model": "Informer",
+  "target_type": "DAU",
+  "horizon": 3,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 9.4608,
+    "RMSE": 17.622023,
+    "MAPE": 5.7379,
+    "sMAPE": 5.7888,
+    "MASE": 1.698249,
+    "WAPE": 7.3162,
+    "R2": 0.909747,
+    "DA": 50.51,
+    "MSE": 310.535695,
+    "MdAE": 2.290449,
+    "MdAPE": 2.0756,
+    "MaxAE": 99.447883,
+    "Bias": -0.105093,
+    "TheilU": 1.697698,
+    "crps": 9.4608
+  },
+  "n_iterations": 33,
+  "n_features": 16,
+  "runtime_seconds": 9239.0,
+  "status": "completed",
+  "datetime": "2026-08-27T06:31:26.727190Z"
+}

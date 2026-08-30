@@ -1,0 +1,29 @@
+{
+  "model": "DLinear",
+  "target_type": "DAU",
+  "horizon": 20,
+  "protocol": "walkforward",
+  "seed": 123,
+  "metrics": {
+    "MAE": 11.231031,
+    "RMSE": 24.119116,
+    "MAPE": 7.9594,
+    "sMAPE": 7.9499,
+    "MASE": 4.114157,
+    "WAPE": 11.1362,
+    "R2": 0.630706,
+    "DA": 50.67,
+    "MSE": 581.731763,
+    "MdAE": 3.076986,
+    "MdAPE": 3.5362,
+    "MaxAE": 109.636585,
+    "Bias": 1.196281,
+    "TheilU": 3.897018,
+    "crps": 11.231031
+  },
+  "n_iterations": 15,
+  "n_features": 15,
+  "runtime_seconds": 1938.4,
+  "status": "completed",
+  "datetime": "2026-08-27T04:39:33.638968Z"
+}

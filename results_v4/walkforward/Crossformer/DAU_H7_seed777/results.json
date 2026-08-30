@@ -1,0 +1,29 @@
+{
+  "model": "Crossformer",
+  "target_type": "DAU",
+  "horizon": 7,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 11.553736,
+    "RMSE": 22.278672,
+    "MAPE": 7.5841,
+    "sMAPE": 7.6276,
+    "MASE": 2.825346,
+    "WAPE": 10.0182,
+    "R2": 0.812869,
+    "DA": 53.08,
+    "MSE": 496.339246,
+    "MdAE": 3.242672,
+    "MdAPE": 3.4609,
+    "MaxAE": 94.02215,
+    "Bias": 2.355354,
+    "TheilU": 2.634642,
+    "crps": 11.553736
+  },
+  "n_iterations": 21,
+  "n_features": 17,
+  "runtime_seconds": 8022.2,
+  "status": "completed",
+  "datetime": "2026-08-28T00:56:17.099780Z"
+}

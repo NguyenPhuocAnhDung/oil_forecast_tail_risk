@@ -1,0 +1,29 @@
+{
+  "model": "TEMPO",
+  "target_type": "XANG",
+  "horizon": 60,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 6.658772,
+    "RMSE": 13.659492,
+    "MAPE": 6.7622,
+    "sMAPE": 7.3708,
+    "MASE": 1.942125,
+    "WAPE": 7.7616,
+    "R2": -0.096671,
+    "DA": 45.8,
+    "MSE": 186.581715,
+    "MdAE": 3.678701,
+    "MdAPE": 4.4344,
+    "MaxAE": 99.77737,
+    "Bias": 3.890387,
+    "TheilU": 3.133075,
+    "crps": 6.658772
+  },
+  "n_iterations": 30,
+  "n_features": 19,
+  "runtime_seconds": 1723.2,
+  "status": "completed",
+  "datetime": "2026-07-19T11:35:33.372040Z"
+}

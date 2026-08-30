@@ -1,0 +1,29 @@
+{
+  "model": "LTSF_Linear",
+  "target_type": "DAU",
+  "horizon": 10,
+  "protocol": "walkforward",
+  "seed": 123,
+  "metrics": {
+    "MAE": 9.996011,
+    "RMSE": 20.933114,
+    "MAPE": 6.6021,
+    "sMAPE": 6.9284,
+    "MASE": 2.820857,
+    "WAPE": 9.1948,
+    "R2": 0.796119,
+    "DA": 49.61,
+    "MSE": 438.19526,
+    "MdAE": 2.276945,
+    "MdAPE": 2.5645,
+    "MaxAE": 93.068025,
+    "Bias": 3.278193,
+    "TheilU": 2.456712,
+    "crps": 9.996011
+  },
+  "n_iterations": 40,
+  "n_features": 15,
+  "runtime_seconds": 4648.3,
+  "status": "completed",
+  "datetime": "2026-08-27T03:31:06.595355Z"
+}

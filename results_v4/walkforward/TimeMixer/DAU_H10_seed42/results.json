@@ -1,0 +1,29 @@
+{
+  "model": "TimeMixer",
+  "target_type": "DAU",
+  "horizon": 10,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 9.853614,
+    "RMSE": 19.936184,
+    "MAPE": 6.6798,
+    "sMAPE": 6.9077,
+    "MASE": 2.780673,
+    "WAPE": 9.0638,
+    "R2": 0.815076,
+    "DA": 48.71,
+    "MSE": 397.451443,
+    "MdAE": 2.596883,
+    "MdAPE": 2.9309,
+    "MaxAE": 95.594068,
+    "Bias": 2.766685,
+    "TheilU": 2.339705,
+    "crps": 9.853614
+  },
+  "n_iterations": 40,
+  "n_features": 15,
+  "runtime_seconds": 1058.2,
+  "status": "completed",
+  "datetime": "2026-07-19T07:46:28.730590Z"
+}

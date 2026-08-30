@@ -1,0 +1,318 @@
+=== ACTION NOTES ===
+👉 【HÀNH ĐỘNG: bổ sung trích dẫn cho BiMamba】
+
+=== ALL TRACKED CHANGES ===
+
+[Change #1]:
+  ❌ Deleted : These representations are dynamically fused by a horizon-aware and market-context gating router
+  ✅ Inserted: These representations are combined by a gating router conditioned on the forecast horizon and market context
+
+[Change #2]:
+  ❌ Deleted : under an expanding walk-forward protocol during severe market turmoil (annualized test set volatility reaching
+  ✅ Inserted: under an expanding walk-forward protocol in a high-volatility period (annualized test-set volatility reaching
+
+[Change #3]:
+  ❌ Deleted : GUMNetHet consistently achieves the lowest MAE across all reported baselines over all seven horizons H1–H60
+  ✅ Inserted: GUMNetHet achieves the lowest MAE among the reported baselines at all seven horizons H1–H60
+
+[Change #4]:
+  ❌ Deleted : but declines at H10 and H60, highlighting the structural dichotomy between price-level precision and long-term directional forecasting
+  ✅ Inserted: but declines at H10 and H60, indicating a gap between price-level accuracy and directional accuracy at longer horizons
+
+[Change #5]:
+  ❌ Deleted : Ablation studies and router analysis confirm that expert specialization and adaptive routing contribute substantially to model robustness
+  ✅ Inserted: Ablation studies and router analysis indicate that expert specialization and adaptive routing contribute substantially to model performance
+
+[Change #6]:
+  ❌ Deleted : Keywords—energy price forecasting,
+  ✅ Inserted: Keywords—refined petroleum price forecasting,
+
+[Change #7]:
+  ❌ Deleted : The Vietnamese refined petroleum market possesses a distinctive strategic supply structure:
+  ✅ Inserted: The Vietnamese refined petroleum market has a distinctive supply structure:
+
+[Change #8]:
+  ❌ Deleted : while the remaining 30% must be imported directly from international markets
+  ✅ Inserted: while the remaining 30% is imported from international markets
+
+[Change #9]:
+  ❌ Deleted : Singapore serves as the most critical import hub
+  ✅ Inserted: Singapore is the primary import source
+
+[Change #10]:
+  ❌ Deleted : act as the foundational pricing benchmark for commercial contracts
+  ✅ Inserted: serve as the reference pricing benchmark for most commercial contracts
+
+[Change #11]:
+  ❌ Deleted : However, Platts prices fluctuate with extreme complexity due to simultaneous responses to
+  ✅ Inserted: However, Platts prices exhibit complex dynamics, responding simultaneously to
+
+[Change #12]:
+  ❌ Deleted : demonstrate that refined product price series frequently exhibit non-linear jumps, regime shifts, and severe volatility clustering
+  ✅ Inserted: show that refined product price series can exhibit non-linear jumps, regime shifts, and pronounced volatility clustering
+
+[Change #13]:
+  ❌ Deleted : Consequently, accurately forecasting Platts refined petroleum prices over short-term (H1–H7) and medium-term (H10–H60) horizons is an urgent operational necessity directly serving business decision-making
+  ✅ Inserted: Consequently, accurate forecasts of Platts refined petroleum prices over short-term (H1–H7) and medium-term (H10–H60) horizons are of practical importance for business decision-making
+
+[Change #14]:
+  ❌ Deleted : have substantially improved performance on general benchmarks
+  ✅ Inserted: have improved performance on general benchmarks
+
+[Change #15]:
+  ❌ Deleted : three signal groups possess fundamentally different natures:
+  ✅ Inserted: three groups of signals differ fundamentally in nature:
+
+[Change #16]:
+  ❌ Deleted : that demand specialized architectural inductive biases
+  ✅ Inserted: which call for specialized architectural inductive biases
+
+[Change #17]:
+  ❌ Deleted : thereby degrading the degree of expert specialization
+  ✅ Inserted: which may limit the degree of expert specialization
+
+[Change #18]:
+  ❌ Deleted : The proposed GUMNetHet model resolves this bottleneck via feature partitioning:
+  ✅ Inserted: The proposed GUMNetHet model addresses this limitation via feature partitioning:
+
+[Change #19]:
+  ❌ Deleted : These three representations are flexibly aggregated via a gating router
+  ✅ Inserted: These three representations are combined via a gating router
+
+[Change #20]:
+  ❌ Deleted : grounded in economic principles and frequency domains, effectively preventing expert collapse (ablation reveals
+  ✅ Inserted: grounded in economic characteristics and frequency content, which mitigates expert collapse (ablation shows
+
+[Change #21]:
+  ❌ Deleted : with Wavelet-KAN allocation surging up to 0.61 during top-decile GPR shock regimes
+  ✅ Inserted: with the Wavelet-KAN weight rising to 0.61 in top-decile GPR regimes
+
+[Change #22]:
+  ❌ Deleted : A multi-quantile tail risk head
+  ✅ Inserted: A multi-quantile head
+
+[Change #23]:
+  ❌ Deleted : combined with residual scaling to curtail long-horizon variance drift and deliver calibrated prediction intervals
+  ✅ Inserted: combined with residual scaling to limit long-horizon variance drift and provide calibrated prediction intervals
+
+[Change #24]:
+  ❌ Deleted : Extensive expanding walk-forward empirical evaluations on
+  ✅ Inserted: Expanding walk-forward evaluation on
+
+[Change #25]:
+  ❌ Deleted : directly within severe geopolitical turmoil (test set volatility
+  ✅ Inserted: in a period of elevated geopolitical volatility (test-set volatility
+
+[Change #26]:
+  ❌ Deleted : demonstrating consistent MAE superiority across all horizons H1–H60 over six competitive state-of-the-art baselines with up to 30.1%
+  ✅ Inserted: showing lower MAE than six competitive baselines at all horizons H1–H60, with up to 30.1%
+
+[Change #27]:
+  ❌ Deleted : and Baumeister & Kilian
+  ✅ Inserted: and Baumeister and Kilian
+
+[Change #28]:
+  ❌ Deleted : established foundational frameworks for decomposing supply–demand shocks in oil markets
+  ✅ Inserted: established frameworks for decomposing supply and demand shocks in oil markets
+
+[Change #29]:
+  ❌ Deleted : where wavelets are uniquely suited for multi-resolution localized signals
+  ✅ Inserted: where wavelets are well suited to localized, multi-resolution signals
+
+[Change #30]:
+  ❌ Deleted : further demonstrate the value of expert routing in time series.
+  ✅ Inserted: further demonstrate the value of expert routing in time series. Unlike these homogeneous expert designs, GUMNetHet assigns different architectures to different feature groups and conditions the router on the forecast horizon.
+
+[Change #31]:
+  ❌ Deleted : is subsequently reconstructed exactly via the deterministic inverse mapping in
+  ✅ Inserted: is then recovered via the deterministic inverse mapping in
+
+[Change #32]:
+  ❌ Deleted : This direct cumulative return formulation transforms the non-stationary price series into stationary log-returns
+  ✅ Inserted: This direct cumulative-return formulation maps the non-stationary price series to stationary log-returns (
+
+[Change #33]:
+  ❌ Deleted : (empirically validated in Section IV-B), while completely eliminating autoregressive error compounding across multi-step horizons.
+  ✅ Inserted: ; see Section IV-B) and avoids recursive error accumulation across multi-step horizons.
+
+[Change #34]:
+  ❌ Deleted : that feed all features into every expert—which often degrades specialization—GUMNetHet partitions features across frequency domains and economic characteristics:
+  ✅ Inserted: that feed all features into every expert, which may weaken specialization, GUMNetHet partitions features by frequency content and economic characteristics:
+
+[Change #35]:
+  ❌ Deleted : This mechanism enforces strong domain inductive bias, effectively preventing expert degeneration.
+  ✅ Inserted: This design imposes a domain-specific inductive bias on each expert and helps mitigate expert degeneration.
+
+[Change #36]:
+  ❌ Deleted : 3) Non-Linear Shock-Absorption Expert: Wavelet-KAN:
+  ✅ Inserted: 3) Non-Linear Shock Expert: Wavelet-KAN:
+
+[Change #37]:
+  ❌ Deleted : To capture severe non-linear structural breaks induced by extreme geopolitical risk events, the third expert implements
+  ✅ Inserted: To capture non-linear structural breaks associated with geopolitical risk events, the third expert implements
+
+[Change #38]:
+  ❌ Deleted : To dynamically modulate expert contributions across diverse forecasting horizons and varying market regimes
+  ✅ Inserted: To adjust expert contributions across forecasting horizons and market regimes
+
+[Change #39]:
+  ❌ Deleted : 5) Residual Scaling Bounding & Multi-Quantile Head:
+  ✅ Inserted: 5) Residual Scaling and Multi-Quantile Head:
+
+[Change #40]:
+  ❌ Deleted : To prevent variance explosion at long horizons (such as H60)
+  ✅ Inserted: To limit variance growth at long horizons (such as H60)
+
+[Change #41]:
+  ❌ Deleted : the out-of-sample test windows (2024–2026) specifically stress-test model resilience under the recent era of clustered acute geopolitical shocks (namely,
+  ✅ Inserted: the out-of-sample test windows (2024–2026) fall within a recent period of clustered geopolitical shocks (namely,
+
+[Change #42]:
+  ❌ Deleted : direct Middle East/Iran–Israel military escalations
+  ✅ Inserted: Middle East/Iran–Israel military escalations
+
+[Change #43]:
+  ❌ Deleted : during the short-term test window (100 days) surges to 73.04%
+  ✅ Inserted: during the short-term test window (100 days) rises to 73.04%
+
+[Change #44]:
+  ❌ Deleted : Price swings in the H60 test window record extreme peak-to-trough variations:
+  ✅ Inserted: Prices in the H60 test window span a wide peak-to-trough range:
+
+[Change #45]:
+  ❌ Deleted : Comprehensive train/test splits
+  ✅ Inserted: Train/test splits
+
+[Change #46]:
+  ❌ Deleted : Table 1
+  ✅ Inserted: Table I
+
+[Change #47]:
+  ❌ Deleted : This configuration serves as a rigorous stress-testing benchmark, ensuring models are evaluated on their capacity to adapt under fat-tailed regime shifts rather than static market conditions.
+  ✅ Inserted: This configuration therefore acts as a stress test, evaluating the models under fat-tailed regime shifts rather than stable market conditions.
+
+[Change #48]:
+  ❌ Deleted : Table 2
+  ✅ Inserted: Table II
+
+[Change #49]:
+  ❌ Deleted : provide evidence of non-stationarity in raw price levels;
+  ✅ Inserted: indicate non-stationarity in raw price levels for most series;
+
+[Change #50]:
+  ❌ Deleted : Return kurtosis is exceptionally high (213.35 for WTI and 17.51 for MG95), substantiating fat tails and extreme jumps in energy price series.
+  ✅ Inserted: Return kurtosis is high (213.35 for WTI and 17.51 for MG95), consistent with fat tails and large jumps in energy price series.
+
+[Change #51]:
+  ❌ Deleted : Evaluated baselines comprise six representative state-of-the-art benchmarks:
+  ✅ Inserted: Six representative baselines are evaluated:
+
+[Change #52]:
+  ❌ Deleted : , TFT
+  ✅ Inserted: , BiMamba 【HÀNH ĐỘNG: bổ sung trích dẫn cho BiMamba】, and Chronos
+
+[Change #53]:
+  ❌ Deleted : [12]
+  ✅ Inserted: [16]
+
+[Change #54]:
+  ❌ Deleted : , and N-HiTS
+  ✅ Inserted: Table III
+
+[Change #55]:
+  ❌ Deleted : [14]
+  ✅ Inserted: Table IV
+
+[Change #56]:
+  ❌ Deleted : Table 3
+  ✅ Inserted: show that GUMNetHet attains lower MAE than the reported baselines for both products at all horizons, with larger margins at H20–H60, where the test set experiences price swings of up to
+
+[Change #57]:
+  ❌ Deleted : Table 4
+  ✅ Inserted: at H60 falls to 0.155 (gasoline) and −0.007 (diesel); the long-horizon results should therefore be interpreted as lower price-level error under high volatility rather than reliable trajectory forecasting.
+
+[Change #58]:
+  ❌ Deleted : demonstrates that GUMNetHet consistently maintains lower MAE than all reported baselines across both products over all horizons, with pronounced advantages at H20–H60 where the test set undergoes massive price swings of up to
+  ✅ Inserted: shows a clear difference between short and long horizons
+
+[Change #59]:
+  ❌ Deleted : at H60 moderates to 0.155 (gasoline) and −0.007 (diesel), indicating that long-term performance represents superior price-level stabilization under high volatility rather than flawless trajectory forecasting.
+  ✅ Inserted: Table III
+
+[Change #60]:
+  ❌ Deleted : reveals distinct behavior between short and long horizons
+  ✅ Inserted: Table IV
+
+[Change #61]:
+  ❌ Deleted : Table 3
+  ✅ Inserted: At H20, DA remains high (91.65% for gasoline; 71.11% for diesel). However, at H10 and H60, DA drops below 50%
+
+[Change #62]:
+  ❌ Deleted : Table 4
+  ✅ Inserted: The long-horizon behavior is consistent with well-known results in financial econometrics: over extended horizons (H60 spans nearly three months), oil prices behave close to a random walk, with uncertainty accumulating with the horizon and directional signals becoming weak. A plausible explanation is that the residual scaling mechanism shrinks predictions toward the current price level rather than committing to strong directional forecasts, which reduces absolute error (MAE reduced by 30.1% at H60) at the cost of directional accuracy. The drop at H10, between two horizons with high DA, does not follow this pattern and is left for further investigation. Overall, GUMNetHet is better suited to providing directional signals at short horizons (H1–H7) and to price-level error control and uncertainty quantification at long horizons (H10–H60).
+
+[Change #63]:
+  ❌ Deleted : At H20, DA remains substantial (91.65% for gasoline; 71.11% for diesel). Conversely, at H10 and H60, DA drops below 50%
+  ✅ Inserted: This indicates that the model avoids under-coverage while maintaining sharpness, which is useful for oil importers
+
+[Change #64]:
+  ❌ Deleted : This phenomenon aligns with financial econometrics principles: over extended horizons (H60 spanning nearly three months), oil prices approximate a near random walk with exponentially compounding uncertainty, rendering directional signals noisy. Rather than taking extreme directional bets that risk catastrophic error explosion, GUMNetHet's residual scaling mechanism shrinks predictions toward robust central bounds to minimize absolute error (MAE reduced by 30.1% at H60). Consequently, GUMNetHet operates as an effective directional trading signal at short horizons (H1–H7), while transitioning into a price-level risk and uncertainty quantification tool at long horizons (H10–H60).
+  ✅ Inserted: shows that the prediction intervals widen during periods of higher market volatility
+
+[Change #65]:
+  ❌ Deleted : This validates that the model avoids under-coverage while maintaining sharpness, offering practical utility for oil importers
+  ✅ Inserted: Table V
+
+[Change #66]:
+  ❌ Deleted : illustrates that prediction intervals dynamically widen during heightened market volatility
+  ✅ Inserted: indicate that replacing Wav-KAN with an MLP causes the largest degradation among the expert variants; a uniform router also increases MAE, supporting the roles of expert specialization and adaptive routing.
+
+[Change #67]:
+  ❌ Deleted : Table 5
+  ✅ Inserted: CNN (k=3 only)
+
+[Change #68]:
+  ❌ Deleted : indicate that replacing Wav-KAN with MLP causes the steepest degradation among expert variants; a uniform router similarly inflates MAE, corroborating the essential roles of expert specialization and adaptive routing.
+  ✅ Inserted: Uniform router
+
+[Change #69]:
+  ❌ Deleted : CNN chỉ k=3
+  ✅ Inserted: Removing residual scaling
+
+[Change #70]:
+  ❌ Deleted : Router đồng nhất
+  ✅ Inserted: the Wav-KAN weight rises from approximately 0.29 to 0.61
+
+[Change #71]:
+  ❌ Deleted : Empirical results reveal that removing residual scaling
+  ✅ Inserted: while the CNN weight decreases to approximately 0.21. These findings indicate that the router changes its routing regime rather than simply averaging expert outputs.
+
+[Change #72]:
+  ❌ Deleted : the Wav-KAN weight surges from approximately 0.29 to 0.61
+  ✅ Inserted: The model combines a multi-scale 1D-CNN, GRU-Attention, and Wavelet-KAN through a horizon-aware router, with multi-quantile outputs and residual scaling to improve stability over extended horizons.
+
+[Change #73]:
+  ❌ Deleted : while the CNN weight contracts to approximately 0.21. These findings demonstrate that the router executes genuine regime-switching rather than trivial output averaging.
+  ✅ Inserted: show that GUMNetHet achieves the lowest MAE among the evaluated baselines across H1–H60
+
+[Change #74]:
+  ❌ Deleted : The model synergizes multi-scale 1D-CNN, GRU-Attention, and Wavelet-KAN through a horizon-aware router, combined with multi-quantile outputs and residual scaling to bolster stability over extended horizons.
+  ✅ Inserted: Ablation experiments and router weight analyses support the contributions of
+
+[Change #75]:
+  ❌ Deleted : demonstrate that GUMNetHet achieves the lowest MAE across all evaluated baselines throughout H1–H60
+  ✅ Inserted: feature partitioning, Wavelet-KAN, and adaptive routing. However, the decline of
+
+[Change #76]:
+  ❌ Deleted : Ablation experiments and router weight analyses corroborate the contributions of
+  ✅ Inserted: and directional accuracy at long horizons indicates that the model's advantage lies in price-level error control and uncertainty quantification rather than in long-range directional forecasting.
+
+[Change #77]:
+  ❌ Deleted : feature partitioning, Wavelet-KAN, and adaptive routing. However, the attenuation of
+  ✅ Inserted: are publicly available at the project repository:
+
+[Change #78]:
+  ❌ Deleted : and directional accuracy at long horizons underscores that model superiority lies in price-level error containment and uncertainty quantification, rather than long-range directional forecasting.
+
+[Change #79]:
+  ❌ Deleted : are publicly available for full peer reproducibility at the project repository:

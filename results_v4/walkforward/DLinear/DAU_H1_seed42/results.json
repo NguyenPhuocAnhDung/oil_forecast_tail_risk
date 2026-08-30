@@ -1,0 +1,20 @@
+{
+  "model": "DLinear",
+  "target_type": "DAU",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MSE": 135.78401420570302,
+    "RMSE": 11.652639795587222,
+    "MAE": 6.034611210751532,
+    "MAPE": 3.5124143491926185,
+    "R2": 0.9603540181535232,
+    "DA": 55.05050505050505
+  },
+  "n_iterations": 100,
+  "n_features": 16,
+  "runtime_seconds": 1650.9,
+  "status": "completed",
+  "datetime": "2026-07-17T19:15:33.251221Z"
+}

@@ -1,0 +1,31 @@
+{
+  "model": "GUMNet_Wavelet",
+  "target_type": "XANG",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 2.985307,
+    "RMSE": 5.507822,
+    "MAPE": 2.588,
+    "sMAPE": 2.5817,
+    "MASE": 0.617954,
+    "WAPE": 3.0149,
+    "R2": 0.967256,
+    "DA": 54.55,
+    "MSE": 30.336109,
+    "MdAE": 1.042948,
+    "MdAPE": 1.3069,
+    "MaxAE": 25.753539,
+    "Bias": -0.04314,
+    "TheilU": 0.776598,
+    "PICP": 67.0,
+    "PINAW": 6.1361,
+    "crps": 2.081179
+  },
+  "n_iterations": 100,
+  "n_features": 15,
+  "runtime_seconds": 33689.1,
+  "status": "completed",
+  "datetime": "2026-08-18T16:21:21.372127Z"
+}

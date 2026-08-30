@@ -1,0 +1,29 @@
+{
+  "model": "TimeMachine",
+  "target_type": "XANG",
+  "horizon": 7,
+  "protocol": "walkforward",
+  "seed": 123,
+  "metrics": {
+    "MAE": 4.961208,
+    "RMSE": 8.909985,
+    "MAPE": 4.5049,
+    "sMAPE": 4.6371,
+    "MASE": 1.224855,
+    "WAPE": 5.4145,
+    "R2": 0.884421,
+    "DA": 47.26,
+    "MSE": 79.387827,
+    "MdAE": 1.789686,
+    "MdAPE": 2.3071,
+    "MaxAE": 39.82579,
+    "Bias": 1.640108,
+    "TheilU": 1.482742,
+    "crps": 4.961208
+  },
+  "n_iterations": 21,
+  "n_features": 16,
+  "runtime_seconds": 5157.9,
+  "status": "completed",
+  "datetime": "2026-08-20T03:32:12.328715Z"
+}

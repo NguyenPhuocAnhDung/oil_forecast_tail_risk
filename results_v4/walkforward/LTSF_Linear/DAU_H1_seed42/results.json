@@ -1,0 +1,20 @@
+{
+  "model": "LTSF_Linear",
+  "target_type": "DAU",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MSE": 125.14188673617544,
+    "RMSE": 11.186683455617015,
+    "MAE": 5.772568641489744,
+    "MAPE": 3.367762287431545,
+    "R2": 0.9634612881435355,
+    "DA": 58.080808080808076
+  },
+  "n_iterations": 100,
+  "n_features": 16,
+  "runtime_seconds": 1418.8,
+  "status": "completed",
+  "datetime": "2026-07-17T19:11:41.183788Z"
+}

@@ -1,0 +1,46 @@
+Total comments found in comments.xml: 7
+
+==================================================
+COMMENT ID: 0 | Author: Huong Bui | Date: 2026-08-30T04:31:00Z
+COMMENT TEXT:
+Các con số này có chuẩn xác không, thể hiện chỗ nào trong bài, rà soát lại để chỉnh nếu cần?
+==================================================
+
+==================================================
+COMMENT ID: 1 | Author: Huong Bui | Date: 2026-08-30T04:10:00Z
+COMMENT TEXT:
+Cần có giải thích hoặc số liệu minh chứng cho ý này
+==================================================
+
+==================================================
+COMMENT ID: 4 | Author: Huong Bui | Date: 2026-08-30T04:12:00Z
+COMMENT TEXT:
+Sửa lại ký hiệu P mũ trong công thức này cho rõ ràng
+==================================================
+
+==================================================
+COMMENT ID: 8 | Author: Huong Bui | Date: 2026-08-30T04:16:00Z
+COMMENT TEXT:
+Công thức này bị thiếu phía sau?
+==================================================
+
+==================================================
+COMMENT ID: 12 | Author: Huong Bui | Date: 2026-08-30T04:18:00Z
+COMMENT TEXT:
+Công thức này cũng bị thiếu phía sau?
+==================================================
+
+==================================================
+COMMENT ID: 20 | Author: Huong Bui | Date: 2026-08-30T04:23:00Z
+COMMENT TEXT:
+Ý này có chuẩn ko? Mình có thực hiện test trên tất cả các giai đoạn biến động chính trị nói trên hay chỉ test trong giai đoạn Mỹ - Iran? Cần làm rõ và sửa lại đoạn này nếu chưa chuẩn
+==================================================
+
+==================================================
+COMMENT ID: 29 | Author: Huong Bui | Date: 2026-08-30T04:33:00Z
+COMMENT TEXT:
+Kiểm tra các con số này
+==================================================
+
+
+--- ANCHORED PARAGRAPHS IN DOCUMENT ---

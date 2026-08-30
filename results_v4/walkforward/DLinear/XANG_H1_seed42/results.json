@@ -1,0 +1,20 @@
+{
+  "model": "DLinear",
+  "target_type": "XANG",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MSE": 31.048095175938116,
+    "RMSE": 5.572081763213648,
+    "MAE": 3.0237472007572648,
+    "MAPE": 2.645646633217501,
+    "R2": 0.9664870877125693,
+    "DA": 54.54545454545454
+  },
+  "n_iterations": 100,
+  "n_features": 15,
+  "runtime_seconds": 3001.0,
+  "status": "completed",
+  "datetime": "2026-07-17T19:32:56.072847Z"
+}

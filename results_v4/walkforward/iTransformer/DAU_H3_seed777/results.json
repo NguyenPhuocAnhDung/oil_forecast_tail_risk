@@ -1,0 +1,29 @@
+{
+  "model": "iTransformer",
+  "target_type": "DAU",
+  "horizon": 3,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 10.007256,
+    "RMSE": 20.101002,
+    "MAPE": 5.9928,
+    "sMAPE": 5.91,
+    "MASE": 1.79634,
+    "WAPE": 7.7388,
+    "R2": 0.882568,
+    "DA": 42.35,
+    "MSE": 404.050297,
+    "MdAE": 2.013584,
+    "MdAPE": 2.1952,
+    "MaxAE": 125.220491,
+    "Bias": -1.301071,
+    "TheilU": 1.936536,
+    "crps": 10.007256
+  },
+  "n_iterations": 33,
+  "n_features": 16,
+  "runtime_seconds": 4812.4,
+  "status": "completed",
+  "datetime": "2026-08-25T22:22:52.996278Z"
+}

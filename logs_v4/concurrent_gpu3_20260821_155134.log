@@ -1,0 +1,6 @@
+Concurrent run started: 2026-08-21T15:51:34.276720
+GPU: 3 | Models: 47 | Jobs: 417
+
+[   1/417]   0.2% | OK:1    FAIL:0    SKIP:241 | OK           | 1876s | ETA:13004m | UniTS|XANG|H20|s9999
+[   2/417]   0.5% | OK:2    FAIL:0    SKIP:241 | OK           | 2204s | ETA:7624m | iTransformer|XANG|H20|s9999
+[   3/417]   0.7% | OK:3    FAIL:0    SKIP:241 | OK           | 2007s | ETA:8930m | TimeXer|XANG|H20|s9999

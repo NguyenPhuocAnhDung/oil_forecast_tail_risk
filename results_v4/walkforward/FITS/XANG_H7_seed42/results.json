@@ -1,0 +1,28 @@
+{
+  "model": "FITS",
+  "target_type": "XANG",
+  "horizon": 7,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 5.011424,
+    "RMSE": 8.965777,
+    "MAPE": 4.4994,
+    "sMAPE": 4.641,
+    "MASE": 1.237253,
+    "WAPE": 5.4693,
+    "R2": 0.882969,
+    "DA": 45.21,
+    "MSE": 80.385157,
+    "MdAE": 1.685359,
+    "MdAPE": 2.1181,
+    "MaxAE": 40.124314,
+    "Bias": 1.915288,
+    "TheilU": 1.492044
+  },
+  "n_iterations": 21,
+  "n_features": 16,
+  "runtime_seconds": 725.3,
+  "status": "completed",
+  "datetime": "2026-07-18T09:43:14.189191Z"
+}

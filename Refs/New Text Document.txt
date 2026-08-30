@@ -1,0 +1,27 @@
+[1] Haas, C., Budin, C., & d’Arcy, A. (2024). How to select oil price prediction models—The effect of statistical and financial performance metrics and sentiment scores. Energy Economics, 133, 107466.
+https://doi.org/10.1016/j.eneco.2024.107466
+[2] Ross, S. (2024, January 9). How do companies forecast oil prices? Investopedia. https://www.investopedia.com/articles/investing/101215/how-do-companies-forecast-oil-prices.asp
+[3] Bashiri Behmiri, N., & Pires Manso, J. R. (2013). Crude Oil Price Forecasting Techniques: a comprehensive review of literature. Alternative Investment Analyst Review (Research Review). CAIA Association. https://caia.org/sites/default/files/research_review.pdf
+[4] [5] [11] Ross, S. (2024). How do companies forecast oil prices? Investopedia. https://www.investopedia.com/articles/investing/101215/how-do-companies-forecast-oil-prices.asp
+[6] U.S. Energy Information Administration. (2020). Short-Term Energy Forecasting Overview (STEO Overview). U.S. Energy Information Administration. https://www.eia.gov/analysis/handbook/pdf/STEO_Overview.pdf
+[7] U.S. Energy Information Administration. (2020). Short-Term Energy Forecasting Overview (STEO Overview). U.S. Energy Information Administration. https://www.eia.gov/analysis/handbook/pdf/STEO_Overview.pdf
+[8] Bashiri Behmiri, N., & Pires Manso, J. R. (2013, June 6). Crude Oil Price Forecasting Techniques: A Comprehensive Review of Literature (Research Review, Alternative Investment Analyst Review). CAIA Association. https://www.caia.org/sites/default/files/research_review.pdf
+[9] Bashiri Behmiri, N., & Pires Manso, J. R. (2013, June 6). Crude Oil Price Forecasting Techniques: A Comprehensive Review of Literature (Research Review, Alternative Investment Analyst Review). CAIA Association. https://www.caia.org/sites/default/files/research_review.pdf
+[10] Economies.com. (2025). Oil Technical Analysis. https://www.economies.com/commodities/oil-analysis
+[11] Ross, S. (2024). How do companies forecast oil prices? Investopedia. https://www.investopedia.com/articles/investing/101215/how-do-companies-forecast-oil-prices.asp
+[12] [13] Haas, C. (2024). How to select oil price prediction models – The effect of statistical and financial performance metrics and sentiment scores. Energy Economics, 133, Article 107466. https://doi.org/10.1016/j.eneco.2024.107466
+[13] 
+[14] Yao, L., Pu, Y., & Qiu, B. (2021). Prediction of Oil Price Using LSTM and Prophet. In Proceeding of the International Conference on Applied Energy, Bangkok, Thailand (Vol. 29). https://www.energy-proceedings.org/wp-content/uploads/icae2021/1642296576.pdf
+[15]  Tạp chí Tài chính. (2020, 25 tháng 10). Ứng dụng của mô hình Lasso trong dự báo chỉ số kinh tế. Tạp chí Tài chính, Kỳ 2–Tháng 5/2020. https://tapchitaichinh.vn/ung-dung-cua-mo-hinh-lasso-trong-du-bao-chi-so-kinh-te.html
+[16]  trùng 14
+[17] trùng 2
+[18] trùng 14
+[19] trùng 14
+[20] trùng 14
+[24] Trùng 2
+[25] trùng 2
+
+
+
+
+

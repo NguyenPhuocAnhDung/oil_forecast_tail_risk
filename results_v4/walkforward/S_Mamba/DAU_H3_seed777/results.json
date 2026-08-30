@@ -1,0 +1,29 @@
+{
+  "model": "S_Mamba",
+  "target_type": "DAU",
+  "horizon": 3,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 9.333522,
+    "RMSE": 18.024817,
+    "MAPE": 5.6163,
+    "sMAPE": 5.6986,
+    "MASE": 1.675402,
+    "WAPE": 7.2178,
+    "R2": 0.905574,
+    "DA": 48.47,
+    "MSE": 324.894015,
+    "MdAE": 2.142149,
+    "MdAPE": 2.2993,
+    "MaxAE": 105.934023,
+    "Bias": 0.574529,
+    "TheilU": 1.736501,
+    "crps": 9.333522
+  },
+  "n_iterations": 33,
+  "n_features": 16,
+  "runtime_seconds": 15103.2,
+  "status": "completed",
+  "datetime": "2026-08-27T14:02:29.940731Z"
+}

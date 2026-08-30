@@ -1,0 +1,29 @@
+{
+  "model": "Reformer",
+  "target_type": "XANG",
+  "horizon": 10,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 5.405955,
+    "RMSE": 10.79258,
+    "MAPE": 4.897,
+    "sMAPE": 5.1157,
+    "MASE": 1.507929,
+    "WAPE": 6.0844,
+    "R2": 0.788521,
+    "DA": 50.39,
+    "MSE": 116.479781,
+    "MdAE": 1.893587,
+    "MdAPE": 2.4091,
+    "MaxAE": 65.926685,
+    "Bias": 1.801527,
+    "TheilU": 2.005368,
+    "crps": 5.405955
+  },
+  "n_iterations": 40,
+  "n_features": 14,
+  "runtime_seconds": 3186.8,
+  "status": "completed",
+  "datetime": "2026-08-20T11:19:51.641847Z"
+}

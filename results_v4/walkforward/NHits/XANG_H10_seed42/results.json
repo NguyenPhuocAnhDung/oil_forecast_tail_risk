@@ -1,0 +1,28 @@
+{
+  "model": "NHits",
+  "target_type": "XANG",
+  "horizon": 10,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 4.834748,
+    "RMSE": 9.731457,
+    "MAPE": 4.4461,
+    "sMAPE": 4.6841,
+    "MASE": 1.348598,
+    "WAPE": 5.4415,
+    "R2": 0.828062,
+    "DA": 48.2,
+    "MSE": 94.701262,
+    "MdAE": 1.877241,
+    "MdAPE": 2.4352,
+    "MaxAE": 65.831199,
+    "Bias": 1.985889,
+    "TheilU": 1.808192
+  },
+  "n_iterations": 40,
+  "n_features": 14,
+  "runtime_seconds": 1087.0,
+  "status": "completed",
+  "datetime": "2026-07-18T09:29:34.804284Z"
+}

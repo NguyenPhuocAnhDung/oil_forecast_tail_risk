@@ -1,0 +1,29 @@
+{
+  "model": "PatchTST",
+  "target_type": "DAU",
+  "horizon": 10,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 9.497564,
+    "RMSE": 19.233848,
+    "MAPE": 6.4066,
+    "sMAPE": 6.6894,
+    "MASE": 2.680197,
+    "WAPE": 8.7363,
+    "R2": 0.827876,
+    "DA": 48.59,
+    "MSE": 369.9409,
+    "MdAE": 2.550029,
+    "MdAPE": 2.8782,
+    "MaxAE": 92.827108,
+    "Bias": 3.341119,
+    "TheilU": 2.257283,
+    "crps": 9.497564
+  },
+  "n_iterations": 40,
+  "n_features": 15,
+  "runtime_seconds": 5626.4,
+  "status": "completed",
+  "datetime": "2026-08-26T03:26:51.503903Z"
+}

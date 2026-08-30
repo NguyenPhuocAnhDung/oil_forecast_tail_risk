@@ -1,0 +1,29 @@
+{
+  "model": "TimeXer",
+  "target_type": "DAU",
+  "horizon": 7,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 11.842603,
+    "RMSE": 24.561698,
+    "MAPE": 7.7254,
+    "sMAPE": 7.615,
+    "MASE": 2.895985,
+    "WAPE": 10.2687,
+    "R2": 0.772551,
+    "DA": 56.16,
+    "MSE": 603.276987,
+    "MdAE": 3.064095,
+    "MdAPE": 3.2384,
+    "MaxAE": 111.752798,
+    "Bias": 0.991008,
+    "TheilU": 2.904629,
+    "crps": 11.842603
+  },
+  "n_iterations": 21,
+  "n_features": 17,
+  "runtime_seconds": 4537.6,
+  "status": "completed",
+  "datetime": "2026-08-27T23:57:33.720194Z"
+}

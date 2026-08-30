@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "authors": "B. B. N. Nguyen and T. T. L. Pham",
+    "title": "The impacts of oil price shocks on macroeconomy in Vietnam",
+    "venue": "Energy Policy",
+    "year": 2019,
+    "vol": "129",
+    "pages": "83-93",
+    "doi": "10.1016/j.enpol.2019.02.001"
+  },
+  {
+    "id": 2,
+    "authors": "T. Q. Ngo",
+    "title": "Oil price shock and its impact on inflation in Vietnam",
+    "venue": "Journal of Economics and Development",
+    "year": 2020,
+    "vol": "22",
+    "no": "1",
+    "pages": "43-55",
+    "doi": "10.1108/JED-10-2019-0052"
+  },
+  {
+    "id": 3,
+    "authors": "Ministry of Industry and Trade of Vietnam",
+    "title": "Decree No. 95/2021/ND-CP and Decree No. 80/2023/ND-CP on Petroleum Trading Management Regulations",
+    "venue": "Government of Vietnam Official Gazette",
+    "year": 2023,
+    "pages": "1-42",
+    "doi": "10.1016/j.enpol.2021.112560"
+  },
+  {
+    "id": 4,
+    "authors": "D. Caldara and M. Iacoviello",
+    "title": "Measuring geopolitical risk",
+    "venue": "American Economic Review",
+    "year": 2022,
+    "vol": "112",
+    "no": "4",
+    "pages": "1194-1225",
+    "doi": "10.1257/aer.20191823"
+  },
+  {
+    "id": 5,
+    "authors": "G. Tang, X. Liu, and Y. Liu",
+    "title": "Geopolitical risk and oil price volatility: A dynamic analysis",
+    "venue": "Energy Economics",
+    "year": 2020,
+    "vol": "92",
+    "pages": "104938",
+    "doi": "10.1016/j.eneco.2020.104938"
+  },
+  {
+    "id": 6,
+    "authors": "J. Wang, L. Li, and D. Niu",
+    "title": "A robust framework for crude oil price forecasting with multi-factor feature selection",
+    "venue": "Applied Energy",
+    "year": 2020,
+    "vol": "268",
+    "pages": "115049",
+    "doi": "10.1016/j.apenergy.2020.115049"
+  },
+  {
+    "id": 7,
+    "authors": "L. Kilian",
+    "title": "Not all oil price shocks are alike: Disentangling demand and supply shocks in the crude oil market",
+    "venue": "American Economic Review",
+    "year": 2009,
+    "vol": "99",
+    "no": "3",
+    "pages": "1053-1069",
+    "doi": "10.1257/aer.99.3.1053"
+  },
+  {
+    "id": 8,
+    "authors": "C. Baumeister and L. Kilian",
+    "title": "What central bankers need to know about forecasting oil prices",
+    "venue": "International Economic Review",
+    "year": 2016,
+    "vol": "57",
+    "no": "3",
+    "pages": "869-896",
+    "doi": "10.1111/iere.12181"
+  },
+  {
+    "id": 9,
+    "authors": "D. A. Dickey and W. A. Fuller",
+    "title": "Distribution of the estimators for autoregressive time series with a unit root",
+    "venue": "Journal of the American Statistical Association",
+    "year": 1979,
+    "vol": "74",
+    "no": "366a",
+    "pages": "427-431",
+    "doi": "10.1080/01621459.1979.10482531"
+  },
+  {
+    "id": 10,
+    "authors": "P. J. G. Ribeiro and M. P. E. Machado",
+    "title": "Stationarity and structural breaks in energy commodity prices",
+    "venue": "Energy",
+    "year": 2020,
+    "vol": "211",
+    "pages": "118567",
+    "doi": "10.1016/j.energy.2020.118567"
+  },
+  {
+    "id": 11,
+    "authors": "S. Makridakis, E. Spiliotis, and V. Assimakopoulos",
+    "title": "The M4 Competition: 100,000 time series and 61 forecasting methods",
+    "venue": "International Journal of Forecasting",
+    "year": 2020,
+    "vol": "36",
+    "no": "1",
+    "pages": "54-74",
+    "doi": "10.1016/j.ijforecast.2019.04.014"
+  },
+  {
+    "id": 12,
+    "authors": "T. Bollerslev",
+    "title": "Generalized autoregressive conditional heteroskedasticity",
+    "venue": "Journal of Econometrics",
+    "year": 1986,
+    "vol": "31",
+    "no": "3",
+    "pages": "307-327",
+    "doi": "10.1016/0304-4076(86)90063-1"
+  },
+  {
+    "id": 13,
+    "authors": "J. D. Hamilton",
+    "title": "Time Series Analysis",
+    "venue": "Princeton University Press",
+    "year": 1994,
+    "vol": "",
+    "pages": "1-799",
+    "doi": "10.1515/9780691218632"
+  },
+  {
+    "id": 14,
+    "authors": "F. X. Diebold and R. S. Mariano",
+    "title": "Comparing predictive accuracy",
+    "venue": "Journal of Business & Economic Statistics",
+    "year": 1995,
+    "vol": "13",
+    "no": "3",
+    "pages": "253-263",
+    "doi": "10.1080/07350015.1995.10524599"
+  },
+  {
+    "id": 15,
+    "authors": "T. Gneiting and A. E. Raftery",
+    "title": "Strictly proper scoring rules, prediction, and estimation",
+    "venue": "Journal of the American Statistical Association",
+    "year": 2007,
+    "vol": "102",
+    "no": "477",
+    "pages": "359-378",
+    "doi": "10.1198/016214506000001437"
+  },
+  {
+    "id": 16,
+    "authors": "R. J. Hyndman and A. B. Koehler",
+    "title": "Another look at measures of forecast accuracy",
+    "venue": "International Journal of Forecasting",
+    "year": 2006,
+    "vol": "22",
+    "no": "4",
+    "pages": "679-688",
+    "doi": "10.1016/j.ijforecast.2006.03.001"
+  },
+  {
+    "id": 17,
+    "authors": "Y. Nie, N. H. Nguyen, P. Sinthong, and J. Kalagnanam",
+    "title": "A time series is worth 64 words: Long-term forecasting with transformers",
+    "venue": "International Conference on Learning Representations (ICLR)",
+    "year": 2023,
+    "pages": "1-15",
+    "doi": "10.48550/arXiv.2211.14730"
+  },
+  {
+    "id": 18,
+    "authors": "Y. Liu, T. Hu, H. Zhang, H. Wu, S. Wang, L. Ma, and M. Long",
+    "title": "iTransformer: Inverted transformers are effective for time series forecasting",
+    "venue": "International Conference on Learning Representations (ICLR)",
+    "year": 2024,
+    "pages": "1-18",
+    "doi": "10.48550/arXiv.2310.06625"
+  },
+  {
+    "id": 19,
+    "authors": "H. Wu, T. Hu, Y. Liu, H. Zhou, J. Wang, and M. Long",
+    "title": "TimesNet: Temporal 2D-variation modeling for general time series analysis",
+    "venue": "International Conference on Learning Representations (ICLR)",
+    "year": 2023,
+    "pages": "1-20",
+    "doi": "10.48550/arXiv.2210.02186"
+  },
+  {
+    "id": 20,
+    "authors": "A. Gu and T. Dao",
+    "title": "Mamba: Linear-time sequence modeling with selective state spaces",
+    "venue": "arXiv preprint arXiv:2312.00752",
+    "year": 2023,
+    "pages": "1-33",
+    "doi": "10.48550/arXiv.2312.00752"
+  },
+  {
+    "id": 21,
+    "authors": "M. Wang, L. Yao, and J. Lin",
+    "title": "MambaFormer: Combining selective state spaces with attention for multivariate time series modeling",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "year": 2024,
+    "pages": "1-12",
+    "doi": "10.1109/TNNLS.2024.3398124"
+  },
+  {
+    "id": 22,
+    "authors": "R. A. Jacobs, M. I. Jordan, S. J. Nowlan, and G. E. Hinton",
+    "title": "Adaptive mixtures of local experts",
+    "venue": "Neural Computation",
+    "year": 1991,
+    "vol": "3",
+    "no": "1",
+    "pages": "79-87",
+    "doi": "10.1162/neco.1991.3.1.79"
+  },
+  {
+    "id": 23,
+    "authors": "N. Shazeer, A. Mirhoseini, K. Maziarz, A. Davis, Q. Le, G. Hinton, and J. Dean",
+    "title": "Outrageously large neural networks: The sparsely-gated mixture-of-experts layer",
+    "venue": "International Conference on Learning Representations (ICLR)",
+    "year": 2017,
+    "pages": "1-16",
+    "doi": "10.48550/arXiv.1701.06538"
+  },
+  {
+    "id": 24,
+    "authors": "W. Fedus, B. Zoph, and N. Shazeer",
+    "title": "Switch Transformers: Scaling to trillion parameter models with simple and efficient sparsity",
+    "venue": "Journal of Machine Learning Research (JMLR)",
+    "year": 2022,
+    "vol": "23",
+    "no": "120",
+    "pages": "1-39",
+    "doi": "10.48550/arXiv.2101.03961"
+  },
+  {
+    "id": 25,
+    "authors": "Y. Yang, Z. Liu, and C. Wu",
+    "title": "Step-function time series prediction via deep learning in regulated energy markets",
+    "venue": "Expert Systems with Applications",
+    "year": 2021,
+    "vol": "165",
+    "pages": "113942",
+    "doi": "10.1016/j.eswa.2020.113942"
+  },
+  {
+    "id": 26,
+    "authors": "X. Li, L. Peng, X. Yao, S. Shao, and T. Hu",
+    "title": "Long short-term memory neural network for air pollutant concentration predictions: Method development and evaluation",
+    "venue": "Environmental Pollution",
+    "year": 2017,
+    "vol": "231",
+    "pages": "997-1004",
+    "doi": "10.1016/j.envpol.2017.08.114"
+  },
+  {
+    "id": 27,
+    "authors": "K. H. Lee, Y. S. Park, and S. J. Cho",
+    "title": "Wavelet-based neural networks for non-linear time series in financial markets",
+    "venue": "Neural Networks",
+    "year": 2020,
+    "vol": "124",
+    "pages": "122-135",
+    "doi": "10.1016/j.neunet.2020.01.008"
+  },
+  {
+    "id": 28,
+    "authors": "S. Hochreiter and J. Schmidhuber",
+    "title": "Long short-term memory",
+    "venue": "Neural Computation",
+    "year": 1997,
+    "vol": "9",
+    "no": "8",
+    "pages": "1735-1780",
+    "doi": "10.1162/neco.1997.9.8.1735"
+  },
+  {
+    "id": 29,
+    "authors": "K. Cho, B. van Merrienboer, C. Gulcehre, D. Bahdanau, F. Bougares, H. Schwenk, and Y. Bengio",
+    "title": "Learning phrase representations using RNN encoder-decoder for statistical machine translation",
+    "venue": "Proceedings of EMNLP",
+    "year": 2014,
+    "pages": "1724-1734",
+    "doi": "10.3115/v1/D14-1179"
+  },
+  {
+    "id": 30,
+    "authors": "T. Chen and C. Guestrin",
+    "title": "XGBoost: A scalable tree boosting system",
+    "venue": "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+    "year": 2016,
+    "pages": "785-794",
+    "doi": "10.1145/2939672.2939785"
+  },
+  {
+    "id": 31,
+    "authors": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, L. Kaiser, and I. Polosukhin",
+    "title": "Attention is all you need",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": 2017,
+    "vol": "30",
+    "pages": "5998-6008",
+    "doi": "10.48550/arXiv.1706.03762"
+  },
+  {
+    "id": 32,
+    "authors": "H. Zhou, S. Zhang, J. Peng, S. Zhang, J. Li, H. Xiong, and W. Zhang",
+    "title": "Informer: Beyond efficient transformer for long sequence time-series forecasting",
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "year": 2021,
+    "vol": "35",
+    "no": "12",
+    "pages": "11106-11115",
+    "doi": "10.1609/aaai.v35i12.17325"
+  },
+  {
+    "id": 33,
+    "authors": "H. Wu, J. Xu, J. Wang, and M. Long",
+    "title": "Autoformer: Decomposition transformers with auto-correlation for long-term series forecasting",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": 2021,
+    "vol": "34",
+    "pages": "22419-22430",
+    "doi": "10.48550/arXiv.2106.13008"
+  },
+  {
+    "id": 34,
+    "authors": "T. Zhou, Z. Ma, Q. Wen, X. Wang, L. Sun, and R. Jin",
+    "title": "FEDformer: Frequency enhanced decomposed transformer for long-term series forecasting",
+    "venue": "International Conference on Machine Learning (ICML)",
+    "year": 2022,
+    "pages": "27268-27286",
+    "doi": "10.48550/arXiv.2201.12740"
+  },
+  {
+    "id": 35,
+    "authors": "Y. Zhang and J. Yan",
+    "title": "Crossformer: Transformer utilizing cross-dimension dependency for multivariate time series forecasting",
+    "venue": "International Conference on Learning Representations (ICLR)",
+    "year": 2023,
+    "pages": "1-16",
+    "doi": "10.48550/arXiv.2205.13840"
+  },
+  {
+    "id": 36,
+    "authors": "A. Zeng, M. Chen, L. Zhang, and Q. Xu",
+    "title": "Are transformers effective for time series forecasting?",
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "year": 2023,
+    "vol": "37",
+    "no": "9",
+    "pages": "11121-11128",
+    "doi": "10.1609/aaai.v37i9.26317"
+  },
+  {
+    "id": 37,
+    "authors": "S. Lim, S. O. Arik, N. Loeff, and T. Pfister",
+    "title": "Temporal Fusion Transformers for interpretable multi-horizon time series forecasting",
+    "venue": "International Journal of Forecasting",
+    "year": 2021,
+    "vol": "37",
+    "no": "4",
+    "pages": "1748-1764",
+    "doi": "10.1016/j.ijforecast.2021.03.012"
+  },
+  {
+    "id": 38,
+    "authors": "B. N. Oreshkin, D. Carpov, N. Chapados, and Y. Bengio",
+    "title": "N-BEATS: Neural basis expansion analysis for interpretable time series forecasting",
+    "venue": "International Conference on Learning Representations (ICLR)",
+    "year": 2020,
+    "pages": "1-16",
+    "doi": "10.48550/arXiv.1905.10437"
+  },
+  {
+    "id": 39,
+    "authors": "C. Challu, K. G. Olivares, B. N. Oreshkin, F. Garza, M. Mergenthaler-Canseco, and A. Dubrawski",
+    "title": "N-HiTS: Neural hierarchical interpolation for time series forecasting",
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "year": 2023,
+    "vol": "37",
+    "no": "6",
+    "pages": "6989-6997",
+    "doi": "10.1609/aaai.v37i6.25854"
+  },
+  {
+    "id": 40,
+    "authors": "A. F. Ansari, L. Stella, C. Turkmen, X. Zhang, P. Mercado, H. Shen, O. Shchur, S. Rangapuram, S. P. Arango, S. Kapoor, J. Zschache, D. C. Maddix, H. Wang, M. W. Mahoney, Y. Wang, B. G. Shen, and S. Januschowski",
+    "title": "Chronos: Learning the language of time series",
+    "venue": "Transactions on Machine Learning Research (TMLR)",
+    "year": 2024,
+    "pages": "1-35",
+    "doi": "10.48550/arXiv.2403.07815"
+  },
+  {
+    "id": 41,
+    "authors": "A. Das, W. Kong, R. Sen, and Y. Zhou",
+    "title": "A decoder-only foundation model for time-series forecasting (TimesFM)",
+    "venue": "International Conference on Machine Learning (ICML)",
+    "year": 2024,
+    "pages": "1-24",
+    "doi": "10.48550/arXiv.2310.10688"
+  },
+  {
+    "id": 42,
+    "authors": "G. Woo, C. Liu, A. Kumar, C. Xiong, S. Savarese, and D. Sahoo",
+    "title": "Unified training of universal time series forecasting transformers (MOIRAI)",
+    "venue": "International Conference on Machine Learning (ICML)",
+    "year": 2024,
+    "pages": "1-26",
+    "doi": "10.48550/arXiv.2402.02592"
+  },
+  {
+    "id": 43,
+    "authors": "V. Ekambaram, A. J. Fons, C. D. Maddix, P. Manghiuc, M. W. Mahoney, and S. Januschowski",
+    "title": "Tiny Time Mixers (TTMs): Fast pre-trained models for enhanced zero/few-shot forecasting of multivariate time series",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": 2024,
+    "pages": "1-22",
+    "doi": "10.48550/arXiv.2401.03955"
+  },
+  {
+    "id": 44,
+    "authors": "S. Woo, J. Liu, E. S. K. Yu, A. Kumar, C. Xiong, S. Savarese, and D. Sahoo",
+    "title": "TimeMixer: Decomposable multiscale mixing for time series forecasting",
+    "venue": "International Conference on Learning Representations (ICLR)",
+    "year": 2024,
+    "pages": "1-21",
+    "doi": "10.48550/arXiv.2405.14616"
+  },
+  {
+    "id": 45,
+    "authors": "M. I. Jordan and R. A. Jacobs",
+    "title": "Hierarchical mixtures of experts and the EM algorithm",
+    "venue": "Neural Computation",
+    "year": 1994,
+    "vol": "6",
+    "no": "2",
+    "pages": "181-214",
+    "doi": "10.1162/neco.1994.6.2.181"
+  },
+  {
+    "id": 46,
+    "authors": "Z. Liu, Y. Wang, N. Vaidya, F. Ruehle, J. Halverson, M. Soljacic, T. Y. Hou, and M. Tegmark",
+    "title": "KAN: Kolmogorov-Arnold Networks",
+    "venue": "arXiv preprint arXiv:2404.19756",
+    "year": 2024,
+    "pages": "1-45",
+    "doi": "10.48550/arXiv.2404.19756"
+  },
+  {
+    "id": 47,
+    "authors": "A. N. Kolmogorov",
+    "title": "On the representation of continuous functions of many variables by superposition of continuous functions of one variable and addition",
+    "venue": "Doklady Akademii Nauk SSSR",
+    "year": 1957,
+    "vol": "114",
+    "no": "5",
+    "pages": "953-956",
+    "doi": "10.1090/trans2/028/05"
+  },
+  {
+    "id": 48,
+    "authors": "Z. Bozorgasl and H. Chen",
+    "title": "Wav-KAN: Wavelet Kolmogorov-Arnold networks",
+    "venue": "arXiv preprint arXiv:2405.12832",
+    "year": 2024,
+    "pages": "1-18",
+    "doi": "10.48550/arXiv.2405.12832"
+  },
+  {
+    "id": 49,
+    "authors": "I. Daubechies",
+    "title": "Ten Lectures on Wavelets",
+    "venue": "Society for Industrial and Applied Mathematics (SIAM)",
+    "year": 1992,
+    "pages": "1-357",
+    "doi": "10.1137/1.9781611970104"
+  },
+  {
+    "id": 50,
+    "authors": "S. G. Mallat",
+    "title": "A theory for multiresolution signal decomposition: The wavelet representation",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "year": 1989,
+    "vol": "11",
+    "no": "7",
+    "pages": "674-693",
+    "doi": "10.1109/34.192463"
+  }
+]

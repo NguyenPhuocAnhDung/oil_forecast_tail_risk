@@ -1,0 +1,29 @@
+{
+  "model": "Lag_Llama",
+  "target_type": "XANG",
+  "horizon": 10,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 4.801562,
+    "RMSE": 9.812943,
+    "MAPE": 4.4023,
+    "sMAPE": 4.6487,
+    "MASE": 1.339341,
+    "WAPE": 5.4042,
+    "R2": 0.82517,
+    "DA": 48.2,
+    "MSE": 96.293858,
+    "MdAE": 1.719912,
+    "MdAPE": 2.1296,
+    "MaxAE": 65.426618,
+    "Bias": 2.161206,
+    "TheilU": 1.823349,
+    "crps": 4.801562
+  },
+  "n_iterations": 40,
+  "n_features": 14,
+  "runtime_seconds": 961.4,
+  "status": "completed",
+  "datetime": "2026-07-19T02:28:25.736509Z"
+}

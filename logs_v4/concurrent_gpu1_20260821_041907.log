@@ -1,0 +1,5 @@
+Concurrent run started: 2026-08-21T04:19:07.104212
+GPU: 1 | Models: 47 | Jobs: 419
+
+[   1/419]   0.2% | OK:1    FAIL:0    SKIP:239 | OK           | 1797s | ETA:12516m | Reformer|XANG|H20|s777
+[   2/419]   0.5% | OK:2    FAIL:0    SKIP:239 | OK           | 1970s | ETA:6847m | Informer|XANG|H20|s777

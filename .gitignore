@@ -1,0 +1,22 @@
+# Caches and builds
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+.venv/
+.idea/
+.vscode/
+
+# Data files (keep directory structure via .gitkeep)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Results backups
+results_v4_backup*/
+
+# Environments and Secrets
+.env
+
+

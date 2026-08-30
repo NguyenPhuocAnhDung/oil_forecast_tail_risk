@@ -1,0 +1,29 @@
+{
+  "model": "Chronos",
+  "target_type": "XANG",
+  "horizon": 10,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 4.926257,
+    "RMSE": 9.989433,
+    "MAPE": 4.5079,
+    "sMAPE": 4.747,
+    "MASE": 1.374123,
+    "WAPE": 5.5445,
+    "R2": 0.818825,
+    "DA": 49.61,
+    "MSE": 99.788773,
+    "MdAE": 1.863272,
+    "MdAPE": 2.3243,
+    "MaxAE": 66.022783,
+    "Bias": 1.880484,
+    "TheilU": 1.856136,
+    "crps": 4.926257
+  },
+  "n_iterations": 40,
+  "n_features": 14,
+  "runtime_seconds": 4531.8,
+  "status": "completed",
+  "datetime": "2026-08-20T14:07:49.427645Z"
+}

@@ -1,0 +1,6 @@
+CMD: /usr/bin/python3 /data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py --type DAU --model GUMNetHet --horizon 20 --seed 123 --protocol walkforward
+RETURN: -9
+
+=== STDOUT ===
+
+=== STDERR ===

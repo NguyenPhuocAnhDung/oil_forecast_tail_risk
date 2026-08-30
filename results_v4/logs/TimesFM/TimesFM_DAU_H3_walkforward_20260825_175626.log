@@ -1,0 +1,41 @@
+17:56:26 | ================================================================================
+17:56:26 |  TimesFM | DAU | H3 | walkforward | seed=777
+17:56:26 | ================================================================================
+17:56:26 | Data: 4513 rows | Features: 16
+17:58:27 |  Iter-01 | MAE=1.767 | MAPE=2.15%
+18:00:43 |  Iter-02 | MAE=1.450 | MAPE=1.82%
+18:02:59 |  Iter-03 | MAE=0.583 | MAPE=0.74%
+18:05:11 |  Iter-04 | MAE=0.246 | MAPE=0.30%
+18:07:05 |  Iter-05 | MAE=0.356 | MAPE=0.45%
+18:08:57 |  Iter-06 | MAE=0.731 | MAPE=0.93%
+18:10:45 |  Iter-07 | MAE=2.122 | MAPE=2.74%
+18:12:31 |  Iter-08 | MAE=2.481 | MAPE=3.08%
+18:14:25 |  Iter-09 | MAE=0.521 | MAPE=0.64%
+18:16:10 |  Iter-10 | MAE=1.179 | MAPE=1.41%
+18:17:55 |  Iter-11 | MAE=1.422 | MAPE=1.66%
+18:19:40 |  Iter-12 | MAE=2.101 | MAPE=2.42%
+18:21:29 |  Iter-13 | MAE=2.147 | MAPE=2.48%
+18:23:27 |  Iter-14 | MAE=0.905 | MAPE=1.03%
+18:25:25 |  Iter-15 | MAE=0.894 | MAPE=1.02%
+18:27:11 |  Iter-16 | MAE=1.760 | MAPE=2.03%
+18:29:29 |  Iter-17 | MAE=1.896 | MAPE=2.12%
+18:31:18 |  Iter-18 | MAE=0.568 | MAPE=0.61%
+18:33:16 |  Iter-19 | MAE=0.388 | MAPE=0.42%
+18:35:06 |  Iter-20 | MAE=34.196 | MAPE=26.17%
+18:36:57 |  Iter-21 | MAE=23.168 | MAPE=13.48%
+18:38:55 |  Iter-22 | MAE=17.802 | MAPE=10.70%
+18:40:42 |  Iter-23 | MAE=3.158 | MAPE=1.63%
+18:42:49 |  Iter-24 | MAE=14.242 | MAPE=6.43%
+18:44:39 |  Iter-25 | MAE=13.512 | MAPE=6.07%
+18:46:49 |  Iter-26 | MAE=24.415 | MAPE=10.05%
+18:48:39 |  Iter-27 | MAE=20.073 | MAPE=7.35%
+18:50:26 |  Iter-28 | MAE=59.645 | MAPE=28.23%
+18:52:24 |  Iter-29 | MAE=5.795 | MAPE=2.97%
+18:54:34 |  Iter-30 | MAE=22.373 | MAPE=13.28%
+18:56:21 |  Iter-31 | MAE=15.145 | MAPE=10.25%
+18:58:11 |  Iter-32 | MAE=16.853 | MAPE=10.28%
+19:00:41 |  Iter-33 | MAE=4.267 | MAPE=2.62%
+19:00:41 | 
+ OVERALL: MAE=9.035, MAPE=5.38%, R2=0.9089 (3854.7s)
+19:00:41 | Saved model checkpoint: /data/quyhv/oil_forecast_tail_risk/results_v4/walkforward/TimesFM/DAU_H3_seed777/model_checkpoint.pth
+19:00:41 | Saved processor/scaler: /data/quyhv/oil_forecast_tail_risk/results_v4/walkforward/TimesFM/DAU_H3_seed777/processor.pkl

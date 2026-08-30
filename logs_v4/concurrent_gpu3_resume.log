@@ -1,0 +1,107 @@
+
+══════════════════════════════════════════════════════════════════════
+  CONCURRENT EXPERIMENT PLAN  ─  Kiến Trúc Song Song Hoàn Chỉnh
+══════════════════════════════════════════════════════════════════════
+  GPU              : 3  (CUDA_VISIBLE_DEVICES=3)
+  Target(s)        : ['XANG', 'DAU']
+  Models           : 47
+  Horizons         : [1, 3, 5, 7, 10, 20, 60]
+  Seeds            : [9999]
+  Total planned    : 658
+  Already done     : 241  (--resume skip)
+  Jobs to run      : 417
+  Max concurrent   : 7  (auto VRAM-aware)
+  Per-job timeout  : Unlimited (không giới hạn)
+  Retries          : 1
+  Results dir      : results_v4/
+  Error logs       : logs_v4/errors/
+  Dry run          : False
+
+  Models (47):
+    [01] DLinear                ~ 400 MB VRAM
+    [02] RLinear                ~ 400 MB VRAM
+    [03] LTSF_Linear            ~ 400 MB VRAM
+    [04] NBEATS                 ~ 700 MB VRAM
+    [05] NHits                  ~ 700 MB VRAM
+    [06] PatchTST               ~1800 MB VRAM
+    [07] TFT                    ~ 900 MB VRAM
+    [08] Autoformer             ~1800 MB VRAM
+    [09] FedFormer              ~1800 MB VRAM
+    [10] Informer               ~1500 MB VRAM
+    [11] Reformer               ~1500 MB VRAM
+    [12] iTransformer           ~1500 MB VRAM
+    [13] UniTS                  ~1500 MB VRAM
+    [14] TimeXer                ~1200 MB VRAM
+    [15] Crossformer            ~1200 MB VRAM
+    [16] CARD                   ~1200 MB VRAM
+    [17] TimesNet               ~1200 MB VRAM
+    [18] TimeMixer              ~1200 MB VRAM
+    [19] TTM                    ~1200 MB VRAM
+    [20] FITS                   ~ 600 MB VRAM
+    [21] CoST                   ~ 700 MB VRAM
+    [22] TimeMachine            ~1800 MB VRAM
+    [23] S_Mamba                ~2000 MB VRAM
+    [24] MambaFormer            ~2000 MB VRAM
+    [25] BiMamba                ~1800 MB VRAM
+    [26] Chronos                ~4500 MB VRAM
+    [27] TimesFM                ~4500 MB VRAM
+    [28] Moirai                 ~4500 MB VRAM
+    [29] Lag_Llama              ~4000 MB VRAM
+    [30] TEMPO                  ~3500 MB VRAM
+    [31] GPT4TS                 ~3500 MB VRAM
+    [32] Time_MoE               ~ 800 MB VRAM
+    [33] Gated_TabNet           ~ 500 MB VRAM
+    [34] GUMNet                 ~ 900 MB VRAM
+    [35] GUMNet_Mamba           ~1800 MB VRAM
+    [36] GUMNet_iTrans          ~1500 MB VRAM
+    [37] GUMNet_Wavelet         ~1200 MB VRAM
+    [38] GUMNet_Patch           ~1000 MB VRAM
+    [39] GUMNet_Fourier         ~ 800 MB VRAM
+    [40] GUMNet_Diffusion       ~2500 MB VRAM
+    [41] GUMNet_Graph           ~2500 MB VRAM
+    [42] GUMNet_RL              ~2000 MB VRAM
+    [43] GUMNet_MoE_Sparse      ~ 800 MB VRAM
+    [44] GUMNet_Fusion          ~3000 MB VRAM
+    [45] GUMNet_Decomp          ~ 800 MB VRAM
+    [46] GUMNet_Adaptive        ~ 900 MB VRAM
+    [47] GUMNetHet              ~ 800 MB VRAM
+══════════════════════════════════════════════════════════════════════
+
+[GPU3] Starting 417 jobs with 7 concurrent workers...
+[GPU3] Log: /data/quyhv/oil_forecast_tail_risk/logs_v4/concurrent_gpu3_20260821_155134.log
+
+[   1/417]   0.2% | OK:1    FAIL:0    SKIP:241 | OK           | 1876s | ETA:13004m | UniTS|XANG|H20|s9999
+[   2/417]   0.5% | OK:2    FAIL:0    SKIP:241 | OK           | 2204s | ETA:7624m | iTransformer|XANG|H20|s9999
+[   3/417]   0.7% | OK:3    FAIL:0    SKIP:241 | OK           | 2007s | ETA:8930m | TimeXer|XANG|H20|s9999
+
+
+[INTERRUPTED] Graceful shutdown requested — finishing in-flight jobs...
+
+
+
+[INTERRUPTED] Graceful shutdown requested — finishing in-flight jobs...
+
+
+
+[INTERRUPTED] Graceful shutdown requested — finishing in-flight jobs...
+
+
+
+[INTERRUPTED] Graceful shutdown requested — finishing in-flight jobs...
+
+
+
+[INTERRUPTED] Graceful shutdown requested — finishing in-flight jobs...
+
+
+
+[INTERRUPTED] Graceful shutdown requested — finishing in-flight jobs...
+
+
+
+[INTERRUPTED] Graceful shutdown requested — finishing in-flight jobs...
+
+
+
+[INTERRUPTED] Graceful shutdown requested — finishing in-flight jobs...
+

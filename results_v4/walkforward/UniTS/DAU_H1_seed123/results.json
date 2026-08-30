@@ -1,0 +1,29 @@
+{
+  "model": "UniTS",
+  "target_type": "DAU",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 123,
+  "metrics": {
+    "MAE": 6.435074,
+    "RMSE": 12.05503,
+    "MAPE": 3.7328,
+    "sMAPE": 3.7535,
+    "MASE": 1.130495,
+    "WAPE": 4.9599,
+    "R2": 0.957569,
+    "DA": 56.57,
+    "MSE": 145.323742,
+    "MdAE": 1.513819,
+    "MdAPE": 1.4508,
+    "MaxAE": 59.734267,
+    "Bias": 0.659003,
+    "TheilU": 1.149454,
+    "crps": 6.435074
+  },
+  "n_iterations": 100,
+  "n_features": 16,
+  "runtime_seconds": 20971.5,
+  "status": "completed",
+  "datetime": "2026-08-26T21:44:46.571614Z"
+}

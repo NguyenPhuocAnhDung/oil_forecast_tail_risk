@@ -1,0 +1,29 @@
+{
+  "model": "TFT",
+  "target_type": "XANG",
+  "horizon": 20,
+  "protocol": "walkforward",
+  "seed": 2025,
+  "metrics": {
+    "MAE": 7.166185,
+    "RMSE": 13.463737,
+    "MAPE": 6.9195,
+    "sMAPE": 7.4116,
+    "MASE": 2.41073,
+    "WAPE": 8.373,
+    "R2": 0.552695,
+    "DA": 50.17,
+    "MSE": 181.272222,
+    "MdAE": 3.366952,
+    "MdAPE": 4.2887,
+    "MaxAE": 75.39808,
+    "Bias": 4.231343,
+    "TheilU": 3.004039,
+    "crps": 7.166185
+  },
+  "n_iterations": 15,
+  "n_features": 14,
+  "runtime_seconds": 4779.5,
+  "status": "completed",
+  "datetime": "2026-08-21T22:20:29.256507Z"
+}

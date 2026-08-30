@@ -1,0 +1,370 @@
+TOTAL PARAGRAPHS: 194
+TOTAL TABLES: 15
+
+[P000|Normal] GUM-Net: Cấu trúc Gated Mixture-of-Experts với Wavelet-KAN cho Dự báo Đa chân trời Giá Bán lẻ Xăng dầu dưới Rủi ro Địa chính trị
+[P001|Normal] Huong Bui1, Phuoc Anh Dung Nguyen1, Van Quy Hoang2*
+[P002|Normal] 1 Faculty of Information Technology, HUTECH University, Ho Chi Minh City, Vietnam
+[P003|Normal] 2 Thuy Loi University (TLU), Hanoi, Vietnam
+[P004|Normal] ABSTRACT: Giá bán lẻ xăng dầu là một biến số tài chính vĩ mô mang tính chiến lược, ảnh hưởng sâu sắc đến động lực lạm phát toàn cầu, công thức chính sách tiền tệ quốc gia và khuôn khổ an ninh năng lượng rộng lớn hơn. Khác với giá dầu thô được quyết định bởi đầu cơ tài chính trên NYMEX hay ICE, giá xăng dầu bán lẻ (cụ thể là xăng và diesel) có đặc trưng độc nhất là sự cứng nhắc do chính sách định hướng, cấu trúc thuế địa phương và độ trễ tồn kho phức tạp của chuỗi cung ứng. Tại các nền kinh tế đang phát triển như Việt Nam, nhà nước điều tiết giá nhiên liệu trong nước thông qua các chu kỳ điều chỉnh (7 đến 15 ngày) để bảo vệ các ngành công nghiệp khỏi những cú sốc biến động của thị trường dầu thô toàn cầu. Bất chấp tầm quan trọng kinh tế vô song này, các mô hình học sâu hiện có chủ yếu tập trung vào dầu thô, bỏ qua tính chất thống kê không đồng nhất của các sản phẩm bán lẻ. Việc áp dụng chung một kiến trúc cho cả chuỗi xăng (tính dừng cao) và chuỗi diesel (không dừng, theo xu hướng) dẫn đến sự ô nhiễm chéo các tín hiệu học. Hơn nữa, các kiến trúc hiện tại gặp khó khăn trong việc hấp thụ định lượng các cú sốc giá phi tuyến tính do xung đột địa chính trị gây ra. 
+[P005|Normal] Objective. Nghiên cứu này đề xuất GUM-Net (Gated Unified Mixture Network), một kiến trúc Mixture-of-Experts (MoE) chuyên biệt và tinh vi, được thiết kế để dự báo đồng thời và chính xác bốn sản phẩm nhiên liệu bán lẻ riêng biệt của Việt Nam (Xăng RON95, Xăng RON92, Diesel DO 0.05% và DO 0.001%) trên một phổ dự báo đa chân trời đầy thách thức bao gồm 1, 3, 5, 10 và 60 ngày (H1-H60). 
+[P006|Normal] Method. GUM-Net giới thiệu một cơ chế định tuyến động tiên tiến kết hợp thông minh các biểu diễn từ ba chuyên gia thời gian chuyên biệt: một 1D-CNN đa tỷ lệ giãn (Multi-Scale Dilated) để nắm bắt động lượng chu kỳ ngắn hạn; một GRU kết hợp với khối Multi-Head Self-Attention tập trung trích xuất xu hướng vĩ mô dài hạn; và một mạng Wavelet-Kolmogorov-Arnold (Wavelet-KAN) đột phá. Wavelet-KAN thay thế B-splines tiêu chuẩn bằng các kích hoạt cạnh wavelet Mexican Hat cục bộ để hoạt động như một bộ giảm xóc thuật toán, hấp thụ trực tiếp Chỉ số Rủi ro Địa chính trị (GPR) bên ngoài. Hơn nữa, phương pháp luận chính thức hóa một Chiến lược Mô hình Hóa Tách rời (Decoupled Modelling). Dựa trên kiểm định Augmented Dickey-Fuller (ADF), kiến trúc cô lập cụm xăng có tính dừng khỏi cụm diesel không dừng. Mô hình được tối ưu hóa thông qua hàm mất mát Dual-MAE mới giúp cân bằng sai số giữa các sản phẩm. 
+[P007|Normal] Results. Hệ thống được đánh giá toàn diện trên một tập dữ liệu khổng lồ gồm 4.517 ngày làm việc (từ tháng 1/2008 đến đầu năm 2026) bằng cách sử dụng giao thức kiểm chứng Walk-Forward mở rộng, ngăn chặn rò rỉ dữ liệu tuyệt đối. So sánh với 6 kiến trúc tiên tiến nhất (gồm DLinear, PatchTST, XGBoost và các RNN), kết quả thực nghiệm đã phá vỡ ảo tưởng về sự thống trị tuyệt đối của một mạng nơ-ron duy nhất. Trong khi các mô hình tuyến tính sâu (DLinear) thiết lập các baseline đáng kinh ngạc cho xu hướng diesel, GUM-Net chứng minh sự thống trị sâu sắc ở chân trời chu kỳ H3 cho xăng (R²=0.8323). Đặc biệt, tại chân trời H60 khắc nghiệt, nơi các Transformer như PatchTST sụp đổ thảm hại (R² âm -0.0372), cơ chế Residual Scale của GUM-Net hoạt động như một hệ thống an toàn thuật toán, giới hạn chặt chẽ sai số MAPE dưới mức 7,5%. 
+[P008|Normal] Contribution. Nghiên cứu mang lại bốn đóng góp then chốt: (1) Giới thiệu chuyên gia Wavelet-KAN đầu tiên trong kiến trúc MoE cho dự báo hàng hóa biến động; (2) Chính thức hóa chiến lược tách rời dựa trên tính dừng; (3) Giới hạn toán học sai số dài hạn qua residual scaling; (4) Cung cấp cho cộng đồng học thuật một bộ tiêu chuẩn (benchmark) đã được kiểm chứng bằng Diebold-Mariano trên bảy chân trời dự báo, thu hẹp khoảng cách giữa học sâu và chính sách kinh tế vĩ mô.
+[P009|Normal] Keywords:  Dự báo giá bán lẻ xăng dầu; Mixture-of-Experts (MoE); Wavelet-KAN; Rủi ro Địa chính trị (GPR); Decoupled Modelling; Walk-Forward validation.
+[P010|Heading 1] GIỚI THIỆU (INTRODUCTION)
+[P011|Normal] Thị trường năng lượng toàn cầu đóng vai trò như hệ tuần hoàn máu của nền kinh tế hiện đại. Trong đó, giá bán lẻ nhiên liệu – đặc biệt là các mặt hàng xăng và dầu diesel – đại diện cho một biến số kinh tế vĩ mô mang tính chiến lược [1]. Mọi sự biến động của giá bán lẻ xăng dầu đều lan truyền trực tiếp và nhanh chóng vào cấu trúc chi phí của các ngành công nghiệp cốt lõi, từ logistics, vận tải, cho đến sản xuất và tiêu dùng [2]. Cú sốc giá năng lượng không chỉ đe dọa trực tiếp đến mục tiêu kiểm soát lạm phát của các ngân hàng trung ương mà còn có thể gây ra những bất ổn về mặt xã hội nếu không được quản lý một cách thận trọng. Tuy nhiên, bất chấp tầm quan trọng sống còn của thị trường hạ nguồn (downstream market) này, phần lớn các nỗ lực nghiên cứu trong cộng đồng học máy và tài chính định lượng lại đang bị thu hút một cách mất cân đối vào thị trường thượng nguồn (upstream market), tập trung tuyệt đối vào việc dự báo giá dầu thô toàn cầu (như West Texas Intermediate - WTI hay Brent) [3]-[4]. Sự thiên lệch này đã để lại một khoảng trống khoa học khổng lồ đối với bài toán dự báo đa sản phẩm bán lẻ.
+[P012|Normal] Giá dầu thô quốc tế được quyết định bởi các yếu tố cung - cầu theo thời gian thực và các giao dịch đầu cơ trên các sàn giao dịch tương lai (như NYMEX, ICE). Chuỗi thời gian của dầu thô do đó mang tính nhiễu loạn cao (high noise-to-signal ratio) và phản ứng tức thời với mọi thông tin trên thị trường [5]. Ngược lại hoàn toàn, giá bán lẻ xăng dầu tại các quốc gia đang phát triển hoặc các nền kinh tế chuyển đổi như Việt Nam lại bị chi phối bởi một khuôn khổ thể chế hoàn toàn khác biệt. Để bảo vệ các ngành công nghiệp và người tiêu dùng nội địa khỏi sự biến động hoang dã của thị trường quốc tế, nhà nước thường can thiệp trực tiếp bằng cách thiết lập giá trần (price ceilings) thông qua các chu kỳ điều chỉnh định kỳ [6]. Lịch sử điều hành giá tại Việt Nam đã chứng kiến sự thu hẹp dần của các chu kỳ này: từ 15 ngày, xuống 10 ngày, và hiện tại là 7 ngày kể từ năm 2023. Sự can thiệp này tạo ra một "độ trễ chính sách" (policy lag) và biến chuỗi thời gian của giá bán lẻ thành các hàm bậc thang (step-functions) vô cùng đặc thù [7]. Các mô hình học sâu truyền thống khi áp dụng trực tiếp lên loại dữ liệu này thường gặp thất bại thảm hại, bởi chúng cố gắng tìm kiếm các vi biến động hằng ngày trong khi thực tế mức giá bị "khóa cứng" trong suốt một chu kỳ điều hành.
+[P013|Normal] Bên cạnh sự phức tạp về cấu trúc chính sách, thách thức lớn thứ hai nằm ở tính chất thống kê không đồng nhất (heterogeneous statistical properties) của các mặt hàng đồng phân phối (co-products). Xăng (Gasoline) chủ yếu phục vụ nhu cầu đi lại cá nhân, vốn có độ co giãn cao theo giá (price elastic demand). Do đó, chuỗi thời gian của giá xăng thường thể hiện tính dừng (stationarity) mạnh mẽ và có xu hướng hoàn nguyên về mức trung bình (mean-reverting) [8]. Trong khi đó, dầu diesel (Diesel) lại là xương sống của vận tải hạng nặng và máy móc công nghiệp, nơi nhu cầu hoàn toàn cứng nhắc và kém co giãn (inelastic demand). Lịch sử dữ liệu cho thấy giá diesel thường hình thành các xu hướng (trends) dài hạn, ổn định và mang tính không dừng (non-stationary) [9]. Đáng tiếc thay, gần như toàn bộ các nghiên cứu đa biến (multivariate forecasting) hiện tại đều gộp chung các mặt hàng này vào một ma trận đầu vào duy nhất và tối ưu hóa bằng một hàm mất mát chung. Cách tiếp cận ngây thơ (naive approach) này ép mô hình học sâu phải tìm ra một không gian biểu diễn chung cho cả chuỗi dừng và không dừng, dẫn đến sự "ô nhiễm chéo các tín hiệu học" (cross-contamination of learning signals), triệt tiêu động lượng cục bộ và làm suy giảm độ chính xác của dự báo [10].
+[P014|Normal] Thách thức thứ ba, và có lẽ là thách thức khốc liệt nhất trong kỷ nguyên hiện tại, chính là sự mong manh của chuỗi cung ứng trước các sự kiện rủi ro địa chính trị (Geopolitical Risks - GPR) [11]. Các cuộc xung đột vũ trang (như sự kiện Nga-Ukraine hay bất ổn ở Trung Đông) liên tục tạo ra các cú sốc cung ứng không thể lường trước. Khác với các chu kỳ kinh tế thông thường có thể được nắm bắt bởi các mạng nơ-ron hồi quy (Recurrent Neural Networks - RNN) hay Transformer, các cú sốc địa chính trị mang tính phi tuyến tính cực đoan [12]. Các hàm kích hoạt tĩnh (static activation functions) phổ biến như ReLU, Sigmoid hay Tanh bên trong các mô hình học sâu hiện tại tỏ ra quá cứng nhắc, hoàn toàn bất lực trong việc thay đổi hình dạng thuật toán để "hấp thụ" định lượng các biến động dị thường này [13].
+[P015|Normal] Nhằm giải quyết triệt để và đồng thời cả ba hố sâu học thuật nêu trên, nghiên cứu này tự hào giới thiệu một siêu kiến trúc học sâu mang tên GUM-Net (Gated Unified Mixture Network). Lấy cảm hứng từ những tiến bộ mang tính cách mạng của cơ chế Mixture-of-Experts (MoE) trong xử lý ngôn ngữ tự nhiên, GUM-Net được tinh chỉnh đặc biệt cho dữ liệu chuỗi thời gian tài chính. Thay vì buộc một mạng duy nhất học mọi thứ, GUM-Net chia nhỏ nhiệm vụ và phân bổ cho ba "chuyên gia thời gian" (Temporal Experts) riêng biệt: một chuyên gia CNN đa tỷ lệ (Multi-Scale Dilated CNN) để săn tìm động lượng chu kỳ ngắn; một chuyên gia GRU kết hợp cơ chế Tự chú ý (Multi-Head Self-Attention) để gìn giữ ký ức vĩ mô dài hạn; và một chuyên gia chống sốc đột phá có tên Wavelet-KAN. Dựa trên lý thuyết biểu diễn hàm của Kolmogorov-Arnold (KAN), chúng tôi thay thế hàm B-Splines phức tạp bằng các hàm sóng nhỏ Mexican Hat (Mexican Hat Wavelets) trực tiếp trên các cạnh của mạng, cho phép chuyên gia này linh hoạt thay đổi hình dạng để "nhai nuốt" dữ liệu Chỉ số Rủi ro Địa chính trị (GPR Index). Đầu ra của ba chuyên gia này không được cộng gộp một cách cứng nhắc, mà được điều tiết bởi một Bộ định tuyến động (Dynamic Router) có khả năng nhận thức chân trời dự báo (Horizon-Aware Gating).
+[P016|Normal] Cấu trúc của bài báo được tổ chức như sau: Phần 2 trình bày tổng quan các tài liệu liên quan về dự báo giá năng lượng và sự tiến hóa của học sâu. Phần 3 mô tả chi tiết phương pháp luận, cấu trúc dữ liệu và kiến trúc toán học của GUM-Net. Phần 4 thảo luận về thiết lập thực nghiệm và phân tích chuyên sâu các kết quả. Phần 5 kết luận và đưa ra các hàm ý chính sách quan trọng.
+[P017|Heading 1] TỔNG QUAN TÀI LIỆU (RELATED WORK)
+[P018|Heading 2] 2.1. Động lực học của Giá Năng lượng và Kỷ nguyên của Học sâu
+[P019|Normal] Trong nhiều thập kỷ, việc dự báo giá năng lượng, đặc biệt là giá dầu thô, đã bị thống trị bởi các mô hình kinh tế lượng cổ điển như Tự hồi quy Tích hợp Trung bình Trượt (ARIMA) và Tự hồi quy có điều kiện Phương sai sai số Tổng quát (GARCH) [14]-[15]. Mặc dù các mô hình này cung cấp những diễn giải thống kê vững chắc về phương sai và giá trị trung bình, chúng lại thất bại thảm hại khi phải đối mặt với các chuỗi thời gian có tính phi tuyến tính cao và các cú sốc cấu trúc đột ngột (structural breaks). Sự bùng nổ của Trí tuệ Nhân tạo (AI) đã đánh dấu một bước ngoặt mô hình luận (paradigm shift). Các mạng nơ-ron học sâu (Deep Learning), với khả năng xấp xỉ phổ quát (universal approximation capability), đã nhanh chóng thay thế các phương pháp kinh tế lượng truyền thống. Mạng Bộ nhớ Dài-Ngắn hạn (LSTM) và Đơn vị Hồi quy có Cổng (GRU) đã trở thành các tiêu chuẩn vàng (gold standards) trong việc nắm bắt các phụ thuộc dài hạn (long-term dependencies) của chuỗi thời gian [16]. Các nghiên cứu gần đây đã tiến xa hơn bằng cách tích hợp cơ chế Chú ý (Attention Mechanisms) để giúp mô hình tập trung vào các đặc trưng quan trọng nhất của chuỗi dữ liệu trong quá khứ, nâng cao đáng kể độ chính xác [17]. Mặc dù đạt được những thành tựu rực rỡ trên thị trường dầu thô thượng nguồn, việc áp dụng trực tiếp các mô hình RNN hay Transformer vào thị trường hạ nguồn (như giá bán lẻ xăng dầu) thường mang lại kết quả dưới mức tối ưu (sub-optimal). Nguyên nhân cốt lõi là do chúng không được thiết kế để xử lý các hàm bậc thang (step-functions) gây ra bởi độ trễ chính sách điều hành giá (policy lags) tại các quốc gia đang phát triển [18]. Hơn nữa, việc cố gắng nhồi nhét cả xăng (stationary) và diesel (non-stationary) vào chung một cấu trúc mạng đã trực tiếp vi phạm các giả định về tính đồng nhất thống kê (statistical homogeneity), làm suy giảm nghiêm trọng khả năng tổng quát hóa của mô hình.
+[P020|Heading 2] 2.2. Kiến trúc Hỗn hợp Chuyên gia (Mixture-of-Experts) trong Dự báo Chuỗi thời gian
+[P021|Normal] Kiến trúc Hỗn hợp Chuyên gia (MoE) ban đầu được thiết kế để mở rộng quy mô (scale up) các mô hình Ngôn ngữ Lớn (LLMs) bằng cách kích hoạt thưa thớt (sparse activation) các tham số mạng [19]. Trong lĩnh vực dự báo chuỗi thời gian, MoE đang mở ra một biên giới nghiên cứu mới. Thay vì ép một mạng nơ-ron duy nhất phải học toàn bộ động lực học phức tạp của thị trường (từ các dao động vi mô hằng ngày đến các siêu chu kỳ kinh tế vĩ mô), MoE phân chia không gian đặc trưng (feature space) cho các "chuyên gia" (experts) cụ thể. Một Cổng Định tuyến (Gating Network) sẽ đóng vai trò như một nhạc trưởng, đánh giá tín hiệu đầu vào và phân bổ trọng số cho từng chuyên gia sao cho phù hợp nhất với bối cảnh hiện tại [20]. Tuy nhiên, các kiến trúc MoE hiện hành trong dự báo chuỗi thời gian thường chỉ sử dụng các Multi-Layer Perceptrons (MLPs) tiêu chuẩn làm chuyên gia. MLPs dựa trên các hàm kích hoạt điểm (point-wise activation functions) cố định như ReLU, vốn rất yếu kém trong việc mô hình hóa các tần số cao (high-frequency components) và các dao động hoang dã do tâm lý thị trường hoảng loạn.
+[P022|Heading 2] 2.3. Mạng Kolmogorov-Arnold (KAN) và Sóng nhỏ (Wavelets)
+[P023|Normal] Vào năm 2024, một cuộc cách mạng kiến trúc mạng nơ-ron đã nổ ra với sự ra đời của Mạng Kolmogorov-Arnold (KAN). Dựa trên định lý biểu diễn hàm Kolmogorov-Arnold, KAN đảo ngược hoàn toàn triết lý của MLPs truyền thống: thay vì đặt các hàm kích hoạt cố định tại các nút (nodes) và học các trọng số tuyến tính trên các cạnh (edges), KAN đặt các hàm kích hoạt có thể học được (learnable activation functions) trực tiếp trên các cạnh [21]. Phiên bản KAN nguyên thủy sử dụng các đường cong B-Splines để làm hàm kích hoạt. Mặc dù B-Splines cực kỳ mượt mà và phù hợp cho các bài toán nội suy toán học, chúng lại tỏ ra chậm chạp và kém nhạy bén khi đối mặt với các chuỗi thời gian nhiễu loạn cao (highly noisy time-series). Để khắc phục điều này, Wavelet-KAN đã được đề xuất, thay thế B-Splines bằng các hàm sóng nhỏ (wavelets) [22]. Sóng nhỏ, với đặc tính định vị kép (dual localization) cả trong không gian thời gian và tần số, là công cụ hoàn hảo để bắt các xung kích (impulses) và các cú sốc (shocks) [23]. Bất chấp tiềm năng to lớn này, cho đến nay, chưa có bất kỳ nghiên cứu nào tiên phong tích hợp Wavelet-KAN vào một kiến trúc MoE để giải quyết trực tiếp bài toán dự báo năng lượng dưới áp lực của rủi ro địa chính trị.
+[P024|Heading 2] 2.4. Khoảng trống Nghiên cứu (Research Gaps)
+[P025|Normal] Từ việc lược khảo tài liệu chuyên sâu, chúng tôi xác định được ba khoảng trống nghiên cứu chí mạng:
+[P026|Normal] Thứ nhất, thiếu vắng một Khung Mô hình hóa Tách rời (Decoupled Modelling Framework) được kiểm chứng thống kê để xử lý đồng thời tính dừng của xăng và tính không dừng của diesel.
+[P027|Normal] Thứ hai, các cấu trúc MoE tĩnh (Static MoE architectures) hiện tại không thể hấp thụ định lượng các cú sốc từ biến ngoại sinh Rủi ro Địa chính trị (GPR Index).
+[P028|Normal] Thứ ba, sự thiếu vắng nghiêm trọng của các giao thức đánh giá Đa chân trời dài hạn (Multi-horizon Evaluation Protocols), đặc biệt là việc kiểm tra giới hạn rủi ro tại các mốc khắc nghiệt như 60 ngày (H60) thông qua phương pháp Walk-Forward phi rò rỉ dữ liệu.
+[P029|Normal] Nghiên cứu của chúng tôi được thiết kế một cách tinh xảo để lấp đầy toàn bộ những khoảng trống này.
+[P030|Heading 1] PHƯƠNG PHÁP NGHIÊN CỨU VÀ KIẾN TRÚC HỆ THỐNG (METHODOLOGY)
+[P031|Heading 2] 3.1. Thiết lập Bài toán và Xử lý Tiền dữ liệu (Problem Setup & Data Preprocessing)
+[P032|Normal] Bài toán đặt ra là dự báo giá bán lẻ xăng dầu trần của 4 mặt hàng chủ lực tại Việt Nam (Xăng RON95, Xăng RON92, Diesel DO 0.05%, Diesel DO 0.001%) dựa trên một tập hợp phong phú các biến ngoại sinh đa chiều. Dữ liệu đầu vào bao gồm:
+[P033|Normal] - Các biến giá trị thị trường quốc tế: Giá giao ngay Platt’s Singapore (Platt's Singapore Spot Prices), Hợp đồng tương lai dầu WTI và Brent.
+[P034|Normal] - Các biến vĩ mô và địa chính trị: Chỉ số sức mạnh đồng đô la Mỹ (US Dollar Index - DXY), Chỉ số Rủi ro Địa chính trị (Geopolitical Risk Index - GPR).
+[P035|Normal] - Lịch sử giá bán lẻ nội địa của Việt Nam (Nguồn gốc trực tiếp từ các quyết định điều hành của Liên Bộ Tài chính - Công Thương).
+[P036|Normal] Một điểm tối quan trọng trong việc thiết lập môi trường dữ liệu là ngăn chặn triệt để hiện tượng rò rỉ thông tin tương lai (Look-ahead bias). Do thị trường xăng dầu đóng cửa vào cuối tuần và các ngày lễ, dữ liệu thường bị khuyết (missing values). Thay vì sử dụng các phương pháp nội suy (interpolation) vốn sử dụng thông tin của các ngày tương lai để lấp đầy ngày quá khứ, chúng tôi áp dụng nguyên tắc Forward Fill tuyệt đối (chỉ dùng giá của ngày gần nhất trước đó để điền vào ngày trống).
+[P037|Normal] Bảng 3. Kết quả kiểm định ADF và KPSS trên chuỗi giá bán lẻ (toàn mẫu 2008–2026)
+[P038|Normal] Kiểm định được cấu hình với hệ số chặn nhưng không có xu hướng (intercept, no trend), độ trễ được lựa chọn tối ưu theo tiêu chí AIC (Akaike Information Criterion). Kết quả được đối chứng chéo với kiểm định KPSS nhằm đảm bảo tính rắn chắc của khẳng định.
+[P039|Heading 2] 3.2. Chiến lược Mô hình Hóa Tách rời dựa trên Tính dừng (Stationarity-Aware Decoupled Modelling)
+[P040|Normal] Tính chất thống kê của dữ liệu chuỗi thời gian đóng vai trò sống còn đối với khả năng học của các mạng nơ-ron. Để định lượng tính dừng của các mặt hàng đồng phân phối (co-products), chúng tôi thực hiện kiểm định thống kê Augmented Dickey-Fuller (ADF Test) trên toàn bộ dữ liệu lịch sử. Kết quả kiểm định ADF: Nhóm mặt hàng Xăng (RON95, RON92) mang tính dừng (stationary) mạnh mẽ; trong khi nhóm mặt hàng Dầu Diesel (DO 0.05%, DO 0.001%) lại mang tính không dừng (non-stationary) và bị chi phối bởi xu hướng (trend-dominated).
+[P041|Normal] Phát hiện thống kê này là nền tảng cho Chiến lược Mô hình Hóa Tách rời (Decoupled Modelling) của chúng tôi. Thay vì ép một mạng nơ-ron đa biến khổng lồ học chung một hàm ánh xạ cho toàn bộ 4 mặt hàng, chúng tôi cô lập chúng thành hai cụm độc lập: Cụm Xăng và Cụm Diesel. Sự phân tách này bảo vệ cấu trúc bên trong của mạng khỏi sự "ô nhiễm chéo tín hiệu" (signal cross-contamination).
+[P042|Normal] 
+[P043|Normal] Hình 1. Kiến trúc tổng thể hệ thống GUM-Net
+[P044|Heading 2] 3.3. Định dạng Mục tiêu: Lợi suất Tích lũy Trực tiếp (Direct Cumulative Log-Return Target)
+[P045|Normal] Trong dự báo đa chân trời (multi-horizon forecasting), phương pháp tự hồi quy (recursive forecasting) thường dẫn đến sự tích lũy sai số theo cấp số nhân khi chân trời H càng lớn. Để giải quyết triệt để rủi ro này, chúng tôi áp dụng chiến lược dự báo trực tiếp (direct forecasting) vào biến mục tiêu là Lợi suất Tích lũy (Cumulative Log-Return) thay vì dự báo giá tuyệt đối.
+[P046|Normal] Cho trước giá tại thời điểm hiện tại P_t và giá tại thời điểm tương lai P̂_t+h, biến mục tiêu dự báo (R̂_t → t+h) được định nghĩa bằng phương trình toán học sau:
+[P047|Normal] Trong giai đoạn suy luận thực tế (inference phase), giá bán lẻ tuyệt đối được khôi phục ngược lại thông qua hàm mũ tự nhiên (exponential function):
+[P048|Heading 2] 3.4. Kiến trúc Mạng GUM-Net (Gated Unified Mixture Network)
+[P049|Normal] Kiến trúc cốt lõi của hệ thống được xây dựng dựa trên nguyên lý Hỗn hợp Chuyên gia (Mixture-of-Experts). Đầu vào lịch sử đa biến X (bao gồm dữ liệu giá và các biến ngoại sinh như GPR) được truyền song song vào ba mạng chuyên gia thời gian chuyên biệt.
+[P050|Normal] 
+[P051|Normal] Hình 2. Chi tiết mạng GUM-Net
+[P052|Normal] 3.4.1. Chuyên gia Động lượng Ngắn hạn: CNN Đa tỷ lệ (Multi-Scale Dilated 1D-CNN)
+[P053|Normal] Thị trường xăng dầu có những động lượng cục bộ ngắn hạn rất mạnh. Để nắm bắt được các chu kỳ vi mô này, chúng tôi thiết kế một chuyên gia sử dụng Mạng nơ-ron Tích chập 1 Chiều với các hệ số giãn nở đa tỷ lệ (Multi-Scale Dilated 1D-CNN). Thay vì chỉ nhìn vào một cửa sổ cố định, các hệ số giãn nở d  ∈  {1, 2, 4} cho phép màng lọc CNN bao quát được các trường nhìn (receptive fields) rộng lớn hơn mà không làm tăng số lượng tham số tính toán. Đầu ra của chuyên gia này được ký hiệu là fcnn.
+[P054|Normal] 3.4.2. Chuyên gia Xu hướng Vĩ mô: GRU-Attention
+[P055|Normal] Để duy trì ký ức dài hạn về các chu kỳ vĩ mô kéo dài (như chu kỳ suy thoái kinh tế hay chu kỳ siêu tăng giá hàng hóa), chúng tôi sử dụng Đơn vị Hồi quy có Cổng (GRU - Gated Recurrent Unit). Khác với LSTM, GRU có cấu trúc cổng đơn giản hơn, giúp hạn chế hiện tượng triệt tiêu gradient. Quan trọng hơn, GRU được kết hợp với một cơ chế Tự chú ý Đa đầu (Multi-Head Self-Attention). Cơ chế này hoạt động như một hệ thống "đánh dấu", giúp mô hình tự động nhận diện và gán trọng số cao cho những ngày giao dịch quan trọng trong quá khứ (ví dụ: ngày OPEC+ cắt giảm sản lượng). Đầu ra của chuyên gia xu hướng là fgru.
+[P056|Normal] 3.4.3. Chuyên gia Chống sốc Phi tuyến: Wavelet-KAN
+[P057|Normal] Đây là đóng góp kiến trúc đột phá nhất của nghiên cứu. Thay vì sử dụng MLP truyền thống, chúng tôi tiên phong tích hợp Mạng Kolmogorov-Arnold (KAN). Tuy nhiên, B-splines tiêu chuẩn của KAN không đủ độ nhạy để bắt các xung sốc từ biến GPR. Do đó, chúng tôi thay thế toàn bộ B-splines bằng các hàm Sóng nhỏ Mexican Hat (Mexican Hat Wavelets). Hàm sóng nhỏ có đặc tính suy giảm nhanh (fast decay) ở cả hai cực, hoạt động như một bộ giảm xóc thuật toán (algorithmic shock absorber) lý tưởng. Bất cứ khi nào GPR Index đột ngột tăng vọt (dấu hiệu của chiến tranh hoặc hoảng loạn), các cạnh (edges) của Wavelet-KAN sẽ kích hoạt các sóng nhỏ cục bộ để hấp thụ cú sốc đó mà không làm nhiễu loạn toàn bộ mạng lưới. Đầu ra của chuyên gia này là fkan.
+[P058|Heading 2] 3.5. Bộ Định tuyến Động nhận thức Chân trời (Horizon-Aware Dynamic Router)
+[P059|Normal] Mỗi chân trời dự báo (H=1 so với H=60) đòi hỏi sự kết hợp trọng số chuyên gia hoàn toàn khác nhau. Một chân trời H1 có thể cần nhiều tín hiệu từ CNN, trong khi H60 lại cần sự ổn định từ GRU và khả năng chống sốc của KAN. Do đó, chúng tôi thiết kế một cổng định tuyến kết hợp với một Nhúng Vị trí Chân trời (Horizon Positional Embedding - Posh). Bộ định tuyến này là một mạng MLP sẽ phân phối trọng số mềm (w1, w2, w3) cho từng chuyên gia theo cơ chế Softmax:
+[P060|Normal] Biểu diễn cuối cùng của mạng là tổng có trọng số:
+[P061|Normal] f_{final} = w_1 f_{cnn} + w_2 f_{gru} + w_3 f_{kan}
+[P062|Heading 2] 3.6. Giới hạn Sai số Ngoại suy bằng Residual Scaling (Error Bounding)
+[P063|Normal] Để khắc phục hạn chế này, GUM-Net áp dụng cơ chế Co giãn phần dư (Residual Scaling). Đầu ra thô của mô hình sẽ được nhân với một hệ số co giãn phần dư $s_h$ là tham số vô hướng học được độc lập cho từng bước dự báo $h$ thuộc chân trời $H$ ($s_h \in \mathbb{R}^H$). Tham số này được khởi tạo bằng giá trị $0.5$ và đi qua hàm Sigmoid để đảm bảo giá trị co giãn $\sigma(s_h)$ luôn nằm trong khoảng $(0, 1)$: $\sigma(s_h) = \frac{1}{1 + e^{-s_h}}$. Dự báo lợi suất log tích lũy cuối cùng tại bước $h$ là:
+$$\hat{R}_{t \rightarrow t+h} = \sigma(s_h) \cdot \hat{y}_{\text{raw}, h} \quad (6)$$
+Cơ chế này hoạt động như một bộ điều hợp độ tin cậy động: ở các chân trời ngắn (như $h=1$), mô hình có xu hướng học $\sigma(s_h)$ gần bằng $1.0$ nhằm giữ trọn biên độ dự báo; ngược lại, ở các chân trời dài (như $h=60$), sự bất định tăng cao khiến mô hình học $\sigma(s_h)$ tiến sát về $0$, kéo dự báo lợi suất log về phía $0$ (tương ứng với dự báo quán tính giữ nguyên giá của ngày gần nhất). Đây là một ràng buộc kiến trúc dạng heuristic có tác dụng điều tiết (regularization) hiệu quả sai số ngoại suy mà không đòi hỏi các giả định phân phối phức tạp.
+[P064|Heading 2] 3.7. Tối ưu hóa với Hàm mất mát Dual-MAE
+[P065|Normal] Để tối ưu hóa năng lực dự báo phân vị (probabilistic prediction) của GUM-Net, chúng tôi áp dụng hàm mất mát Tổn thất phân vị (Quantile Pinball Loss) trên tập các phân vị $Q = \{0.1, 0.5, 0.9\}$, kết hợp với số hạng chính quy hóa cân bằng tải (Load-Balancing Regularization) nhằm chống hiện tượng sụp đổ định tuyến (router collapse) trong cơ chế MoE. Công thức toán học tổng quát được định nghĩa cụ thể như sau:
+$$\mathcal{L}_{\text{final}} = \mathcal{L}_{\text{pinball}} + \alpha \mathcal{L}_{\text{balance}} \quad (7)$$
+$$\mathcal{L}_{\text{pinball}} = \frac{1}{C \cdot H \cdot |Q|} \sum_{c=1}^C \sum_{h=1}^H \sum_{q \in Q} \max \left( q (y_{t+h, c} - \hat{y}_{t+h, c}^{(q)}), (q-1) (y_{t+h, c} - \hat{y}_{t+h, c}^{(q)}) \right) \quad (8)$$
+$$\mathcal{L}_{\text{balance}} = \sum_{i=1}^{N_e} \left( \bar{w}_i - \frac{1}{N_e} \right)^2 \quad (9)$$
+Trong đó, $C = 2$ đại diện cho số lượng dòng sản phẩm trong từng cụm (xăng hoặc dầu), $H$ là chân trời dự báo, $Q = \{0.1, 0.5, 0.9\}$ là tập hợp các phân vị dự báo, và $N_e = 3$ là số lượng chuyên gia trong cơ chế hỗn hợp chuyên gia (MoE). Siêu tham số cân bằng tải $\alpha$ được thiết lập cố định ở mức $0.01$ trong toàn bộ các thực nghiệm.
+[P066|Heading 1] THIẾT LẬP THỰC NGHIỆM VÀ ĐÁNH GIÁ (EXPERIMENTAL SETUP AND RESULTS)
+[P067|Heading 2] 4.1. Chi tiết Tập Dữ liệu (Dataset Details)
+[P068|Normal] Trong đó, tập dữ liệu giá Platts (MG95, MG92, DO 0.05%, DO 0.001%) và chỉ số GPR của Caldara-Iacoviello thay đổi theo từng ngày làm việc (tương đương 4454 lần thay đổi). Tuy nhiên, cần lưu ý rằng tại Việt Nam, giá bán lẻ nội địa thực tế được ấn định theo chu kỳ điều hành (7-15 ngày), do đó số sự kiện thay đổi giá thực tế tại trạm chỉ vào khoảng vài trăm (Bảng 2). Kích thước thông tin hiệu dụng này là một thách thức lớn cần thảo luận.
+[P069|Normal] Bảng 4. Thống kê mô tả các chuỗi giá
+[P070|Normal] Dữ liệu đóng vai trò là mạch máu của toàn bộ hệ thống dự báo. Khác với các nghiên cứu trước đây chỉ sử dụng một vài biến đơn lẻ, chúng tôi xây dựng một ma trận dữ liệu (dataset matrix) phong phú, bao phủ toàn bộ các góc độ từ vi mô đến vĩ mô, từ tài chính đến địa chính trị.
+[P071|Normal] Tập dữ liệu được thu thập từ ngày 01/01/2008 đến 01/03/2026, bao gồm 4.517 ngày làm việc.
+[P072|Normal] Các đặc trưng đầu vào (Features) bao gồm:
+[P073|Normal] 1. Platt's Singapore Spot Price (Xăng 92, Xăng 95, DO 0.05%, DO 0.001%)
+[P074|Normal] 2. Hợp đồng tương lai Dầu thô WTI (WTI Crude Oil Futures)
+[P075|Normal] 3. Hợp đồng tương lai Dầu thô Brent (Brent Crude Oil Futures)
+[P076|Normal] 4. Tỷ giá hối đoái USD/VND và Chỉ số Sức mạnh Đồng Đô la Mỹ (DXY)
+[P077|Normal] 5. Chỉ số Rủi ro Địa chính trị (Geopolitical Risk Index - GPR)
+[P078|Normal] Nhãn dự báo (Labels): Giá bán lẻ trần nội địa của 4 mặt hàng tại Việt Nam (Xăng RON95, Xăng RON92, Diesel DO 0.05%, và Diesel DO 0.001%).
+[P079|Normal] Để làm rõ khối lượng dữ liệu được đưa vào huấn luyện và kiểm thử ở từng mốc chân trời (H1, H3, H5, H10, H60), chúng tôi trình bày Bảng phân bổ dữ liệu dưới đây. Khối lượng mẫu (samples) thực tế sẽ giảm dần một lượng bằng H ở cuối tập dữ liệu do không có nhãn tương lai để đối chiếu. Tổng số ngày là N = 4517, độ dài chuỗi cửa sổ nhìn lại (look-back window) được cấu hình là seqlen = 30 ngày.
+[P080|Normal] 
+[P081|Normal] Bảng 3: Phân bổ dữ liệu theo Chân trời dự báo (H)
+[P082|Normal] 
+[P083|Heading 2] 4.2. Môi trường Thực nghiệm và Nền tảng Tính toán
+[P084|Normal] Tất cả các thực nghiệm trong nghiên cứu này được triển khai trên hệ thống tính toán hiệu năng cao. Máy chủ sử dụng CPU Intel Xeon Silver 4216 @ 2.10GHz, RAM 512GB, và 04 GPU NVIDIA Tesla T4 (16GB VRAM/GPU). Môi trường phần mềm được chuẩn hóa trên Ubuntu 22.04 LTS, Python 3.10, PyTorch 2.11.0 và CUDA 13.0.
+[P085|Normal] Quá trình tối ưu hóa mạng GUM-Net sử dụng thuật toán AdamW với learning rate scheduler dạng ReduceLROnPlateau (patience=5, factor=0.5). Tốc độ học (learning rate) khởi tạo được đặt ở mức 1e-3 và trọng số phân rã (weight decay) là 1e-4. Quá trình huấn luyện kéo dài tối đa 200 epoch, kết hợp cơ chế Early Stopping với patience linh hoạt theo chân trời dự báo (ví dụ 25 cho H1-H5, 15 cho H10, 20 cho H60) trên tập validation tránh Overfitting.
+Để đảm bảo tính công bằng, quy trình tinh chỉnh siêu tham số cho sáu baseline được thực hiện thông qua Grid Search trên tập validation. Kết quả cuối cùng được báo cáo dựa trên một lượt chạy với seed cố định (seed=42) do chi phí tính toán cực lớn của giao thức Walk-Forward liên tục tái huấn luyện.
+[P086|Heading 2] 4.3. Giao thức Đánh giá Walk-Forward phi Rò rỉ (Strict Leakage-Free Walk-Forward Validation)
+[P087|Normal] Chúng tôi áp dụng giao thức Walk-Forward Validation dạng cửa sổ mở rộng (Expanding Window). Dữ liệu từ 2008 đến 2022 (khoảng 70%) được dùng để khởi tạo huấn luyện. Tập Validation chiếm 10%, và 20% dữ liệu cuối cùng (chứa các sự kiện địa chính trị phức tạp từ 2024-2026) được dùng riêng biệt để kiểm tra (Test). Sau mỗi chu kỳ dự báo, cửa sổ dữ liệu huấn luyện sẽ mở rộng thêm, mô hình được tái huấn luyện trước khi dự báo bước tiếp theo. Quá trình này tái tạo chính xác cách thức mà một mô hình hoạt động trong môi trường sản xuất thực tế.
+[P088|Heading 2] 4.4. Phân tích Kết quả Thực nghiệm Đa chân trời (Multi-Horizon Results Analysis)
+[P089|Normal] Chúng tôi tiến hành so sánh GUM-Net với 6 mô hình tiên tiến (kèm theo baseline Persistence Naive Pt+h = Pt để kiểm tra sự học hỏi thực chất mà không phải quán tính bậc thang): LSTM, GRU, BiLSTM, DLinear, PatchTST, và XGBoost. Việc đánh giá được tiến hành độc lập trên 5 mốc chân trời dự báo: H1, H3, H5, H10, và H60.
+[P090|Normal] 4.4.1. Dự báo Ngắn hạn (Horizon H1)
+[P091|Normal] 
+[P092|Normal] Bảng 6. Kết quả Dự báo: Chân trời H1
+[P093|Normal] 
+[P094|Normal] Đánh giá (H1): Tại chân trời 1 ngày, sự thay đổi của giá cả bị chi phối hoàn toàn bởi quán tính ngắn hạn (momentum). Các mô hình tuyến tính như DLinear và mạng hồi quy cơ bản (LSTM) hoạt động cực kỳ hiệu quả (R² > 0.94 đối với Dầu). GUM-Net đạt kết quả rất tốt (R² > 0.90) nhưng chưa thể hiện được sự thống trị tuyệt đối tại mốc này, bởi thiết kế phức tạp của GUM-Net (MoE, Wavelet-KAN) thường cần một khoảng thời gian dài hơn để phát huy tác dụng chống sốc.
+[P095|Normal] 4.4.2. Chu kỳ Điều chỉnh Vĩ mô (Horizon H3)
+[P096|Normal] 
+[P097|Normal] Bảng 7. Kết quả Dự báo: Chân trời H3
+[P098|Normal] 
+[P099|Normal] Đánh giá (H3): Mốc 3 ngày bắt đầu phản ánh sự trễ pha của thông tin từ thị trường quốc tế truyền dẫn vào hệ thống giá nội địa. Tại đây, sự ưu việt của kiến trúc GUM-Net bắt đầu lộ diện rõ nét đối với cụm mặt hàng Xăng (chuỗi có tính dừng). GUM-Net vươn lên chiếm lĩnh vị trí dẫn đầu toàn diện với chỉ số R² cao nhất (0.8323) và sai số MAPE thấp nhất. Cơ chế Gating tự động dịch chuyển sự chú ý từ chuyên gia CNN sang chuyên gia GRU.
+[P100|Normal] 4.4.3. Dự báo Trung hạn (Horizon H5)
+[P101|Normal] 
+[P102|Normal] Bảng 8. Kết quả Dự báo: Chân trời H5
+[P103|Normal] 
+[P104|Normal] Đánh giá (H5): Chân trời 5 ngày chứng kiến sự phân hóa mạnh mẽ giữa hai nhóm mặt hàng. Đối với Dầu (mang tính không dừng), mô hình DLinear tiếp tục chứng minh vì sao nó lại là "sát thủ" của các Transformer, duy trì vị thế số một. Ngược lại, đối với Xăng, GUM-Net tạo ra một khoảng cách an toàn, đánh bại hoàn toàn các mô hình cây quyết định (XGBoost) vốn bắt đầu có dấu hiệu quá khớp.
+[P105|Normal] 4.4.4. Khung Cửa sổ Chính sách (Horizon H10)
+[P106|Normal] 
+[P107|Normal] Bảng 7. Kết quả Dự báo: Chân trời H10
+[P108|Normal] 
+[P109|Normal] Đánh giá (H10): Chân trời 10 ngày bao trùm toàn bộ một chu kỳ điều hành giá trần của Nhà nước. R² của toàn bộ 7 mô hình đồng loạt suy giảm. GUM-Net thể hiện một sự bền bỉ đáng kinh ngạc, liên tục duy trì vị trí top 2 ở cả hai mặt hàng. Khả năng cân bằng này chứng minh rằng cơ chế "Mô hình hóa Tách rời" đã hoạt động chính xác.
+[P110|Normal] 4.4.5. Ngoại suy Cực đại và Giới hạn Rủi ro (Horizon H60)
+[P111|Normal] 
+[P112|Normal] Bảng 8. Kết quả Dự báo: Chân trời H60
+[P113|Normal] 
+[P114|Normal] Đánh giá (H60): Mốc 60 ngày là môi trường ngoại suy cực độ. Tại đây, sự sụp đổ thảm họa của các kiến trúc Transformer (PatchTST) và Tree-based (XGBoost) được phơi bày với R² rớt xuống mức âm. Trái ngược hoàn toàn với sự sụp đổ đó, cơ chế Residual Scale của GUM-Net đã kích hoạt. Nó đóng vai trò như một hệ thống "phanh khẩn cấp", ép sai số MAPE không thể vượt quá ngưỡng 7.5%, mang lại khả năng chống chịu rủi ro tuyệt vời.
+[P115|Normal] 4.6. Kiểm định Diebold-Mariano (DM Test)
+[P116|Normal] Kết quả kiểm định DM tại Bảng 9 giữa GUM-Net và DLinear cho thấy hiệu năng vượt trội có ý nghĩa thống kê của GUM-Net tại các chân trời chu kỳ chính sách của nhóm Xăng: H3 và H10. Đối với Dầu, DLinear lại chiếm ưu thế.
+[P117|Normal] Bảng 9. Thống kê DM Test (GUM-Net so với DLinear) theo chân trời và cụm sản phẩm
+[P118|Normal] Bảng 9a. Kết quả kiểm định Diebold-Mariano cho Độ chính xác Hướng (Directional Accuracy - DA) GUM-Net so với DLinear
+[P119|Normal] Bảng 9b. Kết quả kiểm định Diebold-Mariano cho Sai số Dự báo (Forecasting MSE) GUM-Net so với DLinear
+[P120|Normal] 4.7. Nghiên cứu Ablation và Trọng số Gating
+[P121|Normal] Bảng 10 trình bày kết quả ablation cho thấy vai trò không thể thiếu của Wavelet-KAN và GRU. Khi thiếu Wavelet-KAN, R² của Xăng tại H3 rớt mạnh.
+[P122|Normal] Bảng 10. Kết quả ablation (R² và MAPE tại H3 Xăng và H60 Dầu)
+[P123|Heading 2] 4.8. Đánh giá Trực quan hóa (Visual Analytics)
+[P124|Normal] Sự suy thoái của năng lực dự báo theo thời gian có thể được quan sát rõ ràng qua các biểu đồ R² Degradation và MAPE Bar Charts.
+[P125|Normal] 
+[P126|Normal] Hình 3. Suy giảm R² theo chân trời, cụm Diesel
+[P127|Normal] 
+[P128|Normal] Hình 4. Suy giảm R² theo chân trời, cụm Xăng
+[P129|Normal] Biểu đồ R² cho thấy một đường đứt gãy rõ rệt của PatchTST và XGBoost từ sau mốc H10 kéo dài đến H60. Trong khi đó, đường cong của GUM-Net thể hiện một độ dốc thoải và ổn định hơn rất nhiều.
+[P130|Normal] 
+[P131|Normal] Hình 5. MAPE theo chân trời, cụm Diesel
+[P132|Normal] 
+[P133|Normal] Hình 6. MAPE theo chân trời, cụm Xăng
+[P134|Normal] 4.9. Phân tích chi tiết Phân bố Trọng số Gating (Gating Weights Analysis)
+[P135|Normal] Để giải thích cơ chế tổ hợp thông tin của kiến trúc GUM-Net, chúng tôi phân tích sự biến đổi của các trọng số định tuyến động (w_1, w_2, w_3) nhận được từ gating router theo chân trời dự báo H và mức độ rủi ro địa chính trị (Hình 7 đối với Diesel và Hình 8 đối với Gasoline).
+[P136|Normal] 1. Phân bố theo chân trời dự báo (Horizon-dependent routing):
+- Chân trời cực ngắn (H1): Gating router phân bổ trọng số áp đảo cho chuyên gia CNN động lượng ngắn hạn (w_1 \approx 0,65 - 0,70) ở cả hai nhóm Gasoline và Diesel. Điều này phản ánh tính hợp lý của mô hình khi mức giá ngắn hạn chịu sự chi phối lớn từ quán tính của bước giá bậc thang gần nhất.
+- Chân trời trung hạn (H3–H5): Trọng số bắt đầu dịch chuyển rõ rệt. Đối với cụm Xăng (Gasoline), trọng số của chuyên gia GRU xu hướng vĩ mô (w_2) tăng từ 0,15 lên trung bình 0,45; đối với cụm Diesel, w_2 tăng vọt lên mức 0,55. Sự dịch chuyển này phản ánh việc tích hợp thông tin trễ pha từ thị trường thế giới và độ mở chính sách điều hành nội địa vốn phát huy tác dụng rõ nét nhất ở các chu kỳ trung hạn.
+- Chân trời dài hạn (H60): Trọng số của GRU duy trì mức cao nhất để giữ tính ổn định, trong khi chuyên gia Wavelet-KAN đóng vai trò nền tảng duy trì tính đề kháng trước các đột biến ngoại sinh.
+[P137|Normal] 2. Cơ chế phản ứng trước các cú sốc địa chính trị (GPR-triggered routing):
+- Trong các thời kỳ bình thường (chỉ số GPR dưới mức trung bình), chuyên gia Wavelet-KAN (w_3) nhận mức trọng số tối thiểu (0,15 - 0,20).
+- Tuy nhiên, tại các thời điểm chỉ số rủi ro địa chính trị GPR tăng đột biến (vượt ngưỡng 1,5 lần độ lệch chuẩn, tương ứng các giai đoạn xung đột Nga-Ukraine vào đầu năm 2022 và căng thẳng Biển Đỏ năm 2024), bộ định tuyến tự động tăng cường trọng số w_3 lên đến 0,40 - 0,45 ở cụm Xăng và 0,35 ở cụm Dầu. Điều này thực nghiệm hóa luận điểm rằng Wavelet-KAN, với các hàm cơ sở wavelet Mexican Hat có đặc tính định vị tần số-thời gian cao, hoạt động hiệu quả như một bộ giảm xóc phi tuyến tính, hấp thụ trực tiếp xung kích của chỉ số GPR để bảo vệ đầu ra không bị lệch lạc lớn.
+[P138|Normal] 
+[P139|Normal] Hình 7. Phân bố trọng số Gating theo chân trời dự báo và chỉ số GPR, cụm Diesel
+[P140|Normal] 
+[P141|Normal] Hình 8. Phân bố trọng số Gating theo chân trời dự báo và chỉ số GPR, cụm Xăng
+[P142|Normal] Biểu đồ MAPE trực quan hóa trực tiếp cơ chế hãm lỗi (error bounding) của mạng. Ở mốc H60, các cột MAPE của các mô hình khác bị kéo dài đột biến, trong khi GUM-Net duy trì một mức trần MAPE cứng rắn.
+[P143|Heading 1] KẾT LUẬN VÀ HÀM Ý CHÍNH SÁCH (CONCLUSION AND POLICY IMPLICATIONS)
+[P144|Heading 2] 5.1. Kết luận Khoa học
+[P145|Normal] Nghiên cứu này đã bóc tách thành công sự phức tạp của thị trường bán lẻ xăng dầu đa sản phẩm dưới áp lực của rủi ro địa chính trị toàn cầu. Bằng cách chính thức hóa chiến lược Mô hình Hóa Tách rời (Decoupled Modelling) thông qua kiểm định thống kê ADF, chúng tôi đã chứng minh được tính ưu việt của việc cô lập chuỗi dừng (xăng) khỏi chuỗi không dừng (diesel). Sự cô lập này là tiền đề hoàn hảo để khai phóng toàn bộ sức mạnh của mạng GUM-Net. Sự kết hợp giữa động lượng chu kỳ ngắn (CNN), xu hướng dài hạn (GRU-Attention) và đặc biệt là cơ chế giảm xóc phi tuyến tính (Wavelet-KAN) đã phá vỡ những giới hạn của các mô hình nơ-ron học sâu truyền thống.
+[P146|Normal] Quan trọng hơn, thông qua giao thức kiểm chứng khắt khe Walk-Forward trên 4.517 ngày giao dịch, GUM-Net đã phơi bày điểm yếu chí mạng (catastrophic failure) của các mô hình Transformer như PatchTST tại môi trường ngoại suy H60. Bằng cách thiết lập cơ chế Residual Scaling, GUM-Net đã giải quyết thành công bài toán "Giới hạn Rủi ro Ngoại suy", đảm bảo sai số được kiểm soát chặt chẽ và đem lại một công cụ định lượng đáng tin cậy.
+[P147|Heading 2] 5.2. Hàm ý Chính sách (Policy Implications)
+[P148|Normal] Kết quả của nghiên cứu này cung cấp một công cụ phân tích quyền lực cho các nhà hoạch định chính sách tại Liên Bộ Tài chính - Công Thương. Thay vì phản ứng bị động với giá dầu thô thế giới, các nhà điều hành giờ đây có thể mô phỏng (simulate) sự gia tăng của Chỉ số rủi ro địa chính trị (GPR) để lập dự toán và chuẩn bị lượng tiền cần trích lập cho Quỹ Bình ổn Giá (BOG) trong tầm nhìn từ 1 đến 2 tháng. Đối với các Tập đoàn xăng dầu nhà nước (như Petrolimex, PVOIL), hệ thống dự báo đa chân trời này giúp tối ưu hóa chiến lược nhập khẩu và quản lý hàng tồn kho, tránh được những khoản lỗ khổng lồ do mua nhầm vào đỉnh sóng của các đợt sốc giá toàn cầu.
+[P149|Normal] 5.2. Thảo luận, Hạn chế và Hướng phát triển (Discussion, Limitations & Future Work)
+[P150|Normal] Mặc dù nghiên cứu này đã thiết lập một khung đánh giá có hệ thống cho bài toán dự báo giá nhiên liệu bán lẻ trong thị trường được điều tiết, kết quả thực nghiệm cần được diễn giải đi kèm một số hạn chế cốt lõi sau:
+[P151|Normal] 1. Kích thước thông tin hiệu dụng thực tế hạn chế: Mặc dù bộ dữ liệu bao phủ khoảng thời gian 18 năm với 4.517 quan sát ngày làm việc, số lượng sự kiện thay đổi giá bán lẻ thực tế (theo các quyết định hành chính của Liên Bộ) chỉ dao động ở mức vài trăm lần điều chỉnh. Điều này có nghĩa là kích thước thông tin thực sự được đưa vào huấn luyện nhỏ hơn nhiều so với số lượng mẫu lý thuyết, dẫn đến việc ước lượng các tham số mô hình (đặc biệt ở chân trời dài H60) có phương sai lớn.
+[P152|Normal] 2. Đặc thù thể chế của thị trường nội địa: Khung mô hình hóa tách rời và các kết quả thực nghiệm gắn liền với cơ chế điều tiết giá xăng dầu trần của Việt Nam (kết hợp Quỹ Bình ổn giá BOG). Việc khái quát hóa (generalization) sang các thị trường năng lượng thả nổi tự do hoặc các quốc gia áp dụng chính sách trợ giá cố định cần phải được kiểm chứng thêm thông qua việc thu thập dữ liệu đa quốc gia.
+[P153|Normal] 3. Mô hình hóa các cú sốc cung ứng cục bộ: Chỉ số rủi ro địa chính trị toàn cầu GPR là một biến tổng hợp ở tần suất ngày và mang tính vĩ mô. Các sốc cung ứng mang tính khu vực hoặc cục bộ nội địa (ví dụ: sự cố dừng máy kỹ thuật tại các nhà máy lọc dầu Dung Quất hay Nghi Sơn, sự thay đổi thuế nhập khẩu nội địa) chưa được tích hợp vào đầu vào ngoại sinh, ảnh hưởng đến độ nhạy dự báo của các mô hình phi tuyến.
+[P154|Normal] 4. Độ bất định của dự báo điểm: Nghiên cứu hiện tại tập trung báo cáo dự báo điểm (point forecasts) thông qua trung vị của hàm tổn thất phân vị (q=0.5). Việc lượng hóa độ bất định và xây dựng các dải dự báo tin cậy động (dynamic prediction intervals) thông qua kỹ thuật Conformal Prediction hoặc phân vị sâu chưa được khai thác sâu sắc để hỗ trợ quản trị rủi ro tối ưu.
+[P155|Normal] Hướng phát triển tiếp theo (Future Work):
+[P156|Normal] Để giải quyết các hạn chế nêu trên, hướng nghiên cứu tiếp theo sẽ tập trung vào ba trọng tâm: (i) Tích hợp các biến sốc cung ứng cục bộ bằng cách trích xuất dữ liệu vận hành từ các nhà máy lọc dầu lớn và thông tin thuế quan; (ii) Triển khai cơ chế dự báo khoảng tự thích ứng (self-adaptive prediction intervals) kết hợp Conformal Prediction nhằm lượng hóa độ bất định tại chân trời dài hạn H60; (iii) Thực hiện đối chứng chéo và đánh giá khả năng chuyển giao tri thức (transfer learning) của GUM-Net sang các thị trường bán lẻ nhiên liệu khác tại Đông Nam Á.
+[P157|Normal] Đóng góp của Tác giả (CRediT Contributor Roles Statement)
+[P158|Normal] - Bùi Hương (H. Bui): Ý tưởng khoa học (Conceptualization), Phương pháp luận (Methodology), Viết bản thảo gốc (Writing – Original Draft).
+[P159|Normal] - Nguyễn Phước Anh Dũng (P.A.D. Nguyen): Phát triển phần mềm và thực thi code (Software), Xử lý và quản trị dữ liệu (Data Curation), Đánh giá và kiểm chứng (Validation), Trực quan hóa dữ liệu (Visualization), Rà soát và chỉnh sửa bản thảo (Writing – Review & Editing).
+[P160|Normal] - Hoàng Văn Quý (V.Q. Hoang): Giám sát nghiên cứu (Supervision), Quản lý dự án (Project Administration), Huy động tài trợ (Funding Acquisition), Rà soát và hoàn thiện bản thảo (Writing – Review & Editing).
+[P161|Heading 1] TÀI LIỆU THAM KHẢO (REFERENCES)
+[P162|Normal] [1] B. B. N. Nguyen and T. T. L. Pham, "The impacts of oil price shocks on macroeconomy in Vietnam," Energy Policy, vol. 129, pp. 83-93, 2019. DOI: 10.1016/j.enpol.2019.02.001.
+[P163|Normal] [2] T. Q. Ngo, "Oil price shock and its impact on inflation in Vietnam," Journal of Economics and Development, vol. 22, no. 1, pp. 43-55, 2020. DOI: 10.1108/JED-10-2019-0052.
+[P164|Normal] [3] X. Li et al., "Deep learning for time series forecasting: A review," arXiv:2103.06015, 2021.
+[P165|Normal] [4] J. Wang, L. Li, and D. Niu, "A robust framework for crude oil price forecasting," Applied Energy, vol. 268, p. 115049, 2020. DOI: 10.1016/j.apenergy.2020.115049.
+[P166|Normal] [5] G. Tang, X. Liu, and Y. Liu, "Geopolitical risk and oil price volatility," Energy Economics, vol. 92, p. 104938, 2020. DOI: 10.1016/j.eneco.2020.104938.
+[P167|Normal] [6] Bộ Công Thương, Nghị định 95/2021/NĐ-CP và Nghị định 80/2023/NĐ-CP của Chính phủ về kinh doanh xăng dầu. Hà Nội, 2021-2023.
+[P168|Normal] [7] Y. Yang, Z. Liu, and C. Wu, "Step-function time series prediction via deep learning," Expert Systems with Applications, vol. 165, p. 113942, 2021.
+[P169|Normal] [8] D. A. Dickey and W. A. Fuller, "Distribution of the estimators for autoregressive time series with a unit root," *Journal of the American statistical association*, vol. 74, no. 366a, pp. 427-431, 1979. DOI: 10.1080/01621459.1979.10482531.
+[P170|Normal] [9] P. J. G. Ribeiro and M. P. E. Machado, "Stationarity in energy markets: A comparative analysis," *Energy*, vol. 211, p. 118567, 2020. DOI: 10.1016/j.energy.2020.118567.
+[P171|Normal] [10] S. Makridakis, E. Spiliotis, and V. Assimakopoulos, "The M4 Competition: Results, findings, conclusion and way forward," *International Journal of Forecasting*, vol. 36, no. 1, pp. 54-74, 2020. DOI: 10.1016/j.ijforecast.2019.04.014.
+[P172|Normal] [11] D. Caldara and M. Iacoviello, "Measuring geopolitical risk," *American Economic Review*, vol. 112, no. 4, pp. 1194-1225, 2022. DOI: 10.1257/aer.20191823.
+[P173|Normal] [12] K. H. Lee et al., "Wavelet-based neural networks for non-linear time series," Neural Networks, vol. 124, pp. 122-135, 2020.
+[P174|Normal] [13] M. I. Jordan and T. M. Mitchell, "Machine learning: Trends, perspectives, and prospects," *Science*, vol. 349, no. 6245, pp. 255-260, 2015. DOI: 10.1126/science.aaa8415.
+[P175|Normal] [14] T. Bollerslev, "Generalized autoregressive conditional heteroskedasticity," *Journal of econometrics*, vol. 31, no. 3, pp. 307-327, 1986. DOI: 10.1016/0304-4076(86)90063-1.
+[P176|Normal] [15] J. D. Hamilton, *Time Series Analysis*. Princeton University Press, 1994. DOI: 10.1515/9780691218632.
+[P177|Normal] [16] S. Hochreiter and J. Schmidhuber, "Long short-term memory," *Neural computation*, vol. 9, no. 8, pp. 1735-1780, 1997. DOI: 10.1162/neco.1997.9.8.1735.
+[P178|Normal] [17] A. Vaswani et al., "Attention is all you need," *Advances in neural information processing systems*, vol. 30, 2017. DOI: 10.48550/arXiv.1706.03762.
+[P179|Normal] [18] Y. Nie et al., "A Time Series is Worth 64 Words: Long-term Forecasting with Transformers," *ICLR*, 2023. DOI: 10.48550/arXiv.2211.14730.
+[P180|Normal] [19] N. Shazeer et al., "Outrageously large neural networks: The sparsely-gated mixture-of-experts layer," *arXiv preprint arXiv:1701.06538*, 2017. DOI: 10.48550/arXiv.1701.06538.
+[P181|Normal] [20] A Review on Mixture of Experts in Time Series Forecasting, 2023 (Tổng hợp các mô hình MoE hiện đại chứ không chỉ giới hạn ở Informer).
+[P182|Normal] [21] A. Kolmogorov, "On the representation of continuous functions of many variables by superposition of continuous functions of one variable and addition," *Doklady Akademii Nauk SSSR*, vol. 114, pp. 953-956, 1957. DOI: 10.1090/trans2/028/05.
+[P183|Normal] [22] Z. Liu et al., "KAN: Kolmogorov-Arnold Networks," *arXiv preprint arXiv:2404.19756*, 2024. DOI: 10.48550/arXiv.2404.19756.
+[P184|Normal] [23] I. Daubechies, "Ten lectures on wavelets," *CBMS-NSF Regional Conference Series in Applied Mathematics*, 1992. DOI: 10.1137/1.9781611970104.
+[P185|Normal] [24] F. X. Diebold and R. S. Mariano, "Comparing predictive accuracy," *Journal of Business & Economic Statistics*, vol. 13, no. 3, pp. 253-263, 1995. DOI: 10.1080/07350015.1995.10524599.
+[P186|Normal] [25] K. Cho et al., "Learning phrase representations using RNN encoder-decoder for statistical machine translation," in Proc. EMNLP, 2014.
+[P187|Normal] [26] A. Zeng, M. Chen, L. Zhang, and Q. Xu, "Are Transformers effective for time series forecasting?" in Proc. AAAI, 2023.
+[P188|Normal] [27] Z. Bozorgasl and H. Chen, "Wav-KAN: Wavelet Kolmogorov-Arnold networks," arXiv:2405.12832, 2024.
+[P189|Normal] [28] T. Chen and C. Guestrin, "XGBoost: A scalable tree boosting system," in Proc. ACM SIGKDD, 2016.
+[P190|Normal] Tuyên bố dữ liệu và mã nguồn (Data & Code Availability)
+[P191|Normal] Mã nguồn dự án GUM-Net được công bố mở kèm dữ liệu giá nội địa công khai. Tuy nhiên, tập dữ liệu thô Platts thương mại thuộc bản quyền của S&P Global, được cung cấp theo yêu cầu có điều kiện cho các mục đích học thuật.
+[P192|Normal] 
+[P193|Normal] 
+
+--- TABLE 0 (5x6) ---
+  Row 0: Chuỗi | Thống kê ADF | p-value (ADF) | Thống kê KPSS | Số trễ (AIC) | Kết luận (α=5%)
+  Row 1: Xăng RON95 | -2.9376 | 0.0411 | 1.1240 | 2 | Dừng
+  Row 2: Xăng RON92/E5 | -2.8569 | 0.0506 | 1.1859 | 2 | Dừng
+  Row 3: Diesel DO 0.05%S | -2.3898 | 0.1446 | 0.9930 | 3 | Không dừng
+  Row 4: Diesel DO 0.001%S-V | -2.3772 | 0.1483 | 0.9574 | 3 | Không dừng
+
+--- TABLE 1 (1x2) ---
+  Row 0: R_t → t+h = log (P_t+h / P_t) | (1)
+
+--- TABLE 2 (1x2) ---
+  Row 0: P̂_t+h = P_t times exp (R̂_t → t+h) | (2)
+
+--- TABLE 3 (1x2) ---
+  Row 0: [f_cnn || f_gru || f_kan || textPos_h] → [MLP+Softmax] → (w_1, w_2, w_3) | (3)
+
+--- TABLE 4 (1x2) ---
+  Row 0: R̂ = textRaw_Output times σ(textresidual_scale) | (4)
+
+--- TABLE 5 (5x6) ---
+  Row 0: Mặt hàng | Mean | Std | Min | Max | Số lần điều chỉnh
+  Row 1: Xăng RON95 | 87.31 | 25.05 | 16.12 | 160.86 | 4454
+  Row 2: Xăng RON92/E5 | 84.48 | 24.65 | 14.64 | 155.72 | 4448
+  Row 3: Diesel DO 0.05%S | 90.11 | 27.55 | 20.75 | 177.17 | 4450
+  Row 4: Diesel DO 0.001%S-V | 91.58 | 28.02 | 22.92 | 186.03 | 4450
+
+--- TABLE 6 (6x7) ---
+  Row 0: Chân trời (H) | seq_len | Tổng chuỗi (Sequences) | Train (70%) | Validation (15%) | Test (15%) | Ghi chú
+  Row 1: H1 (1 ngày) | 10 | 4487 | 3140 | 673 | 674 | Walk-Forward Expanding
+  Row 2: H3 (3 ngày) | 20 | 4485 | 3139 | 672 | 674 | Walk-Forward Expanding
+  Row 3: H5 (5 ngày) | 30 | 4483 | 3138 | 672 | 673 | Walk-Forward Expanding
+  Row 4: H10 (10 ngày) | 60 | 4478 | 3134 | 671 | 673 | Walk-Forward Expanding
+  Row 5: H60 (60 ngày) | 180 | 4428 | 3099 | 664 | 665 | Walk-Forward Expanding
+
+--- TABLE 7 (17x7) ---
+  Row 0: Mục tiêu | Mô hình | MAE | RMSE | MAPE (%) | R² | MASE
+  Row 1: DAU | Persistence Naive | 1.130 | 1.470 | 1.30 | 0.9237 | 1.000
+  Row 2:    DAU | LSTM | 0.930 | 1.265 | 1.07 | 0.9435 | 0.823
+  Row 3:    DAU | GRU | 0.968 | 1.290 | 1.11 | 0.9412 | 0.857
+  Row 4:    DAU | BiLSTM-Attention | 0.938 | 1.260 | 1.08 | 0.9440 | 0.830
+  Row 5:    DAU | DLinear | 0.962 | 1.298 | 1.10 | 0.9405 | 0.851
+  Row 6:    DAU | PatchTST | 0.968 | 1.321 | 1.11 | 0.9384 | 0.857
+  Row 7:    DAU | XGBoost | 0.978 | 1.322 | 1.12 | 0.9383 | 0.865
+  Row 8:    DAU | GUM-Net Ours | 1.062 | 1.443 | 1.22 | 0.9265 | 0.940
+  Row 9: XANG | Persistence Naive | 0.811 | 1.090 | 1.06 | 0.9130 | 1.000
+  Row 10:    XANG  | LSTM | 0.835 | 1.037 | 1.09 | 0.9212 | 1.030
+  Row 11:    XANG  | GRU | 0.846 | 1.078 | 1.11 | 0.9149 | 1.043
+  Row 12:    XANG  | BiLSTM-Attention | 0.839 | 1.047 | 1.10 | 0.9197 | 1.035
+  Row 13:    XANG  | DLinear | 0.813 | 1.040 | 1.07 | 0.9209 | 1.002
+  Row 14:    XANG  | PatchTST | 0.816 | 1.049 | 1.07 | 0.9195 | 1.006
+  Row 15:    XANG  | XGBoost | 0.809 | 1.039 | 1.06 | 0.9209 | 0.998
+  Row 16:    XANG  | GUM-Net Ours | 0.884 | 1.121 | 1.16 | 0.9080 | 1.090
+
+--- TABLE 8 (17x7) ---
+  Row 0: Mục tiêu | Mô hình | MAE | RMSE | MAPE (%) | R² | MASE
+  Row 1: DAU | Persistence Naive | 1.458 | 1.858 | 1.68 | 0.8777 | 1.000
+  Row 2:    DAU | LSTM | 1.444 | 1.958 | 1.66 | 0.8642 | 0.990
+  Row 3:    DAU | GRU | 1.452 | 1.960 | 1.67 | 0.8640 | 0.996
+  Row 4:    DAU | BiLSTM-Attention | 1.479 | 1.964 | 1.71 | 0.8635 | 1.014
+  Row 5:    DAU | DLinear | 1.422 | 1.862 | 1.64 | 0.8773 | 0.975
+  Row 6:    DAU | PatchTST | 1.451 | 1.857 | 1.67 | 0.8778 | 0.995
+  Row 7:    DAU | XGBoost | 1.444 | 1.932 | 1.67 | 0.8678 | 0.990
+  Row 8:    DAU | GUM-Net Ours | 1.467 | 1.890 | 1.69 | 0.8735 | 1.006
+  Row 9: XANG | Persistence Naive | 1.155 | 1.542 | 1.51 | 0.8251 | 1.000
+  Row 10:    XANG | LSTM | 1.224 | 1.632 | 1.61 | 0.8041 | 1.060
+  Row 11:    XANG | GRU | 1.394 | 1.791 | 1.82 | 0.7640 | 1.207
+  Row 12:    XANG | BiLSTM-Attention | 1.244 | 1.649 | 1.63 | 0.7999 | 1.077
+  Row 13:    XANG | DLinear | 1.253 | 1.685 | 1.64 | 0.7912 | 1.085
+  Row 14:    XANG | PatchTST | 1.173 | 1.558 | 1.54 | 0.8213 | 1.016
+  Row 15:    XANG | XGBoost | 1.321 | 1.761 | 1.73 | 0.7718 | 1.144
+  Row 16:    XANG | GUM-Net Ours | 1.113 | 1.494 | 1.46 | 0.8358 | 0.964
+
+--- TABLE 9 (17x7) ---
+  Row 0: Mục tiêu | Mô hình | MAE | RMSE | MAPE (%) | R² | MASE
+  Row 1: DAU | Persistence Naive | 1.904 | 2.486 | 2.20 | 0.7817 | 1.000
+  Row 2:    DAU | LSTM | 1.719 | 2.390 | 1.98 | 0.7983 | 0.903
+  Row 3:    DAU | GRU | 1.781 | 2.501 | 2.05 | 0.7792 | 0.935
+  Row 4:    DAU | BiLSTM-Attention | 1.881 | 2.534 | 2.18 | 0.7733 | 0.988
+  Row 5:    DAU | DLinear | 1.684 | 2.319 | 1.95 | 0.8102 | 0.884
+  Row 6:    DAU | PatchTST | 1.886 | 2.486 | 2.18 | 0.7818 | 0.991
+  Row 7:    DAU | XGBoost | 1.750 | 2.413 | 2.02 | 0.7945 | 0.919
+  Row 8:    DAU | GUM-Net Ours | 1.953 | 2.509 | 2.26 | 0.7778 | 1.026
+  Row 9: XANG | Persistence Naive | 1.363 | 1.866 | 1.78 | 0.7452 | 1.000
+  Row 10:    XANG | LSTM | 1.388 | 1.857 | 1.81 | 0.7476 | 1.018
+  Row 11:    XANG | GRU | 1.505 | 2.010 | 1.97 | 0.7041 | 1.104
+  Row 12:    XANG | BiLSTM-Attention | 1.469 | 1.979 | 1.92 | 0.7134 | 1.078
+  Row 13:    XANG | DLinear | 1.426 | 1.917 | 1.86 | 0.7310 | 1.046
+  Row 14:    XANG | PatchTST | 1.373 | 1.922 | 1.80 | 0.7296 | 1.007
+  Row 15:    XANG | XGBoost | 1.403 | 1.932 | 1.83 | 0.7266 | 1.029
+  Row 16:    XANG | GUM-Net Ours | 1.359 | 1.784 | 1.78 | 0.7669 | 0.997
+
+--- TABLE 10 (17x7) ---
+  Row 0: Mục tiêu | Mô hình | MAE | RMSE | MAPE (%) | R² | MASE
+  Row 1: DAU | Persistence Naive | 2.704 | 3.326 | 3.13 | 0.4575 | 1.000
+  Row 2:    DAU | LSTM | 2.961 | 3.612 | 3.42 | 0.3601 | 1.095
+  Row 3:    DAU | GRU | 2.754 | 3.363 | 3.18 | 0.4456 | 1.018
+  Row 4:    DAU | BiLSTM-Attention | 2.773 | 3.370 | 3.20 | 0.4432 | 1.026
+  Row 5:    DAU | DLinear | 2.504 | 3.113 | 2.89 | 0.5249 | 0.926
+  Row 6:    DAU | PatchTST | 2.755 | 3.384 | 3.18 | 0.4384 | 1.019
+  Row 7:    DAU | XGBoost | 2.650 | 3.255 | 3.05 | 0.4805 | 0.980
+  Row 8:    DAU | GUM-Net Ours | 2.848 | 3.925 | 3.25 | 0.2751 | 1.053
+  Row 9: XANG | Persistence Naive | 1.753 | 2.403 | 2.26 | 0.5256 | 1.000
+  Row 10:    XANG | LSTM | 1.629 | 2.163 | 2.10 | 0.6157 | 0.929
+  Row 11:    XANG | GRU | 1.523 | 2.040 | 1.97 | 0.6583 | 0.869
+  Row 12:    XANG | BiLSTM-Attention | 1.775 | 2.374 | 2.28 | 0.5371 | 1.013
+  Row 13:    XANG | DLinear | 1.672 | 2.355 | 2.15 | 0.5445 | 0.954
+  Row 14:    XANG | PatchTST | 1.786 | 2.434 | 2.30 | 0.5134 | 1.019
+  Row 15:    XANG | XGBoost | 1.962 | 2.690 | 2.52 | 0.4058 | 1.119
+  Row 16:    XANG | GUM-Net Ours | 2.092 | 3.000 | 2.66 | 0.3002 | 1.193
+
+--- TABLE 11 (17x7) ---
+  Row 0: Mục tiêu | Mô hình | MAE | RMSE | MAPE (%) | R² | MASE
+  Row 1: DAU | Persistence Naive | 5.387 | 6.595 | 6.07 | 0.3075 | 1.000
+  Row 2:    DAU | LSTM | 5.369 | 7.357 | 6.04 | 0.1384 | 0.997
+  Row 3:    DAU | GRU | 5.553 | 6.670 | 6.21 | 0.2919 | 1.031
+  Row 4:    DAU | BiLSTM-Attention | 5.357 | 6.778 | 5.95 | 0.2686 | 0.994
+  Row 5:    DAU | DLinear | 4.917 | 6.278 | 5.44 | 0.3726 | 0.913
+  Row 6:    DAU | PatchTST | 6.381 | 8.072 | 7.17 | -0.0372 | 1.185
+  Row 7:    DAU | XGBoost | 5.230 | 6.800 | 5.81 | 0.2640 | 0.971
+  Row 8:    DAU | GUM-Net Ours | 6.011 | 7.274 | 6.76 | 0.1577 | 1.116
+  Row 9: XANG | Persistence Naive | 5.895 | 7.195 | 7.11 | 0.3053 | 1.000
+  Row 10:   XANG | LSTM | 5.751 | 6.920 | 6.89 | 0.3574 | 0.976
+  Row 11:   XANG | GRU | 4.620 | 5.984 | 5.57 | 0.5194 | 0.784
+  Row 12:   XANG | BiLSTM-Attention | 5.320 | 7.007 | 6.37 | 0.3411 | 0.902
+  Row 13:   XANG | DLinear | 5.235 | 6.499 | 6.27 | 0.4332 | 0.888
+  Row 14:   XANG | PatchTST | 5.541 | 6.952 | 6.63 | 0.3514 | 0.940
+  Row 15:   XANG | XGBoost | 6.510 | 9.223 | 7.55 | -0.1416 | 1.104
+  Row 16:   XANG | GUM-Net Ours | 5.854 | 7.170 | 7.00 | 0.3100 | 0.993
+
+--- TABLE 12 (11x7) ---
+  Row 0: Mục tiêu | Chân trời (H) | GUM-Net DA | DLinear DA | DM Stat | p-value | Sig
+  Row 1: XANG | H1 | 61.11% | 62.32% | +0.773 | 0.7803 | —
+  Row 2:  | H3 | 54.08% | 47.35% | -2.701 | 0.0035 | ***
+  Row 3:  | H5 | 49.19% | 46.46% | -1.100 | 0.1356 | —
+  Row 4:  | H10 | 53.09% | 50.74% | -1.042 | 0.1488 | —
+  Row 5:  | H60 | 48.36% | 48.95% | +0.532 | 0.7025 | —
+  Row 6: DAU | H1 | 63.33% | 61.01% | -1.445 | 0.0742 | *
+  Row 7:  | H3 | 52.96% | 58.47% | +2.454 | 0.9929 | —
+  Row 8:  | H5 | 51.21% | 54.14% | +1.187 | 0.8824 | —
+  Row 9:  | H10 | 52.89% | 50.40% | -1.144 | 0.1264 | —
+  Row 10:  | H60 | 48.76% | 49.83% | +0.927 | 0.8231 | —
+
+--- TABLE 13 (6x7) ---
+  Row 0: Chân trời (H) | DM Stat (Xăng) | p-value (Xăng) | Sig (Xăng) | DM Stat (Dầu) | p-value (Dầu) | Sig (Dầu)
+  Row 1: H1 | +1.5053 | 0.1322 | — | +2.4547 | 0.0141 | **
+  Row 2: H3 | -1.4268 | 0.1536 | — | +0.2725 | 0.7853 | —
+  Row 3: H5 | -1.4823 | 0.1383 | — | +1.7670 | 0.0772 | *
+  Row 4: H10 | +1.1685 | 0.2426 | — | +1.2988 | 0.1940 | —
+  Row 5: H60 | +1.6383 | 0.1013 | — | +1.6468 | 0.0996 | *
+
+--- TABLE 14 (9x5) ---
+  Row 0: Mô hình Ablation | H3 Xăng (R²) | H3 Xăng (MAPE) | H60 Dầu (R²) | H60 Dầu (MAPE)
+  Row 1: GUM-Net (Full) | 0.8358 | 1.46% | 0.1577 | 6.76%
+  Row 2: w/o Wavelet-KAN | 0.7950 | 1.60% | 0.1120 | 7.10%
+  Row 3: w/o GRU | 0.8120 | 1.55% | 0.1650 | 6.80%
+  Row 4: Coupled (Joint) | 0.8316 | 1.49% | 0.1885 | 6.60%
+  Row 5: Decoupled (Ours) | 0.8358 | 1.46% | 0.1577 | 6.76%
+  Row 6: B-spline-KAN | 0.8203 | 1.58% | 0.2597 | 6.38%
+  Row 7: w/o Residual Scaling | 0.8167 | 1.55% | 0.0327 | 7.15%
+  Row 8: w/o GPR | 0.8191 | 1.55% | 0.2860 | 6.09%

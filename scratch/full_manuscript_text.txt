@@ -1,0 +1,1760 @@
+[1] Robust Probabilistic Energy Forecasting under Geopolitical Shocks: An Adaptive Mixture of Local-Global Experts
+
+[2] Xuan Thuy NguyenPetrolvietnam Oil CorporationHo Chi Minh City, Vietnamthuynx@pvoil.com.vn
+
+[3] Phuoc Anh Dung NguyenFaculty of Information TechnologyHUTECH UniversityHo Chi Minh City, Vietnamanhdungnguyen955@gmail.com
+
+[4] Hoang Long LyFaculty of Information TechnologyHUTECH UniversityHo Chi Minh City, Vietnamlyhoanglong1709@gmail.com
+
+[5] Van Quy HoangFaculty of Information TechnologyBacgiang Agriculture and Forestry University (BAFU)Bac Ninh, Vietnamquyhv@bafu.edu.vn
+
+[6] Huong BuiFaculty of Information TechnologyHUTECH UniversityHo Chi Minh City, Vietnambd.huong@hutech.edu.vn
+
+[7] Abstract—This paper proposes GUMNetHet (Heterogeneous Gated Unified Mixture Network) for multi-horizon probabilistic forecasting of refined petroleum prices under geopolitical volatility. The framework partitions input features into three distinct subsets and processes them via specialized domain experts: multi-scale 1D-CNN for price momentum, GRU-Attention for macroeconomic regimes, and Wavelet-KAN for non-linear shock-sensitive dynamics. These representations are combined by a gating router conditioned on the forecast horizon and market context; multi-quantile outputs q ∈ {0.1, 0.5, 0.9} are optimized using pinball loss combined with residual scaling. On Platts data spanning 11/2008–04/2026 (N = 4,512 observations) under an expanding walk-forward protocol in a high-volatility period (annualized test-set volatility reaching 73.04% for MG95 and 96.29% for DO 0.001%, representing 1.90× and 2.90× historical training levels, respectively), GUMNetHet achieves the lowest MAE among the reported baselines at all seven horizons H1–H60 for both MG95 gasoline and DO 0.001% diesel. At H60, MAE is reduced by 30.1% for MG95 (4.847 vs. 6.933) and 22.9% for DO 0.001% (7.066 vs. 9.167) relative to the strongest baseline. Directional accuracy remains high at short horizons (H1–H7: 90.95%–95.56% for MG95, 76.65%–84.92% for DO) but declines at H10 and H60, indicating a gap between price-level accuracy and directional accuracy at longer horizons. The calibrated 80% prediction interval attains PICP=82.4% with sharpness PINAW=0.142. Ablation studies and router analysis indicate that expert specialization and adaptive routing contribute substantially to model performance.
+
+[8] Keywords—refined petroleum price forecasting, mixture-of-experts, Wavelet-KAN, geopolitical risk, quantile forecasting, expanding walk-forward
+
+[9] I. INTRODUCTION
+
+[10] The Vietnamese refined petroleum market has a distinctive supply structure: approximately 70% of total domestic consumption is supplied by two domestic oil refineries (Dung Quat and Nghi Son), while the remaining 30% is imported from international markets. Among these, Singapore is the primary import source, where Mean of Platts Singapore (MOPS) refined product trading prices—exemplified by Mogas 95 (MG95) and Gasoil 0.001%S (DO 0.001%)—serve as the reference pricing benchmark for most commercial contracts, cost accounting, and supply chain management. However, Platts prices exhibit complex dynamics, responding simultaneously to global supply–demand shocks, foreign exchange volatility, and geopolitical risks (GPR) [1], [2], [3]. Historical episodes such as the 2014–2016 oil price collapse, the 2020 OPEC+ price war, the 2022 Russia–Ukraine conflict, and the 2023–2024 Red Sea tensions show that refined product price series can exhibit non-linear jumps, regime shifts, and pronounced volatility clustering. Consequently, accurate forecasts of Platts refined petroleum prices over short-term (H1–H7) and medium-term (H10–H60) horizons are of practical importance for business decision-making, procurement planning, inventory management, and risk hedging for major petroleum trading enterprises such as Petrolimex and PVOIL.
+
+[11] Modern time series architectures such as PatchTST [8], iTransformer [9], TimesNet [10], DLinear [11], Mamba [15], and Chronos [16] have improved performance on general benchmarks; however, most process all input variables within a relatively homogeneous representation space. For energy data, three groups of signals differ fundamentally in nature: high-frequency price momentum, slowly-evolving macroeconomic regimes, and large-amplitude non-linear shock responses which call for specialized architectural inductive biases. Traditional mixture-of-experts (MoE) networks [20], [21], [22] typically feed the identical feature set to all experts, which may limit the degree of expert specialization.
+
+[12] The proposed GUMNetHet model addresses this limitation via feature partitioning: price and benchmark series are processed by multi-scale 1D-CNN; macroeconomic and GPR indices by GRU-Attention; and crack-spread ratios and realized volatility by Wavelet-KAN. These three representations are combined via a gating router conditioned on the forecasting horizon and market context. The principal contributions of this paper are fourfold: (i) A heterogeneous MoE architecture with feature partitioning grounded in economic characteristics and frequency content, which mitigates expert collapse (ablation shows a 10.1%–17.7% MAE degradation when Wav-KAN is replaced by a standard MLP); (ii) A horizon-aware routing mechanism that dynamically modulates expert weights across forecast lead times and market regimes, with the Wavelet-KAN weight rising to 0.61 in top-decile GPR regimes; (iii) A multi-quantile head (q ∈ {0.1, 0.5, 0.9}) combined with residual scaling to limit long-horizon variance drift and provide calibrated prediction intervals (PICP=82.4%, PINAW=0.142); and (iv) Expanding walk-forward evaluation on N = 4,512 trading days (2008–2026) in a period of elevated geopolitical volatility (test-set volatility 1.90×–2.90× historical training levels), showing lower MAE than six competitive baselines at all horizons H1–H60, with up to 30.1% (MG95) and 22.9% (DO 0.001%) error reductions at H60. All source code, trained checkpoints, and reproducibility scripts are openly available at: https://github.com/NguyenPhuocAnhDung/oil_forecast_tail_risk.
+
+[13] II. RELATED WORK
+
+[14] Kilian [2] and Baumeister and Kilian [3] established frameworks for decomposing supply and demand shocks in oil markets, while the GPR index of Caldara & Iacoviello [1] provides a quantitative metric for geopolitical risk. On the modeling side, PatchTST [8], iTransformer [9], and TimesNet [10] represent modern Transformer and temporal variation designs; DLinear [11] demonstrates that decomposition-based linear models remain strong baselines. TFT [12], N-BEATS [13], and N-HiTS [14] extend multi-horizon forecasting; Mamba [15] introduces selective state-space mechanisms into sequence modeling; and Chronos [16], TimesFM [17], MOIRAI [18], and TTM [19] expand into foundation time-series architectures.
+
+[15] Regarding MoE, Jacobs et al. [20] introduced adaptive mixtures of local experts; Shazeer et al. [21] and Switch Transformers [22] advanced sparse gating at large scale. KAN [23] and Wav-KAN [24] replace fixed activation functions with learnable basis functions, where wavelets are well suited to localized, multi-resolution signals [25]. Time-MoE [26] and TimeMixer++ [27] further demonstrate the value of expert routing in time series. Unlike these homogeneous expert designs, GUMNetHet assigns different architectures to different feature groups and conditions the router on the forecast horizon.
+
+[16] III. PROPOSED METHODOLOGY: GUMNETHET
+
+[17] A. Problem Formulation
+
+[18] Let Xprice, Xmacro, Xshock denote past input feature matrices with lookback length L = 30 trading days. The forecasting objective is to directly estimate the cumulative log-return vector rt+h,c = ln(Pt+h,c) - ln(Pt,c) across horizons h ∈ {1, 3, 5, 7, 10, 20, 60} for product basket c ∈ {MG95, DO 0.001%}, defined in (1):
+
+[19] Rt→t+h, c = ln(Pt+h, c) - ln(Pt, c)
+
+[20] (1)
+
+[21] The future forecasted price level Pt+h,c = Pt,c · exp(rt+h,c) is then recovered via the deterministic inverse mapping in (2). This direct cumulative-return formulation maps the non-stationary price series to stationary log-returns (p < 0.001; see Section IV-B) and avoids recursive error accumulation across multi-step horizons.
+
+[22] Pt+h, c = Pt, c · exp(Rt→t+h, c)
+
+[23] (2)
+
+[24] B. Overall System Architecture
+
+[25] Fig. 1 illustrates the neural architecture of GUMNetHet. Unlike conventional MoE networks that feed all features into every expert, which may weaken specialization, GUMNetHet partitions features by frequency content and economic characteristics: high-frequency price dynamics to multi-scale 1D-CNN, slowly-evolving macroeconomic regimes to GRU-Attention, and fat-tailed crack-spread/shock indicators to Wavelet-KAN. This design imposes a domain-specific inductive bias on each expert and helps mitigate expert degeneration.
+
+[26] Fig. 1. Neural network architecture of GUMNetHet: Feature partitioning into domain subsets, three specialized heterogeneous experts (Multi-Scale 1D-CNN, Stacked GRU-Attention, and Wavelet-KAN), horizon-aware dynamic gating router, and multi-quantile tail risk output head with residual scaling.
+
+[27] 1) Price Momentum Expert: Multi-Scale 1D-CNN:
+
+[28] The price expert employs three parallel 1D convolutional layers with kernel sizes k ∈ {3, 7, 15} to extract multi-resolution temporal features, integrated with layer normalization and temporal attention according to (3) and (4):
+
+[29] outk = ReLU(Conv1Dk(xCNN)),   k ∈ {3, 7, 15}
+
+[30] (3)
+
+[31] fCNN = Attn(LN(Proj([out3 ‖ out7 ‖ out15]))) ∈ Rd
+
+[32] (4)
+
+[33] 2) Macroeconomic Regime Expert: GRU-Attention:
+
+[34] The macroeconomic expert captures low-frequency trend signals via a 2-layer stacked GRU network with dropout = 0.1, extracting the final hidden state representation according to (5):
+
+[35] ht = GRU(xtGRU, ht-1),   fGRU = hL ∈ Rd
+
+[36] (5)
+
+[37] 3) Non-Linear Shock Expert: Wavelet-KAN:
+
+[38] To capture non-linear structural breaks associated with geopolitical risk events, the third expert implements a Kolmogorov–Arnold Network integrated with Mexican Hat wavelets ψ(z) = (1 - z2) · e-0.5z² parameterized by learnable translation and dilation coefficients according to (6) and (7):
+
+[39] z = xKAN - t|s| + 10-4,   ψ(z) = (1 - z2) · e-0.5z²
+
+[40] (6)
+
+[41] fKAN = LN(Proj([ReLU(WlinxKAN) ‖ ReLU(Wwavψ(z))])) ∈ Rd
+
+[42] (7)
+
+[43] 4) Horizon-Aware Dynamic Gating Router:
+
+[44] To adjust expert contributions across forecasting horizons and market regimes, the gating router accepts concatenated expert representations, horizon positional embeddings, and global summary context statistics xctx according to (8), (9), and (10):
+
+[45] gh = MLP([fCNN ‖ fGRU ‖ fKAN ‖ Posh ‖ xctx])
+
+[46] (8)
+
+[47] wh = Softmax(gh) = [w1, w2, w3]T,   ∑i=13wi = 1
+
+[48] (9)
+
+[49] ffused = w1fCNN + w2fGRU + w3fKAN ∈ Rd
+
+[50] (10)
+
+[51] 5) Residual Scaling and Multi-Quantile Head:
+
+[52] To limit variance growth at long horizons (such as H60), GUMNetHet incorporates a learnable residual scaling vector γh initialized at 0.1, outputting multi-quantile return predictions for q ∈ {0.1, 0.5, 0.9} according to (11):
+
+[53] ŷt+h, c(q) = Headq(ffused) + γh · xt, ctarget
+
+[54] (11)
+
+[55] 6) Dual-Loss Optimization:
+
+[56] The overall objective function combines the multi-quantile pinball loss with a load-balancing regularization penalty to mitigate routing collapse according to (12), (13), and (14):
+
+[57] Ltotal = Lpinball + α · Lbalance
+
+[58] (12)
+
+[59] Lpinball = 1C · H · |Q|∑c,h,q max⁡(q(y - ŷ(q)),
+
+[60] (q-1)(y - ŷ(q)))
+
+[61] (13)
+
+[62] Lbalance = ∑i=13 (w̄i - 13)2,   α = 0.01
+
+[63] (14)
+
+[64] IV. EXPERIMENTAL SETUP
+
+[65] A. Data and Walk-Forward Protocol
+
+[66] The dataset covers 03/11/2008–30/04/2026 with N = 4,512 trading-day observations. The two reported primary targets are MG95 and DO 0.001% per Platts Singapore; exogenous covariates include inter-product Platts benchmarks, WTI, Brent, GPR [1], DXY, crude oil production, crack-spread ratios, realized volatility, and calendar features.
+
+[67] To prevent look-ahead bias, daily variables are indexed at t - 1; GPR is lagged by 30 calendar days; crude oil production is lagged by 7 days; and rolling features are computed strictly after applying lags. All scalers are fit exclusively on the training partition at each walk-forward step. Lookback length is L = 30; train/validation ratio is 85/15 per expansion. Expanding walk-forward test windows increase progressively with horizon: 100 trading days for H1–H5 (11/12/2025–30/04/2026), 150 days for H7 (02/10/2025–30/04/2026), 200 days for H10 (24/07/2025–30/04/2026), 300 days for H20 (10/03/2025–30/04/2026), and 600 days for H60 (10/01/2024–30/04/2026). While the full dataset (2008–2026, N = 4,512) incorporates historical market cycles (e.g., the 2008 global financial crisis, the 2014–2016 oil collapse, the 2020 COVID-19/OPEC+ price war, and the 2022 Russia–Ukraine outbreak) across expanding training partitions, the out-of-sample test windows (2024–2026) fall within a recent period of clustered geopolitical shocks (namely, the Red Sea maritime shipping crisis, Middle East/Iran–Israel military escalations, Western energy sanctions enforcement, and OPEC+ supply quota interventions). Specifically, annualized realized return volatility during the short-term test window (100 days) rises to 73.04% for MG95 (1.90× historical training volatility of 38.45%) and 96.29% for DO 0.001% (2.90× training volatility of 33.16%). The Geopolitical Risk (GPR) index averages 225.66 during the test period (nearly doubling the historical mean of 114.60) and peaks at 500.81 (90th percentile at 376.48). Prices in the H60 test window span a wide peak-to-trough range: 70.34 to 170.52 USD/bbl (+142.4%) for MG95 and 75.90 to 292.82 USD/bbl (+285.8%) for DO 0.001%. Train/test splits and volatility characteristics across horizons are summarized in Table I. This configuration therefore acts as a stress test, evaluating the models under fat-tailed regime shifts rather than stable market conditions.
+
+[68] TABLE I. EXPANDING WALK-FORWARD TRAIN/TEST SPLIT CONFIGURATIONS AND EMPIRICAL VOLATILITY CHARACTERISTICS
+
+[69] Horizon
+
+[70] Test Window
+
+[71] Test Date Range
+
+[72] Ann. Vol MG95 (Train→Test)
+
+[73] Ann. Vol DO (Train→Test)
+
+[74] Test GPR (Mean / Max)
+
+[75] Test Price Range (USD/bbl)
+
+[76] H1, H3, H5
+
+[77] 100 days
+
+[78] 11/12/2025 – 30/04/2026
+
+[79] 38.45% → 73.04% (1.90×)
+
+[80] 33.16% → 96.29% (2.90×)
+
+[81] 225.66 / 500.81
+
+[82] MG95: [70.58, 170.52]DO: [77.11, 292.82]
+
+[83] H7
+
+[84] 150 days
+
+[85] 02/10/2025 – 30/04/2026
+
+[86] 38.61% → 60.75% (1.57×)
+
+[87] 33.20% → 80.59% (2.43×)
+
+[88] 197.51 / 500.81
+
+[89] MG95: [70.58, 170.52]DO: [77.11, 292.82]
+
+[90] H10
+
+[91] 200 days
+
+[92] 24/07/2025 – 30/04/2026
+
+[93] 38.77% → 53.60% (1.38×)
+
+[94] 33.31% → 70.63% (2.12×)
+
+[95] 184.98 / 500.81
+
+[96] MG95: [70.58, 170.52]DO: [77.11, 292.82]
+
+[97] H20
+
+[98] 300 days
+
+[99] 10/03/2025 – 30/04/2026
+
+[100] 38.95% → 47.24% (1.21×)
+
+[101] 33.35% → 60.50% (1.81×)
+
+[102] 184.47 / 540.16
+
+[103] MG95: [70.34, 170.52]DO: [75.90, 292.82]
+
+[104] H60
+
+[105] 600 days
+
+[106] 10/01/2024 – 30/04/2026
+
+[107] 39.81% → 37.86% (0.95×)
+
+[108] 33.93% → 46.20% (1.36×)
+
+[109] 165.51 / 540.16
+
+[110] MG95: [70.34, 170.52]DO: [75.90, 292.82]
+
+[111] B. Econometric Diagnostics and Training Configuration
+
+[112] ADF and KPSS unit root tests in Table II indicate non-stationarity in raw price levels for most series; upon log-return transformation, ADF tests reject the unit-root null hypothesis (p < 0.001) across all series. Return kurtosis is high (213.35 for WTI and 17.51 for MG95), consistent with fat tails and large jumps in energy price series.
+
+[113] TABLE II. CONDENSED ECONOMETRIC STATISTICAL DIAGNOSTICS FOR PRIMARY ENERGY SERIES
+
+[114] Series
+
+[115] ADF Level p
+
+[116] KPSS Level p
+
+[117] ADF Return p
+
+[118] Kurtosis
+
+[119] MG95
+
+[120] 0.023
+
+[121] 0.010
+
+[122] <0.001
+
+[123] 17.51
+
+[124] DO 0.001%
+
+[125] 0.505
+
+[126] 0.010
+
+[127] <0.001
+
+[128] 14.69
+
+[129] WTI
+
+[130] 0.033
+
+[131] 0.010
+
+[132] <0.001
+
+[133] 213.35
+
+[134] GPR
+
+[135] <0.001
+
+[136] 0.010
+
+[137] <0.001
+
+[138] 1.52
+
+[139] DXY
+
+[140] 0.555
+
+[141] 0.010
+
+[142] <0.001
+
+[143] 4.38
+
+[144] The implementation in this paper utilizes PyTorch 2.1 / Python 3.10, AdamW optimizer (lr = 10⁻³, weight decay = 10⁻⁴), batch size = 64, a maximum of 100 epochs with early stopping patience of 10. The experts have a hidden dimension of 128, and the router MLP has a hidden dimension of 64. Hardware environment: Intel Xeon Silver 4216 CPU, 512 GB RAM, and 4× NVIDIA Tesla T4 16 GB GPUs.
+
+[145] C. Baseline Methods and Evaluation Metrics
+
+[146] Six representative baselines are evaluated: PatchTST [8], iTransformer [9], TimesNet [10], DLinear [11], BiMamba [15], and Chronos [16]. Evaluation metrics include MAE, RMSE, MAPE (%), R2, and Directional Accuracy (DA, %). Probabilistic forecasts are quantified using Prediction Interval Coverage Probability (PICP) and Prediction Interval Normalized Average Width (PINAW) on [q0.1, q0.9].
+
+[147] V. RESULTS AND DISCUSSION
+
+[148] A. Multi-Horizon Point Forecasting Performance
+
+[149] Fig. 2 alongside Table III and Table IV show that GUMNetHet attains lower MAE than the reported baselines for both products at all horizons, with larger margins at H20–H60, where the test set experiences price swings of up to +142.4% (MG95) and +285.8% (DO). At H60, gasoline MAE is 4.847 compared to 6.933 for the best baseline (a 30.1% reduction); for diesel, MAE is 7.066 versus 9.167 (a 22.9% reduction). However, R2 at H60 falls to 0.155 (gasoline) and −0.007 (diesel); the long-horizon results should therefore be interpreted as lower price-level error under high volatility rather than reliable trajectory forecasting.
+
+[150] Fig. 2. MAE and R² degradation curves across seven forecasting horizons for MG95 and DO 0.001% (Seed=42).
+
+[151] TABLE III. DETAILED EMPIRICAL FORECASTING PERFORMANCE ON MG95 GASOLINE (SEED=42)
+
+[152] H
+
+[153] Model
+
+[154] MAE
+
+[155] RMSE
+
+[156] MAPE (%)
+
+[157] R²
+
+[158] DA (%)
+
+[159] H1
+
+[160] GUMNetHet
+
+[161] 2.7921
+
+[162] 5.0249
+
+[163] 2.45
+
+[164] 0.9727
+
+[165] 91.46
+
+[166] H1
+
+[167] PatchTST
+
+[168] 2.8834
+
+[169] 5.1146
+
+[170] 2.53
+
+[171] 0.9718
+
+[172] 61.11
+
+[173] H1
+
+[174] iTransformer
+
+[175] 2.9809
+
+[176] 5.3918
+
+[177] 2.61
+
+[178] 0.9686
+
+[179] 57.07
+
+[180] H1
+
+[181] TimesNet
+
+[182] 3.1192
+
+[183] 5.7423
+
+[184] 2.74
+
+[185] 0.9644
+
+[186] 59.09
+
+[187] H1
+
+[188] DLinear
+
+[189] 3.0237
+
+[190] 5.5721
+
+[191] 2.65
+
+[192] 0.9665
+
+[193] 54.55
+
+[194] H1
+
+[195] BiMamba
+
+[196] 3.3320
+
+[197] 6.2491
+
+[198] 2.91
+
+[199] 0.9578
+
+[200] 54.55
+
+[201] H1
+
+[202] Chronos
+
+[203] 3.0436
+
+[204] 5.3617
+
+[205] 2.70
+
+[206] 0.9690
+
+[207] 61.62
+
+[208] H3
+
+[209] GUMNetHet
+
+[210] 4.6691
+
+[211] 8.4898
+
+[212] 4.14
+
+[213] 0.9218
+
+[214] 91.37
+
+[215] H3
+
+[216] PatchTST
+
+[217] 4.8262
+
+[218] 8.3000
+
+[219] 4.22
+
+[220] 0.9253
+
+[221] 47.45
+
+[222] H3
+
+[223] iTransformer
+
+[224] 5.0313
+
+[225] 8.7446
+
+[226] 4.47
+
+[227] 0.9171
+
+[228] 40.82
+
+[229] H3
+
+[230] TimesNet
+
+[231] 4.9776
+
+[232] 8.8658
+
+[233] 4.41
+
+[234] 0.9147
+
+[235] 46.43
+
+[236] H3
+
+[237] DLinear
+
+[238] 5.0211
+
+[239] 9.2494
+
+[240] 4.45
+
+[241] 0.9072
+
+[242] 44.39
+
+[243] H3
+
+[244] BiMamba
+
+[245] 5.4216
+
+[246] 10.0286
+
+[247] 4.77
+
+[248] 0.8909
+
+[249] 40.82
+
+[250] H3
+
+[251] Chronos
+
+[252] 5.1084
+
+[253] 8.7883
+
+[254] 4.42
+
+[255] 0.9162
+
+[256] 48.98
+
+[257] H5
+
+[258] GUMNetHet
+
+[259] 4.8892
+
+[260] 8.2562
+
+[261] 4.37
+
+[262] 0.9264
+
+[263] 90.95
+
+[264] H5
+
+[265] PatchTST
+
+[266] 5.5400
+
+[267] 9.0953
+
+[268] 4.83
+
+[269] 0.9107
+
+[270] 55.05
+
+[271] H5
+
+[272] iTransformer
+
+[273] 5.5776
+
+[274] 9.1791
+
+[275] 4.94
+
+[276] 0.9091
+
+[277] 52.53
+
+[278] H5
+
+[279] TimesNet
+
+[280] 5.6939
+
+[281] 9.6105
+
+[282] 5.00
+
+[283] 0.9003
+
+[284] 38.89
+
+[285] H5
+
+[286] DLinear
+
+[287] 5.8835
+
+[288] 10.0733
+
+[289] 5.19
+
+[290] 0.8905
+
+[291] 45.45
+
+[292] H5
+
+[293] BiMamba
+
+[294] 6.5439
+
+[295] 11.2085
+
+[296] 5.82
+
+[297] 0.8644
+
+[298] 53.54
+
+[299] H5
+
+[300] Chronos
+
+[301] 5.5504
+
+[302] 9.1791
+
+[303] 4.85
+
+[304] 0.9091
+
+[305] 50.00
+
+[306] H7
+
+[307] GUMNetHet
+
+[308] 4.0695
+
+[309] 7.6785
+
+[310] 3.76
+
+[311] 0.9142
+
+[312] 95.56
+
+[313] H7
+
+[314] PatchTST
+
+[315] 5.0377
+
+[316] 8.9709
+
+[317] 4.54
+
+[318] 0.8828
+
+[319] 44.18
+
+[320] H7
+
+[321] iTransformer
+
+[322] 4.7339
+
+[323] 8.5689
+
+[324] 4.32
+
+[325] 0.8931
+
+[326] 50.34
+
+[327] H7
+
+[328] TimesNet
+
+[329] 4.6936
+
+[330] 8.6611
+
+[331] 4.25
+
+[332] 0.8908
+
+[333] 49.66
+
+[334] H7
+
+[335] DLinear
+
+[336] 4.5978
+
+[337] 8.2653
+
+[338] 4.21
+
+[339] 0.9005
+
+[340] 47.26
+
+[341] H7
+
+[342] BiMamba
+
+[343] 5.2500
+
+[344] 9.1154
+
+[345] 4.73
+
+[346] 0.8790
+
+[347] 46.92
+
+[348] H7
+
+[349] Chronos
+
+[350] 4.8999
+
+[351] 8.8162
+
+[352] 4.42
+
+[353] 0.8868
+
+[354] 50.34
+
+[355] H10
+
+[356] GUMNetHet
+
+[357] 4.3970
+
+[358] 8.9788
+
+[359] 4.09
+
+[360] 0.8522
+
+[361] 42.24
+
+[362] H10
+
+[363] PatchTST
+
+[364] 4.8548
+
+[365] 9.8175
+
+[366] 4.48
+
+[367] 0.8250
+
+[368] 48.59
+
+[369] H10
+
+[370] iTransformer
+
+[371] 4.9325
+
+[372] 9.9338
+
+[373] 4.53
+
+[374] 0.8208
+
+[375] 49.87
+
+[376] H10
+
+[377] TimesNet
+
+[378] 5.1042
+
+[379] 10.1940
+
+[380] 4.68
+
+[381] 0.8113
+
+[382] 50.13
+
+[383] H10
+
+[384] DLinear
+
+[385] 4.9854
+
+[386] 9.9668
+
+[387] 4.61
+
+[388] 0.8196
+
+[389] 44.60
+
+[390] H10
+
+[391] BiMamba
+
+[392] 5.0603
+
+[393] 10.1585
+
+[394] 4.63
+
+[395] 0.8126
+
+[396] 48.97
+
+[397] H10
+
+[398] Chronos
+
+[399] 4.9070
+
+[400] 9.9822
+
+[401] 4.49
+
+[402] 0.8191
+
+[403] 52.57
+
+[404] H20
+
+[405] GUMNetHet
+
+[406] 5.4115
+
+[407] 10.3617
+
+[408] 5.37
+
+[409] 0.7262
+
+[410] 91.65
+
+[411] H20
+
+[412] PatchTST
+
+[413] 5.8312
+
+[414] 11.0895
+
+[415] 5.68
+
+[416] 0.6965
+
+[417] 48.66
+
+[418] H20
+
+[419] iTransformer
+
+[420] 6.1280
+
+[421] 11.4250
+
+[422] 5.99
+
+[423] 0.6779
+
+[424] 44.15
+
+[425] H20
+
+[426] TimesNet
+
+[427] 7.1888
+
+[428] 12.6175
+
+[429] 7.05
+
+[430] 0.6072
+
+[431] 46.49
+
+[432] H20
+
+[433] DLinear
+
+[434] 6.5672
+
+[435] 12.5417
+
+[436] 6.24
+
+[437] 0.6119
+
+[438] 48.66
+
+[439] H20
+
+[440] BiMamba
+
+[441] 6.6974
+
+[442] 12.1714
+
+[443] 6.43
+
+[444] 0.6344
+
+[445] 40.47
+
+[446] H20
+
+[447] Chronos
+
+[448] 5.9577
+
+[449] 11.3518
+
+[450] 5.82
+
+[451] 0.6820
+
+[452] 44.48
+
+[453] H60
+
+[454] GUMNetHet
+
+[455] 4.8470
+
+[456] 10.4474
+
+[457] 5.11
+
+[458] 0.1552
+
+[459] 27.95
+
+[460] H60
+
+[461] PatchTST
+
+[462] 7.3983
+
+[463] 14.1515
+
+[464] 7.64
+
+[465] -0.1771
+
+[466] 47.86
+
+[467] H60
+
+[468] iTransformer
+
+[469] 6.9327
+
+[470] 13.6722
+
+[471] 7.15
+
+[472] -0.0987
+
+[473] 47.41
+
+[474] H60
+
+[475] TimesNet
+
+[476] 8.7212
+
+[477] 16.0547
+
+[478] 9.04
+
+[479] -0.5150
+
+[480] 46.28
+
+[481] H60
+
+[482] DLinear
+
+[483] 6.9707
+
+[484] 13.7963
+
+[485] 7.13
+
+[486] -0.1187
+
+[487] 46.63
+
+[488] H60
+
+[489] BiMamba
+
+[490] 7.5070
+
+[491] 14.4158
+
+[492] 7.71
+
+[493] -0.2215
+
+[494] 48.90
+
+[495] H60
+
+[496] Chronos
+
+[497] 6.9722
+
+[498] 13.8894
+
+[499] 7.21
+
+[500] -0.1339
+
+[501] 46.16
+
+[502] TABLE IV. DETAILED EMPIRICAL FORECASTING PERFORMANCE ON DO 0.001% DIESEL (SEED=42)
+
+[503] H
+
+[504] Model
+
+[505] MAE
+
+[506] RMSE
+
+[507] MAPE (%)
+
+[508] R²
+
+[509] DA (%)
+
+[510] H1
+
+[511] GUMNetHet
+
+[512] 5.6023
+
+[513] 11.3820
+
+[514] 3.24
+
+[515] 0.9622
+
+[516] 84.92
+
+[517] H1
+
+[518] PatchTST
+
+[519] 6.1468
+
+[520] 11.8728
+
+[521] 3.58
+
+[522] 0.9588
+
+[523] 62.12
+
+[524] H1
+
+[525] iTransformer
+
+[526] 6.1601
+
+[527] 12.0048
+
+[528] 3.60
+
+[529] 0.9579
+
+[530] 57.07
+
+[531] H1
+
+[532] TimesNet
+
+[533] 6.0768
+
+[534] 11.8132
+
+[535] 3.54
+
+[536] 0.9593
+
+[537] 58.08
+
+[538] H1
+
+[539] DLinear
+
+[540] 6.0346
+
+[541] 11.6526
+
+[542] 3.51
+
+[543] 0.9604
+
+[544] 55.05
+
+[545] H1
+
+[546] Chronos
+
+[547] 6.1218
+
+[548] 11.7740
+
+[549] 3.54
+
+[550] 0.9595
+
+[551] 60.10
+
+[552] H3
+
+[553] GUMNetHet
+
+[554] 8.8536
+
+[555] 17.0380
+
+[556] 5.35
+
+[557] 0.9156
+
+[558] 76.65
+
+[559] H3
+
+[560] PatchTST
+
+[561] 9.0363
+
+[562] 17.6157
+
+[563] 5.36
+
+[564] 0.9098
+
+[565] 48.47
+
+[566] H3
+
+[567] iTransformer
+
+[568] 10.0366
+
+[569] 19.3143
+
+[570] 5.98
+
+[571] 0.8916
+
+[572] 46.43
+
+[573] H3
+
+[574] TimesNet
+
+[575] 9.5007
+
+[576] 17.9989
+
+[577] 5.69
+
+[578] 0.9058
+
+[579] 47.45
+
+[580] H3
+
+[581] DLinear
+
+[582] 9.7697
+
+[583] 18.8569
+
+[584] 5.86
+
+[585] 0.8967
+
+[586] 44.90
+
+[587] H3
+
+[588] Chronos
+
+[589] 9.4605
+
+[590] 18.4546
+
+[591] 5.61
+
+[592] 0.9010
+
+[593] 45.92
+
+[594] H5
+
+[595] GUMNetHet
+
+[596] 9.2159
+
+[597] 16.2954
+
+[598] 5.65
+
+[599] 0.9225
+
+[600] 76.88
+
+[601] H5
+
+[602] PatchTST
+
+[603] 10.6900
+
+[604] 18.1687
+
+[605] 6.25
+
+[606] 0.9036
+
+[607] 52.02
+
+[608] H5
+
+[609] iTransformer
+
+[610] 10.0784
+
+[611] 17.0064
+
+[612] 6.14
+
+[613] 0.9156
+
+[614] 52.53
+
+[615] H5
+
+[616] TimesNet
+
+[617] 11.5665
+
+[618] 19.6444
+
+[619] 6.87
+
+[620] 0.8873
+
+[621] 47.98
+
+[622] H5
+
+[623] DLinear
+
+[624] 11.4410
+
+[625] 19.0864
+
+[626] 6.83
+
+[627] 0.8936
+
+[628] 41.41
+
+[629] H5
+
+[630] Chronos
+
+[631] 10.5636
+
+[632] 17.5114
+
+[633] 6.27
+
+[634] 0.9105
+
+[635] 53.54
+
+[636] H7
+
+[637] GUMNetHet
+
+[638] 9.6578
+
+[639] 18.3317
+
+[640] 6.46
+
+[641] 0.8733
+
+[642] 83.28
+
+[643] H7
+
+[644] PatchTST
+
+[645] 11.0491
+
+[646] 21.2867
+
+[647] 7.22
+
+[648] 0.8292
+
+[649] 50.68
+
+[650] H7
+
+[651] iTransformer
+
+[652] 11.0220
+
+[653] 22.1113
+
+[654] 7.28
+
+[655] 0.8157
+
+[656] 57.88
+
+[657] H7
+
+[658] TimesNet
+
+[659] 11.7217
+
+[660] 23.1415
+
+[661] 7.70
+
+[662] 0.7981
+
+[663] 51.37
+
+[664] H7
+
+[665] DLinear
+
+[666] 10.3087
+
+[667] 20.3122
+
+[668] 6.79
+
+[669] 0.8444
+
+[670] 47.26
+
+[671] H7
+
+[672] Chronos
+
+[673] 11.4008
+
+[674] 23.0828
+
+[675] 7.46
+
+[676] 0.7991
+
+[677] 54.79
+
+[678] H10
+
+[679] GUMNetHet
+
+[680] 9.1926
+
+[681] 18.3690
+
+[682] 6.16
+
+[683] 0.8433
+
+[684] 32.29
+
+[685] H10
+
+[686] PatchTST
+
+[687] 9.7691
+
+[688] 19.9689
+
+[689] 6.54
+
+[690] 0.8145
+
+[691] 47.30
+
+[692] H10
+
+[693] iTransformer
+
+[694] 9.8507
+
+[695] 20.6902
+
+[696] 6.55
+
+[697] 0.8008
+
+[698] 47.43
+
+[699] H10
+
+[700] TimesNet
+
+[701] 9.6920
+
+[702] 19.9194
+
+[703] 6.57
+
+[704] 0.8154
+
+[705] 47.04
+
+[706] H10
+
+[707] DLinear
+
+[708] 9.8931
+
+[709] 20.9276
+
+[710] 6.54
+
+[711] 0.7962
+
+[712] 48.71
+
+[713] H10
+
+[714] Chronos
+
+[715] 9.7097
+
+[716] 19.8244
+
+[717] 6.52
+
+[718] 0.8171
+
+[719] 46.53
+
+[720] H20
+
+[721] GUMNetHet
+
+[722] 9.4562
+
+[723] 20.7135
+
+[724] 6.85
+
+[725] 0.7192
+
+[726] 71.11
+
+[727] H20
+
+[728] PatchTST
+
+[729] 12.6691
+
+[730] 27.0410
+
+[731] 8.94
+
+[732] 0.5358
+
+[733] 47.99
+
+[734] H20
+
+[735] iTransformer
+
+[736] 12.4936
+
+[737] 26.8776
+
+[738] 8.81
+
+[739] 0.5414
+
+[740] 48.33
+
+[741] H20
+
+[742] TimesNet
+
+[743] 13.4284
+
+[744] 28.6245
+
+[745] 9.59
+
+[746] 0.4799
+
+[747] 47.16
+
+[748] H20
+
+[749] DLinear
+
+[750] 12.6621
+
+[751] 27.5688
+
+[752] 8.87
+
+[753] 0.5175
+
+[754] 47.49
+
+[755] H20
+
+[756] Chronos
+
+[757] 12.2271
+
+[758] 25.8642
+
+[759] 8.68
+
+[760] 0.5753
+
+[761] 49.33
+
+[762] H60
+
+[763] GUMNetHet
+
+[764] 7.0664
+
+[765] 18.0187
+
+[766] 6.41
+
+[767] -0.0072
+
+[768] 19.10
+
+[769] H60
+
+[770] PatchTST
+
+[771] 10.1792
+
+[772] 24.4469
+
+[773] 8.68
+
+[774] -0.1894
+
+[775] 50.21
+
+[776] H60
+
+[777] iTransformer
+
+[778] 9.3447
+
+[779] 23.8920
+
+[780] 7.82
+
+[781] -0.1360
+
+[782] 49.64
+
+[783] H60
+
+[784] TimesNet
+
+[785] 9.5859
+
+[786] 24.3673
+
+[787] 8.01
+
+[788] -0.1817
+
+[789] 47.89
+
+[790] H60
+
+[791] DLinear
+
+[792] 9.7714
+
+[793] 24.0682
+
+[794] 8.26
+
+[795] -0.1528
+
+[796] 48.21
+
+[797] H60
+
+[798] Chronos
+
+[799] 9.1668
+
+[800] 23.6800
+
+[801] 7.63
+
+[802] -0.1160
+
+[803] 47.80
+
+[804] B. Directional Accuracy Analysis
+
+[805] Directional accuracy in Fig. 3 shows a clear difference between short and long horizons. For gasoline (Table III), GUMNetHet attains high DA between 90.95% and 95.56% at H1–H7; for diesel (Table IV), DA spans 76.65% to 84.92%. At H20, DA remains high (91.65% for gasoline; 71.11% for diesel). However, at H10 and H60, DA drops below 50% (42.24%/27.95% for gasoline and 32.29%/19.10% for diesel). The long-horizon behavior is consistent with well-known results in financial econometrics: over extended horizons (H60 spans nearly three months), oil prices behave close to a random walk, with uncertainty accumulating with the horizon and directional signals becoming weak. A plausible explanation is that the residual scaling mechanism shrinks predictions toward the current price level rather than committing to strong directional forecasts, which reduces absolute error (MAE reduced by 30.1% at H60) at the cost of directional accuracy. The drop at H10, between two horizons with high DA, does not follow this pattern and is left for further investigation. Overall, GUMNetHet is better suited to providing directional signals at short horizons (H1–H7) and to price-level error control and uncertainty quantification at long horizons (H10–H60).
+
+[806] Fig. 3. Directional accuracy (DA%) of GUMNetHet and baselines across H1–H60 for gasoline and diesel.
+
+[807] C. Probabilistic Forecasting, Ablation, and Router Behavior
+
+[808] The [q0.1, q0.9] prediction interval achieves an empirical coverage probability of PICP=82.4% (exceeding nominal 80%) with a normalized average width of PINAW=0.142. This indicates that the model avoids under-coverage while maintaining sharpness, which is useful for oil importers (e.g., Petrolimex, PVOIL) in forward pricing, inventory buffer sizing, and hedging optimization. Fig. 4 shows that the prediction intervals widen during periods of higher market volatility. Ablation results in Table V indicate that replacing Wav-KAN with an MLP causes the largest degradation among the expert variants; a uniform router also increases MAE, supporting the roles of expert specialization and adaptive routing.
+
+[809] TABLE V. CONDENSED ABLATION STUDY OF GUMNETHET VARIANTS (SEED=42)
+
+[810] Variant
+
+[811] MG95-H3 MAE
+
+[812] MG95-H3 R²
+
+[813] DO-H5 MAE
+
+[814] DO-H5 R²
+
+[815] Full GUMNetHet
+
+[816] 4.669
+
+[817] 0.922
+
+[818] 9.216
+
+[819] 0.923
+
+[820] Wav-KAN→MLP
+
+[821] 5.142
+
+[822] 0.885
+
+[823] 10.852
+
+[824] 0.865
+
+[825] −GRU
+
+[826] 4.985
+
+[827] 0.901
+
+[828] 10.124
+
+[829] 0.891
+
+[830] CNN (k=3 only)
+
+[831] 4.892
+
+[832] 0.910
+
+[833] 9.854
+
+[834] 0.904
+
+[835] −GPR
+
+[836] 4.821
+
+[837] 0.912
+
+[838] 9.980
+
+[839] 0.898
+
+[840] Uniform router
+
+[841] 5.012
+
+[842] 0.895
+
+[843] 10.450
+
+[844] 0.879
+
+[845] Removing residual scaling increases MAE by approximately 8.5%/6.3% at H20 and 14.1%/11.8% at H60 for gasoline/diesel. Router weight analysis in Fig. 4 indicates that under low GPR and short horizons, the CNN expert receives an average weight of approximately 0.48; when GPR exceeds the 90th percentile, the Wav-KAN weight rises from approximately 0.29 to 0.61 at medium–long horizons, while the CNN weight decreases to approximately 0.21. These findings indicate that the router changes its routing regime rather than simply averaging expert outputs.
+
+[846] Fig. 4. Top: Multi-quantile fan chart under high volatility. Bottom: Router gating weights across low-GPR and high-GPR regimes.
+
+[847] VI. CONCLUSION
+
+[848] This paper proposed GUMNetHet, a heterogeneous mixture-of-experts architecture for multi-horizon probabilistic refined oil price forecasting. The model combines a multi-scale 1D-CNN, GRU-Attention, and Wavelet-KAN through a horizon-aware router, with multi-quantile outputs and residual scaling to improve stability over extended horizons.
+
+[849] Expanding walk-forward experiments on MG95 and DO 0.001% show that GUMNetHet achieves the lowest MAE among the evaluated baselines across H1–H60, yielding MAE reductions at H60 of 30.1% for MG95 (4.847 vs. 6.933) and 22.9% for DO 0.001% (7.066 vs. 9.167) relative to the strongest baselines. Ablation experiments and router weight analyses support the contributions of feature partitioning, Wavelet-KAN, and adaptive routing. However, the decline of R2 and directional accuracy at long horizons indicates that the model's advantage lies in price-level error control and uncertainty quantification rather than in long-range directional forecasting.
+
+[850] Future work will focus on multi-seed benchmarking, expanding probabilistic baseline comparisons, formal statistical significance testing for multi-step forecasts, and integrating real-time multimodal geopolitical news representations.
+
+[851] Data and Code Availability: All source code for model architectures, training pipelines, expanding walk-forward evaluation scripts, and benchmark dataset matrices are publicly available at the project repository: https://github.com/NguyenPhuocAnhDung/oil_forecast_tail_risk.
+
+[852] REFERENCES
+
+[853] [1] D. Caldara and M. Iacoviello, "Measuring geopolitical risk," American Economic Review, vol. 112, no. 4, pp. 1194–1225, 2022.
+
+[854] [2] L. Kilian, "Not all oil price shocks are alike: Disentangling demand and supply shocks in the crude oil market," American Economic Review, vol. 99, no. 3, pp. 1053–1069, 2009.
+
+[855] [3] C. Baumeister and L. Kilian, "What central bankers need to know about forecasting oil prices," International Economic Review, vol. 57, no. 3, pp. 869–896, 2016.
+
+[856] [4] D. A. Dickey and W. A. Fuller, "Distribution of the estimators for autoregressive time series with a unit root," Journal of the American Statistical Association, vol. 74, no. 366a, pp. 427–431, 1979.
+
+[857] [5] F. X. Diebold and R. S. Mariano, "Comparing predictive accuracy," Journal of Business & Economic Statistics, vol. 13, no. 3, pp. 253–263, 1995.
+
+[858] [6] T. Gneiting and A. E. Raftery, "Strictly proper scoring rules, prediction, and estimation," Journal of the American Statistical Association, vol. 102, no. 477, pp. 359–378, 2007.
+
+[859] [7] R. J. Hyndman and A. B. Koehler, "Another look at measures of forecast accuracy," International Journal of Forecasting, vol. 22, no. 4, pp. 679–688, 2006.
+
+[860] [8] Y. Nie, N. H. Nguyen, P. Sinthong, and J. Kalagnanam, "A time series is worth 64 words: Long-term forecasting with transformers," in Proc. ICLR, 2023.
+
+[861] [9] Y. Liu, T. Hu, H. Zhang, H. Wu, S. Wang, L. Ma, and M. Long, "iTransformer: Inverted transformers are effective for time series forecasting," in Proc. ICLR, 2024.
+
+[862] [10] H. Wu, T. Hu, Y. Liu, H. Zhou, J. Wang, and M. Long, "TimesNet: Temporal 2D-variation modeling for general time series analysis," in Proc. ICLR, 2023.
+
+[863] [11] A. Zeng, M. Chen, L. Zhang, and Q. Xu, "Are transformers effective for time series forecasting?" in Proc. AAAI, vol. 37, no. 9, 2023, pp. 11121–11128.
+
+[864] [12] B. Lim, S. Ö. Arık, N. Loeff, and T. Pfister, "Temporal Fusion Transformers for interpretable multi-horizon time series forecasting," International Journal of Forecasting, vol. 37, no. 4, pp. 1748–1764, 2021.
+
+[865] [13] B. N. Oreshkin, D. Carpov, N. Chapados, and Y. Bengio, "N-BEATS: Neural basis expansion analysis for interpretable time series forecasting," in Proc. ICLR, 2020.
+
+[866] [14] C. Challu, K. G. Olivares, B. N. Oreshkin, F. Garza, M. Mergenthaler-Canseco, and A. Dubrawski, "N-HiTS: Neural hierarchical interpolation for time series forecasting," in Proc. AAAI, vol. 37, no. 6, 2023, pp. 6989–6997.
+
+[867] [15] A. Gu and T. Dao, "Mamba: Linear-time sequence modeling with selective state spaces," arXiv preprint arXiv:2312.00752, 2023.
+
+[868] [16] A. F. Ansari et al., "Chronos: Learning the language of time series," Transactions on Machine Learning Research, 2024.
+
+[869] [17] A. Das, W. Kong, R. Sen, and Y. Zhou, "A decoder-only foundation model for time-series forecasting," in Proc. ICML, 2024.
+
+[870] [18] G. Woo, C. Liu, A. Kumar, C. Xiong, S. Savarese, and D. Sahoo, "Unified training of universal time series forecasting transformers," in Proc. ICML, 2024.
+
+[871] [19] V. Ekambaram et al., "Tiny Time Mixers (TTMs): Fast pre-trained models for enhanced zero/few-shot forecasting of multivariate time series," in Proc. NeurIPS, 2024.
+
+[872] [20] R. A. Jacobs, M. I. Jordan, S. J. Nowlan, and G. E. Hinton, "Adaptive mixtures of local experts," Neural Computation, vol. 3, no. 1, pp. 79–87, 1991.
+
+[873] [21] N. Shazeer et al., "Outrageously large neural networks: The sparsely-gated mixture-of-experts layer," in Proc. ICLR, 2017.
+
+[874] [22] W. Fedus, B. Zoph, and N. Shazeer, "Switch Transformers: Scaling to trillion parameter models with simple and efficient sparsity," Journal of Machine Learning Research, vol. 23, no. 120, pp. 1–39, 2022.
+
+[875] [23] Z. Liu et al., "KAN: Kolmogorov–Arnold Networks," arXiv preprint arXiv:2404.19756, 2024.
+
+[876] [24] Z. Bozorgasl and H. Chen, "Wav-KAN: Wavelet Kolmogorov–Arnold networks," arXiv preprint arXiv:2405.12832, 2024.
+
+[877] [25] I. Daubechies, Ten Lectures on Wavelets. Philadelphia, PA, USA: SIAM, 1992.
+
+[878] [26] X. Shi et al., "Time-MoE: Billion-scale time series foundation models with mixture of experts," in Proc. ICLR, 2025.
+
+[879] [27] S. Wang et al., "TimeMixer++: A general time series pattern machine for universal predictive analysis," in Proc. ICLR, 2025.
+
+[880] [28] M. D. Wilkinson et al., "The FAIR Guiding Principles for scientific data management and stewardship," Scientific Data, vol. 3, art. 160018, 2016.
+

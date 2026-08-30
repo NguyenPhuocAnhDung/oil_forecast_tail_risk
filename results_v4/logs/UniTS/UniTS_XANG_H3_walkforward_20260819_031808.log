@@ -1,0 +1,41 @@
+03:18:08 | ================================================================================
+03:18:08 |  UniTS | XANG | H3 | walkforward | seed=9999
+03:18:08 | ================================================================================
+03:18:08 | Data: 4513 rows | Features: 15
+03:19:58 |  Iter-01 | MAE=0.306 | MAPE=0.39%
+03:21:46 |  Iter-02 | MAE=3.925 | MAPE=5.26%
+03:23:27 |  Iter-03 | MAE=0.760 | MAPE=1.03%
+03:25:08 |  Iter-04 | MAE=0.544 | MAPE=0.74%
+03:27:02 |  Iter-05 | MAE=1.205 | MAPE=1.66%
+03:28:52 |  Iter-06 | MAE=0.852 | MAPE=1.19%
+03:30:46 |  Iter-07 | MAE=1.065 | MAPE=1.51%
+03:32:28 |  Iter-08 | MAE=1.817 | MAPE=2.50%
+03:34:03 |  Iter-09 | MAE=1.100 | MAPE=1.54%
+03:35:41 |  Iter-10 | MAE=0.617 | MAPE=0.85%
+03:37:31 |  Iter-11 | MAE=0.457 | MAPE=0.64%
+03:39:09 |  Iter-12 | MAE=1.257 | MAPE=1.72%
+03:40:44 |  Iter-13 | MAE=2.036 | MAPE=2.83%
+03:42:28 |  Iter-14 | MAE=1.666 | MAPE=2.25%
+03:44:03 |  Iter-15 | MAE=2.146 | MAPE=2.79%
+03:45:51 |  Iter-16 | MAE=2.421 | MAPE=3.33%
+03:47:35 |  Iter-17 | MAE=1.502 | MAPE=1.97%
+03:49:26 |  Iter-18 | MAE=1.372 | MAPE=1.72%
+03:51:13 |  Iter-19 | MAE=0.775 | MAPE=0.96%
+03:52:59 |  Iter-20 | MAE=16.456 | MAPE=16.82%
+03:54:43 |  Iter-21 | MAE=21.104 | MAPE=16.03%
+03:56:19 |  Iter-22 | MAE=17.917 | MAPE=14.36%
+03:57:56 |  Iter-23 | MAE=6.305 | MAPE=4.35%
+03:59:39 |  Iter-24 | MAE=4.051 | MAPE=2.65%
+04:01:19 |  Iter-25 | MAE=16.316 | MAPE=11.57%
+04:03:02 |  Iter-26 | MAE=4.534 | MAPE=3.29%
+04:04:38 |  Iter-27 | MAE=3.153 | MAPE=2.22%
+04:06:19 |  Iter-28 | MAE=12.208 | MAPE=9.59%
+04:07:58 |  Iter-29 | MAE=9.576 | MAPE=7.25%
+04:09:36 |  Iter-30 | MAE=9.201 | MAPE=7.48%
+04:11:13 |  Iter-31 | MAE=2.578 | MAPE=2.08%
+04:12:51 |  Iter-32 | MAE=6.523 | MAPE=5.11%
+04:14:29 |  Iter-33 | MAE=2.285 | MAPE=1.76%
+04:14:29 | 
+ OVERALL: MAE=4.789, MAPE=4.23%, R2=0.9241 (3380.7s)
+04:14:29 | Saved model checkpoint: /data/quyhv/oil_forecast_tail_risk/results_v4/walkforward/UniTS/XANG_H3_seed9999/model_checkpoint.pth
+04:14:29 | Saved processor/scaler: /data/quyhv/oil_forecast_tail_risk/results_v4/walkforward/UniTS/XANG_H3_seed9999/processor.pkl

@@ -1,0 +1,29 @@
+{
+  "model": "iTransformer",
+  "target_type": "XANG",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 2025,
+  "metrics": {
+    "MAE": 3.157609,
+    "RMSE": 5.953753,
+    "MAPE": 2.7285,
+    "sMAPE": 2.7112,
+    "MASE": 0.65362,
+    "WAPE": 3.1889,
+    "R2": 0.961739,
+    "DA": 56.57,
+    "MSE": 35.447177,
+    "MdAE": 1.169702,
+    "MdAPE": 1.384,
+    "MaxAE": 30.262254,
+    "Bias": 0.003681,
+    "TheilU": 0.839474,
+    "crps": 3.157609
+  },
+  "n_iterations": 100,
+  "n_features": 15,
+  "runtime_seconds": 17478.2,
+  "status": "completed",
+  "datetime": "2026-08-17T15:10:55.495551Z"
+}

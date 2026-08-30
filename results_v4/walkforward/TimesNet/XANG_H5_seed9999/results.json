@@ -1,0 +1,29 @@
+{
+  "model": "TimesNet",
+  "target_type": "XANG",
+  "horizon": 5,
+  "protocol": "walkforward",
+  "seed": 9999,
+  "metrics": {
+    "MAE": 6.077699,
+    "RMSE": 10.859747,
+    "MAPE": 5.3155,
+    "sMAPE": 5.638,
+    "MASE": 1.258074,
+    "WAPE": 6.1379,
+    "R2": 0.872703,
+    "DA": 45.45,
+    "MSE": 117.9341,
+    "MdAE": 2.430595,
+    "MdAPE": 2.7396,
+    "MaxAE": 57.002031,
+    "Bias": 3.007411,
+    "TheilU": 1.531219,
+    "crps": 6.077699
+  },
+  "n_iterations": 20,
+  "n_features": 16,
+  "runtime_seconds": 2921.2,
+  "status": "completed",
+  "datetime": "2026-08-19T17:22:39.713942Z"
+}

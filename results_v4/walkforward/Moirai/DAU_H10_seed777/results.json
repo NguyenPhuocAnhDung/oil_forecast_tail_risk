@@ -1,0 +1,29 @@
+{
+  "model": "Moirai",
+  "target_type": "DAU",
+  "horizon": 10,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 9.873709,
+    "RMSE": 20.083374,
+    "MAPE": 6.5877,
+    "sMAPE": 6.8442,
+    "MASE": 2.786344,
+    "WAPE": 9.0823,
+    "R2": 0.812335,
+    "DA": 46.79,
+    "MSE": 403.341921,
+    "MdAE": 2.626207,
+    "MdAPE": 2.9055,
+    "MaxAE": 95.202996,
+    "Bias": 3.071838,
+    "TheilU": 2.356984,
+    "crps": 9.873709
+  },
+  "n_iterations": 40,
+  "n_features": 15,
+  "runtime_seconds": 4418.7,
+  "status": "completed",
+  "datetime": "2026-08-26T02:54:25.846479Z"
+}

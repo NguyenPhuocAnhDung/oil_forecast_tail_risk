@@ -1,0 +1,56 @@
+================================================================================
+PARAGRAPH #9 | Relevant Comment IDs: {'0'}
+  [COMMENT ID 0] Author: Huong Bui
+  COMMENT CONTENT: Các con số này có chuẩn xác không, thể hiện chỗ nào trong bài, rà soát lại để chỉnh nếu cần?
+--------------------------------------------------------------------------------
+PARAGRAPH TEXT:
+Abstract—This paper proposes GUMNetHet (Heterogeneous Gated Unified Mixture Network) for multi-horizon probabilistic forecasting of refined oil prices under geopolitical volatility. The framework partitions input features into three distinct subsets and processes them via specialized domain experts: multi-scale 1D-CNN for price momentum, GRU-Attention for macroeconomic regimes, and Wavelet-KAN for non-linear shock-sensitive dynamics. These representations are dynamically fused by a horizon-aware and market-context gating router; multi-quantile outputs q ∈ {0.1, 0.5, 0.9} are optimized using pinball loss combined with residual scaling. On Platts data spanning 11/2008–04/2026 (N = 4.512 observations) under an expanding walk-forward protocol during severe market turmoil (annualized test set volatility reaching 73.04–96.29%, 1.9–2.9× historical training levels), GUMNetHet achieves the lowest MAE across all reported baselines over all seven horizons H1–H60 for both MG95 gasoline and DO 0.001% diesel. At H60, MAE is reduced by 30.1% and 22.9% relative to the strongest baseline, respectively. Directional accuracy remains high at H1–H7 but declines noticeably at H10 and H60, highlighting the structural dichotomy between price-level precision and long-term directional forecasting. The 80% prediction interval attains PICP=82.4% with PINAW=0.142. Ablation studies and router analysis confirm that expert specialization and adaptive routing contribute substantially to model performance.
+
+================================================================================
+PARAGRAPH #14 | Relevant Comment IDs: {'1'}
+  [COMMENT ID 1] Author: Huong Bui
+  COMMENT CONTENT: Cần có giải thích hoặc số liệu minh chứng cho ý này
+--------------------------------------------------------------------------------
+PARAGRAPH TEXT:
+The proposed GUMNetHet model resolves this bottleneck via feature partitioning: price and benchmark series are processed by multi-scale 1D-CNN; macroeconomic and GPR indices by GRU-Attention; and crack-spread ratios and realized volatility by Wavelet-KAN. These three representations are flexibly aggregated via a gating router conditioned on the forecasting horizon and market context. The principal contributions of this paper are fourfold: (i) A heterogeneous MoE architecture with feature partitioning grounded in economic principles and frequency domains; (ii) A horizon-aware routing mechanism (horizon-aware routing); (iii) A multi-quantile output head (multi-quantile head) combined with residual scaling to mitigate variance drift; and (iv) Extensive expanding walk-forward empirical evaluations on N = 4.512 trading days directly within high geopolitical volatility regimes (test set volatility 1.9–2.9× training levels) with comprehensive reporting across MAE, RMSE, MAPE, R2, and DA% metrics.
+
+================================================================================
+PARAGRAPH #25 | Relevant Comment IDs: {'4'}
+  [COMMENT ID 4] Author: Huong Bui
+  COMMENT CONTENT: Sửa lại ký hiệu P mũ trong công thức này cho rõ ràng
+--------------------------------------------------------------------------------
+PARAGRAPH TEXT:
+(2)
+
+================================================================================
+PARAGRAPH #35 | Relevant Comment IDs: {'8'}
+  [COMMENT ID 8] Author: Huong Bui
+  COMMENT CONTENT: Công thức này bị thiếu phía sau?
+--------------------------------------------------------------------------------
+PARAGRAPH TEXT:
+(4)
+
+================================================================================
+PARAGRAPH #45 | Relevant Comment IDs: {'12'}
+  [COMMENT ID 12] Author: Huong Bui
+  COMMENT CONTENT: Công thức này cũng bị thiếu phía sau?
+--------------------------------------------------------------------------------
+PARAGRAPH TEXT:
+(7)
+
+================================================================================
+PARAGRAPH #69 | Relevant Comment IDs: {'20'}
+  [COMMENT ID 20] Author: Huong Bui
+  COMMENT CONTENT: Ý này có chuẩn ko? Mình có thực hiện test trên tất cả các giai đoạn biến động chính trị nói trên hay chỉ test trong giai đoạn Mỹ - Iran? Cần làm rõ và sửa lại đoạn này nếu chưa chuẩn
+--------------------------------------------------------------------------------
+PARAGRAPH TEXT:
+To prevent look-ahead bias, daily variables are indexed at t - 1; GPR is lagged by 30 calendar days; crude oil production is lagged by 7 days; and rolling features are computed strictly after applying lags. All scalers are fit exclusively on the training partition at each walk-forward step. Lookback length is L = 30; train/validation ratio is 85/15 per expansion. Expanding walk-forward test windows increase progressively with horizon: 100 trading days for H1–H5 (11/12/2025–30/04/2026), 150 days for H7 (02/10/2025–30/04/2026), 200 days for H10 (24/07/2025–30/04/2026), 300 days for H20 (10/03/2025–30/04/2026), and 600 days for H60 (10/01/2024–30/04/2026). All test windows fall entirely within a period of clustered extreme energy shocks (Red Sea crisis, Middle East escalations, Russia–Ukraine war, and OPEC+ quota shifts). Specifically, annualized realized return volatility during the short-term test window (100 days) surges to 73.04% for MG95 (1.90× historical training volatility of 38.45%) and 96.29% for DO 0.001% (2.90× training volatility of 33.16%). The Geopolitical Risk (GPR) index averages 225.66 during the test period (nearly doubling the historical mean of 114.60) and peaks at 500.81 (90th percentile at 376.48). Price swings in the H60 test window record extreme peak-to-trough variations: 70.34 to 170.52 USD/bbl (+142.4%) for MG95 and 75.90 to 292.82 USD/bbl (+285.8%) for DO 0.001%. Comprehensive train/test splits and volatility characteristics across horizons are summarized in Table 1. This configuration serves as a rigorous stress-testing benchmark, ensuring models are evaluated on their capacity to adapt under fat-tailed regime shifts rather than static market conditions.
+
+================================================================================
+PARAGRAPH #854 | Relevant Comment IDs: {'29'}
+  [COMMENT ID 29] Author: Huong Bui
+  COMMENT CONTENT: Kiểm tra các con số này
+--------------------------------------------------------------------------------
+PARAGRAPH TEXT:
+Expanding walk-forward experiments on MG95 and DO 0.001% demonstrate that GUMNetHet achieves the lowest MAE across all evaluated baselines throughout H1–H60, yielding MAE reductions at H60 of 30.1% for MG95 and 22.9% for DO 0.001%. Ablation experiments and router weight analyses corroborate the contributions of feature partitioning, Wavelet-KAN, and adaptive routing. However, the attenuation of R2 and directional accuracy at long horizons underscores that model superiority lies in price-level error containment and uncertainty quantification, rather than long-range directional forecasting.
+

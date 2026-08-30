@@ -1,0 +1,11 @@
+CMD: /usr/bin/python3 /data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py --type DAU --model Time_MoE --horizon 10 --seed 777 --protocol walkforward
+RETURN: -15
+
+=== STDOUT ===
+
+================================================================================
+ [1/1] Time_MoE | DAU | H10 | walkforward
+================================================================================
+
+
+=== STDERR ===

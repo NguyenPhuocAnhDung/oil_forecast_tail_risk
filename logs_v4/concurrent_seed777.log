@@ -1,0 +1,310 @@
+
+══════════════════════════════════════════════════════════════════════
+  CONCURRENT EXPERIMENT PLAN  ─  Kiến Trúc Song Song Hoàn Chỉnh
+══════════════════════════════════════════════════════════════════════
+  GPU              : 1  (CUDA_VISIBLE_DEVICES=1)
+  Target(s)        : ['XANG', 'DAU']
+  Models           : 47
+  Horizons         : [1, 3, 5, 7, 10, 20, 60]
+  Seeds            : [777]
+  Total planned    : 658
+  Jobs to run      : 658
+  Max concurrent   : 7  (auto VRAM-aware)
+  Per-job timeout  : Unlimited (không giới hạn)
+  Retries          : 1
+  Results dir      : results_v4/
+  Error logs       : logs_v4/errors/
+  Dry run          : False
+
+  Models (47):
+    [01] DLinear                ~ 400 MB VRAM
+    [02] RLinear                ~ 400 MB VRAM
+    [03] LTSF_Linear            ~ 400 MB VRAM
+    [04] NBEATS                 ~ 700 MB VRAM
+    [05] NHits                  ~ 700 MB VRAM
+    [06] PatchTST               ~1800 MB VRAM
+    [07] TFT                    ~ 900 MB VRAM
+    [08] Autoformer             ~1800 MB VRAM
+    [09] FedFormer              ~1800 MB VRAM
+    [10] Informer               ~1500 MB VRAM
+    [11] Reformer               ~1500 MB VRAM
+    [12] iTransformer           ~1500 MB VRAM
+    [13] UniTS                  ~1500 MB VRAM
+    [14] TimeXer                ~1200 MB VRAM
+    [15] Crossformer            ~1200 MB VRAM
+    [16] CARD                   ~1200 MB VRAM
+    [17] TimesNet               ~1200 MB VRAM
+    [18] TimeMixer              ~1200 MB VRAM
+    [19] TTM                    ~1200 MB VRAM
+    [20] FITS                   ~ 600 MB VRAM
+    [21] CoST                   ~ 700 MB VRAM
+    [22] TimeMachine            ~1800 MB VRAM
+    [23] S_Mamba                ~2000 MB VRAM
+    [24] MambaFormer            ~2000 MB VRAM
+    [25] BiMamba                ~1800 MB VRAM
+    [26] Chronos                ~4500 MB VRAM
+    [27] TimesFM                ~4500 MB VRAM
+    [28] Moirai                 ~4500 MB VRAM
+    [29] Lag_Llama              ~4000 MB VRAM
+    [30] TEMPO                  ~3500 MB VRAM
+    [31] GPT4TS                 ~3500 MB VRAM
+    [32] Time_MoE               ~ 800 MB VRAM
+    [33] Gated_TabNet           ~ 500 MB VRAM
+    [34] GUMNet                 ~ 900 MB VRAM
+    [35] GUMNet_Mamba           ~1800 MB VRAM
+    [36] GUMNet_iTrans          ~1500 MB VRAM
+    [37] GUMNet_Wavelet         ~1200 MB VRAM
+    [38] GUMNet_Patch           ~1000 MB VRAM
+    [39] GUMNet_Fourier         ~ 800 MB VRAM
+    [40] GUMNet_Diffusion       ~2500 MB VRAM
+    [41] GUMNet_Graph           ~2500 MB VRAM
+    [42] GUMNet_RL              ~2000 MB VRAM
+    [43] GUMNet_MoE_Sparse      ~ 800 MB VRAM
+    [44] GUMNet_Fusion          ~3000 MB VRAM
+    [45] GUMNet_Decomp          ~ 800 MB VRAM
+    [46] GUMNet_Adaptive        ~ 900 MB VRAM
+    [47] GUMNetHet              ~ 800 MB VRAM
+══════════════════════════════════════════════════════════════════════
+
+[GPU1] Starting 658 jobs with 7 concurrent workers...
+[GPU1] Log: /data/quyhv/oil_forecast_tail_risk/logs_v4/concurrent_gpu1_20260817_015425.log
+
+[   1/658]   0.2% | OK:1    FAIL:0    SKIP:0   | OK           | 11800s | ETA:129209m | NBEATS|XANG|H1|s777
+[   2/658]   0.3% | OK:2    FAIL:0    SKIP:0   | OK           | 12293s | ETA:67202m | NHits|XANG|H1|s777
+[   3/658]   0.5% | OK:3    FAIL:0    SKIP:0   | OK           | 14314s | ETA:52086m | TFT|XANG|H1|s777
+[   4/658]   0.6% | OK:4    FAIL:0    SKIP:0   | OK           | 23335s | ETA:63589m | PatchTST|XANG|H1|s777
+[   5/658]   0.8% | OK:5    FAIL:0    SKIP:0   | OK           | 27255s | ETA:59325m | RLinear|XANG|H1|s777
+[   6/658]   0.9% | OK:6    FAIL:0    SKIP:0   | OK           | 17821s | ETA:58200m | Informer|XANG|H1|s777
+[   7/658]   1.1% | OK:7    FAIL:0    SKIP:0   | OK           | 25059s | ETA:57896m | FedFormer|XANG|H1|s777
+[   8/658]   1.2% | OK:8    FAIL:0    SKIP:0   | OK           | 37892s | ETA:51312m | DLinear|XANG|H1|s777
+[   9/658]   1.4% | OK:9    FAIL:0    SKIP:0   | OK           | 27352s | ETA:47055m | Autoformer|XANG|H1|s777
+[  10/658]   1.5% | OK:10   FAIL:0    SKIP:0   | OK           | 17583s | ETA:44192m | Reformer|XANG|H1|s777
+[  11/658]   1.7% | OK:11   FAIL:0    SKIP:0   | OK           | 41355s | ETA:40540m | LTSF_Linear|XANG|H1|s777
+[  12/658]   1.8% | OK:12   FAIL:0    SKIP:0   | OK           | 10697s | ETA:38430m | UniTS|XANG|H1|s777
+[  13/658]   2.0% | OK:13   FAIL:0    SKIP:0   | OK           | 16153s | ETA:35895m | iTransformer|XANG|H1|s777
+[  14/658]   2.1% | OK:14   FAIL:0    SKIP:0   | OK           | 11218s | ETA:38617m | CARD|XANG|H1|s777
+[  15/658]   2.3% | OK:15   FAIL:0    SKIP:0   | OK           | 11848s | ETA:39477m | FITS|XANG|H1|s777
+[  16/658]   2.4% | OK:16   FAIL:0    SKIP:0   | OK           | 17981s | ETA:37004m | TimeXer|XANG|H1|s777
+[  17/658]   2.6% | OK:17   FAIL:0    SKIP:0   | OK           | 16634s | ETA:36168m | TimesNet|XANG|H1|s777
+[  18/658]   2.7% | OK:18   FAIL:0    SKIP:0   | OK           | 17551s | ETA:35783m | TTM|XANG|H1|s777
+[  19/658]   2.9% | OK:19   FAIL:0    SKIP:0   | OK           | 10082s | ETA:33885m | CoST|XANG|H1|s777
+[  20/658]   3.0% | OK:20   FAIL:0    SKIP:0   | OK           | 23707s | ETA:32750m | Crossformer|XANG|H1|s777
+[  21/658]   3.2% | OK:21   FAIL:0    SKIP:0   | OK           | 24242s | ETA:33163m | TimeMixer|XANG|H1|s777
+[  22/658]   3.3% | OK:22   FAIL:0    SKIP:0   | OK           | 20596s | ETA:37653m | MambaFormer|XANG|H1|s777
+[  23/658]   3.5% | OK:23   FAIL:0    SKIP:0   | OK           | 18179s | ETA:36710m | TimesFM|XANG|H1|s777
+[  24/658]   3.6% | OK:24   FAIL:0    SKIP:0   | OK           | 27293s | ETA:38632m | Chronos|XANG|H1|s777
+[  25/658]   3.8% | OK:25   FAIL:0    SKIP:0   | OK           | 16254s | ETA:39838m | Lag_Llama|XANG|H1|s777
+[  26/658]   4.0% | OK:26   FAIL:0    SKIP:0   | OK           | 39948s | ETA:38570m | TimeMachine|XANG|H1|s777
+[  27/658]   4.1% | OK:27   FAIL:0    SKIP:0   | OK           | 42508s | ETA:38109m | S_Mamba|XANG|H1|s777
+[  28/658]   4.3% | OK:28   FAIL:0    SKIP:0   | OK           | 38976s | ETA:37260m | BiMamba|XANG|H1|s777
+[  29/658]   4.4% | OK:29   FAIL:0    SKIP:0   | OK           | 14246s | ETA:36869m | GPT4TS|XANG|H1|s777
+[  30/658]   4.6% | OK:30   FAIL:0    SKIP:0   | OK           | 24941s | ETA:36535m | TEMPO|XANG|H1|s777
+[  31/658]   4.7% | OK:31   FAIL:0    SKIP:0   | OK           | 39635s | ETA:35473m | Moirai|XANG|H1|s777
+[  32/658]   4.9% | OK:32   FAIL:0    SKIP:0   | OK           | 23513s | ETA:39566m | GUMNet|XANG|H1|s777
+[  33/658]   5.0% | OK:33   FAIL:0    SKIP:0   | OK           | 31625s | ETA:39782m | Time_MoE|XANG|H1|s777
+[  34/658]   5.2% | OK:34   FAIL:0    SKIP:0   | OK           | 34029s | ETA:39530m | Gated_TabNet|XANG|H1|s777
+[  35/658]   5.3% | OK:35   FAIL:0    SKIP:0   | OK           | 31813s | ETA:38915m | GUMNet_Mamba|XANG|H1|s777
+[  36/658]   5.5% | OK:36   FAIL:0    SKIP:0   | OK           | 31184s | ETA:39283m | GUMNet_Patch|XANG|H1|s777
+[  37/658]   5.6% | OK:37   FAIL:0    SKIP:0   | OK           | 33698s | ETA:38719m | GUMNet_Wavelet|XANG|H1|s777
+[  38/658]   5.8% | OK:38   FAIL:0    SKIP:0   | OK           | 38971s | ETA:38332m | GUMNet_iTrans|XANG|H1|s777
+[  39/658]   5.9% | OK:39   FAIL:0    SKIP:0   | OK           | 31799s | ETA:40513m | GUMNet_Fourier|XANG|H1|s777
+[  40/658]   6.1% | OK:40   FAIL:0    SKIP:0   | OK           | 29665s | ETA:41416m | GUMNet_RL|XANG|H1|s777
+[  41/658]   6.2% | OK:41   FAIL:0    SKIP:0   | OK           | 34837s | ETA:40347m | GUMNet_Diffusion|XANG|H1|s777
+[  42/658]   6.4% | OK:42   FAIL:0    SKIP:0   | OK           | 32593s | ETA:39557m | GUMNet_Graph|XANG|H1|s777
+[  43/658]   6.5% | OK:43   FAIL:0    SKIP:0   | OK           | 6455s | ETA:39884m | DLinear|XANG|H3|s777
+[  44/658]   6.7% | OK:44   FAIL:0    SKIP:0   | OK           | 7919s | ETA:39479m | RLinear|XANG|H3|s777
+[  45/658]   6.8% | OK:45   FAIL:0    SKIP:0   | OK           | 29491s | ETA:38699m | GUMNet_Decomp|XANG|H1|s777
+[  46/658]   7.0% | OK:46   FAIL:0    SKIP:0   | OK           | 34835s | ETA:37973m | GUMNet_MoE_Sparse|XANG|H1|s777
+[  47/658]   7.1% | OK:47   FAIL:0    SKIP:0   | OK           | 5890s | ETA:37529m | LTSF_Linear|XANG|H3|s777
+[  48/658]   7.3% | OK:48   FAIL:0    SKIP:0   | OK           | 3790s | ETA:36756m | NBEATS|XANG|H3|s777
+[  49/658]   7.4% | OK:49   FAIL:0    SKIP:0   | OK           | 3894s | ETA:36115m | NHits|XANG|H3|s777
+[  50/658]   7.6% | OK:50   FAIL:0    SKIP:0   | OK           | 4310s | ETA:35580m | PatchTST|XANG|H3|s777
+[  51/658]   7.8% | OK:51   FAIL:0    SKIP:0   | OK           | 15350s | ETA:34950m | GUMNetHet|XANG|H1|s777
+[  52/658]   7.9% | OK:52   FAIL:0    SKIP:0   | OK           | 4332s | ETA:34484m | TFT|XANG|H3|s777
+[  53/658]   8.1% | OK:53   FAIL:0    SKIP:0   | OK           | 3441s | ETA:33825m | FedFormer|XANG|H3|s777
+[  54/658]   8.2% | OK:54   FAIL:0    SKIP:0   | OK           | 4461s | ETA:33182m | Autoformer|XANG|H3|s777
+[  55/658]   8.4% | OK:55   FAIL:0    SKIP:0   | OK           | 4185s | ETA:32845m | Informer|XANG|H3|s777
+[  56/658]   8.5% | OK:56   FAIL:0    SKIP:0   | OK           | 41909s | ETA:32309m | GUMNet_Fusion|XANG|H1|s777
+[  57/658]   8.7% | OK:57   FAIL:0    SKIP:0   | OK           | 4909s | ETA:31824m | Reformer|XANG|H3|s777
+[  58/658]   8.8% | OK:58   FAIL:0    SKIP:0   | OK           | 3441s | ETA:31246m | UniTS|XANG|H3|s777
+[  59/658]   9.0% | OK:59   FAIL:0    SKIP:0   | OK           | 3742s | ETA:30752m | TimeXer|XANG|H3|s777
+[  60/658]   9.1% | OK:60   FAIL:0    SKIP:0   | OK           | 4566s | ETA:30250m | iTransformer|XANG|H3|s777
+[  61/658]   9.3% | OK:61   FAIL:0    SKIP:0   | OK           | 3418s | ETA:29971m | CARD|XANG|H3|s777
+[  62/658]   9.4% | OK:62   FAIL:0    SKIP:0   | OK           | 3666s | ETA:29623m | TimeMixer|XANG|H3|s777
+[  63/658]   9.6% | OK:63   FAIL:0    SKIP:0   | OK           | 5237s | ETA:29118m | Crossformer|XANG|H3|s777
+[  64/658]   9.7% | OK:64   FAIL:0    SKIP:0   | OK           | 4620s | ETA:28728m | TimesNet|XANG|H3|s777
+[  65/658]   9.9% | OK:65   FAIL:0    SKIP:0   | OK           | 4742s | ETA:28354m | TTM|XANG|H3|s777
+[  66/658]  10.0% | OK:66   FAIL:0    SKIP:0   | OK           | 2916s | ETA:27905m | CoST|XANG|H3|s777
+[  67/658]  10.2% | OK:67   FAIL:0    SKIP:0   | OK           | 5192s | ETA:27536m | FITS|XANG|H3|s777
+[  68/658]  10.3% | OK:68   FAIL:0    SKIP:0   | OK           | 37308s | ETA:27542m | GUMNet_Adaptive|XANG|H1|s777
+[  69/658]  10.5% | OK:69   FAIL:0    SKIP:0   | OK           | 5529s | ETA:27208m | MambaFormer|XANG|H3|s777
+[  70/658]  10.6% | OK:70   FAIL:0    SKIP:0   | OK           | 4657s | ETA:26785m | Chronos|XANG|H3|s777
+[  71/658]  10.8% | OK:71   FAIL:0    SKIP:0   | OK           | 4249s | ETA:26394m | TimesFM|XANG|H3|s777
+[  72/658]  10.9% | OK:72   FAIL:0    SKIP:0   | OK           | 7935s | ETA:26169m | S_Mamba|XANG|H3|s777
+[  73/658]  11.1% | OK:73   FAIL:0    SKIP:0   | OK           | 3745s | ETA:25938m | Moirai|XANG|H3|s777
+[  74/658]  11.2% | OK:74   FAIL:0    SKIP:0   | OK           | 3721s | ETA:25644m | Lag_Llama|XANG|H3|s777
+[  75/658]  11.4% | OK:75   FAIL:0    SKIP:0   | OK           | 10435s | ETA:25306m | TimeMachine|XANG|H3|s777
+[  76/658]  11.6% | OK:76   FAIL:0    SKIP:0   | OK           | 4428s | ETA:25013m | GPT4TS|XANG|H3|s777
+[  77/658]  11.7% | OK:77   FAIL:0    SKIP:0   | OK           | 4713s | ETA:24652m | TEMPO|XANG|H3|s777
+[  78/658]  11.9% | OK:78   FAIL:0    SKIP:0   | OK           | 9973s | ETA:24347m | BiMamba|XANG|H3|s777
+[  79/658]  12.0% | OK:79   FAIL:0    SKIP:0   | OK           | 4267s | ETA:24244m | Gated_TabNet|XANG|H3|s777
+[  80/658]  12.2% | OK:80   FAIL:0    SKIP:0   | OK           | 6337s | ETA:23994m | Time_MoE|XANG|H3|s777
+[  81/658]  12.3% | OK:81   FAIL:0    SKIP:0   | OK           | 6260s | ETA:23890m | GUMNet|XANG|H3|s777
+[  82/658]  12.5% | OK:82   FAIL:0    SKIP:0   | OK           | 12357s | ETA:24315m | GUMNet_Mamba|XANG|H3|s777
+[  83/658]  12.6% | OK:83   FAIL:0    SKIP:0   | OK           | 11459s | ETA:24006m | GUMNet_Patch|XANG|H3|s777
+[  84/658]  12.8% | OK:84   FAIL:0    SKIP:0   | OK           | 12897s | ETA:23795m | GUMNet_Wavelet|XANG|H3|s777
+[  85/658]  12.9% | OK:85   FAIL:0    SKIP:0   | OK           | 13478s | ETA:23533m | GUMNet_iTrans|XANG|H3|s777
+[  86/658]  13.1% | OK:86   FAIL:0    SKIP:0   | OK           | 12794s | ETA:23419m | GUMNet_Fourier|XANG|H3|s777
+[  87/658]  13.2% | OK:87   FAIL:0    SKIP:0   | OK           | 14098s | ETA:23338m | GUMNet_Diffusion|XANG|H3|s777
+[  88/658]  13.4% | OK:88   FAIL:0    SKIP:0   | OK           | 12571s | ETA:23080m | GUMNet_Graph|XANG|H3|s777
+[  89/658]  13.5% | OK:89   FAIL:0    SKIP:0   | OK           | 2439s | ETA:23041m | DLinear|XANG|H5|s777
+[  90/658]  13.7% | OK:90   FAIL:0    SKIP:0   | OK           | 3893s | ETA:22851m | GUMNetHet|XANG|H3|s777
+[  91/658]  13.8% | OK:91   FAIL:0    SKIP:0   | OK           | 12048s | ETA:22819m | GUMNet_RL|XANG|H3|s777
+[  92/658]  14.0% | OK:92   FAIL:0    SKIP:0   | OK           | 2888s | ETA:22572m | LTSF_Linear|XANG|H5|s777
+[  93/658]  14.1% | OK:93   FAIL:0    SKIP:0   | OK           | 4415s | ETA:22342m | RLinear|XANG|H5|s777
+[  94/658]  14.3% | OK:94   FAIL:0    SKIP:0   | OK           | 11979s | ETA:22143m | GUMNet_Decomp|XANG|H3|s777
+[  95/658]  14.4% | OK:95   FAIL:0    SKIP:0   | OK           | 2248s | ETA:21926m | NBEATS|XANG|H5|s777
+[  96/658]  14.6% | OK:96   FAIL:0    SKIP:0   | OK           | 2316s | ETA:21704m | NHits|XANG|H5|s777
+[  97/658]  14.7% | OK:97   FAIL:0    SKIP:0   | OK           | 13770s | ETA:21466m | GUMNet_Fusion|XANG|H3|s777
+[  98/658]  14.9% | OK:98   FAIL:0    SKIP:0   | OK           | 2667s | ETA:21268m | PatchTST|XANG|H5|s777
+[  99/658]  15.0% | OK:99   FAIL:0    SKIP:0   | OK           | 1921s | ETA:21071m | Autoformer|XANG|H5|s777
+[ 100/658]  15.2% | OK:100  FAIL:0    SKIP:0   | OK           | 2607s | ETA:20836m | TFT|XANG|H5|s777
+[ 101/658]  15.3% | OK:101  FAIL:0    SKIP:0   | OK           | 1925s | ETA:20623m | FedFormer|XANG|H5|s777
+[ 102/658]  15.5% | OK:102  FAIL:0    SKIP:0   | OK           | 16860s | ETA:20420m | GUMNet_MoE_Sparse|XANG|H3|s777
+[ 103/658]  15.7% | OK:103  FAIL:0    SKIP:0   | OK           | 13672s | ETA:20201m | GUMNet_Adaptive|XANG|H3|s777
+[ 104/658]  15.8% | OK:104  FAIL:0    SKIP:0   | OK           | 2748s | ETA:20016m | Informer|XANG|H5|s777
+[ 105/658]  16.0% | OK:105  FAIL:0    SKIP:0   | OK           | 2646s | ETA:19835m | Reformer|XANG|H5|s777
+[ 106/658]  16.1% | OK:106  FAIL:0    SKIP:0   | OK           | 2219s | ETA:19638m | UniTS|XANG|H5|s777
+[ 107/658]  16.3% | OK:107  FAIL:0    SKIP:0   | OK           | 2745s | ETA:19452m | iTransformer|XANG|H5|s777
+[ 108/658]  16.4% | OK:108  FAIL:0    SKIP:0   | OK           | 2345s | ETA:19243m | TimeXer|XANG|H5|s777
+[ 109/658]  16.6% | OK:109  FAIL:0    SKIP:0   | OK           | 2138s | ETA:19062m | CARD|XANG|H5|s777
+[ 110/658]  16.7% | OK:110  FAIL:0    SKIP:0   | OK           | 2986s | ETA:18911m | Crossformer|XANG|H5|s777
+[ 111/658]  16.9% | OK:111  FAIL:0    SKIP:0   | OK           | 2196s | ETA:18739m | TimeMixer|XANG|H5|s777
+[ 112/658]  17.0% | OK:112  FAIL:0    SKIP:0   | OK           | 2936s | ETA:18556m | TimesNet|XANG|H5|s777
+[ 113/658]  17.2% | OK:113  FAIL:0    SKIP:0   | OK           | 1825s | ETA:18371m | CoST|XANG|H5|s777
+[ 114/658]  17.3% | OK:114  FAIL:0    SKIP:0   | OK           | 2754s | ETA:18214m | TTM|XANG|H5|s777
+[ 115/658]  17.5% | OK:115  FAIL:0    SKIP:0   | OK           | 2681s | ETA:18047m | FITS|XANG|H5|s777
+[ 116/658]  17.6% | OK:116  FAIL:0    SKIP:0   | OK           | 3264s | ETA:17990m | S_Mamba|XANG|H5|s777
+[ 117/658]  17.8% | OK:117  FAIL:0    SKIP:0   | OK           | 2674s | ETA:17819m | Chronos|XANG|H5|s777
+[ 118/658]  17.9% | OK:118  FAIL:0    SKIP:0   | OK           | 3318s | ETA:17655m | MambaFormer|XANG|H5|s777
+[ 119/658]  18.1% | OK:119  FAIL:0    SKIP:0   | OK           | 2536s | ETA:17480m | TimesFM|XANG|H5|s777
+[ 120/658]  18.2% | OK:120  FAIL:0    SKIP:0   | OK           | 2995s | ETA:17360m | Moirai|XANG|H5|s777
+[ 121/658]  18.4% | OK:121  FAIL:0    SKIP:0   | OK           | 5367s | ETA:17193m | TimeMachine|XANG|H5|s777
+[ 122/658]  18.5% | OK:122  FAIL:0    SKIP:0   | OK           | 4283s | ETA:17037m | BiMamba|XANG|H5|s777
+[ 123/658]  18.7% | OK:123  FAIL:0    SKIP:0   | OK           | 2530s | ETA:16931m | Lag_Llama|XANG|H5|s777
+[ 124/658]  18.8% | OK:124  FAIL:0    SKIP:0   | OK           | 2547s | ETA:16778m | TEMPO|XANG|H5|s777
+[ 125/658]  19.0% | OK:125  FAIL:0    SKIP:0   | OK           | 2344s | ETA:16617m | GPT4TS|XANG|H5|s777
+[ 126/658]  19.1% | OK:126  FAIL:0    SKIP:0   | OK           | 2431s | ETA:16520m | Gated_TabNet|XANG|H5|s777
+[ 127/658]  19.3% | OK:127  FAIL:0    SKIP:0   | OK           | 3516s | ETA:16381m | Time_MoE|XANG|H5|s777
+[ 128/658]  19.5% | OK:128  FAIL:0    SKIP:0   | OK           | 4316s | ETA:16339m | GUMNet|XANG|H5|s777
+[ 129/658]  19.6% | OK:129  FAIL:0    SKIP:0   | OK           | 9043s | ETA:16520m | GUMNet_Mamba|XANG|H5|s777
+[ 130/658]  19.8% | OK:130  FAIL:0    SKIP:0   | OK           | 8470s | ETA:16401m | GUMNet_Patch|XANG|H5|s777
+[ 131/658]  19.9% | OK:131  FAIL:0    SKIP:0   | OK           | 9917s | ETA:16339m | GUMNet_Wavelet|XANG|H5|s777
+[ 132/658]  20.1% | OK:132  FAIL:0    SKIP:0   | OK           | 10366s | ETA:16200m | GUMNet_iTrans|XANG|H5|s777
+[ 133/658]  20.2% | OK:133  FAIL:0    SKIP:0   | OK           | 9346s | ETA:16059m | GUMNet_Fourier|XANG|H5|s777
+[ 134/658]  20.4% | OK:134  FAIL:0    SKIP:0   | OK           | 10316s | ETA:15993m | GUMNet_Diffusion|XANG|H5|s777
+[ 135/658]  20.5% | OK:135  FAIL:0    SKIP:0   | OK           | 9120s | ETA:15876m | GUMNet_Graph|XANG|H5|s777
+[ 136/658]  20.7% | OK:136  FAIL:0    SKIP:0   | OK           | 2294s | ETA:15844m | GUMNetHet|XANG|H5|s777
+[ 137/658]  20.8% | OK:137  FAIL:0    SKIP:0   | OK           | 2627s | ETA:15751m | DLinear|XANG|H7|s777
+[ 138/658]  21.0% | OK:138  FAIL:0    SKIP:0   | OK           | 8709s | ETA:15727m | GUMNet_RL|XANG|H5|s777
+[ 139/658]  21.1% | OK:139  FAIL:0    SKIP:0   | OK           | 2692s | ETA:15632m | LTSF_Linear|XANG|H7|s777
+[ 140/658]  21.3% | OK:140  FAIL:0    SKIP:0   | OK           | 3885s | ETA:15513m | RLinear|XANG|H7|s777
+[ 141/658]  21.4% | OK:141  FAIL:0    SKIP:0   | OK           | 8306s | ETA:15414m | GUMNet_Decomp|XANG|H5|s777
+[ 142/658]  21.6% | OK:142  FAIL:0    SKIP:0   | OK           | 2472s | ETA:15316m | NBEATS|XANG|H7|s777
+[ 143/658]  21.7% | OK:143  FAIL:0    SKIP:0   | OK           | 2431s | ETA:15224m | NHits|XANG|H7|s777
+[ 144/658]  21.9% | OK:144  FAIL:0    SKIP:0   | OK           | 10002s | ETA:15092m | GUMNet_Fusion|XANG|H5|s777
+[ 145/658]  22.0% | OK:145  FAIL:0    SKIP:0   | OK           | 9914s | ETA:14978m | GUMNet_Adaptive|XANG|H5|s777
+[ 146/658]  22.2% | OK:146  FAIL:0    SKIP:0   | OK           | 3135s | ETA:14886m | PatchTST|XANG|H7|s777
+[ 147/658]  22.3% | OK:147  FAIL:0    SKIP:0   | OK           | 2626s | ETA:14765m | TFT|XANG|H7|s777
+[ 148/658]  22.5% | OK:148  FAIL:0    SKIP:0   | OK           | 1960s | ETA:14637m | Autoformer|XANG|H7|s777
+[ 149/658]  22.6% | OK:149  FAIL:0    SKIP:0   | OK           | 1920s | ETA:14550m | FedFormer|XANG|H7|s777
+[ 150/658]  22.8% | OK:150  FAIL:0    SKIP:0   | OK           | 13261s | ETA:14424m | GUMNet_MoE_Sparse|XANG|H5|s777
+[ 151/658]  22.9% | OK:151  FAIL:0    SKIP:0   | OK           | 2284s | ETA:14324m | Informer|XANG|H7|s777
+[ 152/658]  23.1% | OK:152  FAIL:0    SKIP:0   | OK           | 1958s | ETA:14202m | Reformer|XANG|H7|s777
+[ 153/658]  23.3% | OK:153  FAIL:0    SKIP:0   | OK           | 2144s | ETA:14137m | UniTS|XANG|H7|s777
+[ 154/658]  23.4% | OK:154  FAIL:0    SKIP:0   | OK           | 2198s | ETA:14021m | TimeXer|XANG|H7|s777
+[ 155/658]  23.6% | OK:155  FAIL:0    SKIP:0   | OK           | 2854s | ETA:13930m | iTransformer|XANG|H7|s777
+[ 156/658]  23.7% | OK:156  FAIL:0    SKIP:0   | OK           | 2181s | ETA:13823m | CARD|XANG|H7|s777
+[ 157/658]  23.9% | OK:157  FAIL:0    SKIP:0   | OK           | 2287s | ETA:13736m | TimeMixer|XANG|H7|s777
+[ 158/658]  24.0% | OK:158  FAIL:0    SKIP:0   | OK           | 3013s | ETA:13637m | Crossformer|XANG|H7|s777
+[ 159/658]  24.2% | OK:159  FAIL:0    SKIP:0   | OK           | 2982s | ETA:13545m | TimesNet|XANG|H7|s777
+[ 160/658]  24.3% | OK:160  FAIL:0    SKIP:0   | OK           | 1966s | ETA:13462m | CoST|XANG|H7|s777
+[ 161/658]  24.5% | OK:161  FAIL:0    SKIP:0   | OK           | 2590s | ETA:13355m | TTM|XANG|H7|s777
+[ 162/658]  24.6% | OK:162  FAIL:0    SKIP:0   | OK           | 2576s | ETA:13248m | FITS|XANG|H7|s777
+[ 163/658]  24.8% | OK:163  FAIL:0    SKIP:0   | OK           | 3057s | ETA:13226m | S_Mamba|XANG|H7|s777
+[ 164/658]  24.9% | OK:164  FAIL:0    SKIP:0   | OK           | 2465s | ETA:13156m | TimesFM|XANG|H7|s777
+[ 165/658]  25.1% | OK:165  FAIL:0    SKIP:0   | OK           | 2578s | ETA:13052m | Chronos|XANG|H7|s777
+[ 166/658]  25.2% | OK:166  FAIL:0    SKIP:0   | OK           | 3538s | ETA:12947m | MambaFormer|XANG|H7|s777
+[ 167/658]  25.4% | OK:167  FAIL:0    SKIP:0   | OK           | 4385s | ETA:12844m | TimeMachine|XANG|H7|s777
+[ 168/658]  25.5% | OK:168  FAIL:0    SKIP:0   | OK           | 3111s | ETA:12772m | Moirai|XANG|H7|s777
+[ 169/658]  25.7% | OK:169  FAIL:0    SKIP:0   | OK           | 4101s | ETA:12686m | BiMamba|XANG|H7|s777
+[ 170/658]  25.8% | OK:170  FAIL:0    SKIP:0   | OK           | 2408s | ETA:12618m | Lag_Llama|XANG|H7|s777
+[ 171/658]  26.0% | OK:171  FAIL:0    SKIP:0   | OK           | 2367s | ETA:12554m | Gated_TabNet|XANG|H7|s777
+[ 172/658]  26.1% | OK:172  FAIL:0    SKIP:0   | OK           | 2620s | ETA:12466m | GPT4TS|XANG|H7|s777
+[ 173/658]  26.3% | OK:173  FAIL:0    SKIP:0   | OK           | 2668s | ETA:12369m | TEMPO|XANG|H7|s777
+[ 174/658]  26.4% | OK:174  FAIL:0    SKIP:0   | OK           | 3353s | ETA:12306m | Time_MoE|XANG|H7|s777
+[ 175/658]  26.6% | OK:175  FAIL:0    SKIP:0   | OK           | 5288s | ETA:12329m | GUMNet|XANG|H7|s777
+[ 176/658]  26.7% | OK:176  FAIL:0    SKIP:0   | OK           | 10607s | ETA:12491m | GUMNet_Mamba|XANG|H7|s777
+[ 177/658]  26.9% | OK:177  FAIL:0    SKIP:0   | OK           | 10048s | ETA:12444m | GUMNet_Patch|XANG|H7|s777
+[ 178/658]  27.1% | OK:178  FAIL:0    SKIP:0   | OK           | 11026s | ETA:12393m | GUMNet_Fourier|XANG|H7|s777
+[ 179/658]  27.2% | OK:179  FAIL:0    SKIP:0   | OK           | 12141s | ETA:12304m | GUMNet_iTrans|XANG|H7|s777
+[ 180/658]  27.4% | OK:180  FAIL:0    SKIP:0   | OK           | 11559s | ETA:12217m | GUMNet_Wavelet|XANG|H7|s777
+[ 181/658]  27.5% | OK:181  FAIL:0    SKIP:0   | OK           | 12076s | ETA:12190m | GUMNet_Diffusion|XANG|H7|s777
+[ 182/658]  27.7% | OK:182  FAIL:0    SKIP:0   | OK           | 10909s | ETA:12158m | GUMNet_Graph|XANG|H7|s777
+[ 183/658]  27.8% | OK:183  FAIL:0    SKIP:0   | OK           | 2383s | ETA:12109m | GUMNetHet|XANG|H7|s777
+[ 184/658]  28.0% | OK:184  FAIL:0    SKIP:0   | OK           | 3812s | ETA:12139m | DLinear|XANG|H10|s777
+[ 185/658]  28.1% | OK:185  FAIL:0    SKIP:0   | OK           | 9995s | ETA:12087m | GUMNet_RL|XANG|H7|s777
+[ 186/658]  28.3% | OK:186  FAIL:0    SKIP:0   | OK           | 5747s | ETA:12082m | RLinear|XANG|H10|s777
+[ 187/658]  28.4% | OK:187  FAIL:0    SKIP:0   | OK           | 10228s | ETA:12010m | GUMNet_Decomp|XANG|H7|s777
+[ 188/658]  28.6% | OK:188  FAIL:0    SKIP:0   | OK           | 3887s | ETA:11943m | LTSF_Linear|XANG|H10|s777
+[ 189/658]  28.7% | OK:189  FAIL:0    SKIP:0   | OK           | 11849s | ETA:11894m | GUMNet_Fusion|XANG|H7|s777
+[ 190/658]  28.9% | OK:190  FAIL:0    SKIP:0   | OK           | 4098s | ETA:11813m | NBEATS|XANG|H10|s777
+[ 191/658]  29.0% | OK:191  FAIL:0    SKIP:0   | OK           | 11947s | ETA:11736m | GUMNet_Adaptive|XANG|H7|s777
+[ 192/658]  29.2% | OK:192  FAIL:0    SKIP:0   | OK           | 4279s | ETA:11728m | NHits|XANG|H10|s777
+[ 193/658]  29.3% | OK:193  FAIL:0    SKIP:0   | OK           | 3217s | ETA:11677m | Autoformer|XANG|H10|s777
+[ 194/658]  29.5% | OK:194  FAIL:0    SKIP:0   | OK           | 3138s | ETA:11596m | FedFormer|XANG|H10|s777
+[ 195/658]  29.6% | OK:195  FAIL:0    SKIP:0   | OK           | 4880s | ETA:11515m | PatchTST|XANG|H10|s777
+[ 196/658]  29.8% | OK:196  FAIL:0    SKIP:0   | OK           | 4401s | ETA:11433m | TFT|XANG|H10|s777
+[ 197/658]  29.9% | OK:197  FAIL:0    SKIP:0   | OK           | 17420s | ETA:11396m | GUMNet_MoE_Sparse|XANG|H7|s777
+[ 198/658]  30.1% | OK:198  FAIL:0    SKIP:0   | OK           | 4245s | ETA:11316m | Informer|XANG|H10|s777
+[ 199/658]  30.2% | OK:199  FAIL:0    SKIP:0   | OK           | 3191s | ETA:11268m | Reformer|XANG|H10|s777
+[ 200/658]  30.4% | OK:200  FAIL:0    SKIP:0   | OK           | 3887s | ETA:11254m | TimeXer|XANG|H10|s777
+[ 201/658]  30.5% | OK:201  FAIL:0    SKIP:0   | OK           | 4023s | ETA:11175m | UniTS|XANG|H10|s777
+[ 202/658]  30.7% | OK:202  FAIL:0    SKIP:0   | OK           | 4496s | ETA:11110m | iTransformer|XANG|H10|s777
+[ 203/658]  30.9% | OK:203  FAIL:0    SKIP:0   | OK           | 4883s | ETA:11054m | Crossformer|XANG|H10|s777
+[ 204/658]  31.0% | OK:204  FAIL:0    SKIP:0   | OK           | 3859s | ETA:10981m | CARD|XANG|H10|s777
+[ 205/658]  31.2% | OK:205  FAIL:0    SKIP:0   | OK           | 4071s | ETA:10946m | TimeMixer|XANG|H10|s777
+[ 206/658]  31.3% | OK:206  FAIL:0    SKIP:0   | OK           | 5186s | ETA:10877m | TimesNet|XANG|H10|s777
+[ 207/658]  31.5% | OK:207  FAIL:0    SKIP:0   | OK           | 3367s | ETA:10845m | CoST|XANG|H10|s777
+[ 208/658]  31.6% | OK:208  FAIL:0    SKIP:0   | OK           | 4421s | ETA:10792m | TTM|XANG|H10|s777
+[ 209/658]  31.8% | OK:209  FAIL:0    SKIP:0   | OK           | 4913s | ETA:10735m | FITS|XANG|H10|s777
+[ 210/658]  31.9% | OK:210  FAIL:0    SKIP:0   | OK           | 6043s | ETA:10741m | S_Mamba|XANG|H10|s777
+[ 211/658]  32.1% | OK:211  FAIL:0    SKIP:0   | OK           | 4536s | ETA:10706m | Chronos|XANG|H10|s777
+[ 212/658]  32.2% | OK:212  FAIL:0    SKIP:0   | OK           | 6613s | ETA:10652m | MambaFormer|XANG|H10|s777
+[ 213/658]  32.4% | OK:213  FAIL:0    SKIP:0   | OK           | 4539s | ETA:10579m | TimesFM|XANG|H10|s777
+[ 214/658]  32.5% | OK:214  FAIL:0    SKIP:0   | OK           | 8112s | ETA:10513m | TimeMachine|XANG|H10|s777
+[ 215/658]  32.7% | OK:215  FAIL:0    SKIP:0   | OK           | 7755s | ETA:10480m | BiMamba|XANG|H10|s777
+[ 216/658]  32.8% | OK:216  FAIL:0    SKIP:0   | OK           | 5639s | ETA:10418m | Moirai|XANG|H10|s777
+[ 217/658]  33.0% | OK:217  FAIL:0    SKIP:0   | OK           | 4123s | ETA:10372m | Lag_Llama|XANG|H10|s777
+[ 218/658]  33.1% | OK:218  FAIL:0    SKIP:0   | OK           | 4044s | ETA:10336m | TEMPO|XANG|H10|s777
+[ 219/658]  33.3% | OK:219  FAIL:0    SKIP:0   | OK           | 4045s | ETA:10285m | GPT4TS|XANG|H10|s777
+[ 220/658]  33.4% | OK:220  FAIL:0    SKIP:0   | OK           | 3930s | ETA:10218m | Gated_TabNet|XANG|H10|s777
+[ 221/658]  33.6% | OK:221  FAIL:0    SKIP:0   | OK           | 4262s | ETA:10153m | Time_MoE|XANG|H10|s777
+[ 222/658]  33.7% | OK:222  FAIL:0    SKIP:0   | OK           | 9842s | ETA:10311m | GUMNet|XANG|H10|s777
+[ 223/658]  33.9% | OK:223  FAIL:0    SKIP:0   | OK           | 22334s | ETA:10657m | GUMNet_Mamba|XANG|H10|s777
+[ 224/658]  34.0% | OK:224  FAIL:0    SKIP:0   | OK           | 21633s | ETA:10640m | GUMNet_Patch|XANG|H10|s777
+[ 225/658]  34.2% | OK:225  FAIL:0    SKIP:0   | OK           | 22009s | ETA:10583m | GUMNet_Fourier|XANG|H10|s777
+[ 226/658]  34.3% | OK:226  FAIL:0    SKIP:0   | OK           | 22806s | ETA:10515m | GUMNet_Wavelet|XANG|H10|s777
+[ 227/658]  34.5% | OK:227  FAIL:0    SKIP:0   | OK           | 24508s | ETA:10465m | GUMNet_iTrans|XANG|H10|s777
+[ 228/658]  34.7% | OK:228  FAIL:0    SKIP:0   | OK           | 23926s | ETA:10436m | GUMNet_Diffusion|XANG|H10|s777
+[ 229/658]  34.8% | OK:229  FAIL:0    SKIP:0   | OK           | 3960s | ETA:10490m | GUMNetHet|XANG|H10|s777
+[ 230/658]  35.0% | OK:230  FAIL:0    SKIP:0   | OK           | 1865s | ETA:10478m | DLinear|XANG|H20|s777
+[ 231/658]  35.1% | OK:231  FAIL:0    SKIP:0   | OK           | 22932s | ETA:10412m | GUMNet_Graph|XANG|H10|s777
+[ 232/658]  35.3% | OK:232  FAIL:0    SKIP:0   | OK           | 1860s | ETA:10396m | RLinear|XANG|H20|s777
+[ 233/658]  35.4% | OK:233  FAIL:0    SKIP:0   | OK           | 1830s | ETA:10330m | LTSF_Linear|XANG|H20|s777
+[ 234/658]  35.6% | OK:234  FAIL:0    SKIP:0   | OK           | 2042s | ETA:10320m | NBEATS|XANG|H20|s777
+[ 235/658]  35.7% | OK:235  FAIL:0    SKIP:0   | OK           | 2081s | ETA:10256m | NHits|XANG|H20|s777
+[ 236/658]  35.9% | OK:236  FAIL:0    SKIP:0   | OK           | 2475s | ETA:10262m | TFT|XANG|H20|s777
+[ 237/658]  36.0% | OK:237  FAIL:0    SKIP:0   | OK           | 2913s | ETA:10204m | PatchTST|XANG|H20|s777
+[ 238/658]  36.2% | OK:238  FAIL:0    SKIP:0   | OK           | 1763s | ETA:10179m | Autoformer|XANG|H20|s777
+[ 239/658]  36.3% | OK:239  FAIL:0    SKIP:0   | OK           | 1556s | ETA:10116m | FedFormer|XANG|H20|s777

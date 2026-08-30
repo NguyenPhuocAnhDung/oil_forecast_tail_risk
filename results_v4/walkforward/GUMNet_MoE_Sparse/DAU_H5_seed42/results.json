@@ -1,0 +1,31 @@
+{
+  "model": "GUMNet_MoE_Sparse",
+  "target_type": "DAU",
+  "horizon": 5,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 9.25744,
+    "RMSE": 16.672934,
+    "MAPE": 5.6869,
+    "sMAPE": 5.818,
+    "MASE": 1.62632,
+    "WAPE": 7.1353,
+    "R2": 0.918834,
+    "DA": 46.46,
+    "MSE": 277.986713,
+    "MdAE": 2.604716,
+    "MdAPE": 2.8333,
+    "MaxAE": 80.512364,
+    "Bias": 2.726424,
+    "TheilU": 1.589768,
+    "PICP": 68.0,
+    "PINAW": 19.1749,
+    "crps": 6.314554
+  },
+  "n_iterations": 20,
+  "n_features": 17,
+  "runtime_seconds": 4008.1,
+  "status": "completed",
+  "datetime": "2026-07-18T20:21:33.418187Z"
+}

@@ -1,0 +1,29 @@
+{
+  "model": "TTM",
+  "target_type": "DAU",
+  "horizon": 7,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 11.937562,
+    "RMSE": 23.015761,
+    "MAPE": 7.7528,
+    "sMAPE": 7.7204,
+    "MASE": 2.919206,
+    "WAPE": 10.351,
+    "R2": 0.800282,
+    "DA": 54.11,
+    "MSE": 529.725236,
+    "MdAE": 3.218488,
+    "MdAPE": 3.4291,
+    "MaxAE": 97.917691,
+    "Bias": 0.711179,
+    "TheilU": 2.721814,
+    "crps": 11.937562
+  },
+  "n_iterations": 21,
+  "n_features": 17,
+  "runtime_seconds": 2820.7,
+  "status": "completed",
+  "datetime": "2026-08-26T01:03:00.697920Z"
+}

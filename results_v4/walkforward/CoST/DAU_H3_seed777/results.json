@@ -1,0 +1,29 @@
+{
+  "model": "CoST",
+  "target_type": "DAU",
+  "horizon": 3,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 9.725493,
+    "RMSE": 18.228807,
+    "MAPE": 5.8112,
+    "sMAPE": 5.8757,
+    "MASE": 1.745763,
+    "WAPE": 7.5209,
+    "R2": 0.903425,
+    "DA": 47.45,
+    "MSE": 332.289394,
+    "MdAE": 2.396583,
+    "MdAPE": 2.4513,
+    "MaxAE": 102.564056,
+    "Bias": 0.300935,
+    "TheilU": 1.756155,
+    "crps": 9.725493
+  },
+  "n_iterations": 33,
+  "n_features": 16,
+  "runtime_seconds": 5735.1,
+  "status": "completed",
+  "datetime": "2026-08-27T10:37:34.663606Z"
+}

@@ -1,0 +1,31 @@
+{
+  "model": "GUMNet_MoE_Sparse",
+  "target_type": "XANG",
+  "horizon": 7,
+  "protocol": "walkforward",
+  "seed": 2025,
+  "metrics": {
+    "MAE": 4.795325,
+    "RMSE": 8.701699,
+    "MAPE": 4.346,
+    "sMAPE": 4.4359,
+    "MASE": 1.183901,
+    "WAPE": 5.2335,
+    "R2": 0.889762,
+    "DA": 50.34,
+    "MSE": 75.719561,
+    "MdAE": 1.566434,
+    "MdAPE": 1.9744,
+    "MaxAE": 39.236675,
+    "Bias": 1.29777,
+    "TheilU": 1.448133,
+    "PICP": 72.79,
+    "PINAW": 10.4716,
+    "crps": 3.353694
+  },
+  "n_iterations": 21,
+  "n_features": 16,
+  "runtime_seconds": 16976.5,
+  "status": "completed",
+  "datetime": "2026-08-20T13:48:47.512870Z"
+}

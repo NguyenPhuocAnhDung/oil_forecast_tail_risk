@@ -1,0 +1,28 @@
+{
+  "model": "Autoformer",
+  "target_type": "XANG",
+  "horizon": 10,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 5.065794,
+    "RMSE": 10.245743,
+    "MAPE": 4.6473,
+    "sMAPE": 4.8897,
+    "MASE": 1.413045,
+    "WAPE": 5.7016,
+    "R2": 0.809408,
+    "DA": 47.81,
+    "MSE": 104.975246,
+    "MdAE": 1.933083,
+    "MdAPE": 2.419,
+    "MaxAE": 66.388078,
+    "Bias": 1.841186,
+    "TheilU": 1.903743
+  },
+  "n_iterations": 40,
+  "n_features": 14,
+  "runtime_seconds": 875.3,
+  "status": "completed",
+  "datetime": "2026-07-18T14:14:58.261711Z"
+}

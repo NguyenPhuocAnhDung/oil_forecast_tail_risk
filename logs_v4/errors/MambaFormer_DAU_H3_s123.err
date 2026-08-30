@@ -1,0 +1,16 @@
+CMD: /usr/bin/python3 /data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py --type DAU --model MambaFormer --horizon 3 --seed 123 --protocol walkforward
+RETURN: -15
+
+=== STDOUT ===
+
+================================================================================
+ [1/1] MambaFormer | DAU | H3 | walkforward
+================================================================================
+
+ Using GPU: Tesla T4
+================================================================================
+ MambaFormer | DAU | H3 | walkforward | seed=123
+================================================================================
+Data: 4513 rows | Features: 16
+
+=== STDERR ===

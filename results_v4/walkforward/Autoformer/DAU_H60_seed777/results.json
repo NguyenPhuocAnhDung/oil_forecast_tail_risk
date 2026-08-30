@@ -1,0 +1,29 @@
+{
+  "model": "Autoformer",
+  "target_type": "DAU",
+  "horizon": 60,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 9.608265,
+    "RMSE": 24.280057,
+    "MAPE": 7.9892,
+    "sMAPE": 8.9597,
+    "MASE": 5.950745,
+    "WAPE": 10.1708,
+    "R2": -0.173235,
+    "DA": 46.69,
+    "MSE": 589.521179,
+    "MdAE": 4.687908,
+    "MdAPE": 5.1473,
+    "MaxAE": 209.21505,
+    "Bias": 5.659595,
+    "TheilU": 5.470353,
+    "crps": 9.608265
+  },
+  "n_iterations": 30,
+  "n_features": 20,
+  "runtime_seconds": 4548.8,
+  "status": "completed",
+  "datetime": "2026-08-26T08:21:53.150740Z"
+}

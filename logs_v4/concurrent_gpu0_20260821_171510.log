@@ -1,0 +1,325 @@
+Concurrent run started: 2026-08-21T17:15:10.104736
+GPU: 0 | Models: 47 | Jobs: 419
+
+[   1/419]   0.2% | OK:1    FAIL:0    SKIP:239 | OK           | 3095s | ETA:21563m | Reformer|XANG|H20|s123
+[   2/419]   0.5% | OK:2    FAIL:0    SKIP:239 | OK           | 4020s | ETA:13968m | Informer|XANG|H20|s123
+[   3/419]   0.7% | OK:3    FAIL:0    SKIP:239 | OK           | 3914s | ETA:16199m | iTransformer|XANG|H20|s123
+[   4/419]   1.0% | OK:4    FAIL:0    SKIP:239 | OK           | 3878s | ETA:13657m | UniTS|XANG|H20|s123
+[   5/419]   1.2% | OK:5    FAIL:0    SKIP:239 | OK           | 4043s | ETA:15252m | TimeXer|XANG|H20|s123
+[   6/419]   1.4% | OK:6    FAIL:0    SKIP:239 | OK           | 5800s | ETA:15714m | Crossformer|XANG|H20|s123
+[   7/419]   1.7% | OK:7    FAIL:0    SKIP:239 | OK           | 4036s | ETA:14801m | CARD|XANG|H20|s123
+[   8/419]   1.9% | OK:8    FAIL:0    SKIP:239 | OK           | 3989s | ETA:16335m | TimeMixer|XANG|H20|s123
+[   9/419]   2.1% | OK:9    FAIL:0    SKIP:239 | OK           | 5859s | ETA:14848m | TimesNet|XANG|H20|s123
+[  10/419]   2.4% | OK:10   FAIL:0    SKIP:239 | OK           | 3851s | ETA:15629m | TTM|XANG|H20|s123
+[  11/419]   2.6% | OK:11   FAIL:0    SKIP:239 | OK           | 3669s | ETA:14357m | FITS|XANG|H20|s123
+[  12/419]   2.9% | OK:12   FAIL:0    SKIP:239 | OK           | 3327s | ETA:14841m | CoST|XANG|H20|s123
+[  13/419]   3.1% | OK:13   FAIL:0    SKIP:239 | OK           | 10429s | ETA:17517m | TimeMachine|XANG|H20|s123
+[  14/419]   3.3% | OK:14   FAIL:0    SKIP:239 | OK           | 8339s | ETA:16679m | S_Mamba|XANG|H20|s123
+[  15/419]   3.6% | OK:15   FAIL:0    SKIP:239 | OK           | 8523s | ETA:18933m | MambaFormer|XANG|H20|s123
+[  16/419]   3.8% | OK:16   FAIL:0    SKIP:239 | OK           | 5s | ETA:17708m | Chronos|XANG|H20|s123
+[  17/419]   4.1% | OK:17   FAIL:0    SKIP:239 | OK           | 5s | ETA:16626m | TimesFM|XANG|H20|s123
+[  18/419]   4.3% | OK:18   FAIL:0    SKIP:239 | OK           | 45200s | ETA:16783m | GUMNet_RL|XANG|H10|s123
+[  19/419]   4.5% | OK:19   FAIL:0    SKIP:239 | OK           | 45203s | ETA:15861m | GUMNet_Decomp|XANG|H10|s123
+[  20/419]   4.8% | OK:20   FAIL:0    SKIP:239 | OK           | 5s | ETA:15031m | Lag_Llama|XANG|H20|s123
+[  21/419]   5.0% | OK:21   FAIL:0    SKIP:239 | OK           | 5s | ETA:14280m | TEMPO|XANG|H20|s123
+[  22/419]   5.3% | OK:22   FAIL:0    SKIP:239 | OK           | 12410s | ETA:14137m | BiMamba|XANG|H20|s123
+[  23/419]   5.5% | OK:23   FAIL:0    SKIP:239 | OK           | 5315s | ETA:13631m | Moirai|XANG|H20|s123
+[  24/419]   5.7% | OK:24   FAIL:0    SKIP:239 | OK           | 4511s | ETA:13638m | Time_MoE|XANG|H20|s123
+[  25/419]   6.0% | OK:25   FAIL:0    SKIP:239 | OK           | 4117s | ETA:13428m | Gated_TabNet|XANG|H20|s123
+[  26/419]   6.2% | OK:26   FAIL:0    SKIP:239 | OK           | 5973s | ETA:12893m | GPT4TS|XANG|H20|s123
+[  27/419]   6.4% | OK:27   FAIL:0    SKIP:239 | OK           | 51563s | ETA:12477m | GUMNet_Adaptive|XANG|H10|s123
+[  28/419]   6.7% | OK:28   FAIL:0    SKIP:239 | OK           | 52597s | ETA:12241m | GUMNet_Fusion|XANG|H10|s123
+[  29/419]   6.9% | OK:29   FAIL:0    SKIP:239 | OK           | 11901s | ETA:13314m | GUMNet|XANG|H20|s123
+[  30/419]   7.2% | OK:30   FAIL:0    SKIP:239 | OK           | 81591s | ETA:17633m | GUMNet_MoE_Sparse|XANG|H10|s123
+[  31/419]   7.4% | OK:31   FAIL:0    SKIP:239 | OK           | 32393s | ETA:17433m | GUMNet_Wavelet|XANG|H20|s123
+[  32/419]   7.6% | OK:32   FAIL:0    SKIP:239 | OK           | 33339s | ETA:17024m | GUMNet_iTrans|XANG|H20|s123
+[  33/419]   7.9% | OK:33   FAIL:0    SKIP:239 | OK           | 33001s | ETA:16486m | GUMNet_Patch|XANG|H20|s123
+[  34/419]   8.1% | OK:34   FAIL:0    SKIP:239 | OK           | 34855s | ETA:15961m | GUMNet_Mamba|XANG|H20|s123
+[  35/419]   8.4% | OK:35   FAIL:0    SKIP:239 | OK           | 32749s | ETA:15606m | GUMNet_Fourier|XANG|H20|s123
+[  36/419]   8.6% | OK:36   FAIL:0    SKIP:239 | OK           | 34564s | ETA:16662m | GUMNet_Diffusion|XANG|H20|s123
+[  37/419]   8.8% | OK:37   FAIL:0    SKIP:239 | OK           | 3903s | ETA:16841m | GUMNetHet|XANG|H20|s123
+[  38/419]   9.1% | OK:38   FAIL:0    SKIP:239 | OK           | 8368s | ETA:17753m | DLinear|XANG|H60|s123
+[  39/419]   9.3% | OK:39   FAIL:0    SKIP:239 | OK           | 33288s | ETA:18656m | GUMNet_Graph|XANG|H20|s123
+[  40/419]   9.5% | OK:40   FAIL:0    SKIP:239 | OK           | 5s | ETA:18142m | LTSF_Linear|XANG|H60|s123
+[  41/419]   9.8% | OK:41   FAIL:0    SKIP:239 | OK           | 9247s | ETA:17745m | RLinear|XANG|H60|s123
+[  42/419]  10.0% | OK:42   FAIL:0    SKIP:239 | OK           | 32059s | ETA:17299m | GUMNet_RL|XANG|H20|s123
+[  43/419]  10.3% | OK:43   FAIL:0    SKIP:239 | OK           | 32548s | ETA:17069m | GUMNet_Decomp|XANG|H20|s123
+[  44/419]  10.5% | OK:44   FAIL:0    SKIP:239 | OK           | 35121s | ETA:17001m | GUMNet_Fusion|XANG|H20|s123
+[  45/419]  10.7% | OK:45   FAIL:0    SKIP:239 | OK           | 34544s | ETA:16607m | GUMNet_Adaptive|XANG|H20|s123
+[  46/419]  11.0% | OK:46   FAIL:0    SKIP:239 | OK           | 9946s | ETA:16870m | NBEATS|XANG|H60|s123
+[  47/419]  11.2% | OK:47   FAIL:0    SKIP:239 | OK           | 10049s | ETA:16560m | NHits|XANG|H60|s123
+[  48/419]  11.5% | OK:48   FAIL:0    SKIP:239 | OK           | 10359s | ETA:16752m | Autoformer|XANG|H60|s123
+[  49/419]  11.7% | OK:49   FAIL:0    SKIP:239 | OK           | 10290s | ETA:16383m | FedFormer|XANG|H60|s123
+[  50/419]  11.9% | OK:50   FAIL:0    SKIP:239 | OK           | 14572s | ETA:16198m | TFT|XANG|H60|s123
+[  51/419]  12.2% | OK:51   FAIL:0    SKIP:239 | OK           | 19106s | ETA:16204m | PatchTST|XANG|H60|s123
+[  52/419]  12.4% | OK:52   FAIL:0    SKIP:239 | OK           | 9944s | ETA:15936m | Reformer|XANG|H60|s123
+[  53/419]  12.6% | OK:53   FAIL:0    SKIP:239 | OK           | 12142s | ETA:15765m | Informer|XANG|H60|s123
+[  54/419]  12.9% | OK:54   FAIL:0    SKIP:239 | OK           | 9775s | ETA:15767m | UniTS|XANG|H60|s123
+[  55/419]  13.1% | OK:55   FAIL:0    SKIP:239 | OK           | 10059s | ETA:15454m | iTransformer|XANG|H60|s123
+[  56/419]  13.4% | OK:56   FAIL:0    SKIP:239 | OK           | 9801s | ETA:15287m | TimeXer|XANG|H60|s123
+[  57/419]  13.6% | OK:57   FAIL:0    SKIP:239 | OK           | 9924s | ETA:15390m | CARD|XANG|H60|s123
+[  58/419]  13.8% | OK:58   FAIL:0    SKIP:239 | OK           | 8298s | ETA:15539m | FITS|XANG|H60|s123
+[  59/419]  14.1% | OK:59   FAIL:0    SKIP:239 | OK           | 10601s | ETA:15326m | TTM|XANG|H60|s123
+[  60/419]  14.3% | OK:60   FAIL:0    SKIP:239 | OK           | 13265s | ETA:15280m | TimeMixer|XANG|H60|s123
+[  61/419]  14.6% | OK:61   FAIL:0    SKIP:239 | OK           | 9205s | ETA:15123m | CoST|XANG|H60|s123
+[  62/419]  14.8% | OK:62   FAIL:0    SKIP:239 | OK           | 23362s | ETA:15172m | Crossformer|XANG|H60|s123
+[  63/419]  15.0% | OK:63   FAIL:0    SKIP:239 | OK           | 76790s | ETA:15186m | GUMNet_MoE_Sparse|XANG|H20|s123
+[  64/419]  15.3% | OK:64   FAIL:0    SKIP:239 | OK           | 12878s | ETA:15806m | Chronos|XANG|H60|s123
+[  65/419]  15.5% | OK:65   FAIL:0    SKIP:239 | OK           | 41268s | ETA:16179m | TimesNet|XANG|H60|s123
+[  66/419]  15.8% | OK:66   FAIL:0    SKIP:239 | OK           | 18196s | ETA:15996m | TimesFM|XANG|H60|s123
+[  67/419]  16.0% | OK:67   FAIL:0    SKIP:239 | OK           | 32101s | ETA:16007m | S_Mamba|XANG|H60|s123
+[  68/419]  16.2% | OK:68   FAIL:0    SKIP:239 | OK           | 12168s | ETA:15756m | Moirai|XANG|H60|s123
+[  69/419]  16.5% | OK:69   FAIL:0    SKIP:239 | OK           | 34987s | ETA:15911m | MambaFormer|XANG|H60|s123
+[  70/419]  16.7% | OK:70   FAIL:0    SKIP:239 | OK           | 11456s | ETA:15763m | Lag_Llama|XANG|H60|s123
+[  71/419]  16.9% | OK:71   FAIL:0    SKIP:239 | OK           | 11363s | ETA:15587m | TEMPO|XANG|H60|s123
+[  72/419]  17.2% | OK:72   FAIL:0    SKIP:239 | OK           | 42238s | ETA:15425m | TimeMachine|XANG|H60|s123
+[  73/419]  17.4% | OK:73   FAIL:0    SKIP:239 | OK           | 11113s | ETA:15345m | Time_MoE|XANG|H60|s123
+[  74/419]  17.7% | OK:74   FAIL:0    SKIP:239 | OK           | 10768s | ETA:15461m | Gated_TabNet|XANG|H60|s123
+[  75/419]  17.9% | OK:75   FAIL:0    SKIP:239 | OK           | 49392s | ETA:15595m | BiMamba|XANG|H60|s123
+[  76/419]  18.1% | OK:76   FAIL:0    SKIP:239 | OK           | 22726s | ETA:15460m | GPT4TS|XANG|H60|s123
+[  77/419]  18.4% | OK:77   FAIL:0    SKIP:239 | OK           | 49151s | ETA:17681m | GUMNet|XANG|H60|s123
+[  78/419]  18.6% | OK:77   FAIL:0    SKIP:239 | RETRY(1)     | 47561s | ETA:18567m | GUMNet_Fourier|XANG|H60|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[  79/419]  18.9% | OK:77   FAIL:0    SKIP:239 | RETRY(1)     | 52583s | ETA:18513m | GUMNet_Patch|XANG|H60|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[  80/419]  19.1% | OK:77   FAIL:0    SKIP:239 | RETRY(1)     | 60752s | ETA:18459m | GUMNet_Mamba|XANG|H60|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[  81/419]  19.3% | OK:77   FAIL:0    SKIP:239 | RETRY(1)     | 59530s | ETA:18404m | GUMNet_iTrans|XANG|H60|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[  82/419]  19.6% | OK:77   FAIL:0    SKIP:239 | RETRY(1)     | 57304s | ETA:18350m | GUMNet_Wavelet|XANG|H60|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[  83/419]  19.8% | OK:77   FAIL:0    SKIP:239 | RETRY(1)     | 12717s | ETA:18296m | GUMNet_Graph|XANG|H60|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[  84/419]  20.0% | OK:77   FAIL:0    SKIP:239 | RETRY(1)     | 46032s | ETA:18241m | GUMNet_Diffusion|XANG|H60|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[  85/419]  20.3% | OK:78   FAIL:0    SKIP:239 | OK           | 8518s | ETA:18561m | GUMNetHet|XANG|H60|s123
+[  86/419]  20.5% | OK:79   FAIL:0    SKIP:239 | OK           | 61801s | ETA:22015m | DLinear|DAU|H1|s123
+[  87/419]  20.8% | OK:80   FAIL:0    SKIP:239 | OK           | 63687s | ETA:22394m | RLinear|DAU|H1|s123
+[  88/419]  21.0% | OK:81   FAIL:0    SKIP:239 | OK           | 21671s | ETA:23527m | NBEATS|DAU|H1|s123
+[  89/419]  21.2% | OK:82   FAIL:0    SKIP:239 | OK           | 42475s | ETA:23867m | LTSF_Linear|DAU|H1|s123
+[  90/419]  21.5% | OK:83   FAIL:0    SKIP:239 | OK           | 22411s | ETA:24302m | NHits|DAU|H1|s123
+[  91/419]  21.7% | OK:84   FAIL:0    SKIP:239 | OK           | 26174s | ETA:25643m | TFT|DAU|H1|s123
+[  92/419]  22.0% | OK:85   FAIL:0    SKIP:239 | OK           | 45653s | ETA:25743m | PatchTST|DAU|H1|s123
+[  93/419]  22.2% | OK:86   FAIL:0    SKIP:239 | OK           | 165796s | ETA:26368m | GUMNet_RL|XANG|H60|s123
+[  94/419]  22.4% | OK:87   FAIL:0    SKIP:239 | OK           | 167792s | ETA:26109m | GUMNet_Decomp|XANG|H60|s123
+[  95/419]  22.7% | OK:88   FAIL:0    SKIP:239 | OK           | 169056s | ETA:25811m | GUMNet_Adaptive|XANG|H60|s123
+[  96/419]  22.9% | OK:89   FAIL:0    SKIP:239 | OK           | 175641s | ETA:25840m | GUMNet_Fusion|XANG|H60|s123
+[  97/419]  23.2% | OK:90   FAIL:0    SKIP:239 | OK           | 45667s | ETA:26664m | FedFormer|DAU|H1|s123
+[  98/419]  23.4% | OK:91   FAIL:0    SKIP:239 | OK           | 53307s | ETA:26299m | Autoformer|DAU|H1|s123
+[  99/419]  23.6% | OK:92   FAIL:0    SKIP:239 | OK           | 27420s | ETA:25973m | iTransformer|DAU|H1|s123
+[ 100/419]  23.9% | OK:93   FAIL:0    SKIP:239 | OK           | 20977s | ETA:25622m | UniTS|DAU|H1|s123
+[ 101/419]  24.1% | OK:94   FAIL:0    SKIP:239 | OK           | 4s | ETA:25270m | TimesNet|DAU|H1|s123
+[ 102/419]  24.3% | OK:95   FAIL:0    SKIP:239 | OK           | 4s | ETA:24925m | TimeMixer|DAU|H1|s123
+[ 103/419]  24.6% | OK:96   FAIL:0    SKIP:239 | OK           | 4s | ETA:24588m | TTM|DAU|H1|s123
+[ 104/419]  24.8% | OK:97   FAIL:0    SKIP:239 | OK           | 33352s | ETA:24394m | Informer|DAU|H1|s123
+[ 105/419]  25.1% | OK:98   FAIL:0    SKIP:239 | OK           | 33078s | ETA:24160m | Reformer|DAU|H1|s123
+[ 106/419]  25.3% | OK:99   FAIL:0    SKIP:239 | OK           | 21253s | ETA:24729m | CARD|DAU|H1|s123
+[ 107/419]  25.5% | OK:100  FAIL:0    SKIP:239 | OK           | 19138s | ETA:24432m | CoST|DAU|H1|s123
+[ 108/419]  25.8% | OK:101  FAIL:0    SKIP:239 | OK           | 23042s | ETA:24184m | FITS|DAU|H1|s123
+[ 109/419]  26.0% | OK:102  FAIL:0    SKIP:239 | OK           | 33005s | ETA:24322m | TimeXer|DAU|H1|s123
+[ 110/419]  26.3% | OK:103  FAIL:0    SKIP:239 | OK           | 5s | ETA:24008m | Chronos|DAU|H1|s123
+[ 111/419]  26.5% | OK:104  FAIL:0    SKIP:239 | OK           | 4s | ETA:23701m | TimesFM|DAU|H1|s123
+[ 112/419]  26.7% | OK:105  FAIL:0    SKIP:239 | OK           | 5s | ETA:23399m | Moirai|DAU|H1|s123
+[ 113/419]  27.0% | OK:105  FAIL:0    SKIP:239 | RETRY(1)     | 866s | ETA:23365m | Lag_Llama|DAU|H1|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 114/419]  27.2% | OK:105  FAIL:0    SKIP:239 | RETRY(1)     | 9814s | ETA:23289m | BiMamba|DAU|H1|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 115/419]  27.4% | OK:105  FAIL:0    SKIP:239 | RETRY(1)     | 208s | ETA:23222m | TEMPO|DAU|H1|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 116/419]  27.7% | OK:105  FAIL:0    SKIP:239 | RETRY(1)     | 207s | ETA:23146m | GPT4TS|DAU|H1|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 117/419]  27.9% | OK:106  FAIL:0    SKIP:239 | OK           | 40720s | ETA:23175m | Crossformer|DAU|H1|s123
+[ 118/419]  28.2% | OK:106  FAIL:0    SKIP:239 | RETRY(1)     | 237292s | ETA:23136m | GUMNet_MoE_Sparse|XANG|H60|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 119/419]  28.4% | OK:107  FAIL:0    SKIP:239 | OK           | 33239s | ETA:23509m | MambaFormer|DAU|H1|s123
+[ 120/419]  28.6% | OK:108  FAIL:0    SKIP:239 | OK           | 65152s | ETA:23882m | TimeMachine|DAU|H1|s123
+[ 121/419]  28.9% | OK:109  FAIL:0    SKIP:239 | OK           | 4s | ETA:23584m | GUMNet_Wavelet|DAU|H1|s123
+[ 122/419]  29.1% | OK:110  FAIL:0    SKIP:239 | OK           | 4s | ETA:23292m | GUMNet_Patch|DAU|H1|s123
+[ 123/419]  29.4% | OK:111  FAIL:0    SKIP:239 | OK           | 4s | ETA:23004m | GUMNet_Fourier|DAU|H1|s123
+[ 124/419]  29.6% | OK:112  FAIL:0    SKIP:239 | OK           | 4s | ETA:22722m | GUMNet_Diffusion|DAU|H1|s123
+[ 125/419]  29.8% | OK:113  FAIL:0    SKIP:239 | OK           | 52536s | ETA:22628m | S_Mamba|DAU|H1|s123
+[ 126/419]  30.1% | OK:114  FAIL:0    SKIP:239 | OK           | 40073s | ETA:22623m | GUMNet|DAU|H1|s123
+[ 127/419]  30.3% | OK:115  FAIL:0    SKIP:239 | OK           | 55648s | ETA:22721m | Time_MoE|DAU|H1|s123
+[ 128/419]  30.5% | OK:116  FAIL:0    SKIP:239 | OK           | 60595s | ETA:22655m | Gated_TabNet|DAU|H1|s123
+[ 129/419]  30.8% | OK:117  FAIL:0    SKIP:239 | OK           | 4s | ETA:22384m | GUMNet_Decomp|DAU|H1|s123
+[ 130/419]  31.0% | OK:118  FAIL:0    SKIP:239 | OK           | 4s | ETA:22118m | GUMNet_Adaptive|DAU|H1|s123
+[ 131/419]  31.3% | OK:119  FAIL:0    SKIP:239 | OK           | 5s | ETA:21857m | GUMNetHet|DAU|H1|s123
+[ 132/419]  31.5% | OK:120  FAIL:0    SKIP:239 | OK           | 4s | ETA:21599m | DLinear|DAU|H3|s123
+[ 133/419]  31.7% | OK:121  FAIL:0    SKIP:239 | OK           | 4s | ETA:21346m | RLinear|DAU|H3|s123
+[ 134/419]  32.0% | OK:122  FAIL:0    SKIP:239 | OK           | 4s | ETA:21098m | LTSF_Linear|DAU|H3|s123
+[ 135/419]  32.2% | OK:123  FAIL:0    SKIP:239 | OK           | 56540s | ETA:20988m | GUMNet_Mamba|DAU|H1|s123
+[ 136/419]  32.5% | OK:124  FAIL:0    SKIP:239 | OK           | 6837s | ETA:20872m | NBEATS|DAU|H3|s123
+[ 137/419]  32.7% | OK:125  FAIL:0    SKIP:239 | OK           | 5s | ETA:20632m | PatchTST|DAU|H3|s123
+[ 138/419]  32.9% | OK:126  FAIL:0    SKIP:239 | OK           | 5s | ETA:20396m | TFT|DAU|H3|s123
+[ 139/419]  33.2% | OK:127  FAIL:0    SKIP:239 | OK           | 4s | ETA:20163m | Autoformer|DAU|H3|s123
+[ 140/419]  33.4% | OK:127  FAIL:0    SKIP:239 | RETRY(1)     | 31443s | ETA:20103m | GUMNet_Graph|DAU|H1|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 141/419]  33.7% | OK:127  FAIL:0    SKIP:239 | RETRY(1)     | 20918s | ETA:20031m | GUMNet_MoE_Sparse|DAU|H1|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 142/419]  33.9% | OK:127  FAIL:0    SKIP:239 | RETRY(1)     | 320s | ETA:19959m | FedFormer|DAU|H3|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 143/419]  34.1% | OK:127  FAIL:0    SKIP:239 | RETRY(1)     | 27217s | ETA:19887m | GUMNet_RL|DAU|H1|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 144/419]  34.4% | OK:127  FAIL:0    SKIP:239 | RETRY(1)     | 3653s | ETA:19815m | NHits|DAU|H3|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 145/419]  34.6% | OK:127  FAIL:0    SKIP:239 | RETRY(1)     | 12144s | ETA:19743m | GUMNet_Fusion|DAU|H1|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 146/419]  34.8% | OK:127  FAIL:0    SKIP:239 | RETRY(1)     | 45962s | ETA:19671m | GUMNet_iTrans|DAU|H1|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 147/419]  35.1% | OK:128  FAIL:0    SKIP:239 | OK           | 6s | ETA:19446m | iTransformer|DAU|H3|s123
+[ 148/419]  35.3% | OK:129  FAIL:0    SKIP:239 | OK           | 5s | ETA:19224m | TimesNet|DAU|H3|s123
+[ 149/419]  35.6% | OK:130  FAIL:0    SKIP:239 | OK           | 4s | ETA:19006m | TimeMixer|DAU|H3|s123
+[ 150/419]  35.8% | OK:131  FAIL:0    SKIP:239 | OK           | 3s | ETA:18791m | TTM|DAU|H3|s123
+[ 151/419]  36.0% | OK:131  FAIL:0    SKIP:239 | RETRY(1)     | 60s | ETA:18723m | UniTS|DAU|H3|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 152/419]  36.3% | OK:131  FAIL:0    SKIP:239 | RETRY(1)     | 61s | ETA:18653m | TimeXer|DAU|H3|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 153/419]  36.5% | OK:131  FAIL:0    SKIP:239 | RETRY(1)     | 59s | ETA:18583m | CARD|DAU|H3|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 154/419]  36.8% | OK:131  FAIL:0    SKIP:239 | RETRY(1)     | 60s | ETA:18513m | Crossformer|DAU|H3|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 155/419]  37.0% | OK:131  FAIL:0    SKIP:239 | RETRY(1)     | 43s | ETA:18443m | FITS|DAU|H3|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 156/419]  37.2% | OK:131  FAIL:0    SKIP:239 | RETRY(1)     | 62s | ETA:18373m | Reformer|DAU|H3|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 157/419]  37.5% | OK:131  FAIL:0    SKIP:239 | RETRY(1)     | 64s | ETA:18304m | Informer|DAU|H3|s123
+  STDERR:  scaler = GradScaler(enabled=use_amp)
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:309: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+/data/quyhv/oil_forecast_tail_risk/scripts/training/train_unified.py:349: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+[ 158/419]  37.7% | OK:131  FAIL:0    SKIP:239 | RETRY(1)     | 5s | ETA:18234m | Chronos|DAU|H3|s123
+[ 159/419]  37.9% | OK:131  FAIL:0    SKIP:239 | RETRY(1)     | 6s | ETA:18164m | BiMamba|DAU|H3|s123
+[ 160/419]  38.2% | OK:131  FAIL:0    SKIP:239 | RETRY(1)     | 5s | ETA:18094m | TimesFM|DAU|H3|s123
+[ 161/419]  38.4% | OK:131  FAIL:0    SKIP:239 | RETRY(1)     | 6s | ETA:18024m | S_Mamba|DAU|H3|s123
+[ 162/419]  38.7% | OK:131  FAIL:0    SKIP:239 | RETRY(1)     | 6s | ETA:17954m | CoST|DAU|H3|s123
+[ 163/419]  38.9% | OK:131  FAIL:0    SKIP:239 | RETRY(1)     | 6s | ETA:17885m | MambaFormer|DAU|H3|s123
+[ 164/419]  39.1% | OK:131  FAIL:0    SKIP:239 | RETRY(1)     | 6s | ETA:17815m | TimeMachine|DAU|H3|s123
+[ 165/419]  39.4% | OK:132  FAIL:0    SKIP:239 | OK           | 6s | ETA:17611m | Moirai|DAU|H3|s123
+[ 166/419]  39.6% | OK:133  FAIL:0    SKIP:239 | OK           | 6s | ETA:17409m | GUMNet|DAU|H3|s123

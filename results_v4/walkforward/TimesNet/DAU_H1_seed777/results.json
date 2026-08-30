@@ -1,0 +1,29 @@
+{
+  "model": "TimesNet",
+  "target_type": "DAU",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 6.082761,
+    "RMSE": 11.800935,
+    "MAPE": 3.5616,
+    "sMAPE": 3.5655,
+    "MASE": 1.068602,
+    "WAPE": 4.6884,
+    "R2": 0.959338,
+    "DA": 57.58,
+    "MSE": 139.262077,
+    "MdAE": 1.347304,
+    "MdAPE": 1.4769,
+    "MaxAE": 65.701611,
+    "Bias": -0.027049,
+    "TheilU": 1.125204,
+    "crps": 6.082761
+  },
+  "n_iterations": 100,
+  "n_features": 16,
+  "runtime_seconds": 15670.5,
+  "status": "completed",
+  "datetime": "2026-08-25T20:15:55.975252Z"
+}

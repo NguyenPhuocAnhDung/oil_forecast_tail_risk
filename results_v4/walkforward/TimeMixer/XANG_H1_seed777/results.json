@@ -1,0 +1,29 @@
+{
+  "model": "TimeMixer",
+  "target_type": "XANG",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 3.123434,
+    "RMSE": 5.632008,
+    "MAPE": 2.7306,
+    "sMAPE": 2.7328,
+    "MASE": 0.646546,
+    "WAPE": 3.1544,
+    "R2": 0.965762,
+    "DA": 56.57,
+    "MSE": 31.719516,
+    "MdAE": 1.19975,
+    "MdAPE": 1.432,
+    "MaxAE": 24.068353,
+    "Bias": 0.064645,
+    "TheilU": 0.794109,
+    "crps": 3.123434
+  },
+  "n_iterations": 100,
+  "n_features": 15,
+  "runtime_seconds": 24233.4,
+  "status": "completed",
+  "datetime": "2026-08-17T20:07:39.857211Z"
+}

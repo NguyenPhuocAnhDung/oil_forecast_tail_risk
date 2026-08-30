@@ -1,0 +1,29 @@
+{
+  "model": "GPT4TS",
+  "target_type": "XANG",
+  "horizon": 60,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 6.608406,
+    "RMSE": 13.56318,
+    "MAPE": 6.7554,
+    "sMAPE": 7.2919,
+    "MASE": 1.927435,
+    "WAPE": 7.7029,
+    "R2": -0.081261,
+    "DA": 47.08,
+    "MSE": 183.959863,
+    "MdAE": 3.516312,
+    "MdAPE": 4.3075,
+    "MaxAE": 99.25797,
+    "Bias": 2.95259,
+    "TheilU": 3.110989,
+    "crps": 6.608406
+  },
+  "n_iterations": 30,
+  "n_features": 19,
+  "runtime_seconds": 6041.9,
+  "status": "completed",
+  "datetime": "2026-07-19T13:10:54.223604Z"
+}

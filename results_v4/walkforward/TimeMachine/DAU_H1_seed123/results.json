@@ -1,0 +1,29 @@
+{
+  "model": "TimeMachine",
+  "target_type": "DAU",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 123,
+  "metrics": {
+    "MAE": 6.221426,
+    "RMSE": 12.184742,
+    "MAPE": 3.566,
+    "sMAPE": 3.581,
+    "MASE": 1.092962,
+    "WAPE": 4.7952,
+    "R2": 0.956651,
+    "DA": 62.63,
+    "MSE": 148.467938,
+    "MdAE": 1.311094,
+    "MdAPE": 1.4466,
+    "MaxAE": 65.801062,
+    "Bias": 0.30525,
+    "TheilU": 1.161797,
+    "crps": 6.221426
+  },
+  "n_iterations": 100,
+  "n_features": 16,
+  "runtime_seconds": 65147.5,
+  "status": "completed",
+  "datetime": "2026-08-27T17:01:32.297201Z"
+}

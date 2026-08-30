@@ -1,0 +1,29 @@
+{
+  "model": "BiMamba",
+  "target_type": "DAU",
+  "horizon": 3,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 9.443606,
+    "RMSE": 18.344902,
+    "MAPE": 5.6139,
+    "sMAPE": 5.6974,
+    "MASE": 1.695163,
+    "WAPE": 7.3029,
+    "R2": 0.902191,
+    "DA": 50.51,
+    "MSE": 336.535441,
+    "MdAE": 2.103011,
+    "MdAPE": 2.1302,
+    "MaxAE": 109.548409,
+    "Bias": 0.594363,
+    "TheilU": 1.767343,
+    "crps": 9.443606
+  },
+  "n_iterations": 33,
+  "n_features": 16,
+  "runtime_seconds": 17522.4,
+  "status": "completed",
+  "datetime": "2026-08-27T15:29:41.756016Z"
+}

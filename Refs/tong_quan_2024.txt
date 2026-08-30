@@ -1,0 +1,93 @@
+Tổng quan về xu hướng nghiên cứu từ năm 2024
+Các nghiên cứu từ năm 2024 tiếp tục củng cố xu hướng sử dụng các mô hình lai (hybrid models) và học sâu (deep learning) để dự báo giá dầu thô, do tính phi tuyến tính, không ổn định và các biến động phức tạp của thị trường. Một điểm nhấn đáng chú ý là sự tích hợp ngày càng sâu rộng của các kỹ thuật tiền xử lý dữ liệu tiên tiến, các thuật toán tối ưu hóa đa mục tiêu, và các cơ chế học sâu phức tạp hơn (như BiLSTM, Attention, CNN) để cải thiện độ chính xác và khả năng dự báo. Nhiều nghiên cứu đã đưa ra các bằng chứng thống kê mạnh mẽ về hiệu suất vượt trội của các mô hình mới thông qua các kiểm định Diebold-Mariano (DM) và Model Confidence Set (MCS).
+Các nghiên cứu nổi bật từ năm 2024
+• Mô hình LSTM-based feature extraction with XGBoost Regressor
+    ◦ Mô hình này kết hợp khả năng trích xuất đặc trưng của LSTM với khả năng hồi quy của XGBoost để dự báo giá dầu thô WTI.
+    ◦ Kết quả:
+        ▪ Trên tập dữ liệu Test, mô hình đạt được các chỉ số ấn tượng: R2 là 0.9991, MAE là 0.0037, RMSE là 0.0099, MAPE là 0.00004 và Theil là 0.007.
+        ▪ Kết quả này cho thấy mô hình vượt trội hơn so với các mô hình đơn lẻ CNN và XGBoost trên cả tập huấn luyện, kiểm tra và kiểm định chéo.
+    ◦ Nghiên cứu cũng chỉ ra rằng các yếu tố bên ngoài như Chỉ số Đô la Mỹ và giá vàng có ảnh hưởng tích cực đến đầu ra của mô hình, và việc trích xuất tính năng văn bản từ tin tức trực tuyến có thể cung cấp thông tin chi tiết về tâm lý thị trường.
+• Mô hình VMD-PSR-CNN-BiLSTM (từ "A novel crude oil price forecasting model using decomposition and deep learning networks.pdf")
+    ◦ Đây là một biến thể của mô hình lai kết hợp phân tách VMD, cấu trúc PSR (Probabilistic Shared Representation), CNN và BiLSTM.
+    ◦ Kết quả:
+        ▪ Trong trường hợp dự báo 1 ngày (Case 1), mô hình đạt: RMSE 0.335, MAE 0.579, MAPE 0.430, Dstat 0.662, và R2 0.874.
+        ▪ Kiểm định DM cho thấy mô hình này có ý nghĩa thống kê vượt trội so với CNN-BiLSTM và các mô hình khác, với p-value rất thấp (ví dụ: 7.8692* cho MSE khi so với CNN-BiLSTM).
+• Hệ thống dự báo lai PROPOSED-CM (từ "A novel hybrid forecasting system for crude oil futures prices: A dual perspective of deterministic forecasting and uncertainty analysis.pdf")
+    ◦ Hệ thống này được xây dựng dựa trên khái niệm "khử nhiễu-tích hợp", kết hợp các kỹ thuật khử nhiễu, phương pháp kinh tế lượng và trí tuệ nhân tạo, tối ưu hóa bằng lý thuyết tối ưu hóa đa mục tiêu.
+    ◦ Kết quả dự báo điểm (Step-1):
+        ▪ WTI: MAPE 1.0761, MAE 1.0133, RMSE 1.3733, MSE 1.8860, R2 0.9891, DACC 85.0174%.
+        ▪ Oman: MAPE 0.8763, MAE 0.7408, RMSE 0.9769, MSE 0.9542, R2 0.9859, DACC 84.6690%.
+    ◦ Hệ thống được chứng minh là cải thiện hiệu suất hơn 50% so với mô hình tham chiếu.
+    ◦ Kiểm định DM cho thấy PROPOSED-CM vượt trội đáng kể về mặt thống kê so với các mô hình truyền thống và các phương pháp phân tách khác.
+    ◦ Đối với phân tích dự báo khoảng, mô hình (PROPOSED-CM-FIP) đạt PICP 96.5157% và FINAW 0.1626 cho Oman, cho thấy khả năng dự báo khoảng hiệu quả.
+• Mô hình MEEMD-Mix-KELM (từ "A novel hybrid model for crude oil price forecasting based on MEEMD and Mix-KELM.pdf")
+    ◦ Mô hình lai này sử dụng phân tách MEEMD và Mix-Kernel Extreme Learning Machine.
+    ◦ Kết quả: Kiểm định MCS cho thấy MEEMD-Mix-KELM có p-value là 1.000 trên cả dự báo 1 bước, 2 bước và 3 bước, cho thấy nó nằm trong tập hợp các mô hình tối ưu (hoặc là tốt nhất trong số các mô hình KELM).
+• Mô hình SMVMD-Hybrid (từ "A novel hybrid model with two-layer multivariate decomposition for crude oil price forecasting.pdf")
+    ◦ Đây là một mô hình lai tiên tiến với phân tách đa biến hai lớp.
+    ◦ Kết quả: Mô hình đạt MAE 0.4618, MAPE 0.8236, RMSE 0.5866, DA 0.8919, và p-value của kiểm định PT là 6.0396 (0.0000). Đây là hiệu suất dự báo tốt nhất trong số tất cả các mô hình được liệt kê.
+    ◦ Nghiên cứu này khẳng định rằng phân tách hai lớp và phân tách đa biến đều cải thiện đáng kể độ chính xác dự báo so với phân tách một lớp và đơn biến.
+• Mô hình ES-CF-BiAt (từ "A novel integrated method for improving the forecasting accuracy of crude oil: ESMD-CFastICA-BiLSTM-Attention.pdf")
+    ◦ Mô hình này kết hợp ESMD, kỹ thuật phân cụm, FastICA, BiLSTM và cơ chế Attention.
+    ◦ Kết quả cho giá dầu thô INE: MAE 0.0457, RMSE 0.0599, R2 0.9128, Dstat 0.5379, PICP 0.6079.
+    ◦ Mô hình này cho thấy MAE và RMSE thấp nhất, cùng R2 cao nhất, chứng tỏ sự vượt trội so với các mô hình BiLSTM-Attention khác.
+• Mô hình VMD-ACI-iLSTM (từ "A novel interval-based hybrid framework for crude oil price forecasting and trading.pdf")
+    ◦ Mô hình này sử dụng VMD, mô hình Autoregressive Conditional Interval (ACI) và interval Long Short-Term Memory (iLSTM) để dự báo giá khoảng.
+    ◦ Kết quả (giai đoạn 2015-2020): UI 0.8080, ARVI 0.0921, MSEI 0.7947, MDEI 0.5840, MAPEi 0.01161, DA 0.5104.
+    ◦ Mô hình đạt MAPEi thấp nhất và DA cao nhất, cho thấy hiệu suất vượt trội trong dự báo hướng so với MLP, iMLP và iLSTM.
+• Mô hình mới (từ "A novel link prediction model for interval-valued crude oil prices based on complex network and multi-source information.pdf")
+    ◦ Mô hình này sử dụng mạng phức tạp và thông tin đa nguồn cho dự báo giá dầu thô theo khoảng.
+    ◦ Kết quả: Trong Thí nghiệm 1, mô hình đạt IMAPE 0.1233, IARV 0.5829, IRMSE 1.5114, IMDE 0.8317. Những giá trị này là tốt nhất trong số tất cả các mô hình so sánh.
+    ◦ Kiểm định DM cũng cho thấy sự vượt trội đáng kể về mặt thống kê của mô hình đề xuất.
+• Hệ thống học sâu (từ "Deep learning systems for forecasting the prices of crude oil and precious metals.pdf")
+    ◦ Nghiên cứu này đánh giá nhiều mô hình học sâu khác nhau cho dự báo giá dầu thô WTI.
+    ◦ Kết quả: Mô hình BiGRU liên tục cho thấy MAE và RMSE thấp nhất trên các độ dài chuỗi khác nhau (5, 30, 60, 90 ngày). Ví dụ, với 5 ngày, BiGRU đạt MAE 1.570, MAPE 6.868, RMSE 3.415, vượt trội so với LSTM và GRU.
+    ◦ Nghiên cứu cũng kết luận rằng các mô hình kiểu GRU thường hoạt động tốt hơn các mô hình kiểu LSTM, và các mô hình hồi quy hai chiều (BiLSTM, BiGRU) vượt trội hơn các mô hình một chiều (LSTM, GRU).
+Các nghiên cứu nổi bật từ năm 2025
+• HMOFTTA-CGS-PFSS (từ "A crude oil price forecasting framework based on Constraint Guarantee and Pareto Fronts Shrinking Strategy.pdf")
+    ◦ Mô hình lai này sử dụng chiến lược đảm bảo ràng buộc (CGS) và chiến lược thu hẹp biên Pareto (PFSS) để tối ưu hóa dự báo.
+    ◦ Kết quả:
+        ▪ Brent: MAPE 0.9062, MAE 0.7383, MSE 0.8716, RMSE 0.9336, R2 0.9796.
+        ▪ WTI: MAPE 1.6149, MAE 1.1974, MSE 2.6893, RMSE 1.6399, R2 0.9198.
+    ◦ Mô hình này tuyên bố cải thiện độ chính xác dự đoán khoảng 23.2% trên tập dữ liệu Brent, 4.0% trên tập dữ liệu WTI và 21.7% trên tập dữ liệu Dubai.
+• OVMD-att-SSF-DBiLSTM (từ "A hybrid system with optimized decomposition on random deep learning model for crude oil futures forecasting.pdf")
+    ◦ Đây là một hệ thống lai mới sử dụng phân tách OVMD, cơ chế attention, hàm hiệu quả thời gian ngẫu nhiên (SSF) và Deep Bidirectional LSTM.
+    ◦ Kết quả:
+        ▪ Brent: MAE 1.3952, RMSE 2.0404, MAPE 1.5655, SMAPE 1.8134, TIC 0.0104.
+        ▪ WTI: MAE 1.5667, RMSE 2.2322, MAPE 1.8659, SMAPE 1.8665, TIC 0.0137.
+    ◦ Mô hình đề xuất luôn có các tiêu chí đánh giá thấp nhất (tốt nhất) trong số tất cả các mô hình so sánh. Các kiểm định thống kê (DM test và Wilcoxon signed rank test) cũng xác nhận sự vượt trội đáng kể của mô hình.
+• CEEMDAN-VMD-CNN-BiLSTM (từ "A study on crude oil price forecasting model integrating CEEMDAN-VMD multiscale decomposition with CNN-BiLSTM.pdf")
+    ◦ Mô hình này tích hợp phân tách đa tỷ lệ bằng CEEMDAN và VMD với CNN và BiLSTM.
+    ◦ Kết quả: Với cấu hình tối ưu, mô hình đạt MSE 30.7731, RMSE 5.5474, MAE 4.2957, MAPE 4.671, và R2 68.3918.
+    ◦ Các kiểm định ý nghĩa (P-values) cho thấy mô hình vượt trội đáng kể so với BiLSTM (1.7 × 10–28), CNN-BiLSTM (2.23 × 10–28), và VMD-CNN-BiLSTM (0.014524).
+• IGIA-MVMD-AW-MLSSVR-AI (từ "A weekly crude oil price interval-valued prediction architecture on fusion of decomposition technique and adaptive integration.pdf")
+    ◦ Mô hình này là một kiến trúc dự đoán giá khoảng hàng tuần kết hợp kỹ thuật phân tách và tích hợp thích ứng.
+    ◦ Kết quả cho Brent: IMAE 1.7715, IMAPE 0.0220, IRMSE 1.8881, IU 0.3797, PICP 0.9815, CWC 0.0667.
+    ◦ Mô hình này cho thấy IMAE, IMAPE, IRMSE, IU và CWC thấp nhất, cùng PICP cao nhất so với các mô hình đơn lẻ và lai khác. Mô hình cũng đạt độ chính xác hướng 81.38% cho Brent.
+• LASSO-TVP model (từ "Study on influencing factors and forecast of global crude oil prices based on the hybrid model.pdf")
+    ◦ Mô hình này tập trung vào việc xác định các yếu tố ảnh hưởng và dự báo giá dầu thô toàn cầu.
+    ◦ Mặc dù các chỉ số lỗi cụ thể không được cung cấp trong bản tóm tắt, nghiên cứu nhấn mạnh tầm quan trọng của các sản phẩm trung gian và hạ nguồn của dầu thô như xăng pha chế lại và naphta có thể ảnh hưởng đáng kể đến giá dầu thô toàn cầu.
+Nghiên cứu nổi bật từ năm 2026
+• ARIMAX–LSTM fusion model (từ "Deep learning enhanced energy market prediction- A robust ARIMAX–LSTM fusion for crude oil pricing.pdf")
+    ◦ Mô hình lai này kết hợp ARIMAX và LSTM để dự báo giá dầu thô.
+    ◦ Kết quả (trên tập Actual Test): MSE 0.55603, RMSE 0.74568, MAE 0.59872.
+    ◦ Tuy nhiên, các kết quả này được mô tả là "Cao hơn mức trung bình (Tệ hơn)" hoặc "Hơi cao hơn mức trung bình (Hơi tệ hơn)" trong bảng đánh giá, cho thấy trong trường hợp cụ thể này, hiệu suất chưa vượt trội so với các mô hình tham chiếu khác mà nghiên cứu so sánh.
+Nhìn chung, các nghiên cứu mới nhất từ năm 2024 trở đi tiếp tục chứng minh rằng việc kết hợp các kỹ thuật phân tách chuỗi thời gian, mô hình học sâu phức tạp (đặc biệt là các mô hình hồi quy hai chiều và cơ chế attention), cùng với các chiến lược tối ưu hóa và xử lý giá trị ngoại lệ, là chìa khóa để đạt được độ chính xác dự báo giá dầu thô cao hơn và đáng tin cậy hơn.
+• Akusta, A., Gün, M., & Mukhtarov, S. (2026). Deep learning enhanced energy market prediction: A robust ARIMAX–LSTM fusion for crude oil pricing. Journal of Computational and Applied Mathematics, 474, 117006. https://doi.org/10.1016/j.cam.2025.117006
+• Aldabagh, H., Zheng, X., Najand, M., & Mukkamala, R. (2024). Forecasting Crude Oil Price Using Multiple Factors. Journal of Risk and Financial Management, 17(9), 415. https://doi.org/10.3390/jrfm17090415
+• Chen, Y., & Tian, Z. (2025). A crude oil price forecasting framework based on Constraint Guarantee and Pareto Fronts Shrinking Strategy. Applied Soft Computing Journal, 174, 112996. https://doi.org/10.1016/j.asoc.2025.112996
+• Dong, Y., Jiang, H., Guo, Y., & Wang, J. (2024). A novel crude oil price forecasting model using decomposition and deep learning networks. Engineering Applications of Artificial Intelligence, 133, 108111. http://dx.doi.org/10.1016/j.engappai.2024.108111
+• Foroutan, M., & Lahmiri, S. (2024). Deep learning systems for forecasting the prices of crude oil and precious metals. Financial Innovation, 10(1), 111.
+• Li, J., Hong, Z., Zhang, C., Wu, J., & Yu, C. (2024). A novel hybrid model for crude oil price forecasting based on MEEMD and Mix-KELM. Expert Systems With Applications, 246, 123104. https://doi.org/10.1016/j.eswa.2023.123104
+• Liu, J., Zhao, X., Luo, R., & Tao, Z. (2024). A novel link prediction model for interval-valued crude oil prices based on complex network and multi-source information. Applied Energy, 376, 124261. https://doi.org/10.1016/j.apenergy.2024.124261
+• Luo, H., & Yu, Y. (2024). A novel hybrid forecasting system for crude oil futures prices: A dual perspective of deterministic forecasting and uncertainty analysis. Heliyon, 10, e39818.
+• Ouyang, Z., Lu, M., Ouyang, Z., Zhou, X., & Wang, R. (2024). A novel integrated method for improving the forecasting accuracy of crude oil: ESMD-CFastICA-BiLSTM-Attention. Energy Economics, 138, 107851. https://doi.org/10.1016/j.eneco.2024.107851
+• Wang, D., & Fang, T. (2025). Study on influencing factors and forecast of global crude oil prices based on the hybrid model. Energy, 328, 136604. https://doi.org/10.1016/j.energy.2025.136604
+• Wang, J., & Zhang, Y. (2025). A hybrid system with optimized decomposition on random deep learning model for crude oil futures forecasting. Expert Systems With Applications, 272, 126706. https://doi.org/10.1016/j.eswa.2025.126706
+• Wang, Y., Chen, H., & Xu, X. (2025). A weekly crude oil price interval-valued prediction architecture on fusion of decomposition technique and adaptive integration. Energy, 334, 137800. https://doi.org/10.1016/j.energy.2025.137800
+• Zhao, Z., Sun, S., Sun, J., & Wang, S. (2024). A novel hybrid model with two-layer multivariate decomposition for crude oil price forecasting. Energy, 288, 129740. https://doi.org/10.1016/j.energy.2023.129740
+• Zheng, L., Sun, Y., & Wang, S. (2024). A novel interval-based hybrid framework for crude oil price forecasting and trading. Energy Economics, 130, 107266. https://doi.org/10.1016/j.eneco.2024.107266
+• Zhu, S., Xu, M., Wu, J., Wang, Y., Jiang, X., & Huang, Z. (2025). A study on crude oil price forecasting model integrating CEEMDAN-VMD multiscale decomposition with CNN-BiLSTM. Results in Engineering, 27, 106391. https://doi.org/10.1016/j.rineng.2025.106391
+Top of Form
+Bottom of Form
+

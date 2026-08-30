@@ -1,0 +1,29 @@
+{
+  "model": "NHits",
+  "target_type": "DAU",
+  "horizon": 5,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 11.743148,
+    "RMSE": 19.447271,
+    "MAPE": 6.9957,
+    "sMAPE": 7.1055,
+    "MASE": 2.063002,
+    "WAPE": 9.0512,
+    "R2": 0.889575,
+    "DA": 51.01,
+    "MSE": 378.196338,
+    "MdAE": 2.920962,
+    "MdAPE": 3.1555,
+    "MaxAE": 73.009068,
+    "Bias": 2.943575,
+    "TheilU": 1.854311,
+    "crps": 11.743148
+  },
+  "n_iterations": 20,
+  "n_features": 17,
+  "runtime_seconds": 4200.9,
+  "status": "completed",
+  "datetime": "2026-08-27T16:48:58.581598Z"
+}

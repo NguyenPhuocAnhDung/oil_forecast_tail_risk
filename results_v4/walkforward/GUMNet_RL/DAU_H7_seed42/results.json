@@ -1,0 +1,31 @@
+{
+  "model": "GUMNet_RL",
+  "target_type": "DAU",
+  "horizon": 7,
+  "protocol": "walkforward",
+  "seed": 42,
+  "metrics": {
+    "MAE": 10.639011,
+    "RMSE": 21.453078,
+    "MAPE": 6.9345,
+    "sMAPE": 6.9653,
+    "MASE": 2.601659,
+    "WAPE": 9.2251,
+    "R2": 0.826481,
+    "DA": 58.56,
+    "MSE": 460.234561,
+    "MdAE": 2.128386,
+    "MdAPE": 2.3694,
+    "MaxAE": 91.652449,
+    "Bias": 1.676599,
+    "TheilU": 2.537013,
+    "PICP": 63.61,
+    "PINAW": 14.5043,
+    "crps": 8.271396
+  },
+  "n_iterations": 21,
+  "n_features": 17,
+  "runtime_seconds": 3350.0,
+  "status": "completed",
+  "datetime": "2026-07-19T04:50:39.908504Z"
+}

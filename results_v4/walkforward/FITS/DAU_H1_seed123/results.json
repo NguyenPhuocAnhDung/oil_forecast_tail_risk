@@ -1,0 +1,29 @@
+{
+  "model": "FITS",
+  "target_type": "DAU",
+  "horizon": 1,
+  "protocol": "walkforward",
+  "seed": 123,
+  "metrics": {
+    "MAE": 6.3242,
+    "RMSE": 12.326218,
+    "MAPE": 3.6451,
+    "sMAPE": 3.6488,
+    "MASE": 1.111017,
+    "WAPE": 4.8745,
+    "R2": 0.955638,
+    "DA": 56.06,
+    "MSE": 151.935662,
+    "MdAE": 1.380226,
+    "MdAPE": 1.5249,
+    "MaxAE": 66.946385,
+    "Bias": 0.31678,
+    "TheilU": 1.175303,
+    "crps": 6.3242
+  },
+  "n_iterations": 100,
+  "n_features": 16,
+  "runtime_seconds": 23036.2,
+  "status": "completed",
+  "datetime": "2026-08-27T04:09:00.682768Z"
+}

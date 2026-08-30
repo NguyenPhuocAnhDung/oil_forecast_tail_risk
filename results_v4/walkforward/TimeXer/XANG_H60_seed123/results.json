@@ -1,0 +1,29 @@
+{
+  "model": "TimeXer",
+  "target_type": "XANG",
+  "horizon": 60,
+  "protocol": "walkforward",
+  "seed": 123,
+  "metrics": {
+    "MAE": 6.834602,
+    "RMSE": 13.856173,
+    "MAPE": 6.9621,
+    "sMAPE": 7.5123,
+    "MASE": 1.993408,
+    "WAPE": 7.9666,
+    "R2": -0.12848,
+    "DA": 48.0,
+    "MSE": 191.993539,
+    "MdAE": 3.634762,
+    "MdAPE": 4.4458,
+    "MaxAE": 99.869156,
+    "Bias": 2.882411,
+    "TheilU": 3.178163,
+    "crps": 6.834602
+  },
+  "n_iterations": 30,
+  "n_features": 19,
+  "runtime_seconds": 9795.6,
+  "status": "completed",
+  "datetime": "2026-08-23T08:33:23.548952Z"
+}

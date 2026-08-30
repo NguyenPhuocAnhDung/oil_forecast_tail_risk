@@ -1,0 +1,29 @@
+{
+  "model": "NBEATS",
+  "target_type": "XANG",
+  "horizon": 5,
+  "protocol": "walkforward",
+  "seed": 777,
+  "metrics": {
+    "MAE": 5.405779,
+    "RMSE": 9.016499,
+    "MAPE": 4.7832,
+    "sMAPE": 4.968,
+    "MASE": 1.118988,
+    "WAPE": 5.4593,
+    "R2": 0.912249,
+    "DA": 47.47,
+    "MSE": 81.297253,
+    "MdAE": 2.550343,
+    "MdAPE": 3.0206,
+    "MaxAE": 44.538676,
+    "Bias": 2.425044,
+    "TheilU": 1.271324,
+    "crps": 5.405779
+  },
+  "n_iterations": 20,
+  "n_features": 16,
+  "runtime_seconds": 2244.5,
+  "status": "completed",
+  "datetime": "2026-08-19T15:34:08.562040Z"
+}

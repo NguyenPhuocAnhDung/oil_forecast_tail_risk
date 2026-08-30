@@ -1,0 +1,28 @@
+Mismatch in Methodology_Tail_Risk.md:11: Found 'gru', expected 'GRU'
+Line: 2. **Chuyên gia Xu hướng GRU (\(f_{gru}\))**: Sử dụng mạng GRU kết hợp với cơ chế Tự chú ý đa đầu (Multi-Head Self-Attention) để lưu giữ ký ức vĩ mô dài hạn và lọc xu hướng.
+Mismatch in Methodology_Tail_Risk.md:21: Found 'gru', expected 'GRU'
+Line: Bộ định tuyến (một mạng MLP nhỏ) nhận đầu vào là các biểu diễn chuyên gia kết hợp với nhúng vị trí chân trời và rủi ro ngoại sinh GPR tại thời điểm \(t\), sinh ra các định tuyến logits \(g = [g_{cnn}, g_{gru}, g_{kan}]^T\):
+Mismatch in Methodology_Tail_Risk.md:23: Found 'gru', expected 'GRU'
+Line: g = \text{MLP}\left(\left[f_{cnn} \parallel f_{gru} \parallel f_{kan} \parallel \text{Pos}_h \parallel GPR_t\right]\right)
+Mismatch in Methodology_Tail_Risk.md:40: Found 'gru', expected 'GRU'
+Line: f_{final} = w_1 \cdot f_{cnn} + w_2 \cdot f_{gru} + w_3 \cdot f_{kan}
+Mismatch in Methodology_Tail_Risk.md:43: Found 'gru', expected 'GRU'
+Line: Trong ký hiệu inline, công thức này được viết là: \(f_{final} = w_1 \cdot f_{cnn} + w_2 \cdot f_{gru} + w_3 \cdot f_{kan}\), hoặc dưới dạng plain-text: f_final = w₁·f_cnn + w₂·f_gru + w₃·f_kan.
+Mismatch in Part_1_Intro.md:18: Found 'gru', expected 'GRU'
+Line: **Method.** GUM-Net giới thiệu một cơ chế định tuyến động nhận thức chân trời (Horizon-Aware Dynamic Router) để kết hợp thông minh các biểu diễn từ ba chuyên gia thời gian chuyên biệt: một 1D-CNN đa tỷ lệ giãn (Multi-Scale Dilated 1D-CNN) bắt động lượng ngắn hạn; một GRU kết hợp Multi-Head Self-Attention bắt xu hướng dài hạn; và một mạng Wavelet-Kolmogorov-Arnold (Wavelet-KAN) đột phá thay thế B-splines bằng các kích hoạt wavelet Mexican Hat cục bộ để hấp thụ trực tiếp Chỉ số Rủi ro Địa chính trị (GPR). GUM-Net tối ưu hóa việc phân bổ trọng số thông qua công thức định tuyến động gating dạng LaTeX: \(f_{final} = w_1 \cdot f_{cnn} + w_2 \cdot f_{gru} + w_3 \cdot f_{kan}\) (hoặc biểu diễn plain-text: f_final = w₁·f_cnn + w₂·f_gru + w₃·f_kan). Nghiên cứu cũng chính thức hóa một Chiến lược Mô hình Hóa Tách rời (Decoupled Modelling) dựa trên kiểm định thống kê Augmented Dickey-Fuller (ADF) để xử lý riêng biệt xăng và diesel, và tối ưu hóa qua hàm mất mát Joint Quantile Pinball Loss để cung cấp dự báo phân vị hiệu quả.
+Mismatch in Part_1_Intro.md:40: Found 'gru', expected 'GRU'
+Line: \(f_{final} = w_1 \cdot f_{cnn} + w_2 \cdot f_{gru} + w_3 \cdot f_{kan}\) (hoặc biểu diễn plain-text: f_final = w₁·f_cnn + w₂·f_gru + w₃·f_kan)
+Mismatch in Part_2_RelatedWork.md:34: Found 'gru', expected 'GRU'
+Line: \(f_{final} = w_1 \cdot f_{cnn} + w_2 \cdot f_{gru} + w_3 \cdot f_{kan}\) (hoặc biểu diễn plain-text: f_final = w₁·f_cnn + w₂·f_gru + w₃·f_kan)
+Mismatch in Part_3_Methodology.md:40: Found 'gru', expected 'GRU'
+Line: Để duy trì ký ức dài hạn về các chu kỳ vĩ mô kéo dài (như chu kỳ suy thoái kinh tế hay chu kỳ siêu tăng giá hàng hóa), chúng tôi sử dụng Đơn vị Hồi quy có Cổng (GRU - Gated Recurrent Unit). Khác với LSTM, GRU có cấu trúc cổng đơn giản hơn, giúp hạn chế hiện tượng triệt tiêu gradient. Quan trọng hơn, GRU được kết hợp với một cơ chế Tự chú ý Đa đầu (Multi-Head Self-Attention). Cơ chế này hoạt động như một hệ thống "đánh dấu", giúp mô hình tự động nhận diện và gán trọng số cao cho những ngày giao dịch quan trọng trong quá khứ (ví dụ: ngày OPEC+ cắt giảm sản lượng). Đầu ra của chuyên gia xu hướng là $f_{gru}$.
+Mismatch in Part_3_Methodology.md:48: Found 'gru', expected 'GRU'
+Line: [f_{cnn} \parallel f_{gru} \parallel f_{kan} \parallel \text{Pos}_h] \xrightarrow{\text{MLP + Softmax}} (w_1, w_2, w_3)
+Mismatch in Part_3_Methodology.md:53: Found 'gru', expected 'GRU'
+Line: f_{final} = w_1 \cdot f_{cnn} + w_2 \cdot f_{gru} + w_3 \cdot f_{kan}
+Mismatch in Part_4_Experiments.md:72: Found 'gru', expected 'GRU'
+Line: f_{final} = w_1 \cdot f_{cnn} + w_2 \cdot f_{gru} + w_3 \cdot f_{kan}
+Mismatch in Part_4_Experiments.md:105: Found 'gru', expected 'GRU'
+Line: Trong đó $g_i$ là các định tuyến logits được sinh ra từ $g = \text{MLP}([f_{cnn} \parallel f_{gru} \parallel f_{kan} \parallel \text{Pos}_h \parallel GPR_t])$. Khi rủi ro GPR tăng vọt cực độ ($GPR_t \to \infty$), trọng số định tuyến $w_3$ dành cho chuyên gia Wavelet-KAN sẽ tiệm cận mức tối đa được giới hạn bởi cơ chế số dư ($w_3 \to 1 - \frac{2}{3}\lambda = 0.933$).
+Mismatch in Part_4_Experiments.md:112: Found 'gru', expected 'GRU'
+Line: f_{final} = w_1 \cdot f_{cnn} + w_2 \cdot f_{gru} + w_3 \cdot f_{kan}

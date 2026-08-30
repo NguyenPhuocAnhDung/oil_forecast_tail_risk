@@ -1,0 +1,29 @@
+{
+  "model": "CoST",
+  "target_type": "XANG",
+  "horizon": 60,
+  "protocol": "walkforward",
+  "seed": 9999,
+  "metrics": {
+    "MAE": 8.159333,
+    "RMSE": 15.084262,
+    "MAPE": 8.5054,
+    "sMAPE": 9.283,
+    "MASE": 2.379785,
+    "WAPE": 9.5107,
+    "R2": -0.337382,
+    "DA": 48.99,
+    "MSE": 227.534969,
+    "MdAE": 4.901208,
+    "MdAPE": 5.8861,
+    "MaxAE": 100.160977,
+    "Bias": 4.392943,
+    "TheilU": 3.459808,
+    "crps": 8.159333
+  },
+  "n_iterations": 30,
+  "n_features": 19,
+  "runtime_seconds": 9227.9,
+  "status": "completed",
+  "datetime": "2026-08-23T11:49:54.376777Z"
+}

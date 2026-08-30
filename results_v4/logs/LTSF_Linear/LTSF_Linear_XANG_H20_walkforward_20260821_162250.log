@@ -1,0 +1,23 @@
+16:22:50 | ================================================================================
+16:22:50 |  LTSF_Linear | XANG | H20 | walkforward | seed=2025
+16:22:50 | ================================================================================
+16:22:50 | Data: 4513 rows | Features: 14
+16:24:51 |  Iter-01 | MAE=3.429 | MAPE=4.17%
+16:26:52 |  Iter-02 | MAE=2.466 | MAPE=3.36%
+16:28:53 |  Iter-03 | MAE=2.231 | MAPE=2.94%
+16:30:54 |  Iter-04 | MAE=5.449 | MAPE=6.45%
+16:32:55 |  Iter-05 | MAE=1.019 | MAPE=1.30%
+16:34:58 |  Iter-06 | MAE=4.012 | MAPE=5.07%
+16:37:01 |  Iter-07 | MAE=2.007 | MAPE=2.47%
+16:39:03 |  Iter-08 | MAE=3.142 | MAPE=4.06%
+16:41:06 |  Iter-09 | MAE=3.205 | MAPE=3.97%
+16:43:11 |  Iter-10 | MAE=2.514 | MAPE=3.18%
+16:45:17 |  Iter-11 | MAE=3.914 | MAPE=5.37%
+16:47:23 |  Iter-12 | MAE=2.826 | MAPE=3.88%
+16:49:29 |  Iter-13 | MAE=6.514 | MAPE=7.42%
+16:51:38 |  Iter-14 | MAE=37.025 | MAPE=25.88%
+16:56:06 |  Iter-15 | MAE=19.452 | MAPE=15.30%
+16:56:06 | 
+ OVERALL: MAE=6.614, MAPE=6.32%, R2=0.6258 (1996.1s)
+16:56:06 | Saved model checkpoint: /data/quyhv/oil_forecast_tail_risk/results_v4/walkforward/LTSF_Linear/XANG_H20_seed2025/model_checkpoint.pth
+16:56:06 | Saved processor/scaler: /data/quyhv/oil_forecast_tail_risk/results_v4/walkforward/LTSF_Linear/XANG_H20_seed2025/processor.pkl
