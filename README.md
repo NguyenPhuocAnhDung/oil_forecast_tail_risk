@@ -205,20 +205,6 @@ python scripts/reports/compile_completed_h_5seeds.py
 python scripts/reports/generate_all_outputs.py
 ```
 
----
-
-## 🤖 AI Agent Engineering Stack
-
-This project is built and audited with a state-of-the-art multi-agent framework:
-
-- **Antigravity Orchestrator**: Agentic pair programming, mathematical formula auditing, and manuscript synchronization.
-- **OmniRoute Gateway** (`http://localhost:20128`): High-throughput routing across 250+ foundation model providers.
-- **Skills Ecosystem**:
-  - **gstack** (Garry Tan / YC CEO): CEO Review, Engineering Architecture Review, QA & CSO Security Scanners.
-  - **agent-skills** (Addy Osmani / Google Chrome): Spec-Driven Development, TDD & Verification Loops.
-  - **ECC & Superpowers**: Autonomous debugging, systematic testing, and econometric proof engines.
-
----
 
 ## 📂 Repository Structure
 
@@ -264,32 +250,3 @@ oil_forecast_tail_risk/
 └── tests/                           # Unit tests, pipeline dispatch, and stress tests
 ```
 
----
-
-## 👥 Authors & Research Team
-
-- **Phuoc Anh Dung Nguyen¹** — *Conceptualization, Methodology, Software, Data Curation, Formal Analysis, Writing – Original Draft*
-- **Huong D. Bui¹\*** — *Supervision, Academic Direction, Methodological Validation, Writing – Review & Editing*
-- **Quy V. Hoang²\*** — *Theoretical Mathematical Review, Computational Optimization, Statistical Significance Analysis, Writing – Review & Editing*
-
-¹ *Faculty of Information Technology, Ho Chi Minh City University of Technology (HUTECH), Ho Chi Minh City, Vietnam*  
-² *Faculty of Information Technology, Thuy Loi University (TLU), Hanoi, Vietnam*  
-
-*\* Corresponding Authors*
-
----
-
-## 📄 Citation & License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
-If you find this codebase or research methodology helpful in your work, please cite:
-
-```bibtex
-@article{nguyen2026robust,
-  title={Robust Probabilistic Energy Forecasting under Geopolitical Shocks: An Adaptive Mixture of Local-Global Experts},
-  author={Nguyen, Phuoc Anh Dung and Bui, Huong D. and Hoang, Quy V.},
-  journal={Working Paper / Under Review},
-  year={2026}
-}
-```
