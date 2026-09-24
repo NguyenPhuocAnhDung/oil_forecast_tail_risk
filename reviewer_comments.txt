@@ -1,0 +1,50 @@
+[P0] Reviewer 1
+
+[P2] Summary
+
+[P4] The paper proposes GUMNetHet, a mixture-of-experts model for multi-horizon (H1-H60) forecasting of Singapore refined-product prices (MG95, DO 0.001%). Input features are split by type across three experts (a multi-scale CNN, a GRU-attention module and a Wavelet-KAN). A horizon-aware gate fuses them, and a quantile head with residual scaling produces point and interval forecasts. Under an expanding walk-forward protocol, the model reports the lowest MAE against six baselines at every horizon, with up to 30% lower error at H60, along with high short-horizon directional accuracy and well-covered prediction intervals. 
+
+[P6] Suggested improvements: 
+
+[P8] Resolve the table inconsistencies and DA anomalies, define DA, and audit for leakage. Evaluate all horizons on common test dates, and report results by regime and event. Add naive, econometric, tabular and closest-neural baselines, trained under identical features, losses and tuning. Report scale-free metrics relative to no-change, and DA with base rates and significance tests. Use multiple seeds and formal significance tests. Strengthen ablations: partitioned vs. shared features, capacity-matched alternatives, simpler routers and residual-scaling effects, across all horizons and both products. Support router claims with utilization statistics and regime-conditional error analysis. Broaden the probabilistic evaluation with proper scoring rules, baselines, calibration and more quantile levels. Rewrite related work to cover the energy-forecasting literature, and temper claims ("robust," "calibrated," "tail risk") to match the evidence.
+
+[P10] Evaluation
+
+[P12] Paper's strengths 
+
+[P14] The problem is practically relevant, and the test period covers a genuinely turbulent market. Leakage precautions (lagged features, train-only scaling) are described. The authors are candid that R² and directional accuracy degrade at long horizons. Ablations and router analyses are included, which is more than many applied papers offer. 
+
+[P16] However, the paper suffers from the following weaknesses: 
+
+[P18] 1. Novelty and motivation. Routing partitioned inputs to different architectures with a learned gate is a standard multi-branch fusion design. Hybrid CNN-GRU-attention and wavelet-neural models are well established in oil forecasting, and TFT's variable selection tackles a similar problem. The paper positions itself only against "homogeneous MoEs." The "expert collapse" motivation also fits poorly: with three dense experts that already receive different inputs, collapse is unlikely, and it is never measured. The feature partition is asserted rather than justified, for example by spectral analysis. 
+
+[P20] 2. Coverage of prior work and baselines. The related work is mostly generic deep-learning citations and omits the energy-forecasting literature. The baseline set lacks the comparators that matter most: a random-walk/no-change forecast, which is notoriously hard to beat in oil markets; classical and econometric models (ARIMAX/VAR, GARCH-quantile); strong tabular baselines (e.g., gradient-boosted quantile regression); the closest deep models (TFT, TimeXer, Time-MoE), several of which are cited but not compared. Baseline features, losses, hyperparameters and tuning effort are also unreported, so fairness cannot be judged. 
+
+[P22] 3. Experimental design. Each horizon is evaluated on a different test window, so horizon effects are confounded with market regime. The "stress test" framing is also overstated: the extreme volatility applies to the shortest window, not to the H60 window where the headline gains appear. In effect, the test data amount to one shock episode, which cannot support general claims of robustness. Purging or embargoing for overlapping multi-day targets, the chronological nature of the validation split, and retraining frequency are not described. 
+
+[P24] 4. Results are inconsistent or insufficiently explained. Several table entries do not reconcile. For example, the implied target variance (RMSE²/(1−R²)) differs between GUMNetHet and the baselines at long horizons, suggesting they were scored on different samples. There are also duplicated values across baselines and cases where a baseline beats the proposed model but the text claims uniform superiority. The directional-accuracy results are implausible as presented. They are very high at short horizons (~90%+ for daily returns), erratic across horizons, and far below chance at H60, which random-walk reasoning cannot explain. DA is never defined, and base rates in strongly trending windows are not considered. Long-horizon errors look surprisingly low relative to what a no-change forecast should achieve given the stated volatility. Residual scaling toward the current price may make the model behave like persistence, which the paper does not test. Scale-free metrics relative to a naive forecast are needed. 
+
+[P26] 5. Ablations and router analysis. Ablations are single-seed and cover only one horizon per product, although the claims concern long horizons and shocks. The central claim that feature partitioning helps is never tested directly (all features to every expert). The Wavelet-KAN-versus-MLP comparison is not capacity-matched, and the router is compared only with uniform weights. The router analysis entangles horizon and GPR effects, and shows no variance or regime-conditional error gains, which would be the real evidence for adaptive routing. 
+
+[P28] 6. Probabilistic evaluation. PICP and PINAW are reported as single unqualified numbers, with no probabilistic baselines, no proper scoring rules (pinball/CRPS/Winkler) and no conditional-coverage tests. Over-coverage relative to the nominal level is also miscalibration, and no calibration procedure is described. Modeling only the 0.1/0.5/0.9 quantiles does not support a "tail risk" claim. 
+
+[P30] 7. Statistical rigor and reproducibility. All results use a single seed, with no confidence intervals or significance tests (even though a Diebold-Mariano reference is listed). Some margins are small. Compute costs are not reported, and the proprietary data limit reproducibility.
+
+[P32] Reviewer 2
+
+[P34] Summary
+
+[P36] This paper proposes GUMNetHet (Heterogeneous Gated Unified Mixture Network), a specialized mixture-of-experts architecture for multi-horizon probabilistic forecasting of refined petroleum product prices (Mogas 95 gasoline and Gasoil 0.001%S diesel) subject to geopolitical shocks. To prevent expert collapse, input features are partitioned by economic dynamics: high-frequency price momentum is processed by a multi-scale 1D-CNN, macroeconomic trends by a GRU-Attention module, and non-linear shock signals by a Wavelet-KAN. A horizon- and context-aware gating router dynamically combines expert representations, while a multi-quantile head (𝑞 ∈0.1,0.5,0.9) with residual scaling limits long-horizon variance drift. Evaluated on Platts Singapore benchmark data (2008–2026, N = 4,512) using an expanding walk-forward protocol, GUMNetHet reduces MAE at H60 by 30.1% for gasoline and 22.9% for diesel relative to the strongest baseline.
+
+[P38] Main reason to ACCEPT this paper, if any
+
+[P40] The paper delivers a well-structured, domain-tailored forecasting architecture that effectively mitigates expert collapse and variance drift during geopolitical shock regimes, supported by extensive walk-forward evaluation against modern baselines. However, its score is limited to Weak Accept because directional accuracy degrades severely below 50% at extended lead times (H10–H60), experimental reporting relies on a single random seed without statistical confidence intervals, and the feature partitioning is hard-coded rather than learned end-to-end.
+
+[P42] Evaluation
+
+[P44] The manuscript addresses multi-horizon energy price forecasting under geopolitical uncertainty by introducing GUMNetHet. Input features are split into three domain-specific sets processed by parallel 1D-CNN, GRU-Attention, and Wavelet-KAN experts. A dynamic gating router merges representations based on lead time and risk context, while multi-quantile outputs (𝑞 ∈0.1,0.5,0.9) with residual scaling yield bounded price predictions and calibrated interval bounds. 
+
+[P46] The primary strength of the work lies in its domain-informed feature partitioning, which prevents expert collapse by providing explicit structural inductive biases to each expert branch. The dynamic router demonstrates clear interpretability, automatically shifting weight to the Wavelet-KAN expert (up to 0.61) during acute geopolitical shock regimes. Furthermore, the expanding walk-forward evaluation protocol is rigorous, testing model resilience under out-of-sample volatility up to 2.9 times historical training levels. 
+
+[P48] However, the paper has key limitations. Directional accuracy drops drastically below 50% at long horizons (e.g., 19.10% for diesel at H60), indicating that while price-level error is bounded, directional prediction becomes unreliable over long windows. Empirical results are reported using a single random seed without multi-run error bounds or formal statistical significance testing. Additionally, the manual partitioning of input features imposes fixed constraints that may limit flexibility compared to soft, fully learnable routing frameworks.
+
